@@ -1,0 +1,207 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0px;
+	padding:0px;
+}
+.main{
+	width:100%;
+	height:auto;
+}
+.a{
+	width:1000px;
+	margin:auto;
+	height:auto;
+}
+.a_heading{
+	    color: #074DB0;
+    float: left;
+    font: 25px Verdana,Geneva,sans-serif;
+    padding: 27px 0 0;
+}
+.text_main{
+	width:1000px;
+	float:left;
+}
+.a_text1{
+	margin:30px 0px 0px 0px;
+	font-size:20px;
+	color:#768292;
+	width:1000px;
+	float:left;
+	font: 18px Verdana,Geneva,sans-serif;
+	
+}
+
+
+.a_text2{
+	margin:30px 0px 0px 0px;
+	  font: 18px Verdana,Geneva,sans-serif;
+	color:#768292;
+	width:1000px;
+		float:left;
+	
+	
+}
+
+
+.a_text3{
+	margin:30px 0px 0px 0px;
+	  font: 18px Verdana,Geneva,sans-serif;
+	color:#768292;
+		width:1000px;
+	height:auto;
+	float:left;
+	
+}
+
+
+.a_text5{
+
+	margin:30px 0px 0px 0px;
+	  font: 18px Verdana,Geneva,sans-serif;
+	color:#768292;
+	width:1000px;
+	float:left;
+	
+	
+	
+}
+
+
+
+
+.a_text6{
+	margin-top:30px;
+	
+	width:1000px;
+	  font: 18px Verdana,Geneva,sans-serif;
+	color:#768292;
+
+	height:auto;}
+
+.a_text7{
+	float:left;
+
+	margin:30px 0px 0px 0px;
+	font-size:20px;
+	color:#768292;
+	width:auto;
+	height:auto;}
+.a_org7{
+
+
+		margin:30px 0px 0px 0px;
+		width:auto;
+	color:#eb865c;
+	font-size:20px;
+	float:left;
+
+}	
+
+
+.a_text8{
+	float:left;
+
+     margin:30px 0px 0px 0px;
+	font-size:20px;
+	color:#768292;
+	width:auto;
+	height:auto;}
+	
+.a_org8{
+		margin:30px 0px 0px 0px;
+		width:auto;
+	color:#eb865c;
+	font-size:20px;
+
+}	
+
+
+.a_text9{
+	float:left;
+	
+	
+	font-size:20px;
+	color:#768292;
+	width:auto;
+	height:auto;}
+.a_org9{
+		
+		width:auto;
+	color:#eb865c;
+	font-size:20px;
+
+}
+.a_text10{
+	float:left;
+	margin:30px 0px 0px 0px;
+	font-size:20px;
+	color:#768292;
+	width:auto;
+	height:auto;}
+
+.a_org10{
+	float:left;
+		margin:30px 0px 0px 0px;
+		width:auto;
+	color:#eb865c;
+	font-size:20px;
+
+}
+
+.a_text11{
+
+	margin:30px 0px 0px 0px;
+	font-size:20px;
+	color:#768292;
+	width:auto;
+	height:auto;}
+	
+.a_text12{
+	float:left;
+	
+	font-size:20px;
+	color:#768292;
+	width:auto;
+	height:auto;}
+
+
+
+.aa_new {
+     border: 1px solid #D2D2D2;
+    height: 32px;
+    margin: 10px 0;
+    padding: 0;
+    width: 240px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mssgbox{
+	margin:100px auto 0px auto;
+	
+	background-color:#fbbb01;
+	width:252px;
+	height:105px;
+	border-radius:5px;
+	
+}
+.box_text{
+	color:#FFF;
+	margin:8px 0px 0px 15px;
+	font-size:18px;

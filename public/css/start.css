@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+.instant_reward{ background-color: #FDFDFD;
+ border-bottom:3px solid #0066CC !important;
+ border:1px solid #c5c5c5;
+    border-radius: 8px 8px 8px 8px;
+    float: left;
+    height: auto;
+    margin: 0 0 30px;
+    padding: 0;
+    width: 100%;}
+ 
+ img.new_cam_image{float:left;
+ margin:0px;
+ padding:0px;}
+ 
+ .instant_reward p{   color: #676D7B;
+    float: left;
+    font: 14px/24px Verdana,Geneva,sans-serif;
+    margin: 0;
+    padding: 51px 0 0 17px;
+    width: 54%;}
+ 
+ 
+ .instant_reward h1{   background-color: #F2F2F2;
+    float: left;
+    font: 30px arial;
+    height: auto;
+  border-radius: 7px 9px 0 0;
+ color:#0457BD;
+    padding: 11px 0 14px 31px;
+    width: 97%;}
+
+

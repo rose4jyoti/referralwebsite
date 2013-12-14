@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+*{margin:0; padding:0;}
+
+
+
+#tabContaier{
+	padding:0px;
+	position:relative;
+	width:800px;
+	margin:0px;
+	float:left;
+
+}
+	#tabContaier ul{
+		overflow:hidden;
+		border-right:1px solid #d4d4d4;
+		height:35px;
+		position:absolute;
+		z-index:100;
+	}
+	#tabContaier li{
+		float:left;
+		list-style:none;
+	}
+	#tabContaier li a{
+		background:#ddd;
+		border:1px solid #d4d4d4;
+		border-right:0;
+		color:#666;
+		cursor:pointer;
+		display:block;
+		font:bold 17px Arial, Helvetica, sans-serif;
+		height:35px;
+		line-height:35px;
+		padding:0 30px;
+		margin:0px;
+		text-decoration:none;
+		text-transform:uppercase;
+	}
+	#tabContaier li a:hover{
+		background:#eee;
+	}
+	#tabContaier li a.active{
+		background:#fbfbfb;
+		border:1px solid #d4d4d4;
+		border-right:0;
+		color:#333;
+	}
+	.tabDetails{
+		background:#fbfbfb;
+		border:1px solid #d4d4d4;
+		margin:34px 0 0;
+	}
+	.tabContents{
+		padding:20px
+	}
+	.tabContents h1{
+		font:bold 24px/1.1em Georgia, "Times New Roman", Times, serif;
+		padding:0 0 10px;
+	}
+	.tabContents p{
+		padding:0 0 10px;
+	}
+	
+	
+	
+	
+	.tabbing{color:#5d5d5d;
+	font:19px Arial, Helvetica, sans-serif;
+	margin:0px;
+	float:left;}
+	
+	img.ok_image{
+	margin:-7px 0 0 0;
+	padding:0px;}
+	
+	

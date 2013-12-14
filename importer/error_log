@@ -1,0 +1,396 @@
+[16-Nov-2013 05:48:48 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 78
+[16-Nov-2013 05:48:50 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 78
+[16-Nov-2013 05:48:55 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 78
+[16-Nov-2013 05:50:05 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 78
+[16-Nov-2013 05:50:16 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 78
+[16-Nov-2013 05:50:18 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 78
+[16-Nov-2013 05:50:31 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 78
+[16-Nov-2013 05:50:32 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 76
+[16-Nov-2013 05:53:41 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 76
+[16-Nov-2013 05:53:43 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 78
+[16-Nov-2013 06:01:06 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 7
+[16-Nov-2013 06:01:09 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 7
+[17-Nov-2013 22:05:12 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 43
+[17-Nov-2013 22:05:25 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 43
+[17-Nov-2013 22:05:28 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 43
+[17-Nov-2013 22:05:59 America/Denver] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 43
+[17-Nov-2013 22:06:01 America/Denver] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 43
+[17-Nov-2013 22:06:03 America/Denver] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 43
+[17-Nov-2013 22:17:15 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 82
+[17-Nov-2013 22:17:18 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 82
+[17-Nov-2013 22:17:28 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 82
+[17-Nov-2013 22:18:12 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 75
+[17-Nov-2013 22:18:13 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 75
+[17-Nov-2013 22:19:37 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:20:04 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:20:06 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:20:11 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:20:59 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:21:57 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:24:13 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:24:18 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:24:54 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:25:08 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:26:03 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 93
+[17-Nov-2013 22:26:05 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:26:07 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:27:26 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:27:28 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:27:56 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:29:19 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:29:25 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:29:28 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:29:50 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:29:53 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:30:07 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:31:05 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 54
+[17-Nov-2013 22:31:10 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 32
+[17-Nov-2013 22:31:36 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 32
+[17-Nov-2013 22:33:01 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 32
+[17-Nov-2013 22:52:29 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 86
+[17-Nov-2013 22:52:30 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 22:56:27 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:06:23 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:08:01 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:08:10 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:08:14 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:08:20 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:08:21 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:08:21 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:08:21 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:08:25 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:08:25 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:08:25 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:08:26 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:08:54 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:08:56 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:09:32 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:09:33 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:09:37 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:09:38 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:09:38 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:09:38 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:09:41 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:09:41 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:09:41 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:09:42 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:09:51 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:09:52 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:09:52 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:09:52 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:10:46 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:10:46 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:10:46 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:10:47 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:10:48 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:10:49 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:10:49 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:10:49 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:10:50 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:10:51 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:10:51 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:10:51 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:11:08 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:11:08 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:11:08 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:11:09 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:11:45 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:11:46 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:11:46 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:11:46 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:11:49 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:11:50 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:11:50 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:11:50 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:11:59 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:11:59 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:11:59 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:12:00 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:12:02 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:12:09 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:12:12 America/Denver] PHP Notice:  Array to string conversion in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 38
+[17-Nov-2013 23:16:58 America/Denver] PHP Fatal error:  Class 'Form' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 114
+[17-Nov-2013 23:17:01 America/Denver] PHP Fatal error:  Class 'Form' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 114
+[17-Nov-2013 23:19:24 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 207
+[17-Nov-2013 23:19:33 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 207
+[17-Nov-2013 23:20:57 America/Denver] PHP Fatal error:  Class 'Html' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 207
+[17-Nov-2013 23:51:15 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 277
+[18-Nov-2013 00:53:56 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 166
+[18-Nov-2013 00:53:58 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 166
+[18-Nov-2013 00:54:24 America/Denver] PHP Parse error:  syntax error, unexpected '-', expecting ',' or ')' in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 280
+[18-Nov-2013 00:54:25 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 166
+[18-Nov-2013 01:00:22 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 17
+[18-Nov-2013 01:17:19 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 1
+[18-Nov-2013 01:27:38 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 1
+[18-Nov-2013 01:27:52 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 1
+[18-Nov-2013 01:28:52 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 1
+[18-Nov-2013 01:34:03 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 157
+[18-Nov-2013 01:34:06 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 157
+[18-Nov-2013 01:34:16 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 1
+[18-Nov-2013 02:46:05 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 1
+[18-Nov-2013 02:53:07 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 1
+[18-Nov-2013 03:08:31 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 1
+[18-Nov-2013 03:08:31 America/Denver] PHP Notice:  Undefined index: name in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 42
+[18-Nov-2013 03:08:31 America/Denver] PHP Notice:  Undefined index: lastname in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 43
+[18-Nov-2013 03:11:22 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 1
+[18-Nov-2013 03:11:22 America/Denver] PHP Notice:  Undefined index: name in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 42
+[18-Nov-2013 03:11:22 America/Denver] PHP Notice:  Undefined index: lastname in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 43
+[18-Nov-2013 03:15:49 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 1
+[18-Nov-2013 03:15:49 America/Denver] PHP Notice:  Undefined index: name in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 42
+[18-Nov-2013 03:15:49 America/Denver] PHP Notice:  Undefined index: lastname in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 43
+[18-Nov-2013 03:16:49 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 1
+[18-Nov-2013 03:16:49 America/Denver] PHP Notice:  Undefined index: name in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 42
+[18-Nov-2013 03:16:49 America/Denver] PHP Notice:  Undefined index: lastname in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 43
+[18-Nov-2013 03:17:37 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 1
+[18-Nov-2013 03:17:37 America/Denver] PHP Notice:  Undefined index: name in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 42
+[18-Nov-2013 03:17:37 America/Denver] PHP Notice:  Undefined index: lastname in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 43
+[18-Nov-2013 03:19:14 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 1
+[18-Nov-2013 03:19:14 America/Denver] PHP Notice:  Undefined index: name in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 42
+[18-Nov-2013 03:19:14 America/Denver] PHP Notice:  Undefined index: lastname in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 43
+[18-Nov-2013 03:20:17 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 1
+[18-Nov-2013 03:20:17 America/Denver] PHP Notice:  Undefined index: name in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 42
+[18-Nov-2013 03:20:17 America/Denver] PHP Notice:  Undefined index: lastname in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 43
+[18-Nov-2013 03:22:14 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 1
+[18-Nov-2013 03:23:41 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php:154) in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 1
+[24-Nov-2013 22:47:49 America/Denver] PHP Warning:  require_once(/home4/softoasi/public_html/dev2013/referral/importer): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 159
+[24-Nov-2013 22:47:49 America/Denver] PHP Fatal error:  require_once(): Failed opening required '' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 159
+[24-Nov-2013 22:48:51 America/Denver] PHP Warning:  require_once(/home4/softoasi/public_html/dev2013/referral/importer): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 159
+[24-Nov-2013 22:48:51 America/Denver] PHP Fatal error:  require_once(): Failed opening required '' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 159
+[24-Nov-2013 23:49:48 America/Denver] PHP Warning:  require_once(/home4/softoasi/public_html/dev2013/referral/importer): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 159
+[24-Nov-2013 23:49:48 America/Denver] PHP Fatal error:  require_once(): Failed opening required '' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 159
+[25-Nov-2013 00:19:07 America/Denver] PHP Notice:  Undefined variable: REQUEST in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 00:19:08 America/Denver] PHP Notice:  Undefined variable: REQUEST in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 00:19:55 America/Denver] PHP Notice:  Undefined variable: REQUEST in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 00:19:58 America/Denver] PHP Notice:  Undefined variable: REQUEST in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 00:20:00 America/Denver] PHP Notice:  Undefined variable: REQUEST in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 00:20:18 America/Denver] PHP Notice:  Use of undefined constant id - assumed 'id' in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 00:20:18 America/Denver] PHP Notice:  Undefined variable: REQUEST in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 00:20:20 America/Denver] PHP Notice:  Use of undefined constant id - assumed 'id' in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 00:20:20 America/Denver] PHP Notice:  Undefined variable: REQUEST in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 00:20:36 America/Denver] PHP Notice:  Undefined variable: REQUEST in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 00:20:44 America/Denver] PHP Notice:  Undefined variable: REQUEST in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 00:21:10 America/Denver] PHP Notice:  Undefined variable: REQUEST_id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 00:21:10 America/Denver] PHP Notice:  Undefined variable: REQUEST in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 4
+[25-Nov-2013 00:21:12 America/Denver] PHP Notice:  Undefined variable: REQUEST_id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 00:21:12 America/Denver] PHP Notice:  Undefined variable: REQUEST in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 4
+[25-Nov-2013 00:21:14 America/Denver] PHP Notice:  Undefined variable: REQUEST_id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 00:21:14 America/Denver] PHP Notice:  Undefined variable: REQUEST in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 4
+[25-Nov-2013 00:22:43 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 00:22:46 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 00:25:14 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 71
+[25-Nov-2013 00:26:54 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 71
+[25-Nov-2013 00:29:09 America/Denver] PHP Fatal error:  Class 'URL' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 88
+[25-Nov-2013 00:29:11 America/Denver] PHP Fatal error:  Class 'URL' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 88
+[25-Nov-2013 00:29:15 America/Denver] PHP Fatal error:  Class 'URL' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 88
+[25-Nov-2013 00:29:17 America/Denver] PHP Fatal error:  Class 'URL' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 88
+[25-Nov-2013 00:29:56 America/Denver] PHP Fatal error:  Class 'URL' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 88
+[25-Nov-2013 00:41:31 America/Denver] PHP Fatal error:  Class 'URL' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 88
+[25-Nov-2013 00:41:32 America/Denver] PHP Fatal error:  Class 'URL' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 88
+[25-Nov-2013 00:41:34 America/Denver] PHP Fatal error:  Class 'URL' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 88
+[25-Nov-2013 00:41:35 America/Denver] PHP Fatal error:  Class 'URL' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 88
+[25-Nov-2013 00:42:15 America/Denver] PHP Fatal error:  Class 'URL' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 88
+[25-Nov-2013 00:43:38 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 277
+[25-Nov-2013 00:46:41 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 2
+[25-Nov-2013 00:46:44 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 2
+[25-Nov-2013 00:46:46 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 2
+[25-Nov-2013 00:46:47 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 2
+[25-Nov-2013 00:47:13 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 2
+[25-Nov-2013 00:47:15 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 2
+[25-Nov-2013 00:47:17 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 2
+[25-Nov-2013 00:47:18 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 2
+[25-Nov-2013 00:49:39 America/Denver] PHP Fatal error:  Class 'ContactsHelper' not found in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.main.php on line 49
+[25-Nov-2013 00:50:18 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 3
+[25-Nov-2013 00:50:20 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 3
+[25-Nov-2013 00:50:21 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 3
+[25-Nov-2013 00:51:17 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 3
+[25-Nov-2013 00:52:35 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 3
+[25-Nov-2013 00:52:40 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.page.php on line 3
+[25-Nov-2013 01:00:41 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 71
+[25-Nov-2013 01:01:11 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 71
+[25-Nov-2013 01:03:09 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 71
+[25-Nov-2013 01:03:23 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 71
+[25-Nov-2013 01:13:25 America/Denver] PHP Notice:  Use of undefined constant SITE - assumed 'SITE' in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 71
+[25-Nov-2013 01:13:25 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 71
+[25-Nov-2013 01:13:58 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[25-Nov-2013 06:13:23 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 06:15:32 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 06:15:33 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[25-Nov-2013 14:35:11 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 14:35:30 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[25-Nov-2013 14:35:53 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[25-Nov-2013 14:41:51 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[28-Nov-2013 06:49:44 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[28-Nov-2013 06:50:03 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[28-Nov-2013 06:50:24 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[28-Nov-2013 06:50:45 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[28-Nov-2013 06:51:14 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[28-Nov-2013 06:51:15 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[28-Nov-2013 06:52:06 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[28-Nov-2013 06:52:26 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[28-Nov-2013 06:53:31 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[28-Nov-2013 06:53:32 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[29-Nov-2013 09:05:06 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[29-Nov-2013 09:05:22 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[06-Dec-2013 06:03:45 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[06-Dec-2013 06:04:35 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[06-Dec-2013 06:04:37 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[11-Dec-2013 06:23:06 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 06:23:36 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 06:23:38 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[11-Dec-2013 06:24:37 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 07:09:47 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 14:04:33 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:31:37 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:32:05 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:33:51 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:34:11 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:34:19 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:34:45 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:35:01 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:35:15 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:35:28 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:35:37 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:35:43 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:35:57 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:36:07 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:36:16 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:36:57 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:37:37 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 18:37:39 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[11-Dec-2013 19:23:53 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[11-Dec-2013 19:23:56 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[12-Dec-2013 04:55:37 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 04:59:45 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 04:59:45 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[12-Dec-2013 05:40:56 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 05:41:05 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 05:41:34 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 05:43:58 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 05:44:03 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 05:44:34 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 05:44:41 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 05:48:59 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 05:49:05 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 05:50:07 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 05:50:08 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 05:53:01 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 05:53:04 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 05:57:09 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 05:57:09 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[12-Dec-2013 06:09:03 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:23:19 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:24:36 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:24:37 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:24:38 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:24:44 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:24:45 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:24:53 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:27:14 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:27:15 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:27:17 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:27:47 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:27:54 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:29:46 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:30:38 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:30:40 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:33:58 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:34:26 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:34:27 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:34:45 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:34:47 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:35:35 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:35:36 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:35:50 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:36:14 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:36:31 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:36:32 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:37:15 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:37:17 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:37:23 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:38:19 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:38:47 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:38:48 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:39:21 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:39:23 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:40:02 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:40:02 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:40:04 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:41:28 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:41:29 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:41:32 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:41:46 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:43:38 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:43:41 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:44:06 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:45:16 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:46:02 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:46:04 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:46:25 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:46:35 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:46:37 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:46:56 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:46:56 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[12-Dec-2013 06:47:01 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:51:39 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:51:57 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:51:59 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[12-Dec-2013 06:52:06 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:52:07 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:52:35 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:52:37 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:53:36 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:53:50 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:54:46 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:54:48 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:55:29 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:55:52 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:56:04 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:56:20 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:56:36 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:56:37 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[12-Dec-2013 06:56:40 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:57:29 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:57:31 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[12-Dec-2013 06:57:34 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:57:55 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:57:59 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:58:01 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:58:02 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:58:15 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 06:58:17 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:05:40 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:05:42 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:09:01 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:16:09 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:16:53 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:16:55 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:17:33 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:17:34 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:18:43 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:18:55 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:18:57 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:19:28 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:20:08 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:20:09 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:20:48 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:23:00 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:23:04 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:23:11 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:23:42 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:23:46 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:45:51 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:45:55 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:46:37 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[12-Dec-2013 07:46:37 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[13-Dec-2013 03:39:56 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[13-Dec-2013 03:40:26 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[13-Dec-2013 03:40:41 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[13-Dec-2013 03:40:41 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/importer/example/contacts.invite.php on line 75
+[13-Dec-2013 05:19:14 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[13-Dec-2013 05:19:15 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[13-Dec-2013 05:19:19 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[13-Dec-2013 05:20:59 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[13-Dec-2013 05:21:38 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[13-Dec-2013 05:21:45 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[13-Dec-2013 05:25:48 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
+[13-Dec-2013 05:50:52 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/importer/index.php on line 3
