@@ -39,7 +39,6 @@ class Controller_Home extends Controller_Template  {
  
   public function action_index()
   {
-
 	 /*
 	 if (HTTP_Request::POST == $this->request->method()){
       $data=$this->request->post();
@@ -97,7 +96,47 @@ class Controller_Home extends Controller_Template  {
 				 ->as_array();
 		
 		
-		
+		/////////////////////////////
+		 if (HTTP_Request::POST == $this->request->method()){
+
+          $data= $this->request->post();
+          $count=count($data);
+		  
+		  if($data['formid']=='1'){
+		      $contacts= DB::select()->from('listcontacts')
+		         ->where('email', '=', $data['key'])
+				 ->execute()
+				 ->as_array();
+				 
+			  //print_r($contacts);
+				
+		   }
+		   
+		  if($data['formid']=='2'){
+		    //for($i=1; $i<$count;$i++){
+		    for($i=1; $i<100;$i++){
+		     if(isset($data[$i])){
+		     $to =$data[$i];		   
+             $subject = "Referral program";
+             $message = "Hello!, Welcome to the referral program...";
+             $from = "someonelse@example.com";
+             $headers = "From:" . $from;
+             mail($to,$subject,$message,$headers);
+             //echo "Mail Sent.";
+		   
+		   	 $query = DB::update('listcontacts')
+		         ->set(array('sent_status'=> 1))
+		          ->where('email', '=',$data[$i] )
+				  ->execute();
+		   
+		    }
+           }	
+		  Request::current()->redirect('home/congrats/'.$id);
+		  }
+		  
+      
+		}
+		/////////////////////////////
 		
 		$this->template->content =View::factory('home/index')
 							    ->set('contacts', $contacts) 
@@ -122,10 +161,45 @@ class Controller_Home extends Controller_Template  {
 				 
 		$results = ORM::factory('contact')->find_all(); // loads all article   object from table
          
+		 
+		$contacts= DB::select()->from('listcontacts')
+		        // ->where('referralProgID', '=', $id)
+				 ->execute()
+				 ->as_array();
+				 
+				 
+		/////////////////////////////
+		 if (HTTP_Request::POST == $this->request->method()){
+
+          $data= $this->request->post();
+          $count=count($data);
+		  
+		  if($data['formid']=='1'){
+		      $contacts= DB::select()->from('listcontacts')
+		         ->where('email', '=', $data['key'])
+				 ->execute()
+				 ->as_array(); 
+			  
+			  //print_r($contacts);	
+		   }
+		   
+		  if($data['formid']=='2'){
+		   	 $query = DB::update('listcontacts')
+		         ->set(array('sent_status'=> 1))
+		          ->where('email', '=',$data[$i] )
+				  ->execute();
+
+		    Request::current()->redirect('home/congrats');
+		  }
+		  
+      
+		}
+		/////////////////////////////
         
         $this->template->content =View::factory('home/congrats')
 							    ->set('results', $results)
-							    ->bind('options', $options);	
+							    ->bind('options', $options)
+								->bind('contacts', $contacts);	
    }
 
 }
