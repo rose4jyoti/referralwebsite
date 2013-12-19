@@ -1,7 +1,41 @@
 <?php
 //print_r($_REQUEST);
-//echo 'page.php='.$customerid;
+ $customerid=$_REQUEST['id'];
+ echo $customerid;
 ?>
+
+<!----------Data fetching from database----->
+<?php
+$dbhost = 'localhost';
+$dbuser = 'softoasi_referal';
+$dbpass = ']N^fwqZ*@7X9';
+$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+if(! $conn )
+{  
+  die('Could not connect: ' . mysql_error());
+}
+ //$sql = 'SELECT * FROM rp_referralprog_images';
+$sql = "SELECT * FROM rp_referralprog_images WHERE referralProgID='". $customerid."'  ORDER BY referralProgImageID Desc";
+
+mysql_select_db('softoasi_referral');
+$result = mysql_query( $sql, $conn );
+while($row = mysql_fetch_array($result, MYSQL_ASSOC))
+{
+   if($row['referralProgImageOrder']=='1'){
+      $img1= $row['referralProgImage'];
+   }
+}
+
+$sql2 ="SELECT * FROM rp_referralprog_details WHERE referralProgID='". $customerid."' ";
+$result2 = mysql_query( $sql2, $conn );
+while($row = mysql_fetch_array($result2, MYSQL_ASSOC))
+{
+      $refprogtitle= $row['referralProgTitle'];
+}
+
+mysql_close($conn);
+?>
+
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
@@ -97,7 +131,7 @@
                             <div class="right">
                             <p>
 								<b> 
-								               Referal Program1		                      	
+								        <?php echo $refprogtitle?>                     	
 							    </b>
 							<!---
                             STAR SHARING NOW for a chance to win
