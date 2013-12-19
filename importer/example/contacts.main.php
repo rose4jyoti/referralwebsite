@@ -1,6 +1,6 @@
 <?php
 //print_r($_REQUEST);
-//echo 'main.php='.$customerid=$_REQUEST['id'];
+//echo $customerid=$_REQUEST['id'];
 ?>
 
 <?php
