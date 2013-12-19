@@ -2,6 +2,30 @@
 
 <?php echo Html::style('public/css/style.css'); ?>
 <?php echo Html::style('public/css/page7.css'); ?>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+function check(){
+ //alert('test');
+  temp= document.getElementById("mark").checked;
+
+  if(temp==true){
+  //alert('case1');
+   $(".email").attr ( "checked" ,"checked" );
+   
+    document.getElementsByClass("email").checked=true;
+    //document.getElementById("ss").checked=true;
+  }
+  if(temp==false){
+   //alert('case2');
+    $(".email").removeAttr('checked');
+     
+	 document.getElementsByClass("email").checked=false;
+     //document.getElementById("ss").checked=false;
+  }
+  
+}
+</script>
 
 <?php 
 foreach ($options as $temp) :
@@ -52,19 +76,15 @@ endforeach; ?>
 							--->
 							
 							<b>
-Referral program1 description
-							
-							<?php
-      foreach ($options2 as $temp) :
-        echo $temp['referralProgDescription']; 
-      endforeach; 
-?>
-
-</b>
-							
-							</h3>
+	                         <?php
+                               foreach ($options2 as $temp) :
+                                echo $temp['referralProgDescription']; 
+                               endforeach; 
+                             ?>
+                            </b>
+						   
+					  </h3>
                             
-
                             <!--div class="search_out">
                             
                             <table class="ss">
@@ -82,49 +102,64 @@ Referral program1 description
                           </div-->
                               <div class="ss_out_new">
 							<h1>
-							<input type="checkbox" value="" name=""><b>Mark all</b></h1>
+							<input type="checkbox" value="" name="" id="mark" onclick='check();'><b>Select all</b></h1>
+							
 							<h2>
-							<input type="text" class="new_in_box" name="">
-                                <a href="#"><img style=" float: left;
-    margin: 0;
-    padding: 4px;" src="/dev2013/referral/public/image/search_but.png" alt="">
-								</a>
+							
+							<?= Form::open('home/index'); ?>
+						    <?= Form::input('key','',  array('class'=>'new_in_box')); ?>
+                             <!----<input type="text" class="new_in_box" name="">-->		
+                              <?php echo Form::hidden('formid', '1'); ?>
+                           
+                             <button style="border:none; background:none;height: 22px;width: 28px;" type="submit">
+							  <img style=" float: left;margin: 0; padding: 4px;" src="/dev2013/referral/public/image/search_but.png" alt="">
+							 </button>							  
+							<?= Form::close(); ?>								
+
+									
+
+                               <!---<a href="#">--->
+							   <!----<img style=" float: left;margin: 0; padding: 4px;" src="/dev2013/referral/public/image/search_but.png" alt="">
+							   </a>
+							   --->
+							   
+							   
                              </h2>
+							 
 							</div>
 							
 							
 							<div class="song_over">
-                            <table width="92%" class="songs_list">
-							
-                              <tbody>
-	
-                              
-                               <?php foreach ($contacts as $temp) : ?>
-                               <tr class="with_back">
-                                <td width="5%" valign="middle" align="left"><input type="checkbox" value="" name=""></td>
-                                <td width="40%" valign="middle" align="center">
-								<b><?php echo $temp['name']; ?> </b>
-								</td>
-                                 <td width="60%" valign="middle" align="center">
-								<?php echo $temp['email']; ?> 
-								 </td>  
-                              </tr>
 
+                            <table width="92%" class="songs_list">
+			  
+                             <?= Form::open('home/index'); ?>
+						      <?php $i=1; ?>
+                               <?php foreach ($contacts as $temp) : ?>
+							   
+								<input id="ss" type="checkbox" value="<?php echo $temp['email']; ?> " name="<?php echo $i;?>" class="email">
+                               
+								<b><?php echo $temp['name']; ?> </b>
+
+								  <?php echo $temp['email']; ?>
+								  <br> 
+                                  
+								  <?php $i++; ?>
 							   <?php endforeach; ?>
-                              
+                              <?php echo Form::hidden('formid', '2'); ?>
+							  
                                <!---<tr class="no_back">
                                 <td width="5%" valign="middle" align="left"><input type="checkbox" value="" name=""></td>
                                 <td width="18%" valign="middle" align="center"><b>Staphane</b></td>
                                   <td width="77%" valign="middle" align="center">Staphane@gmail.com</td>  
                               </tr>
 							  ---->
-                      
-                            </tbody></table>
+
+							
+							</table>
                             
                             </div>
-							
-							
-                            
+							 
                             <!--<h1 class="achieve_new"><a href="#">Read <b>terms and conditions</b> before participating</a></h1>--->
                                             
           </div>
@@ -133,13 +168,10 @@ Referral program1 description
 <div class="congratulations">
 <div class="nn_class">
                             						
-						
-                        
+
 						    <!--<span class="msg_name">                               dsfgdfgdfgh			                      								  
 							 </span>---->
 						
-					
-
 							
 								<?php if(isset($img2)){ ?>
 <img style="
@@ -156,8 +188,14 @@ Referral program1 description
 <a href="<?php echo URL::base(); ?>/home/congrats/<?php echo $id; ?>">
 
 
-<img style="float: right;
-    margin: 8px 7px 13px 0;" alt="" src="<?php echo URL::base(); ?>/public/image/next_but.jpg">
+   <!---<img style="float: right; margin: 8px 7px 13px 0;" alt="" src="<?php echo URL::base(); ?>/public/image/next_but.jpg">-->
+
+      <button type="submit" style="background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; float:right; margin: 40px 0 10px 0px;">
+	     <?php echo Html::image('public/image/next_but.jpg', array('alt'=>'', 'class'=>''));  ?>
+        </button>
+	
+       <?//= Form::submit('create', 'Create'); ?>
+       <?= Form::close(); ?>
 
 </a>
 </div>

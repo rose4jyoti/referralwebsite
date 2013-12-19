@@ -1,3 +1,6 @@
+<?php
+//echo $customerid=$_REQUEST['id'];
+?>
 <script>
 function check()
 {
