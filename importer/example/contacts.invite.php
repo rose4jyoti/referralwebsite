@@ -1,3 +1,7 @@
+<?php
+//echo $customerid=$_REQUEST['id'];
+?>
+
 <?php 
 define("SITE","http://softoasistech.com/dev2013/referral");
 ?>
@@ -72,6 +76,9 @@ mysql_close();
 
 <script>
 //function newDoc() {
-  window.location.assign("<?php echo SITE;?>/home/index/<?php echo $customerid; ?>")
+  //window.location.assign("<?php echo SITE;?>/home/index/<?php echo $customerid; ?>"); 
+  
+  window.location.assign("<?php echo SITE;?>/home/index/<?php echo $customerid=$_REQUEST['id']; ?>")
+ 
  // }
 </script>
