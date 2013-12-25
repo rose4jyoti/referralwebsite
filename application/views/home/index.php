@@ -4,29 +4,7 @@
 <?php echo Html::style('public/css/page7.css'); ?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 </script>
-<!--<script>
-function check(){
- //alert('test');
-  temp= document.getElementById("mark").checked;
-
-  if(temp==true){
-  //alert('case1');
-   $(".email").attr ( "checked" ,"checked" );
-   
-    document.getElementsByClass("email").checked=true;
-    //document.getElementById("ss").checked=true;
-  }
-  if(temp==false){
-   //alert('case2');
-    $(".email").removeAttr('checked');
-     
-	 document.getElementsByClass("email").checked=false;
-     //document.getElementById("ss").checked=false;
-  }
-  
-}
-</script>--->
-
+<!---------To select all the checkbox---->
 <script type="text/javascript">
  function checkAll(bx) {
  //alert('ok');
@@ -36,6 +14,32 @@ function check(){
       cbs[i].checked = bx.checked;
     }
   }
+}
+
+</script>
+<!-----counting the checked checkbox---->
+<script type="text/javascript">
+function fnc()
+{   
+    var count=0;
+    x=document.getElementById("chkdiv").elements;
+    for(i=0;i<x.length;++i)
+    {
+	if(x[i].type=='checkbox' && x[i].checked)
+	 {
+      //alert("checked");
+	  count++;
+	 }
+	 
+    }
+	
+  //alert(count);
+  if (count<3)
+  {
+  alert("Please select atleast 3 contact to invite.");
+  return false;
+  }
+  
 }
 
 </script>
@@ -145,9 +149,7 @@ endforeach; ?>
 							
 							<div class="song_over">
 
-                            <table width="92%" class="songs_list">
-			  
-                             <?= Form::open('home/index'); ?>
+                             <?= Form::open('home/index',array('id'=>'chkdiv', 'onsubmit'=>'return fnc();')); ?>
 						      <?php $i=1; ?>
                                <?php foreach ($contacts as $temp) : ?>
 							   
@@ -168,9 +170,6 @@ endforeach; ?>
                                   <td width="77%" valign="middle" align="center">Staphane@gmail.com</td>  
                               </tr>
 							  ---->
-
-							
-							</table>
                             
                             </div>
 							 
