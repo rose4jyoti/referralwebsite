@@ -147,17 +147,17 @@ of your friends will have
 <table class="songs_list">
   <tbody>
   
-  
+ <?php $i=1;?> 
   <?php foreach ($contacts as $temp) : ?>					  
    <tr class="no_back">
-    <td style="" width="30%" valign="middle" align="left"><b><?php echo $temp['name']; ?></b></td>
-    <td width="40%" valign="middle" align="center"><?php echo $temp['email']; ?> </td>
-      <td width="5%" valign="middle" align="center">
+    <td style=" float: left;width: 75px;padding: 0 0 0 3px;text-align: left;" class="td1" valign="middle" align="left"><b><?php echo $temp['name']; ?></b></td>
+    <td style=" float: left;width: 140px;text-align: left;" class="td2" valign="middle" align="center"><?php echo $temp['email']; ?> </td>
+     <td style="float:left;" width="5%" valign="middle" align="center">
 	  
 	  <img alt="" src="/dev2013/referral/public/image/ok.jpg">	 
 	  
-	  </td>
-    <td width="10%" valign="middle" align="center">
+	 </td>
+    <td style="float:left;" width="10%" valign="middle" align="center">
 	<span>
 	<?php 
 	if($temp['sent_status']==1){
@@ -170,8 +170,20 @@ of your friends will have
 
 	?>
 	</span></td>
-    <td width="15%">
-	<img class="r_image" alt="" src="/dev2013/referral/public/image/remind.png">	
+    <td style="float:left;" width="15%">
+	
+    <?= Form::open('home/congrats'); ?>
+	<?php $temp=$temp['email']; ?>
+	<?php echo Form::hidden($i, $temp); ?>
+    <?php echo Form::hidden('formid', '2'); ?>
+		
+	<button type="submit" style="background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; ">
+	 <?php echo Html::image('public/image/remind.png', array('alt'=>'', 'class'=>'r_image'));  ?>
+    </button>
+    <?= Form::close(); ?>
+	   
+
+     <!---<img class="r_image" alt="" src="/dev2013/referral/public/image/remind.png">--->	
 	</td>
    </tr>					  
 
