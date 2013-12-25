@@ -2,6 +2,11 @@
 <?php echo Html::style('public/css/style.css'); ?>
 <?php echo Html::style('public/css/page7.css'); ?>
 
+<!-----social sharing------------>
+<?php echo Html::style('public/css/SuperSocialShare.css'); ?>
+<?php echo Html::script('public/js/jquery.js'); ?>
+<?php echo Html::script('public/js/SuperSocialShare.js'); ?>
+
 <?php 
 foreach ($options as $temp) :
  if($temp['referralProgImageOrder']=='3'){
@@ -242,6 +247,9 @@ of your friends will have
 </div>
 <h1 class="achieve_social"> invite your social contacts to participate:</h1>
 
+
+
+<!--
 <div class="social_second">
 <a href="#">
 <img alt="" src="/dev2013/referral/public/image/face_b.jpg"></a>
@@ -250,14 +258,18 @@ of your friends will have
 <a href="#">
 <img alt="" src="/dev2013/referral/public/image/in_i.jpg"></a>
 </div>
+-->
+
+<div class="social" style="  float: left; margin: 5px 0 -23px 227px; width: 100%;">
+  <div class="supersocialshare" data-networks="linkedin,twitter,facebook" data-url="http://codecanyon.net/user/WeCreateUK" data-open="true"></div>
+  
+</div>	
 
 
+     </div>
 
-
-</div>
-
-</div>
-                </div>
+   </div>
+  </div>
 </div>
 	   
          
