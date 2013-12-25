@@ -1,0 +1,98 @@
+/*
+ *
+ * Bubble Share Style
+ *
+ */
+
+.supersocialshare.bubble {
+    display: block;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.supersocialshare.bubble .sb_main:hover {
+    background-position: 0px -64px;
+}
+
+.supersocialshare.bubble .sb_network_button {
+    display: block;
+    width: 46px;
+    height: 46px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    z-index: 1;
+    cursor: pointer;
+    text-indent: -9999px;
+}
+
+/*
+.supersocialshare.bubble .sb_network_button.facebook {
+    background-image: url(../images/bubble_facebook_share_button.png);
+}
+*/
+
+.supersocialshare.bubble .sb_network_button.facebook {
+    background-image: url(../image/facebook.jpg);
+}
+
+/*
+.supersocialshare.bubble .sb_network_button.linkedin {
+    background-image: url(../images/bubble_linkedin_share_button.png);
+}
+*/
+.supersocialshare.bubble .sb_network_button.linkedin {
+    background-image: url(../image/linkedin.jpg);
+}
+
+.supersocialshare.bubble .sb_network_button.google {
+    background-image: url(../image/bubble_googleplus_share_button.png);
+}
+
+/*
+.supersocialshare.bubble .sb_network_button.twitter {
+    background-image: url(../images/bubble_twitter_share_button.png);
+}
+*/
+.supersocialshare.bubble .sb_network_button.twitter {
+    background-image: url(../image/twitter.jpg);
+}
+
+
+.supersocialshare.bubble .sb_network_button.pinterest {
+    background-image: url(../image/bubble_pinterest_share_button.png);
+}
+
+.supersocialshare.bubble .sb_network_button.email {
+    background-image:url(../image/bubble_email_share_button.png);
+}
+
+/*
+.supersocialshare.bubble .sb_network_button:hover {
+    background-position: 0px -46px;
+}
+*/
+
+.supersocialshare.bubble{
+ //display:none;
+}
+
+.sb_network_button{
+ top:0px !important;
+}
+
+.sb_network_button.facebook {
+left:0px !important;
+}
+.sb_network_button.linkedin {
+left:100px !important;
+}
+.sb_network_button.twitter {
+left:50px !important;
+}
