@@ -104,7 +104,8 @@ class Controller_Home extends Controller_Template  {
 		  
 		  if($data['formid']=='1'){
 		      $contacts= DB::select()->from('listcontacts')
-		         ->where('email', '=', $data['key'])
+		        // ->where('email', '=', $data['key'])
+		         ->where('email', 'LIKE', '%'.$data['key'].'%')
 				 ->execute()
 				 ->as_array();
 				 
@@ -176,7 +177,8 @@ class Controller_Home extends Controller_Template  {
 		  
 		  if($data['formid']=='1'){
 		      $contacts= DB::select()->from('listcontacts')
-		         ->where('email', '=', $data['key'])
+		        // ->where('email', '=', $data['key'])
+				 ->where('email', 'LIKE', '%'.$data['key'].'%')
 				 ->execute()
 				 ->as_array(); 
 			  
@@ -184,12 +186,33 @@ class Controller_Home extends Controller_Template  {
 		   }
 		   
 		  if($data['formid']=='2'){
+		  
+		   //$data= $this->request->post();
+		   //print_r($data);
+		  
+		  ////////////////////////////////
+
+		     if(isset($data[1])){
+		     $to =$data[1];		   
+             $subject = "Remind Referral program";
+             $message = "Hello!, This mesage hs been sent to remin you about the referral program...";
+             $from = "someonelse@example.com";
+             $headers = "From:" . $from;
+             mail($to,$subject,$message,$headers);
+             //echo "Mail Sent.";
+		   
 		   	 $query = DB::update('listcontacts')
 		         ->set(array('sent_status'=> 1))
-		          ->where('email', '=',$data[$i] )
+		          ->where('email', '=',$data[1] )
 				  ->execute();
-
-		    Request::current()->redirect('home/congrats');
+		   
+		    }
+     	
+		  Request::current()->redirect('home/congrats/');
+       
+		   
+		  ///////////////////////////////
+		  
 		  }
 		  
       
