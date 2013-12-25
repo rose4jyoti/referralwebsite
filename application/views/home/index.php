@@ -4,7 +4,7 @@
 <?php echo Html::style('public/css/page7.css'); ?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 </script>
-<script>
+<!--<script>
 function check(){
  //alert('test');
   temp= document.getElementById("mark").checked;
@@ -25,6 +25,19 @@ function check(){
   }
   
 }
+</script>--->
+
+<script type="text/javascript">
+ function checkAll(bx) {
+ //alert('ok');
+  var cbs = document.getElementsByTagName('input');
+  for(var i=0; i < cbs.length; i++) {
+    if(cbs[i].type == 'checkbox') {
+      cbs[i].checked = bx.checked;
+    }
+  }
+}
+
 </script>
 
 <?php 
@@ -102,7 +115,8 @@ endforeach; ?>
                           </div-->
                               <div class="ss_out_new">
 							<h1>
-							<input type="checkbox" value="" name="" id="mark" onclick='check();'><b>Select all</b></h1>
+							<!---<input type="checkbox" value="" name="" id="mark" onclick='check();'>-->
+							<input type="checkbox" value="" name="" id="mark" onClick="checkAll(this)" checked><b>Select all</b></h1>
 							
 							<h2>
 							
@@ -137,7 +151,7 @@ endforeach; ?>
 						      <?php $i=1; ?>
                                <?php foreach ($contacts as $temp) : ?>
 							   
-								<input id="ss" type="checkbox" value="<?php echo $temp['email']; ?> " name="<?php echo $i;?>" class="email">
+								<input id="ss" type="checkbox" value="<?php echo $temp['email']; ?> " name="<?php echo $i;?>" class="email" checked>
                                
 								<b><?php echo $temp['name']; ?> </b>
 
