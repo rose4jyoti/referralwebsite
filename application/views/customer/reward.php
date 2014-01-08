@@ -198,6 +198,11 @@ from this
 <br>
  XLS 
 <b>file</b>.
+
+<b><?php echo Form::file('codefile1', array('style'=>'margin: 0 0 0 -60px;
+    opacity: 0;cursor: pointer;')); ?> </b>
+	
+	
 </span></div>
 
        
@@ -297,6 +302,9 @@ to give an instant reward to the participants with a
 </select>
 from this XLS
 <b>file</b>.
+
+<b><?php echo Form::file('codefile2', array('style'=>'margin: 0 0 0 -60px;
+    opacity: 0;cursor: pointer;')); ?> </b>
 
 </span>
 

@@ -81,17 +81,16 @@ of your friends will have
 
 <div class="contact_in">
 <span>Contacts Invited</span>
-<b>25</b>
+<b><?php echo $countsent?></b>
 
 </div>
 
 
 <div class="contact_in">
 <span>Contacts registered</span>
-<b>6/
-
-   78	
-
+<b><?php echo $countregistered ?>/
+<?php echo $counttotal ?>
+ 
 </b>
 
 </div>
@@ -100,6 +99,17 @@ of your friends will have
 <div class="contact_in">
 <span>Time Left</span>
 <b>23D 24H 59M</b>
+
+
+<?php
+    /*
+    $now = time(); // or your date as well
+     $your_date = strtotime("2013-12-27");
+     $datediff = $now - $your_date;
+     echo floor($datediff/(60*60*24));
+	*/
+?>
+
 
 </div>
 
@@ -132,9 +142,10 @@ of your friends will have
                               <?= Form::input('key','',  array('class'=>'new_in_box')); ?>
 							  <!---<input type="text" class="new_in_box" name="">---->
 							  <?php echo Form::hidden('formid', '1'); ?>
+							  
 							  <button style="border:none; background:none;height: 22px;width: 28px;" type="submit">
 							  <img style=" float: left;margin: 0; padding: 4px;" src="/dev2013/referral/public/image/search_but.png" alt="">
-							 </button>							  
+							  </button>							  
 							<?= Form::close(); ?>
 							
                                <!--- <a href="#">
@@ -153,7 +164,8 @@ of your friends will have
   <tbody>
   
  <?php $i=1;?> 
-  <?php foreach ($contacts as $temp) : ?>					  
+  <?php foreach ($contacts as $temp) : ?>	
+
    <tr class="no_back">
     <td style=" float: left;width: 75px;padding: 0 0 0 3px;text-align: left;" class="td1" valign="middle" align="left"><b><?php echo $temp['name']; ?></b></td>
     <td style=" float: left;width: 140px;text-align: left;" class="td2" valign="middle" align="center"><?php echo $temp['email']; ?> </td>
@@ -165,25 +177,38 @@ of your friends will have
     <td style="float:left;" width="10%" valign="middle" align="center">
 	<span>
 	<?php 
-	if($temp['sent_status']==1){
+    $ss=$temp['sent_status']; 
+	if($ss==1){
 	 echo 'Sent';
 	}
 	else{
 	  echo 'Not Invited';
 	}
 	
-
 	?>
 	</span></td>
     <td style="float:left;" width="15%">
 	
+   
     <?= Form::open('home/congrats'); ?>
 	<?php $temp=$temp['email']; ?>
+   
 	<?php echo Form::hidden($i, $temp); ?>
     <?php echo Form::hidden('formid', '2'); ?>
-		
-	<button type="submit" style="background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; ">
-	 <?php echo Html::image('public/image/remind.png', array('alt'=>'', 'class'=>'r_image'));  ?>
+	
+ 
+
+	
+	<button type="submit" style="cursor:pointer;background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; ">
+
+	 <?php if($ss==1){
+	   echo Html::image('public/image/invite.png', array('alt'=>'', 'class'=>'r_image'));
+	 }
+	 else{
+	   echo Html::image('public/image/remind.png', array('alt'=>'', 'class'=>'r_image'));
+	 }
+	?>
+	
     </button>
     <?= Form::close(); ?>
 	   
@@ -261,8 +286,11 @@ of your friends will have
 -->
 
 <div class="social" style="  float: left; margin: 5px 0 -23px 227px; width: 100%;">
-  <div class="supersocialshare" data-networks="linkedin,twitter,facebook" data-url="http://codecanyon.net/user/WeCreateUK" data-open="true"></div>
+  <!--<div class="supersocialshare" data-networks="linkedin,twitter,facebook" data-url="http://codecanyon.net/user/WeCreateUK" data-open="true"></div>-->
+  <?php foreach($social as $temp):?>
+  <div class="supersocialshare" data-networks="linkedin,twitter,facebook" data-url="<?php echo $temp['facebook'];?>" data-open="true"></div>
   
+   <?php endforeach;?>
 </div>	
 
 
@@ -286,20 +314,20 @@ of your friends will have
 <!-------------------end contents----------------->
 
 
-<div class="foter" style=>
-      <div class="foter_in"  style="float: left; margin: 32px 0px 0px;">
+<div class="foter">
+      <div class="foter_in">
         <div class="foter_content">
           <div class="foter_content_in">
             <ul>
-              <li>About US </li>
+              <li><a class="special" href="<?php echo URL::base(); ?>/front/about">About US </a></li>
               |
-              <li> Q&A </li>
+              <li><a class="special" href="<?php echo URL::base(); ?>/front/quality"> Q&A </a></li>
               |
-              <li> Terms of Use</li>
+              <li><a class="special" href="<?php echo URL::base(); ?>/front/tou"> Terms of Use</a></li>
               |
-              <li>Privacy Policy</li>
+              <li><a class="special" href="<?php echo URL::base(); ?>/front/privacypolicy"> Privacy Policy</a></li>
               |
-              <li>Contact US </li>
+              <li><a class="special" href="<?php echo URL::base(); ?>/front/contact"> Contact US</a></li>
              
             </ul>
             <div class="socil_icon">
@@ -311,6 +339,7 @@ of your friends will have
         </div>
       </div>
     </div>
+	
    </div>
   </div>
   
