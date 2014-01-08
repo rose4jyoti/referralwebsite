@@ -168,7 +168,27 @@ class Controller_Home extends Controller_Template  {
 				 ->execute()
 				 ->as_array();
 				 
-				 
+		/******counting invitation********/
+		$temptotal= DB::select()->from('listcontacts')
+		         //->where('register_status', '=', 1)
+				 ->execute()
+				 ->as_array();
+		$counttotal=  count($temptotal);	
+		
+		$tempsent= DB::select()->from('listcontacts')
+		         ->where('sent_status', '=', 1)
+				 ->execute()
+				 ->as_array();
+		$countsent=  count($tempsent);	
+        $tempregistered= DB::select()->from('listcontacts')
+		         ->where('register_status', '=', 1)
+				 ->execute()
+				 ->as_array();
+		$countregistered=  count($tempregistered);			
+        //print_r($countsent);
+        //print_r($countregistered);
+
+			
 		/////////////////////////////
 		 if (HTTP_Request::POST == $this->request->method()){
 
@@ -218,11 +238,24 @@ class Controller_Home extends Controller_Template  {
       
 		}
 		/////////////////////////////
+		
+		 $social= DB::select()->from('sociallinks')
+		         //->where('referralProgID', '=', $id)
+				 ->limit(1)
+				 ->execute()
+				 ->as_array();
+
+		//print_r($social);
         
+		
         $this->template->content =View::factory('home/congrats')
 							    ->set('results', $results)
 							    ->bind('options', $options)
-								->bind('contacts', $contacts);	
+								->bind('contacts', $contacts)
+								->bind('counttotal', $counttotal)
+								->bind('countsent', $countsent)
+								->bind('countregistered', $countregistered)	
+								->bind('social', $social);	
    }
 
 }
