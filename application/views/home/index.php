@@ -17,7 +17,6 @@
 }
 
 </script>
-
 <!-----counting the checked checkbox---->
 <script type="text/javascript">
 function fnc()
@@ -34,10 +33,11 @@ function fnc()
 	 
     }
 	
-  //alert(count);
+  //alert(count); 
   if (count<3)
   {
-  alert("Please select atleast 3 contact to invite.");
+   document.getElementById("warning").style.display="block"; 
+  //alert("Please select atleast 3 contact to invite.");
   return false;
   }
   
@@ -88,10 +88,14 @@ endforeach; ?>
                  	<div class="img_in">
                                 <div class="participation">
                             <h3>
+							
+							<p style="display:none; color: #FF0000;" id="warning"> Please select atleast 3 contacts to invite.
+							</p>
 							<!---
 							<b>invite your friends</b> to enter this giveaway
                             and get a free mp3 shuffling player
 							--->
+							
 							
 							<b>
 	                         <?php
@@ -100,6 +104,7 @@ endforeach; ?>
                                endforeach; 
                              ?>
                             </b>
+						
 						   
 					  </h3>
                             
@@ -235,20 +240,20 @@ endforeach; ?>
 <!-------------------end contents----------------->
 
 
-<div class="foter" style=>
-      <div class="foter_in"  style="float: left; margin: 32px 0px 0px;">
+<div class="foter">
+      <div class="foter_in">
         <div class="foter_content">
           <div class="foter_content_in">
             <ul>
-              <li>About US </li>
+              <li><a class="special" href="<?php echo URL::base(); ?>/front/about">About US </a></li>
               |
-              <li> Q&A </li>
+              <li><a class="special" href="<?php echo URL::base(); ?>/front/quality"> Q&A </a></li>
               |
-              <li> Terms of Use</li>
+              <li><a class="special" href="<?php echo URL::base(); ?>/front/tou"> Terms of Use</a></li>
               |
-              <li>Privacy Policy</li>
+              <li><a class="special" href="<?php echo URL::base(); ?>/front/privacypolicy"> Privacy Policy</a></li>
               |
-              <li>Contact US </li>
+              <li><a class="special" href="<?php echo URL::base(); ?>/front/contact"> Contact US</a></li>
              
             </ul>
             <div class="socil_icon">
@@ -260,6 +265,8 @@ endforeach; ?>
         </div>
       </div>
     </div>
+	
+	
    </div>
   </div>
   

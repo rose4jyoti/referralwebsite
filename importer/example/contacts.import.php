@@ -29,14 +29,17 @@ function check()
 define("SITE","http://softoasistech.com/dev2013/referral");
 ?>
 
-<form id="import_form" action="" class="center" method="post">
+<span style="display:none; color: #FF0000;" id="warning"> Requset could not be handled.Try again Later. </span>
+			 
+<!---<form name="myForm" id="import_form" action="" class="center" method="post" onsubmit="myFunction()">-->
+<form name="myForm" action="" class="center" method="post" onsubmit="return validateForm();" >
 	<?php if (!$this->current_class->ExternalAuth) {?>
 		  <table height="229" class="table">
 		    
 			<tbody>
-			<tr>
-							  
-			<td><h1>Login to your webmail account below <b>(Hotmail,Gmail,Yahoo,AOL)</b>
+			<tr>				  
+			<td>
+			<h1>Login to your webmail account below <b>(Hotmail,Gmail,Yahoo,AOL)</b>
 			 and discover how much money you colud receive!</h1>
 			</td>
             </tr>
@@ -86,10 +89,16 @@ define("SITE","http://softoasistech.com/dev2013/referral");
 		  <img src="<?php echo SITE; ?>/public/image/next_but.jpg"/>
 		<?php //echo $this->current_class->ExternalAuth? "Authorize Externally" : "Next"; ?>
 		</button>	
+
         <!------------------------------------------->				
 				
-				</td>
-			</tr>
+				
+				
+				
+		</td>
+	  </tr>
+	  
+
 			
 
 	<?php } ?>
@@ -109,10 +118,26 @@ define("SITE","http://softoasistech.com/dev2013/referral");
 								</a>
 								</td>
                               </tr>
-			
 		
 		   </tbody>
 		</table>
 	</form>
+	
+	
 
+<script>
+function validateForm()
+{
+var x=document.forms["myForm"]["email"].value;
+var atpos=x.indexOf("@");
+var dotpos=x.lastIndexOf(".");
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+  {
+  
+   document.getElementById("warning").style.display="block"; 
+  //alert("Not a valid e-mail address");
+  return false;
+  }
+}
+</script>
 	
