@@ -81,7 +81,7 @@ if (getenv('KOHANA_ENV') !== FALSE)
  */
 Kohana::init(array(
    //'base_url'   => 'http://softoasistech.com//dev2013/referral',
-	'base_url'   => '/dev2013/referral',
+    'base_url'   => 'http://referralwebsite.com.local',
     'index_file' => FALSE
 ));
 
@@ -122,8 +122,8 @@ Kohana::modules(array(
 
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
-		'controller' => 'user',
-		'action'     => 'index',
+		'controller' => 'front',
+		'action'     => 'home',
 	));
 
 Route::set('customer', '(<controller>(/<action>(/<id>(/<param>))))')

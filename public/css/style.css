@@ -552,18 +552,19 @@ ul.main_nav li a:hover{
 	height:auto;
 	margin: 120px 0 171px;
 	width: 100%;
+        padding:10px 30px 10px 30px;
 }
 .logo_b {
 	float: left;
-	margin: 0 0 0 35px;
+	margin: 0 0 0 0px;
 }
 .main_in {
 	border: 1px solid #DCDCDC;
 	border-radius: 5px 5px 5px 5px;
 	float: left;
 	height: 33px;
-	margin: 0 0 18px 45px;
-	width: 78%;
+	margin: 0 0 18px 18px;
+	width: 88%;
 }
 a.link {
 	color: #B6B6B6;

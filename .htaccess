@@ -2,7 +2,7 @@
 RewriteEngine On
 
 # Installation directory
-RewriteBase /dev2013/referral
+RewriteBase /
 
 # Protect hidden files from being viewed
 <Files .*>

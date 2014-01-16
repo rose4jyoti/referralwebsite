@@ -1,63 +1,64 @@
 <?php defined('SYSPATH') or die('No direct script access.'); ?>
 
 <?php echo Html::style('public/css/style.css'); ?>
+<?php echo Html::style('public/css/bootstrap.css'); ?>
+<?php echo Html::style('public/css/bootstrap-theme.css'); ?>
+<?php echo Html::style('public/css/bootstrap-theme.min.css'); ?>
+<?php echo Html::style('public/css/bootstrap.min.css'); ?>
 
 <div class="wrapper_out">
-  <div class="sign_in_wrapper">
-<div class="sign_box">
+    <div class="sign_in_wrapper">
+        <div class="sign_box">
 
-<div class="sign_box_in">
-<div class="logo_b">
+            <div class="sign_box_in">
+                <div class="logo_b">
 
-  <?php echo Html::image('public/image/dummy-logo.png', array('alt'=>''));  ?>
-	
-	</div>
-	
+                    <?php echo Html::image('public/image/dummy-logo.png', array('alt' => '')); ?>
 
-<? if ($message) : ?>
-	
-	<h3 class="message" style="background:none !important; color:red !important; padding-left:45px;">
-		<?= $message; ?>
-	</h3>
-
-<? endif; ?>
+                </div>
 
 
-<?= Form::open('user/login'); ?>
+                <? if ($message) : ?>
+                    <div class="row-fluid">
+                        <div class="alert alert" style="background:none !important; color:red !important; padding-left:45px;">
+                            <?= $message; ?>
+                        </div>                    
+                    </div>
+                <? endif; ?>
 
-<?= Form::input('username', HTML::chars(Arr::get($_POST, 'username')), array('class'=>'main_in')); ?>
+                
+                    <?= Form::open('user/login'); ?>
+                    <!-- 
+                    <?= Form::input('username', HTML::chars(Arr::get($_POST, 'username')), array('class' => 'main_in')); ?>
+                               
+                    <?= Form::password('password', '', array('class' => 'main_in')); ?>
+                    -->              
+                    <div class="">
+                        <?php echo Form::input('username', HTML::chars(Arr::get($_POST, 'username')), array('class' => 'main_in', 'id' => 'username', 'placeholder' => 'email', 'autofocus' => 'autofocus')) ?>
+                    </div>  
+                    <div class="">
+                        <?php echo Form::password('password', NULL, array('class' => 'main_in', 'id' => 'password', 'placeholder' => 'Password')) ?>
 
- <?= Form::password('password','', array('class'=>'main_in')); ?>
+                        <div class="help-block text-right">                        
+                            <?php echo HTML::anchor('user/recovery', 'Forgot your password?') ?>
+                        </div>
+                    </div>
+
+                    <div class="text-right">
+                        <?php echo Form::button("submit", "Sign In", array("class" => "btn-lg btn-primary")) ?><br/>
+                    </div>
+                    <div class="text-right">
+                        <?php echo "Don't have an account yet ?" . HTML::anchor("user/create", "Sign up for free here!") ?>
+                    </div>
+
+                    <?= Form::close(); ?>
+                
+
+            </div>
 
 
+        </div>
 
-<a class="link" href="#">Forgot your password?</a>
-
-<button type="submit" style="background: none repeat scroll 0 0 transparent;
-    border: medium none;">
-<?php echo Html::image('public/image/ss.jpg', array('alt'=>'', 'class'=>'ss_a'));  ?>
-</button>
-
-
-
-
-
-<p style="color: red; padding: 0px 0px 0px 26px; font: 13px Verdana,Geneva,sans-serif; ">
-Don't have an account yet ?<a href="<?php echo URL::base(); ?>/user/create" style="color: red; "> Sign up for free here !</a>
-</p>
-
-
-<?php //echo Html::image('public/image/sign.jpg', array('alt'=>'', 'class'=>'ss_a'));  ?>
-<?//= Form::submit('login', 'Sign In'); ?>
-
-<?= Form::close(); ?>
-
-
-</div>
-
-
-</div>
-       
     </div>
-  </div>
+</div>
 
