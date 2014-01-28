@@ -1,6 +1,41 @@
 <?php defined('SYSPATH') or die('No direct script access.'); ?>
-
 <?php echo Html::style('public/css/style.css'); ?>
+<?php echo Html::style('public/css/kooltip/kooltip.css'); ?>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+ <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+	 
+	  ////////Pie chart////////
+        var data = google.visualization.arrayToDataTable([
+         <?php echo $dataresult1; ?>
+        ]);
+
+        var options = {
+          title: 'Shares'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+
+	 ///////Bar chart /////
+	 var data = google.visualization.arrayToDataTable([
+        <?php echo $dataresult2; ?>
+        ]);
+
+        var options = {
+          title: 'Clicks',
+          vAxis: {title: 'Campaign',  titleTextStyle: {color: 'green'}}
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('bar'));
+        chart.draw(data, options);
+		
+		
+     }
+</script>
+
 <style type="text/css">
 a.change{
 background-image:url("<?php echo URL::base(); ?>/public/image/hover.png");
@@ -117,50 +152,54 @@ background-image:url("<?php echo URL::base(); ?>/public/image/hover.png");
           <div class="a_top">
             <h1>0</h1>
             <span>impressions 
-			<?php echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));  ?>
-			
+			<?php //echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));  ?>
+			<a href="#" class="kooltip"><span class="tooltip skyblue bottom center w200 slide-up">Views of the pages with widget code.</span><?php echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));  ?></a>
 			
 			</span> </div>
           <div class="a_top">
             <h2>0</h2>
             <span>Invites
-			<?php echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));  ?>
-		
+			<?php //echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));  ?>
+		    <a href="#" class="kooltip"><span class="tooltip skyblue bottom center w200 slide-up">Invites to join Referral program.</span> <?php echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));    ?></a>
 			
 			</span> </div>
           <div class="a_top">
             <h1>0</h1>
             <span>Participants
-            <?php echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));  ?>
-			
+            <?php //echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));  ?>
+			 <a href="#" class="kooltip"><span class="tooltip skyblue bottom center w200 slide-up">Campaign participants are people who entered your referral program either by entering your email address or by sharing your site via social network.</span> <?php echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));  ?></a>
 			
 			</span> </div>
           <div class="a_top">
             <h2>0</h2>
             <span>Shares 
-			<?php echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));  ?>
-			
+			<?php //echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));  ?>
+			 <a href="#" class="kooltip"><span class="tooltip skyblue bottom center w200 slide-up">Indicates how many times your promo message was shared by campaign participants via the channels you choose.</span> <?php echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));   ?></a>
+			 
 			</span> </div>
           <div class="a_top">
             <h2>0</h2>
             <span>Clicks
-			<?php echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));  ?>
-			
+			<?php //echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));  ?>
+			 <a href="#" class="kooltip"><span class="tooltip skyblue bottom center w200 slide-up">Clicks from unique users on the links which were distributed by your campaign participants.</span> <?php echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));    ?></a>
+			 
 			</span> </div>
           <div class="a_top">
             <h2>0</h2>
             <span>Rewards
-            <?php echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));  ?>
-			
+            <?php //echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));  ?>
+			<a href="#" class="kooltip"><span class="tooltip skyblue bottom center w200 slide-up">Rewards to the users .</span> <?php echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));    ?></a>
 			
 			</span> </div>
         </div>
         <div class="map">
           <div class="left_map">
-		   <?php echo Html::image('public/image/graph_c.jpg', array('alt'=>''));  ?>
+		     <div id="piechart" style="width: 475px; height: 320px;"></div>
+		   <?php //echo Html::image('public/image/graph_c.jpg', array('alt'=>''));  ?>
 		  </div>
           <div class="left_map">
-		  <?php echo Html::image('public/image/graph_d.jpg', array('alt'=>''));  ?>
+		   <div id="bar" style="width: 475px; height: 320px;"></div>
+		  <?php //echo Html::image('public/image/graph_d.jpg', array('alt'=>''));  ?>
 		  </div>
         </div>
         <h1 class="Participants_List">Participants List</h1>
