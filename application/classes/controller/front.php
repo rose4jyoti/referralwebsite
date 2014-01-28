@@ -74,7 +74,7 @@ class Controller_Front extends Controller_Template {
 		  $this->template->content = View::factory('front/iframe');
 		}
 	
-
+ 
 
 }
 
