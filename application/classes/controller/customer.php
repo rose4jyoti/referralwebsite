@@ -510,7 +510,7 @@ class Controller_Customer extends Controller_Template {
 	   $userid = Auth::instance()->get_user()->id;
 	   
 	   $finds = DB::select('refProgID', 'refProgTypeID')->from('rp_referralprogs')
-				 ->order_by('refProgID', `DESC`)
+				 ->order_by('refProgID', 'DESC')
 				 ->limit(1)
 				 ->execute()
 				 ->as_array();
@@ -757,6 +757,26 @@ class Controller_Customer extends Controller_Template {
 		$username = Auth::instance()->get_user()->username;
 		//$userid = Auth::instance()->get_user()->id;
 
+		/********Draw charts**********/
+		$details =DB::select()->from('rp_referralprog_details')
+		                     ->order_by('referralProgDetailsID', `DESC`)
+				             ->limit(5) 
+                             ->execute()
+							 ->as_array();
+			
+		$dataresult1 ="['Campaign', 'Shares'],";	
+		foreach($details as $key=>$temp){
+		$campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
+		$dataresult1.= "["."'".$campaignname."'".",".$key."]".",";
+		}
+		$dataresult2 ="['Campaign', 'Clicks'],";	
+		foreach($details as $key=>$temp){
+		$campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
+		$dataresult2.= "["."'".$campaignname."'".",".$key."]".",";
+		}
+		
+		
+		
 	    $rpdid=$this->request->param('id');
 		
 		
@@ -793,6 +813,8 @@ class Controller_Customer extends Controller_Template {
 		$this->template->content = View::factory('customer/dashboard')
 		                         ->set('username',$username)
 								 ->set('lists', $lists)
+								 ->set('dataresult1', $dataresult1)
+								 ->set('dataresult2', $dataresult2)
                                  ->bind('rpdid',$rpdid)
                                  ->bind('status',$status)
                                  ->bind('temp',$temp)
@@ -809,8 +831,49 @@ class Controller_Customer extends Controller_Template {
 		}
 		$username = Auth::instance()->get_user()->username;
 		
+	   /********Draw charts**********/
+		$details =DB::select()->from('rp_referralprog_details')
+		                     ->order_by('referralProgDetailsID', `DESC`)
+				             ->limit(5) 
+                             ->execute()
+							 ->as_array();
+			
+		$dataresult1 ="['Campaign', 'Impressions'],";	
+		foreach($details as $key=>$temp){
+		$campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
+		$dataresult1.= "["."'".$campaignname."'".",".$key."]".",";
+		}
+		$dataresult2 ="['Campaign', 'Impressions'],";	
+		foreach($details as $key=>$temp){
+		$campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
+		$dataresult2.= "["."'".$campaignname."'".",".$key."]".",";
+		}
+		$dataresult3 ="['Campaign', 'Impressions'],";	
+		foreach($details as $key=>$temp){
+		$campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
+		$dataresult3.= "["."'".$campaignname."'".",".$key."]".",";
+		}
+		$dataresult4 ="['Campaign', 'Impressions'],";	
+		foreach($details as $key=>$temp){
+		$campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
+		$dataresult4.= "["."'".$campaignname."'".",".$key."]".",";
+		}
+
+		/*
+		$dataresult1="['Campaign', 'Impressions'],['Campaign1',15],['Campaign2',2],['Campaign3',2],['Campaign4',2],['Campaign5',7]";
+       
+	    $dataresult2="['Campaign', 'Shares'],['Campaign1',10],['Campaign2',2],['Campaign3',3],['Campaign4',1],['Campaign5',7]";
+		$dataresult3="['Campaign', 'Participant'],['Campaign1',  1000 ],['Campaign2',  1170 ],['Campaign3',  660 ],['Campaign4',  1030 ],['Campaign5',  1030 ]";
+		$dataresult4="  ['Campaign', 'Clicks'],['Campaign1',  1100],['Campaign2',  970],['Campaign3',  860],['Campaign4',  600],['Campaign5',  1000]";
+		
+		*/
+		
 		$this->template->content = View::factory('customer/campaign')
-                                  ->set('username',$username);
+                                  ->set('username',$username)
+                                  ->set('dataresult1',$dataresult1)
+                                  ->set('dataresult2',$dataresult2)
+                                  ->set('dataresult3',$dataresult3)
+                                  ->set('dataresult4',$dataresult4);
 	   
 	
 	}
