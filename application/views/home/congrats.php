@@ -14,8 +14,10 @@ foreach ($options as $temp) :
  }
 endforeach; ?>								  
 <div class="wrapper_out">
-  <div class="wrapper_in">
-       <div class="header_out">
+  <div class="wrapper_in" style="width:auto;">
+       
+    <!------
+	 <div class="header_out">
       <div class="header_in">
         <div class="logo">
 		
@@ -27,31 +29,32 @@ endforeach; ?>
           <li> <a href="<?php echo URL::base(); ?>/front/price">Pricing </a></li>
           <li><a href="<?php echo URL::base(); ?>/front/blog"> Blog </a></li>
           <li><?php echo Html::anchor('user/login', 'Sign In');?></li>
-          <!---<li> <a href="#">Sign In</a></li>--->
+        
         </ul>
       </div>
     </div>
+	
 	
 	<div class="top_line">
       <div class="top_line_in">
         <h1> </h1>
       </div>
-	  
-	  
-	  
-   
+
     </div>
+   ------>
+   
+   
 	
 <!-------------------start contents----------------->
 
- <div class="block_out">
+ <div class="block_out" style="width:auto;">
    
-	 <div class="block3" style="margin: 0 0 0 88px;">
+	 <div class="block3" style="margin: 0px;">
                
-    <div class="img3">
+    <div class="img3" style="margin: 2px 2px 2px 2px;">
                 
                 	<div class="img_in">
-                   <div class="congratulations">
+                   <div class="congratulations" style="min-height:635px">
 
                  <h1>congratulations</h1>
                  <h2>your invitations have been send</h2>
@@ -196,16 +199,14 @@ of your friends will have
 	<?php echo Form::hidden($i, $temp); ?>
     <?php echo Form::hidden('formid', '2'); ?>
 	
- 
-
-	
 	<button type="submit" style="cursor:pointer;background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; ">
 
 	 <?php if($ss==1){
-	   echo Html::image('public/image/invite.png', array('alt'=>'', 'class'=>'r_image'));
+	    echo Html::image('public/image/remind.png', array('alt'=>'', 'class'=>'r_image'));
 	 }
 	 else{
-	   echo Html::image('public/image/remind.png', array('alt'=>'', 'class'=>'r_image'));
+	  
+	   echo Html::image('public/image/invite.png', array('alt'=>'', 'class'=>'r_image'));
 	 }
 	?>
 	
@@ -313,7 +314,7 @@ of your friends will have
 
 <!-------------------end contents----------------->
 
-
+<!----
 <div class="foter">
       <div class="foter_in">
         <div class="foter_content">
@@ -339,6 +340,7 @@ of your friends will have
         </div>
       </div>
     </div>
+	----->
 	
    </div>
   </div>
