@@ -70,6 +70,12 @@ class Controller_Front extends Controller_Template {
 	}
 	
 	
+		public function action_contact() {
+		  $this->template->content = View::factory('front/iframe');
+		}
+	
+
+
 }
 
 ?>
