@@ -1,6 +1,8 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 class Controller_Home extends Controller_Template  {
    
+   protected $session = NULL;
+
    public function before()
     { 
         parent::before();
@@ -39,41 +41,6 @@ class Controller_Home extends Controller_Template  {
  
   public function action_index()
   {
-	 /*
-	 if (HTTP_Request::POST == $this->request->method()){
-      $data=$this->request->post();
-	  $id= $data['id'];
-	  
-
-      $details= DB::select()->from('rp_referralprogs')
-		         ->where('refProgID', '=', $id)
-				 ->execute()
-				 ->as_array();
-	 
-	 
-	 if($details){
-	  $customerid=$details[0]['customerID'];			 
-	 }	
-	 
-      $query=DB::insert('rp_users_referrals', array('referredByUserID', 'referredName','referredEmail'))
-	   ->values(array($customerid, $data['email'], $data['pass']))
-	   ->execute();
-	   
-	   $options = DB::select()->from('rp_referralprog_images')
-		         ->where('referralProgID', '=', $id)
-				 ->order_by('referralProgImageID', 'ASC')
-				 ->execute()
-				 ->as_array();
-				 
-	   $options2= DB::select()->from('rp_referralprog_details')
-		         ->where('referralProgID', '=', $id)
-				 ->execute()
-				 ->as_array();
-	   
-	   
-	  }
-	  */
-	  
 		$id=$this->request->param('id');
 		
         //$contacts = ORM::factory('listcontact')->find_all(); // loads all article   object from table
@@ -110,7 +77,7 @@ class Controller_Home extends Controller_Template  {
 				 ->as_array();
 				 
 			  //print_r($contacts);
-				
+			  //Request::current()->redirect('home/index/'.$data['id']);
 		   }
 		   
 		  if($data['formid']=='2'){
@@ -131,8 +98,11 @@ class Controller_Home extends Controller_Template  {
 				  ->execute();
 		   
 		    }
-           }	
-		  Request::current()->redirect('home/congrats/'.$id);
+           }
+	       $id=$data['id'];
+		   //Request::current()->redirect('home/congrats/'.$data['id']);
+		   Request::current()->redirect('home/congrats/');
+
 		  }
 		  
       
@@ -151,7 +121,8 @@ class Controller_Home extends Controller_Template  {
   
 
   public function action_congrats()
-   {
+   {     
+      
         $id= $this->request->param('id');
 		$options = DB::select()->from('rp_referralprog_images')
 		         ->where('referralProgID', '=', $id)
