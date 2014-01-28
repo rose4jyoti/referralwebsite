@@ -52,8 +52,10 @@ foreach ($options as $temp) :
  }
 endforeach; ?>									  
 <div class="wrapper_out">
-  <div class="wrapper_in">
-       <div class="header_out">
+  <div class="wrapper_in" style="width:auto;">
+      
+      <!----
+	  <div class="header_out">
       <div class="header_in">
         <div class="logo">
 		
@@ -65,7 +67,7 @@ endforeach; ?>
           <li> <a href="<?php echo URL::base(); ?>/front/price">Pricing </a></li>
           <li><a href="<?php echo URL::base(); ?>/front/blog"> Blog </a></li>
           <li><?php echo Html::anchor('user/login', 'Sign In');?></li>
-          <!---<li> <a href="#">Sign In</a></li>--->
+
         </ul>
       </div>
     </div>
@@ -74,17 +76,14 @@ endforeach; ?>
       <div class="top_line_in">
         <h1> </h1>
       </div>
-	  
-	  
-	  
-   
     </div>
+	--->
 	
 <!-------------------start contents----------------->
 
- <div class="block_out">
+ <div class="block_out" style="width:auto;">
    
-		<div class="img2" style="margin: 57px 0 39px 144px;">
+		<div class="img2" style="margin: 0px;">
                  	<div class="img_in">
                                 <div class="participation">
                             <h3>
@@ -97,7 +96,7 @@ endforeach; ?>
 							--->
 							
 							
-							<b>
+							<b style="padding:10px 0px 25px; font-weight:bold; text-transform:capitalize;">
 	                         <?php
                                foreach ($options2 as $temp) :
                                 echo $temp['referralProgDescription']; 
@@ -134,7 +133,9 @@ endforeach; ?>
 						    <?= Form::input('key','',  array('class'=>'new_in_box')); ?>
                              <!----<input type="text" class="new_in_box" name="">-->		
                               <?php echo Form::hidden('formid', '1'); ?>
-                           
+                               
+							   <?php echo Form::hidden('id', $id); ?>
+							 
                              <button style="border:none; background:none;height: 22px;width: 28px;" type="submit">
 							  <img style=" float: left;margin: 0; padding: 4px;" src="/dev2013/referral/public/image/search_but.png" alt="">
 							 </button>							  
@@ -168,6 +169,7 @@ endforeach; ?>
                                   
 								  <?php $i++; ?>
 							   <?php endforeach; ?>
+							  <?php echo Form::hidden('id', $id); ?>
                               <?php echo Form::hidden('formid', '2'); ?>
 							  
                                <!---<tr class="no_back">
@@ -194,9 +196,9 @@ endforeach; ?>
 							
 								<?php if(isset($img2)){ ?>
 <img style="
-    margin: 0 0 0 9px;" height="313px" width="323px" src="<?php echo URL::site("/uploads/$img2") ?>" alt="Uploaded avatar" />
+    margin: 0 0 0 9px;" height="350px" width="323px" src="<?php echo URL::site("/uploads/$img2") ?>" alt="Uploaded avatar" />
 <?php }else{ ?>
-<?php echo Html::image('public/image/giveaway.jpg', array('alt'=>'', 'style'=>'margin: 0 0 0 9px;', 'height'=>'313px',  'width'=>'323px'));  ?>
+<?php echo Html::image('public/image/giveaway.jpg', array('alt'=>'', 'style'=>'margin: 0 0 0 9px;', 'height'=>'350px',  'width'=>'323px'));  ?>
 <?php }?>						
 							  
 							
@@ -209,7 +211,7 @@ endforeach; ?>
 
    <!---<img style="float: right; margin: 8px 7px 13px 0;" alt="" src="<?php echo URL::base(); ?>/public/image/next_but.jpg">-->
 
-      <button type="submit" style="background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; float:right; margin: 40px 0 10px 0px;">
+      <button type="submit" style="background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; float:right; margin: 20px 0 10px 0px;">
 	     <?php echo Html::image('public/image/next_but.jpg', array('alt'=>'', 'class'=>''));  ?>
         </button>
 	
@@ -239,7 +241,7 @@ endforeach; ?>
 
 <!-------------------end contents----------------->
 
-
+<!----
 <div class="foter">
       <div class="foter_in">
         <div class="foter_content">
@@ -265,7 +267,7 @@ endforeach; ?>
         </div>
       </div>
     </div>
-	
+---->	
 	
    </div>
   </div>
