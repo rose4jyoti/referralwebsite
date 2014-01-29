@@ -129,7 +129,7 @@ endforeach; ?>
 							
 							<h2>
 							
-							<?= Form::open('home/index'); ?>
+							<?= Form::open('home/index', array('style'=>'margin:0px',)); ?>
 						    <?= Form::input('key','',  array('class'=>'new_in_box')); ?>
                              <!----<input type="text" class="new_in_box" name="">-->		
                               <?php echo Form::hidden('formid', '1'); ?>
@@ -153,10 +153,9 @@ endforeach; ?>
 							 
 							</div>
 							
-							
 							<div class="song_over">
 
-                             <?= Form::open('home/index',array('id'=>'chkdiv', 'onsubmit'=>'return fnc();')); ?>
+                             <?= Form::open('home/congrats',array('style'=>'margin:0px','id'=>'chkdiv', 'onsubmit'=>'return fnc();')); ?>
 						      <?php $i=1; ?>
                                <?php foreach ($contacts as $temp) : ?>
 							   
@@ -170,7 +169,7 @@ endforeach; ?>
 								  <?php $i++; ?>
 							   <?php endforeach; ?>
 							  <?php echo Form::hidden('id', $id); ?>
-                              <?php echo Form::hidden('formid', '2'); ?>
+                              <?php echo Form::hidden('formid', '0'); ?>
 							  
                                <!---<tr class="no_back">
                                 <td width="5%" valign="middle" align="left"><input type="checkbox" value="" name=""></td>
@@ -268,7 +267,7 @@ endforeach; ?>
       </div>
     </div>
 ---->	
-	 
+	
    </div>
   </div>
   
