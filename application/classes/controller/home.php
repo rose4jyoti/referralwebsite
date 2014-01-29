@@ -6,6 +6,7 @@ class Controller_Home extends Controller_Template  {
    public function before()
     { 
         parent::before();
+        $session = Session::instance();
 	}
 
    public function action_test()
@@ -41,8 +42,13 @@ class Controller_Home extends Controller_Template  {
  
   public function action_index()
   {
-		$id=$this->request->param('id');
-		
+        if($this->request->param('id')){
+		 $id=$this->request->param('id');
+		  $session = Session::instance();
+		  $session->set('cam_id',$id);
+		}
+        $session = Session::instance();		
+		$id=$id=$session->get('cam_id');
         //$contacts = ORM::factory('listcontact')->find_all(); // loads all article   object from table
         
 		$options = DB::select()->from('rp_referralprog_images')
@@ -79,8 +85,45 @@ class Controller_Home extends Controller_Template  {
 			  //print_r($contacts);
 			  //Request::current()->redirect('home/index/'.$data['id']);
 		   }
-		   
-		  if($data['formid']=='2'){
+
+		}
+		/////////////////////////////
+		$session = Session::instance();
+		$id=$session->get('cam_id');
+		
+		$this->template->content =View::factory('home/index')
+							    ->set('contacts', $contacts) 
+								->set('options', $options)
+								->set('options2', $options2)
+							    ->bind('id', $id) ;	
+                      
+  }
+  
+  
+  
+
+  public function action_congrats()
+   {     
+   
+       $results = ORM::factory('contact')->find_all(); // loads all article   object from table
+
+		$contacts= DB::select()->from('listcontacts')
+		        // ->where('referralProgID', '=', $id)
+				 ->execute()
+				 ->as_array();
+				 
+        /////////////////////////////
+		 if (HTTP_Request::POST == $this->request->method()){
+
+          $data= $this->request->post();
+          $count=count($data);
+		  
+		   if($data['formid']=='0'){
+		    
+		    $session = Session::instance();
+			$session->set('cam_id',$data['id']);
+			//print_r($session->get('cam_id'));
+			
 		    //for($i=1; $i<$count;$i++){
 		    for($i=1; $i<100;$i++){
 		     if(isset($data[$i])){
@@ -99,72 +142,14 @@ class Controller_Home extends Controller_Template  {
 		   
 		    }
            }
-	       $id=$data['id'];
+	       //$id=$data['id'];
 		   //Request::current()->redirect('home/congrats/'.$data['id']);
-		   Request::current()->redirect('home/congrats/');
+		   //Request::current()->redirect('home/congrats/');
 
 		  }
 		  
-      
-		}
-		/////////////////////////////
-		
-		$this->template->content =View::factory('home/index')
-							    ->set('contacts', $contacts) 
-								->set('options', $options)
-								->set('options2', $options2)
-							    ->set('id', $id) ;	
-                      
-  }
-  
-  
-  
-
-  public function action_congrats()
-   {     
-      
-        $id= $this->request->param('id');
-		$options = DB::select()->from('rp_referralprog_images')
-		         ->where('referralProgID', '=', $id)
-				 ->order_by('referralProgImageID', 'ASC')
-				 ->execute()
-				 ->as_array();
-				 
-				 
-		$results = ORM::factory('contact')->find_all(); // loads all article   object from table
-         
+		  
 		 
-		$contacts= DB::select()->from('listcontacts')
-		        // ->where('referralProgID', '=', $id)
-				 ->execute()
-				 ->as_array();
-				 
-		/******counting invitation********/
-		$temptotal= DB::select()->from('listcontacts')
-		         //->where('register_status', '=', 1)
-				 ->execute()
-				 ->as_array();
-		$counttotal=  count($temptotal);	
-		
-		$tempsent= DB::select()->from('listcontacts')
-		         ->where('sent_status', '=', 1)
-				 ->execute()
-				 ->as_array();
-		$countsent=  count($tempsent);	
-        $tempregistered= DB::select()->from('listcontacts')
-		         ->where('register_status', '=', 1)
-				 ->execute()
-				 ->as_array();
-		$countregistered=  count($tempregistered);			
-        //print_r($countsent);
-        //print_r($countregistered);
-
-			
-		/////////////////////////////
-		 if (HTTP_Request::POST == $this->request->method()){
-
-          $data= $this->request->post();
-          $count=count($data);
 		  
 		  if($data['formid']=='1'){
 		      $contacts= DB::select()->from('listcontacts')
@@ -172,8 +157,13 @@ class Controller_Home extends Controller_Template  {
 				 ->where('email', 'LIKE', '%'.$data['key'].'%')
 				 ->execute()
 				 ->as_array(); 
-			  
-			  //print_r($contacts);	
+
+			  /*$options = DB::select()->from('rp_referralprog_images')
+		         ->where('referralProgID', '=', $data['id'])
+				 ->order_by('referralProgImageID', 'ASC')
+				 ->execute()
+				 ->as_array();
+				 */
 		   }
 		   
 		  if($data['formid']=='2'){
@@ -208,6 +198,31 @@ class Controller_Home extends Controller_Template  {
 		  
       
 		}
+   
+		
+				 
+		/******counting invitation********/
+		$temptotal= DB::select()->from('listcontacts')
+		         //->where('register_status', '=', 1)
+				 ->execute()
+				 ->as_array();
+		$counttotal=  count($temptotal);	
+		
+		$tempsent= DB::select()->from('listcontacts')
+		         ->where('sent_status', '=', 1)
+				 ->execute()
+				 ->as_array();
+		$countsent=  count($tempsent);	
+        $tempregistered= DB::select()->from('listcontacts')
+		         ->where('register_status', '=', 1)
+				 ->execute()
+				 ->as_array();
+		$countregistered=  count($tempregistered);			
+        //print_r($countsent);
+        //print_r($countregistered);
+
+			
+		
 		/////////////////////////////
 		
 		 $social= DB::select()->from('sociallinks')
@@ -216,8 +231,17 @@ class Controller_Home extends Controller_Template  {
 				 ->execute()
 				 ->as_array();
 
-		//print_r($social);
-        
+		///////////////////////
+        $session = Session::instance();
+		$id=$session->get('cam_id');
+				  $options = DB::select()->from('rp_referralprog_images')
+		         ->where('referralProgID', '=', $id)
+				 ->order_by('referralProgImageID', 'ASC')
+				 ->execute()
+				 ->as_array();
+		
+		
+		
 		
         $this->template->content =View::factory('home/congrats')
 							    ->set('results', $results)
@@ -226,7 +250,8 @@ class Controller_Home extends Controller_Template  {
 								->bind('counttotal', $counttotal)
 								->bind('countsent', $countsent)
 								->bind('countregistered', $countregistered)	
-								->bind('social', $social);	
+								->bind('social', $social)	
+								->bind('id',$id );	
    }
 
 }
