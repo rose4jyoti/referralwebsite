@@ -1,6 +1,34 @@
 <?php
-//echo $customerid=$_REQUEST['id'];
+ $customerid=$_REQUEST['id'];
 ?>
+<?php 
+if($_POST){
+ if($_POST['stage']=='1'){
+  //print_r($_POST);
+  //die();
+$host="localhost"; // Host name
+$username="softoasi_referal"; // Mysql username
+$password="]N^fwqZ*@7X9"; // Mysql password
+$db_name="softoasi_referral"; // Database name
+
+$tbl_name="rpusers"; // Table name
+// Connect to server and select database.
+mysql_connect("$host", "$username", "$password")or die("cannot connect");
+mysql_select_db("$db_name")or die("cannot select DB");
+
+// Insert data into mysql
+ $email=$_POST['email'];
+ $sql="INSERT INTO $tbl_name(userEmail,userReferralID)VALUES('$email','$customerid')";
+ $result=mysql_query($sql);
+ 
+// close connection
+mysql_close();
+ }
+}
+
+//die();
+?>
+
 
 <?php 
 define("SITE","http://softoasistech.com/dev2013/referral");
@@ -32,40 +60,36 @@ $username="softoasi_referal"; // Mysql username
 $password="]N^fwqZ*@7X9"; // Mysql password
 $db_name="softoasi_referral"; // Database name
 
-$tbl_name="listcontacts"; // Table name
+$tbl_name="rp_users_referrals"; // Table name
+//$tbl_name="rp_users_referrals"; // Table name
 
 // Connect to server and select database.
-mysql_connect("$host", "$username", "$password")or die("cannot connect");
+$conn=mysql_connect("$host", "$username", "$password")or die("cannot connect");
 mysql_select_db("$db_name")or die("cannot select DB");
 
 
-// Insert data into mysql
-//$sql="INSERT INTO $tbl_name(name, email)VALUES('$name', '$lastname', '$email')";
-//$sql="INSERT INTO $tbl_name(name, email)VALUES('viky', 'kumar' )";
+// Select data from mysql
+$sqlquery="SELECT * FROM rpusers  ORDER BY userID DESC LIMIT 1 ";
+$queryresult=mysql_query($sqlquery, $conn);
+$row = mysql_fetch_array($queryresult, MYSQL_ASSOC);
+$lastid=$row['userID'];
+//($row);
 
- $sql="TRUNCATE TABLE $tbl_name";
- $result=mysql_query($sql);
+$sql="TRUNCATE TABLE $tbl_name";
+$result=mysql_query($sql);
  
+
 foreach($this->contacts as $contact) {
- echo $name= $contact->name; 
- echo $email=$contact->email; 
- $sql="INSERT INTO $tbl_name(name, email)VALUES('$name', '$email' )";
- $result=mysql_query($sql);
+ $name= $contact->name; 
+ $email=$contact->email; 
+ //$sql="INSERT INTO $tbl_name(name, email)VALUES('$name', '$email' )";
+ //$result=mysql_query($sql);
+   
+   $sql2="INSERT INTO rp_users_referrals(referredName, referredEmail,referredByUserID)VALUES('$name', '$email' ,'$lastid')";
+   $result=mysql_query($sql2);
  
  } 
 
-// if successfully insert data into database, displays message "Successful".
-/*
-if($result){
-echo "Successful";
-//echo "<BR>";
-//echo "<a href='insert.php'>Back to main page</a>";
-}
-
-else {
-echo "ERROR";
-}
-*/
 
 ?>
 

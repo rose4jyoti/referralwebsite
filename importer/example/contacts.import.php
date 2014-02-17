@@ -23,11 +23,10 @@ function check()
 		
 }
 </script>
-
-
 <?php 
 define("SITE","http://softoasistech.com/dev2013/referral");
 ?>
+
 
 <span style="display:none; color: #FF0000;" id="warning"> Requset could not be handled.Try again Later. </span>
 			 
@@ -80,7 +79,7 @@ define("SITE","http://softoasistech.com/dev2013/referral");
 				
 				
         <!------------------------------------------>
-	  <input  type="hidden" name="state" value=""/>			
+	  <input  type="hidden" name="stage" value="1"/>			
 	   
 	   <input id="soption" type="hidden" name="contacts_option" value="<?php echo $selected_option; ?>"/>
 
