@@ -4,7 +4,7 @@ class Controller_Customer extends Controller_Template {
 
     public function before()
     { 
-        parent::before();
+        parent::before(); 
 		
 		$user = Auth::instance()->get_user();
 		if (!$user)
