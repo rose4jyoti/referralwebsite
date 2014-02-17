@@ -26,7 +26,7 @@ class Controller_Home extends Controller_Template  {
 				 ->execute()
 				 ->as_array();
 	 
-	 $details2= DB::select()->from('rp_referralprog_details')
+	 $details2= DB::select()->from('referralprogdetails')
 		         ->where('referralProgID', '=', $id)
 				 ->execute()
 				 ->as_array();
@@ -57,13 +57,15 @@ class Controller_Home extends Controller_Template  {
 				 ->execute()
 				 ->as_array();
 				 
-	    $options2= DB::select()->from('rp_referralprog_details')
+	    $options2= DB::select()->from('referralprogdetails')
 		         ->where('referralProgID', '=', $id)
 				 ->execute()
 				 ->as_array();
+		
+		
+		
 				 
-				 
-		$contacts= DB::select()->from('listcontacts')
+		$contacts= DB::select()->from('rp_users_referrals')
 		        // ->where('referralProgID', '=', $id)
 				 ->execute()
 				 ->as_array();
@@ -76,9 +78,9 @@ class Controller_Home extends Controller_Template  {
           $count=count($data);
 		  
 		  if($data['formid']=='1'){
-		      $contacts= DB::select()->from('listcontacts')
+		      $contacts= DB::select()->from('rp_users_referrals')
 		        // ->where('email', '=', $data['key'])
-		         ->where('email', 'LIKE', '%'.$data['key'].'%')
+		         ->where('referredEmail', 'LIKE', '%'.$data['key'].'%')
 				 ->execute()
 				 ->as_array();
 				 
@@ -105,9 +107,9 @@ class Controller_Home extends Controller_Template  {
   public function action_congrats()
    {     
    
-       $results = ORM::factory('contact')->find_all(); // loads all article   object from table
+      // $results = ORM::factory('contact')->find_all(); // loads all article   object from table
 
-		$contacts= DB::select()->from('listcontacts')
+		$contacts= DB::select()->from('rp_users_referrals')
 		        // ->where('referralProgID', '=', $id)
 				 ->execute()
 				 ->as_array();
@@ -135,9 +137,9 @@ class Controller_Home extends Controller_Template  {
              mail($to,$subject,$message,$headers);
              //echo "Mail Sent.";
 		   
-		   	 $query = DB::update('listcontacts')
+		   	 $query = DB::update('rp_users_referrals')
 		         ->set(array('sent_status'=> 1))
-		          ->where('email', '=',$data[$i] )
+		          ->where('referredEmail', '=',$data[$i] )
 				  ->execute();
 		   
 		    }
@@ -152,9 +154,9 @@ class Controller_Home extends Controller_Template  {
 		 
 		  
 		  if($data['formid']=='1'){
-		      $contacts= DB::select()->from('listcontacts')
+		      $contacts= DB::select()->from('rp_users_referrals')
 		        // ->where('email', '=', $data['key'])
-				 ->where('email', 'LIKE', '%'.$data['key'].'%')
+				 ->where('referredEmail', 'LIKE', '%'.$data['key'].'%')
 				 ->execute()
 				 ->as_array(); 
 
@@ -182,9 +184,9 @@ class Controller_Home extends Controller_Template  {
              mail($to,$subject,$message,$headers);
              //echo "Mail Sent.";
 		   
-		   	 $query = DB::update('listcontacts')
+		   	 $query = DB::update('rp_users_referrals')
 		         ->set(array('sent_status'=> 1))
-		          ->where('email', '=',$data[1] )
+		          ->where('referredEmail', '=',$data[1] )
 				  ->execute();
 		   
 		    }
@@ -202,19 +204,19 @@ class Controller_Home extends Controller_Template  {
 		
 				 
 		/******counting invitation********/
-		$temptotal= DB::select()->from('listcontacts')
+		$temptotal= DB::select()->from('rp_users_referrals')
 		         //->where('register_status', '=', 1)
 				 ->execute()
 				 ->as_array();
 		$counttotal=  count($temptotal);	
 		
-		$tempsent= DB::select()->from('listcontacts')
+		$tempsent= DB::select()->from('rp_users_referrals')
 		         ->where('sent_status', '=', 1)
 				 ->execute()
 				 ->as_array();
 		$countsent=  count($tempsent);	
-        $tempregistered= DB::select()->from('listcontacts')
-		         ->where('register_status', '=', 1)
+        $tempregistered= DB::select()->from('rp_users_referrals')
+		         ->where('referralStatus', '=', 'Registered')
 				 ->execute()
 				 ->as_array();
 		$countregistered=  count($tempregistered);			
@@ -241,16 +243,22 @@ class Controller_Home extends Controller_Template  {
 				 ->as_array();
 		
 		
+		$created= DB::select()->from('referralprogs')
+		         ->where('refProgID', '=', $id)
+				 ->execute()
+				 ->as_array();
+	    
 		
 		
         $this->template->content =View::factory('home/congrats')
-							    ->set('results', $results)
+							    //->set('results', $results)
 							    ->bind('options', $options)
 								->bind('contacts', $contacts)
 								->bind('counttotal', $counttotal)
 								->bind('countsent', $countsent)
 								->bind('countregistered', $countregistered)	
 								->bind('social', $social)	
+								->bind('created', $created)	
 								->bind('id',$id );	
    }
 

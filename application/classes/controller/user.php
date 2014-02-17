@@ -90,10 +90,17 @@ class Controller_User extends Controller_Template {
 			
 			$user = Auth::instance()->login($this->request->post('username'), $this->request->post('password'), $remember);
 			
+			
 			// If successful, redirect user
 			if ($user) 
 			{
-				Request::current()->redirect('customer/campaign');
+			    $role = Auth::instance()->get_user()->role;
+			    if($role=='admin'){
+				 Request::current()->redirect('admin/dashboard');
+				}
+				else{
+				 Request::current()->redirect('customer/campaign');
+				}
 			} 
 			else 
 			{

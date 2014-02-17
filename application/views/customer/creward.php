@@ -162,7 +162,9 @@ function afterchange(first, second, main){
 
      <span class="bb"> when</span>
 	   <!----<a class="onchange" href="#">three</a> ---->
-	 
+   <?= Form::input('mrr','',  array('class'=>'aa_new', 'style'=>'width:50px;')); ?>
+
+<!---   
 <select name="mrr" class="asc_nn">
 <option value="1">1</option>
 <option value="2">2</option>
@@ -175,7 +177,7 @@ function afterchange(first, second, main){
 <option value="9">9</option>
 <option value="10">10</option>
 </select>
-
+--->
 	 
 	 <span class="bb">of 
 
