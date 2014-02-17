@@ -38,7 +38,7 @@
                
               </ul>
             </li>
-            <li><a href="#">Support</a>
+            <li><a href="<?php echo URL::base(); ?>/customer/support">Support</a>
             </li>
 			
             <li><a href="<?php echo URL::base(); ?>/user/logout">Logout</a> </li>
@@ -66,6 +66,134 @@
       </div>
 	  ---->
     </div>
+	
+	<div class="form">
+      <div class="top_menu">
+        <h1 class="ac_s">Edit Account</h1>
+      </div>
+    </div>
+	
+	<div class="change">
+      <div class="change_p">
+        <div class="change_p_content">
+		 
+
+		 
+		  <?= Form::open('Customer/account'); ?>
+          <table class="change_table" border="0">
+            <tr>
+              <td>Customer Name </td>
+            </tr>
+			<tr>
+              <td>
+			  
+			  <?= Form::input('customerName',$options['0']['customerName'],  array('class'=>'aa_new','style'=>'')); ?>
+			  </td>
+            </tr>
+            
+            <tr>
+              <td>Customer Address1</td>
+            </tr>
+            <tr>
+              <td>
+			  
+
+			    <?= Form::textarea('customerAddress1',$options['0']['customerAddress1'],  array('class'=>'aa_new','style'=>'height:100px')); ?>
+			  </td>
+            </tr>
+            <tr>
+              <td>Customer Address2</td>
+            </tr>
+            <tr>
+              <td> 
+			  <?= Form::textarea('customerAddress2',$options['0']['customerAddress2'],  array('class'=>'aa_new','style'=>'height:100px')); ?>
+			 
+            </tr>
+			<tr>
+              <td>Customer City</td>
+            </tr>
+            <tr>
+              <td> 
+			  <?= Form::input('customerCity',$options['0']['customerCity'],  array('class'=>'aa_new','style'=>'')); ?>
+			 
+            </tr>
+			<tr>
+              <td>Customer StateProvID</td>
+            </tr>
+            <tr>
+              <td> 
+			  <?= Form::input('customerStateProvID',$options['0']['customerStateProvID'],  array('class'=>'aa_new','style'=>'')); ?>
+			 
+            </tr>
+			
+			<tr>
+              <td>Customer CountryID</td>
+            </tr>
+            <tr>
+              <td> 
+			  <?= Form::input('customerCountryID',$options['0']['customerCountryID'],  array('class'=>'aa_new','style'=>'')); ?>
+			 
+            </tr>
+			
+			<tr>
+              <td>Customer FirstName</td>
+           
+              <td> 
+			  Customer LastName
+			 
+            </tr>
+			
+			<tr>
+              <td> <?= Form::input('customerCFirstName',$options['0']['customerCFirstName'],  array('class'=>'aa_new','style'=>'')); ?></td>
+            
+              <td> 
+			  <?= Form::input('customerCLastName',$options['0']['customerCLastName'],  array('class'=>'aa_new','style'=>'')); ?>
+			 
+            </tr>
+			
+			<tr>
+              <td>Customer Phoneno.</td>
+            </tr>
+            <tr>
+              <td> 
+			  <?= Form::input('customerPhone',$options['0']['customerPhone'],  array('class'=>'aa_new','style'=>'')); ?>
+			 
+            </tr>
+			
+			<tr>
+              <td>Customer Website</td>
+            </tr>
+            <tr>
+              <td> 
+			  <?= Form::input('customerWebsite',$options['0']['customerWebsite'],  array('class'=>'aa_new','style'=>'')); ?>
+			
+            <tr>
+              <td>
+               
+			   <button type="submit" style=" background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; margin: 0 0 0 0px;">
+	             <?php echo Html::image('public/image/uaccount.png', array('alt'=>'', 'style'=>'margin: 0px 0px 0px -8px;'));  ?>
+		       </button>
+			  	<?php //echo Html::image('public/image/chnag.png', array('alt'=>'', 'style'=>'margin: 10px 0 10px 0;'));  ?>
+			</td>
+            </tr>
+          </table>
+		  
+		     <?= Form::close(); ?>
+			 
+        </div>
+      </div>
+    </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	<div class="form">
       <div class="top_menu">
@@ -152,6 +280,12 @@
         </div>
       </div>
     </div>
+	
+	
+	
+	
+	
+	
 	
 	
 <div class="foter">
