@@ -262,4 +262,4 @@ class Controller_Home extends Controller_Template  {
 								->bind('id',$id );	
    }
 
-}
+} 
