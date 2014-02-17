@@ -101,7 +101,24 @@ of your friends will have
 
 <div class="contact_in">
 <span>Time Left</span>
-<b>23D 24H 59M</b>
+<?php
+ //$date=$created[0]['refProgCreatedDate'];
+  $date1=$created[0]['startTime'];
+  $date2=$created[0]['endTime'];
+//Convert to date
+//$seconds = strtotime($date) - time();
+$seconds = strtotime($date2) - strtotime($date1);
+
+$days = floor($seconds / 86400);
+$seconds %= 86400;
+$hours = floor($seconds / 3600);
+$seconds %= 3600;
+$minutes = floor($seconds / 60);
+$seconds %= 60;
+
+//echo "$days days and $hours hours and $minutes minutes and $seconds seconds";
+?>
+<b><?php echo $days; ?>D <?php echo $hours; ?>H <?php echo $minutes; ?>M</b>
 
 
 <?php
@@ -170,8 +187,8 @@ of your friends will have
   <?php foreach ($contacts as $temp) : ?>	
 
    <tr class="no_back">
-    <td style=" float: left;width: 75px;padding: 0 0 0 3px;text-align: left;" class="td1" valign="middle" align="left"><b><?php echo $temp['name']; ?></b></td>
-    <td style=" float: left;width: 140px;text-align: left;" class="td2" valign="middle" align="center"><?php echo $temp['email']; ?> </td>
+    <td style=" float: left;width: 75px;padding: 0 0 0 3px;text-align: left;" class="td1" valign="middle" align="left"><b><?php echo $temp['referredName']; ?></b></td>
+    <td style=" float: left;width: 140px;text-align: left;" class="td2" valign="middle" align="center"><?php echo $temp['referredEmail']; ?> </td>
      <td style="float:left;" width="5%" valign="middle" align="center">
 	  
 	  <img alt="" src="/dev2013/referral/public/image/ok.jpg">	 
@@ -181,7 +198,7 @@ of your friends will have
 	<span>
 	<?php 
     $ss=$temp['sent_status']; 
-	if($ss==1){
+	if($ss=='1'){
 	 echo 'Sent';
 	}
 	else{
@@ -194,7 +211,7 @@ of your friends will have
 	
    
     <?= Form::open('home/congrats'); ?>
-	<?php $temp=$temp['email']; ?>
+	<?php $temp=$temp['referredEmail']; ?>
    
 	<?php echo Form::hidden($i, $temp); ?>
     <?php echo Form::hidden('formid', '2'); ?>

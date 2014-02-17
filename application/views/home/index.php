@@ -159,11 +159,11 @@ endforeach; ?>
 						      <?php $i=1; ?>
                                <?php foreach ($contacts as $temp) : ?>
 							   
-								<input id="ss" type="checkbox" value="<?php echo $temp['email']; ?> " name="<?php echo $i;?>" class="email" checked>
+								<input id="ss" type="checkbox" value="<?php echo $temp['referredEmail']; ?> " name="<?php echo $i;?>" class="email" checked>
                                
-								<b><?php echo $temp['name']; ?> </b>
+								<b><?php echo $temp['referredName']; ?> </b>
 
-								  <?php echo $temp['email']; ?>
+								  <?php echo $temp['referredEmail']; ?>
 								  <br> 
                                   
 								  <?php $i++; ?>
