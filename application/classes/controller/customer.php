@@ -13,12 +13,20 @@ class Controller_Customer extends Controller_Template {
 		}
          
 		$customername = Auth::instance()->get_user()->username;
-		 
+		$userid = Auth::instance()->get_user()->id;
+
         // Make $page_title available to all views
         View::bind_global('customername', $customername);
 		
-		
-		$campaigns =DB::select()->from('rp_referralprog_details')
+		/*$mycampaigns =DB::select('refProgID')
+		              ->from('referralprogs')
+                      ->where('customerID','=', $userid)
+                      ->execute()
+					  ->as_array();
+		*/
+
+
+		$campaigns =DB::select()->from('referralprogdetails')
                       //->where('customerID','=', $userid)
                       ->execute();
 					  
@@ -57,7 +65,7 @@ class Controller_Customer extends Controller_Template {
 		//print_r($userid);
 		
         if (HTTP_Request::POST == $this->request->method()){
-         $query=DB::insert('rp_referralprogs', array('customerID', 'startTime', 'endTime','minReferralRequired','maxReferralLimit', 'rewardFrequence', 'actionRewarded','rewardsPerAction','entryEmailNotification', 'replyEmail','refProgStatus', 'refProgInstantRewardActivated'))
+         $query=DB::insert('referralprogs', array('customerID', 'startTime', 'endTime','minReferralRequired','maxReferralLimit', 'rewardFrequence', 'actionRewarded','rewardsPerAction','entryEmailNotification', 'replyEmail','refProgStatus', 'refProgInstantRewardActivated'))
 		 ->values(array($userid, $data['startTime'], $data['endTime'],$data['minReferralRequired'], $data['maxReferralLimit'], $data['rewardFrequence'],$data['actionRewarded'], $data['rewardsPerAction'], $data['entryEmailNotification'], $data['replyEmail'],$data['refProgStatus'],$data['refProgInstantRewardActivated']))
 		 ->execute();
 		 
@@ -71,7 +79,7 @@ class Controller_Customer extends Controller_Template {
 	
 	public function action_emails() {
 	    
-		 $finds = DB::select('refProgID', 'refProgTypeID')->from('rp_referralprogs')
+		 $finds = DB::select('refProgID', 'refProgTypeID')->from('referralprogs')
 				 ->order_by('refProgID', `DESC`)
 				 ->limit(1)
 				 ->execute()
@@ -116,7 +124,7 @@ class Controller_Customer extends Controller_Template {
 		 
 		 $rpdid=$this->request->param('id');
 		 
-	     $query = DB::select()->from('rp_referralprog_details')
+	     $query = DB::select()->from('referralprogdetails')
 		         ->where('referralProgDetailsID', '=', $rpdid)
 				 ->execute()
 				 ->as_array();
@@ -135,7 +143,7 @@ class Controller_Customer extends Controller_Template {
 		 //die();
 		 
 		 //$paramid=$query1[0]['refProgTypeID'];
-		 $details =DB::select()->from('rp_referralprog_details')
+		 $details =DB::select()->from('referralprogdetails')
                       ->where('referralProgDetailsID','=', $rpdid)
                       ->execute();		
 		 
@@ -163,7 +171,7 @@ class Controller_Customer extends Controller_Template {
 	    $refproid=$this->request->param('id'); 
 
         if ($refproid){
-         $query=DB::insert('rp_referralprogs', array('customerID', 'refProgTypeID'))
+         $query=DB::insert('referralprogs', array('customerID', 'refProgTypeID'))
 		 
 		 ->values(array( $userid, $refproid))
 		 ->execute();
@@ -186,7 +194,7 @@ class Controller_Customer extends Controller_Template {
 		 }
 		 $userid = Auth::instance()->get_user()->id;
 		 
-		 $finds = DB::select('refProgID', 'refProgTypeID')->from('rp_referralprogs')
+		 $finds = DB::select('refProgID', 'refProgTypeID')->from('referralprogs')
 				 ->order_by('refProgID', 'DESC')
 				 ->limit(1)
 				 ->execute()
@@ -209,13 +217,12 @@ class Controller_Customer extends Controller_Template {
 
          if (HTTP_Request::POST == $this->request->method()){
  
-          $query=DB::insert('rp_referralprog_details', array('referralProgID','referralProgTitle', 'referralProgDescription'))
-		 
+          $query=DB::insert('referralprogdetails', array('referralProgID','referralProgTitle', 'referralProgDescription'))
 		 ->values(array( $id, $data['rpt'], $data['rpd']))
 		 ->execute();
 		  
 		 
-		 $query = DB::update('rp_referralprogs')->set(array('startTime'=> $data['start'], 'endTime'=> $data['end'],'rewardFrequence'=> $data['rf'],'minReferralRequired' => $data['mrr'], 'actionRewarded'=>$data['ar']))
+		 $query = DB::update('referralprogs')->set(array('startTime'=> $data['start'], 'endTime'=> $data['end'],'rewardFrequence'=> $data['rf'],'minReferralRequired' => $data['mrr'], 'actionRewarded'=>$data['ar']))
 		          ->where('refProgID', '=', $id)
 				  ->execute();
 		 
@@ -237,19 +244,25 @@ class Controller_Customer extends Controller_Template {
 		 
 		 $rpdid=$this->request->param('id');
 		 
-		 $query = DB::select()->from('rp_referralprog_details')
+		 $query = DB::select()->from('referralprogdetails')
 		         ->where('referralProgDetailsID', '=', $rpdid)
 				 ->execute()
-				 ->as_array();
+				 ->as_array();		 
+				 
 		 $temp=$query[0]['referralProgID'];
+		 //print_r($temp);
 		 
-		 $query1 = DB::select()->from('rp_referralprogs')
+		 
+		 $query1 = DB::select()->from('referralprogs')
 		         ->where('refProgID', '=', $temp)
 				 ->execute()
 				 ->as_array();
+				 
+	
+	
 		 $paramid=$query1[0]['refProgTypeID'];
 		 
-        $details =DB::select()->from('rp_referralprog_details')
+        $details =DB::select()->from('referralprogdetails')
                       ->where('referralProgDetailsID','=', $rpdid)
                       ->execute();		 
 		$this->template->content = View::factory('customer/creward')
@@ -273,7 +286,7 @@ class Controller_Customer extends Controller_Template {
 	    }
 	   $userid = Auth::instance()->get_user()->id;
 		 
-	   $finds = DB::select('refProgID', 'refProgTypeID')->from('rp_referralprogs')
+	   $finds = DB::select('refProgID', 'refProgTypeID')->from('referralprogs')
 				 ->order_by('refProgID', 'DESC')
 				 ->limit(1)
 				 ->execute()
@@ -293,11 +306,11 @@ class Controller_Customer extends Controller_Template {
 	
 	    /***********required details**************/
 			  
-		$description =DB::select()->from('rp_referralprog_details')
+		$description =DB::select()->from('referralprogdetails')
 					  ->order_by('referralProgDetailsID', 'DESC')
 					  ->limit(1)
                       ->execute();
-		$details =DB::select()->from('rp_referralprogs')
+		$details =DB::select()->from('referralprogs')
 					  ->order_by('refProgID', 'DESC')
 					  ->limit(1)
                       ->execute();
@@ -360,7 +373,7 @@ class Controller_Customer extends Controller_Template {
 	   $rpdid=$this->request->param('id');
 	  
 		
-		$query = DB::select()->from('rp_referralprog_details')
+		$query = DB::select()->from('referralprogdetails')
 		         ->where('referralProgDetailsID', '=', $rpdid)
 				 ->execute()
 				 ->as_array();
@@ -377,11 +390,11 @@ class Controller_Customer extends Controller_Template {
 					  ->as_array();
 		//print_r($images);
 					  
-		$description =DB::select()->from('rp_referralprog_details')
+		$description =DB::select()->from('referralprogdetails')
 					  ->order_by('referralProgDetailsID', 'DESC')
 					  ->limit(1)
                       ->execute();
-		$details =DB::select()->from('rp_referralprogs')
+		$details =DB::select()->from('referralprogs')
 					  ->order_by('refProgID', 'DESC')
 					  ->limit(1)
                       ->execute();
@@ -395,7 +408,7 @@ class Controller_Customer extends Controller_Template {
 		
 		
 		
-		$detail =DB::select()->from('rp_referralprog_details')
+		$detail =DB::select()->from('referralprogdetails')
                       ->where('referralProgDetailsID','=', $rpdid)
                       ->execute();	
 			
@@ -423,7 +436,6 @@ class Controller_Customer extends Controller_Template {
 		if ($this->request->method() == Request::POST)
         {
 		 $query=DB::insert('rp_referralprog_images', array('referralProgID','referralProgImage','referralProgImageOrder'))
-		 
 		 ->values(array( $id, $filename, $data['so']))
 		 ->execute();
 		  
@@ -509,7 +521,7 @@ class Controller_Customer extends Controller_Template {
 		}
 	   $userid = Auth::instance()->get_user()->id;
 	   
-	   $finds = DB::select('refProgID', 'refProgTypeID')->from('rp_referralprogs')
+	   $finds = DB::select('refProgID', 'refProgTypeID')->from('referralprogs')
 				 ->order_by('refProgID', 'DESC')
 				 ->limit(1)
 				 ->execute()
@@ -529,7 +541,7 @@ class Controller_Customer extends Controller_Template {
 	 
 	   if (HTTP_Request::POST == $this->request->method()){
 		  
-		 $query = DB::update('rp_referralprogs')
+		 $query = DB::update('referralprogs')
 		         ->set(array('refProgUniqueKeyID'=> $data['ukey']))
 		          ->where('refProgID', '=', $id)
 				  ->execute();
@@ -553,7 +565,7 @@ class Controller_Customer extends Controller_Template {
 		 
 	   $rpdid=$this->request->param('id');
        //print_r($rpdid);
-	   $details =DB::select()->from('rp_referralprog_details')
+	   $details =DB::select()->from('referralprogdetails')
                       ->where('referralProgDetailsID','=', $rpdid)
                       ->execute()
 					  ->as_array();	
@@ -562,7 +574,7 @@ class Controller_Customer extends Controller_Template {
 		 
 		 //print_r($temp);
 		 
-		 $query1 = DB::select()->from('rp_referralprogs')
+		 $query1 = DB::select()->from('referralprogs')
 		         ->where('refProgID', '=', $temp)
 				 ->execute()
 				 ->as_array();
@@ -593,19 +605,19 @@ class Controller_Customer extends Controller_Template {
 		 if ($rpdid){
 		  $result = DB::select()
 		           ->where('referralProgDetailsID','=', $rpdid)
-		           ->from('rp_referralprog_details')
+		           ->from('referralprogdetails')
 				   ->execute()
 				   ->as_array();
 
 		  $id= $result[0]['referralProgID'];
 		
-		  $query1= DB::delete('rp_referralprog_details')->where('referralProgDetailsID','=',$rpdid)->execute();
-		  $query2= DB::delete('rp_referralprogs')->where('refProgID','=',$id)->execute();
+		  $query1= DB::delete('referralprogdetails')->where('referralProgDetailsID','=',$rpdid)->execute();
+		  $query2= DB::delete('referralprogs')->where('refProgID','=',$id)->execute();
 		  $query3= DB::delete('rp_email_templates')->where('refProgID','=',$id)->execute();
 		  $query4= DB::delete('rp_referralprog_images')->where('referralProgID','=',$id)->execute();
 		  
 
-		  $query5 = DB::select()->from('rp_referralprog_details')
+		  $query5 = DB::select()->from('referralprogdetails')
 		              ->limit(1)
 					  ->order_by('referralProgDetailsID', 'DESC')
                       ->execute()
@@ -654,13 +666,13 @@ class Controller_Customer extends Controller_Template {
 
 		 if ($rpdid){
 		 
-		  $temp=DB::select()->from('rp_referralprog_details')
+		  $temp=DB::select()->from('referralprogdetails')
 		              ->where('referralProgDetailsID','=',$rpdid)
                       ->execute()
 					  ->as_array();
 		  $id=$temp[0]['referralProgID'];
 		
-		  $query = DB::update('rp_referralprogs')->set(array('refProgStatus'=>$status))
+		  $query = DB::update('referralprogs')->set(array('refProgStatus'=>$status))
 		          ->where('refProgID', '=', $id)
 				  ->execute();
 		   Request::current()->redirect('customer/dashboard/'.$rpdid);
@@ -688,7 +700,7 @@ class Controller_Customer extends Controller_Template {
 		$userid = Auth::instance()->get_user()->id;
 		//print_r($userid);
 
-         $referralprogs =DB::select()->from('rp_referralprogs')
+         $referralprogs =DB::select()->from('referralprogs')
                       ->where('customerID','=', $userid)
                       ->execute();
            //print_r($referralprogs);
@@ -716,7 +728,7 @@ class Controller_Customer extends Controller_Template {
 		
         if (HTTP_Request::POST == $this->request->method()){
 		
-		  $query = DB::update('rp_referralprogs')
+		  $query = DB::update('referralprogs')
 		                                    ->set(array('startTime'=>$data['startTime'], 'endTime'=>$data['endTime'],'minReferralRequired'=>$data['minReferralRequired'],'maxReferralLimit'=>$data['maxReferralLimit'], 'rewardFrequence'=>$data['rewardFrequence'], 'actionRewarded'=>$data['actionRewarded'],'rewardsPerAction'=>$data['rewardsPerAction'],'entryEmailNotification'=>$data['entryEmailNotification'], 'replyEmail'=>$data['replyEmail'],'refProgStatus'=>$data['refProgStatus'], 'refProgInstantRewardActivated'=>$data['refProgInstantRewardActivated']))
 		                                    ->where('refProgID','=', '18')
 											->execute();
@@ -740,7 +752,7 @@ class Controller_Customer extends Controller_Template {
 		$refprogid  = $this->request->param('id');
 		//print_r($refprogid);
 		
-		$query = DB::delete('rp_referralprogs')
+		$query = DB::delete('referralprogs')
 		                 ->where('refProgID','=',$refprogid)
 						 ->execute();
 		Request::current()->redirect('customer/refproglist');
@@ -758,7 +770,7 @@ class Controller_Customer extends Controller_Template {
 		//$userid = Auth::instance()->get_user()->id;
 
 		/********Draw charts**********/
-		$details =DB::select()->from('rp_referralprog_details')
+		$details =DB::select()->from('referralprogdetails')
 		                     ->order_by('referralProgDetailsID', `DESC`)
 				             ->limit(5) 
                              ->execute()
@@ -780,7 +792,7 @@ class Controller_Customer extends Controller_Template {
 	    $rpdid=$this->request->param('id');
 		
 		
-		$temp=DB::select()->from('rp_referralprog_details')
+		$temp=DB::select()->from('referralprogdetails')
 		              ->where('referralProgDetailsID','=',$rpdid)
                       ->execute()
 					  ->as_array();
@@ -791,7 +803,7 @@ class Controller_Customer extends Controller_Template {
 		if($temp){
 		$temp2=$temp[0]['referralProgID'];
 		
-		$temp3=DB::select()->from('rp_referralprogs')
+		$temp3=DB::select()->from('referralprogs')
 		              ->where('refProgID','=',$temp2)
                       ->execute()
 					  ->as_array();
@@ -799,24 +811,49 @@ class Controller_Customer extends Controller_Template {
 		
 		if($temp3){
 		$status=$temp3[0]['refProgStatus'];
+           $no_impressions=$temp3[0]['no_impressions'];
 		}
 		
 		$lists =DB::select()->from('rpusers')
                       //->where('customerID','=', $userid)
-                      ->execute();
+                      ->execute();//print_r($lists);
+					  
+  	   $participants=DB::select()->from('rpusers')
+                      ->where('userReferralID','=', $rpdid)
+                      ->execute()
+                      ->as_array();//print_r($participants);
+       if($participants){
+		$participants=count($participants);
+                $referrals=DB::select()->from('rp_users_referrals')
+                       ->execute()
+                      ->as_array();//print_r($participants);
+                     $referrals=count($referrals);
+           
+		}
+              else
+          {
+               $participants=0;$referrals=0;
+          }
 					  
 		
-		$details =DB::select()->from('rp_referralprog_details')
+		$details =DB::select()->from('referralprogdetails')
                       ->where('referralProgDetailsID','=', $rpdid)
                       ->execute();
-					  
+		
+        $header = View::factory('customer/header');		
+		$footer = View::factory('customer/footer');		
+		
 		$this->template->content = View::factory('customer/dashboard')
-		                         ->set('username',$username)
+		                         ->set('header',$header)
+		                         ->set('footer',$footer)
 								 ->set('lists', $lists)
 								 ->set('dataresult1', $dataresult1)
 								 ->set('dataresult2', $dataresult2)
                                  ->bind('rpdid',$rpdid)
                                  ->bind('status',$status)
+                                 ->bind('no_impressions',$no_impressions)
+                                 ->bind('participants',$participants)
+                                 ->bind('referrals',$referrals)
                                  ->bind('temp',$temp)
                                  ->bind('details',$details);
          
@@ -829,11 +866,62 @@ class Controller_Customer extends Controller_Template {
 		{
 			Request::current()->redirect('user/login');
 		}
+		$userid = Auth::instance()->get_user()->id;
 		$username = Auth::instance()->get_user()->username;
+					  
+					  /*
+					  $data = ORM::factory('referralprog')
+                              ->find_all()
+							  ->as_array();
+					  print_r($data);	
+					  foreach ($data as $temp) :
+                        //echo $temp->refProgID.'</br>'; 
+                        //echo $temp->referralProgTitle.'</br>';
+                      endforeach; 	  
+						*/
+						
+					 //$progs =DB::select()->from('referralprogs')
+		                     //->order_by('referralProgDetailsID', 'DESC')
+				             //->limit(5) 
+                            // ->execute()
+							// ->as_array();	
+                     //$progs = ORM::factory('referralprog')
+                              //->find_all();
+							  
+                     //$progs=ORM::factory('referralprog', 100)->find;
+					 //$details= $progs->referralprogdetail->find_all();
+					 
+					 
+					 //foreach ($progs->$details as $temp) :
+                        //echo $temp->refProgID.'</br>'; 
+                        //echo $temp->referralProgTitle.'</br>';
+                     // endforeach; 
+					 print_r($progs);
 		
+		
+	   /**Total No. of impressions, participants, shares and clicks**/
+	    $numbers=DB::select(array('SUM("no_impressions")', 'total_impressions'), array('SUM("no_clicks")', 'total_clicks'))
+			           ->from('referralprogs')
+	                   ->where('customerID','=', $userid)
+                       ->execute()
+			           ->as_array();
+					   
+		$n_of_participants=DB::select(array('COUNT("userEmail")', 'total_participants'))
+			           ->from('rpusers')
+	                   //->where('userReferralID','=', $userid)
+                       ->execute()
+			           ->as_array();
+		
+        $n_of_shares=DB::select(array('COUNT("referredEmail")', 'total_shares'))
+			           ->from('rp_users_referrals')
+	                   //->where('userReferralID','=', $userid)
+                       ->execute()
+			           ->as_array();		
+       //print_r($n_of_participants);
+	   
 	   /********Draw charts**********/
-		$details =DB::select()->from('rp_referralprog_details')
-		                     ->order_by('referralProgDetailsID', `DESC`)
+		$details =DB::select()->from('referralprogdetails')
+		                     ->order_by('referralProgDetailsID', 'DESC')
 				             ->limit(5) 
                              ->execute()
 							 ->as_array();
@@ -859,27 +947,24 @@ class Controller_Customer extends Controller_Template {
 		$dataresult4.= "["."'".$campaignname."'".",".$key."]".",";
 		}
 
-		/*
-		$dataresult1="['Campaign', 'Impressions'],['Campaign1',15],['Campaign2',2],['Campaign3',2],['Campaign4',2],['Campaign5',7]";
-       
-	    $dataresult2="['Campaign', 'Shares'],['Campaign1',10],['Campaign2',2],['Campaign3',3],['Campaign4',1],['Campaign5',7]";
-		$dataresult3="['Campaign', 'Participant'],['Campaign1',  1000 ],['Campaign2',  1170 ],['Campaign3',  660 ],['Campaign4',  1030 ],['Campaign5',  1030 ]";
-		$dataresult4="  ['Campaign', 'Clicks'],['Campaign1',  1100],['Campaign2',  970],['Campaign3',  860],['Campaign4',  600],['Campaign5',  1000]";
 		
-		*/
-		
+		$header = View::factory('customer/header');
 		$this->template->content = View::factory('customer/campaign')
+		                           ->set('header',$header)
                                   ->set('username',$username)
                                   ->set('dataresult1',$dataresult1)
                                   ->set('dataresult2',$dataresult2)
                                   ->set('dataresult3',$dataresult3)
-                                  ->set('dataresult4',$dataresult4);
+                                  ->set('dataresult4',$dataresult4)
+                                  ->set('numbers',$numbers)
+                                  ->set('n_of_participants',$n_of_participants)
+                                  ->set('n_of_shares',$n_of_shares);
 	   
 	
 	}
 	
     
-	 public function action_account() {
+ public function action_account() {
 
 		$user = Auth::instance()->get_user();
 		if (!$user)
@@ -889,9 +974,34 @@ class Controller_Customer extends Controller_Template {
 		
 		$userid = Auth::instance()->get_user()->id;
 
+		////////////////////////////////////////////
+		
+		 $userid = Auth::instance()->get_user()->id;
+		 
+	     $data=$this->request->post();
+
+       if (HTTP_Request::POST == $this->request->method()){
+		  $query = DB::update('users')
+		    ->set(array('customerName'=>$data['customerName'],'customerAddress1'=>$data['customerAddress1'],'customerAddress2'=>$data['customerAddress2'],'customerCity'=>$data['customerCity'],'customerStateProvID'=>$data['customerStateProvID'],'customerCountryID'=>$data['customerCountryID'],'customerPhone'=>$data['customerPhone'],'customerWebsite'=>$data['customerWebsite'],'customerCFirstName'=>$data['customerCFirstName'], 'customerCLastName'=>$data['customerCLastName']))
+		    ->where('id','=', $userid)
+			->execute();
+		
+		}
+		
+		
+		 $options = DB::select()->from('users')
+		         ->where('id', '=', $userid)
+				 ->execute()
+				 ->as_array();
+				
+		 $temp=$options[0]['id'];
+		 
+		////////////////////////////////////////////
 	    $this->template->content = View::factory('customer/account')
-		                           ->set('userid',$userid);
-         
+		                           ->set('userid',$userid)
+								   ->bind('options',$options)
+								   ->bind('data',$data);
+		   
     }
 	
  public function action_delete2() {
@@ -921,15 +1031,43 @@ class Controller_Customer extends Controller_Template {
     }
 	
  public function action_support() {
-    $user = Auth::instance()->get_user();
-		if (!$user)
-		{
-	      Request::current()->redirect('user/login');
-		}
-		
-		$userid = Auth::instance()->get_user()->id;
+     $user = Auth::instance()->get_user();
 
-	    $this->template->content = View::factory('customer/support');
+	 if (!$user)
+  	   {
+	       Request::current()->redirect('user/login');
+    	}
+	  $userid = Auth::instance()->get_user()->id;
+	  $username = Auth::instance()->get_user()->username;
+	  
+	  if ($this->request->method() == Request::POST)
+        {
+		  $data=$this->request->post();
+
+     $From= $data['email'];
+    $To = 'rose4jyoti@gmail.com';   
+     //$To = 'rajansot@gmail.com';   
+     $Subject = $data['title'];
+
+     $message = "";
+	 $message.= "<table style=''>";
+	 $message.= "<tr><td>Name:</td><td>".$data['name']."</td></tr>";
+	 $message.= "<tr><td>Message:</td><td>".$data['message']."</td></tr>";
+	 $message.= "</table>";
+	 
+     $headers = "MIME-Version: 1.0\r\n";
+     $headers.= "Content-Type: text/html; charset=ISO-8859-1\r\n";    
+     $headers.= "From:".$From ."\r\n";
+     mail($To,$Subject,$message,$headers);
+	 
+		  /*
+	      $query=DB::insert('supports', array('user_id','title','message'))
+		 ->values(array( $userid,$data['title'],$data['message']))
+		 ->execute();
+		  */
+	     }
+	   
+	  $this->template->content = View::factory('customer/support');
  
  }
  	
