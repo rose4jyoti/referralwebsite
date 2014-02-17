@@ -59,20 +59,73 @@
         <h1 class="ac_s">Help</h1>
       </div>
     </div>
+
 	
-	  <div class="change">
+	<div class="change">
       <div class="change_p">
         <div class="change_p_content">
-        
-           
+		 
 
-    Support contents goes here..
-  
-
+		 
+		  <?= Form::open('Customer/support'); ?>
+          <table class="change_table" border="0">
+		  
+		  <tr>
+              <td>Name</td>
+            </tr>
+			<tr>
+              <td>
+			  
+			  <?= Form::input('name','',  array('class'=>'aa_new','style'=>'')); ?>
+			  </td>
+            </tr>
+           <tr>
+              <td>Email</td>
+            </tr>
+			<tr>
+              <td>
+			  
+			  <?= Form::input('email','',  array('class'=>'aa_new','style'=>'')); ?>
+			  </td>
+            </tr>
+            <tr>
+              <td>subject</td>
+            </tr>
+			<tr>
+              <td>
+			  
+			  <?= Form::input('title','',  array('class'=>'aa_new','style'=>'')); ?>
+			  </td>
+            </tr>
+            <tr>
+              <td>Description</td>
+            </tr>
+            <tr>
+              <td>
+			  
+			  <?= Form::textarea('message','',  array('class'=>'aa_new','style'=>'height:60px')); ?>
+			  </td>
+            </tr>
+            
+			
+            
+            <tr>
+              <td>
+               <button type="submit" style="  margin: 0 0 0 0px;">
+	             Save
+		       </button>
+			  	<?php //echo Html::image('public/image/chnag.png', array('alt'=>'', 'style'=>'margin: 10px 0 10px 0;'));  ?>
+			</td>
+            </tr>
+          </table>
+		  
+		     <?= Form::close(); ?>
+			 
         </div>
       </div>
-    </div>
-	
+    </div> 
+           
+
 <div class="foter">
       <div class="foter_in">
         <div class="foter_content">
