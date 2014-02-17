@@ -1,8 +1,37 @@
 <?php
 //print_r($_REQUEST);
  $customerid=$_REQUEST['id'];
- echo $customerid;
+ //echo $customerid;
 ?>
+<?php 
+/*
+if($_POST){
+ if($_POST['stage']=='1'){
+  //print_r($_POST);
+  //die();
+$host="localhost"; // Host name
+$username="softoasi_referal"; // Mysql username
+$password="]N^fwqZ*@7X9"; // Mysql password
+$db_name="softoasi_referral"; // Database name
+
+$tbl_name="rpusers"; // Table name
+// Connect to server and select database.
+mysql_connect("$host", "$username", "$password")or die("cannot connect");
+mysql_select_db("$db_name")or die("cannot select DB");
+
+// Insert data into mysql
+ $email=$_POST['email'];
+ $sql="INSERT INTO $tbl_name(userEmail,userReferralID)VALUES('$email','$customerid')";
+ $result=mysql_query($sql);
+ 
+// close connection
+mysql_close();
+ }
+}
+*/
+?>
+
+
 
 <!----------Data fetching from database----->
 <?php
@@ -35,7 +64,6 @@ while($row = mysql_fetch_array($result2, MYSQL_ASSOC))
 
 mysql_close($conn);
 ?>
-
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
@@ -74,8 +102,11 @@ mysql_close($conn);
 <body>
 
 <div class="wrapper_out">
-  <div class="wrapper_in">
-     <div class="header_out">
+  <div class="wrapper_in" style="width:auto;">
+     
+	 
+	 <!----
+	 <div class="header_out">
       <div class="header_in">
         <div class="logo">
 
@@ -89,8 +120,7 @@ mysql_close($conn);
           <li> <a href="http://softoasistech.com/dev2013/referral/front/hiw">How it works </a></li>
           <li> <a href="http://softoasistech.com/dev2013/referral/front/price">Pricing </a></li>
           <li><a href="http://softoasistech.com/dev2013/referral/front/blog"> Blog </a></li>
-          <li><?php //echo Html::anchor('user/login', 'Sign In');?></li>
-          <!---<li> <a href="#">Sign In</a></li>--->
+
         </ul>
     
 	</div>
@@ -102,12 +132,13 @@ mysql_close($conn);
       </div>
 		
     </div>
+          ------->
 
-
+	
 <!-------------------start contents----------------->
 
-<div class="block_out">
-   <div class="img1" style="margin: 40px 0 59px 138px;">
+<div class="block_out" style='width:auto;'>
+   <div class="img1" style="margin: 0px">
                 	<div class="img_in">
                                      <div style="padding: 0 0 0 0; min-height: 401px;" class="left">
                             <!---p>
@@ -130,8 +161,8 @@ mysql_close($conn);
                             </div>
                             <div class="right">
                             <p>
-								<b> 
-								        <?php echo $refprogtitle?>                     	
+								<b style="font-weight:bold;text-transform: capitalize;"> 
+								        <?php echo substr($refprogtitle, '0', '30').'..';?>                     	
 							    </b>
 							<!---
                             STAR SHARING NOW for a chance to win
@@ -248,7 +279,7 @@ mysql_close($conn);
 
 <!-------------------end contents----------------->
 
-
+<!----
 <div class="foter" style=>
       <div class="foter_in"  style="float: left; margin: 32px 0px 0px;">
         <div class="foter_content">
@@ -276,6 +307,10 @@ mysql_close($conn);
         </div>
       </div>
     </div>
+---->
+	
+	
+	
    </div>
   </div>
   
