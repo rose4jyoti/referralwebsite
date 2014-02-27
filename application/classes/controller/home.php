@@ -62,9 +62,7 @@ class Controller_Home extends Controller_Template  {
 				 ->execute()
 				 ->as_array();
 		
-		
-		
-				 
+			 
 		$contacts= DB::select()->from('rp_users_referrals')
 		        // ->where('referralProgID', '=', $id)
 				 ->execute()
@@ -108,12 +106,7 @@ class Controller_Home extends Controller_Template  {
    {     
    
       // $results = ORM::factory('contact')->find_all(); // loads all article   object from table
-
-		$contacts= DB::select()->from('rp_users_referrals')
-		        // ->where('referralProgID', '=', $id)
-				 ->execute()
-				 ->as_array();
-				 
+	 
         /////////////////////////////
 		 if (HTTP_Request::POST == $this->request->method()){
 
@@ -193,15 +186,17 @@ class Controller_Home extends Controller_Template  {
      	
 		  Request::current()->redirect('home/congrats/');
        
-		   
-		  ///////////////////////////////
 		  
 		  }
 		  
       
 		}
-   
-		
+        
+		/**********listing the sent contacts**********/
+		$contacts= DB::select()->from('rp_users_referrals')
+		        // ->where('referralProgID', '=', $id)
+				 ->execute()
+				 ->as_array();
 				 
 		/******counting invitation********/
 		$temptotal= DB::select()->from('rp_users_referrals')
@@ -262,4 +257,4 @@ class Controller_Home extends Controller_Template  {
 								->bind('id',$id );	
    }
 
-} 
+}
