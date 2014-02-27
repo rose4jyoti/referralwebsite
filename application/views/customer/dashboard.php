@@ -148,6 +148,16 @@ background-image:url("<?php echo URL::base(); ?>/public/image/hover.png");
 			<a href="#" class="kooltip"><span class="tooltip skyblue bottom center w200 slide-up">Rewards to the users .</span> <?php echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));    ?></a>
 			
 			</span> </div>
+			
+			
+			<!-----------Export bytton------->
+			<div class="a_top">
+             <h2><!--0--></h2>
+             <span><a href="<?php echo URL::base(); ?>customer/export/<?php echo $rpdid; ?>"><button>Export</button></a></span> 
+			</div>
+			<!------------- END ------------->
+			
+			
         </div>
         <div class="map">
           <div class="left_map">
