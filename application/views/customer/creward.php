@@ -43,42 +43,9 @@ function afterchange(first, second, main){
 
 <div class="wrapper_out">
   <div class="wrapper_in">
-    <div class="header_out">
-      <div class="header_in">
-        <div class="logo">
-		<?php echo Html::image('public/image/dummy-logo.png', array('alt'=>''));  ?>
-		
-		
-		</div>
-         <span class="cus_name"> Welcome &nbsp;<?php echo $customername; ?></span> 
-        
-        <div class="new_ul">
-          <ul id="menu">
-            <li><a href="#">Campaigns</a>
-			<ul>
-			 <?php foreach ($campaigns as $temp) : ?>
-                  <li><a href="<?php echo URL::base(); ?>/customer/dashboard/<?php echo $temp['referralProgDetailsID']; ?>"><?php echo $temp['referralProgTitle']; ?></a></li>
-			 <?php endforeach; ?>	
-                <li><a href="<?php echo URL::base(); ?>/customer/start">Add new Campaigns</a></li> 
-              </ul>
-			
-			</li>
-            
-			   <li><a href="#">Account</a>
-              <ul>
-                <li><a href="<?php echo URL::base(); ?>/customer/account">Account Setting</a></li>
-                <li><a href="<?php echo URL::base(); ?>/customer/billing">Billing information</a></li>
-               
-              </ul>
-            </li>
-            <li><a href="<?php echo URL::base(); ?>/customer/support">Support</a>
-            </li>
-			
-            <li><a href="<?php echo URL::base(); ?>/user/logout">Logout</a> </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+   
+    <?php echo $header; ?>
+   
 	<div class="top_line">
 	
       <div class="top_line_in">
@@ -216,7 +183,11 @@ function afterchange(first, second, main){
 from this
 <br>
  XLS 
-<b>file</b>.
+<b>file</b>(<a style="text-decoration:none;" href="<?php echo URL::base(); ?>/uploads/demo.xlsx">click here</a> to see the organised structure).
+
+<b><?php echo Form::file('codefile1', array('style'=>'
+    margin: 0 0 0 -425px;opacity: 0; width: 75px;cursor: pointer;')); ?> </b>
+	
 </span></div>
 
        
@@ -314,8 +285,10 @@ to give an instant reward to the participants with a
 <option option="multi-time use coupon code">multi-time use coupon code</option>
 </select>
 from this XLS
-<b>file</b>.
+<b>file</b>(<a style="text-decoration:none;" href="<?php echo URL::base(); ?>/uploads/demo.xlsx">click here</a> to see the organised structure).
 
+<b><?php echo Form::file('codefile1', array('style'=>'margin: 0 0 0 -425px;opacity: 0; width: 75px;cursor: pointer;')); ?> </b>
+	
 </span>
 
 </div>
@@ -373,32 +346,7 @@ status.</span>
 <!--- </div>----->
 	
 	
-	
-<div class="foter">
-      <div class="foter_in">
-        <div class="foter_content">
-          <div class="foter_content_in">
-            <ul>
-              <li><a class="special" href="http://softoasistech.com/dev2013/referral/front/about">About US </a></li>
-              |
-              <li><a class="special" href="http://softoasistech.com/dev2013/referral/front/quality"> Q&A </a></li>
-              |
-              <li><a class="special" href="http://softoasistech.com/dev2013/referral/front/tou"> Terms of Use</a></li>
-              |
-              <li><a class="special" href="http://softoasistech.com/dev2013/referral/front/privacypolicy"> Privacy Policy</a></li>
-              |
-              <li><a class="special" href="http://softoasistech.com/dev2013/referral/front/contact"> Contact US</a></li>
-             
-            </ul>
-            <div class="socil_icon">
-			<?php echo Html::image('public/image/social_icon.png', array('alt'=>''));  ?>
-			</div>
-            
-            <p class="copy">Copyright ©2010-2013 Referral. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+<?php echo $footer; ?>
 	
    </div>
   </div>
