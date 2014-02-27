@@ -3,35 +3,6 @@
  $customerid=$_REQUEST['id'];
  //echo $customerid;
 ?>
-<?php 
-/*
-if($_POST){
- if($_POST['stage']=='1'){
-  //print_r($_POST);
-  //die();
-$host="localhost"; // Host name
-$username="softoasi_referal"; // Mysql username
-$password="]N^fwqZ*@7X9"; // Mysql password
-$db_name="softoasi_referral"; // Database name
-
-$tbl_name="rpusers"; // Table name
-// Connect to server and select database.
-mysql_connect("$host", "$username", "$password")or die("cannot connect");
-mysql_select_db("$db_name")or die("cannot select DB");
-
-// Insert data into mysql
- $email=$_POST['email'];
- $sql="INSERT INTO $tbl_name(userEmail,userReferralID)VALUES('$email','$customerid')";
- $result=mysql_query($sql);
- 
-// close connection
-mysql_close();
- }
-}
-*/
-?>
-
-
 
 <!----------Data fetching from database----->
 <?php
@@ -55,11 +26,19 @@ while($row = mysql_fetch_array($result, MYSQL_ASSOC))
    }
 }
 
-$sql2 ="SELECT * FROM rp_referralprog_details WHERE referralProgID='". $customerid."' ";
+$sql2 ="SELECT * FROM referralprogdetails WHERE referralProgID='". $customerid."' ";
 $result2 = mysql_query( $sql2, $conn );
 while($row = mysql_fetch_array($result2, MYSQL_ASSOC))
 {
       $refprogtitle= $row['referralProgTitle'];
+}
+
+/*********Referralprogs*************/
+$sql3 ="SELECT * FROM referralprogs WHERE refProgID='". $_REQUEST['id']."' ";
+$result3 = mysql_query( $sql3, $conn );
+while($row = mysql_fetch_array($result3, MYSQL_ASSOC))
+{
+     $progstatus= $row['refProgStatus'];
 }
 
 mysql_close($conn);
@@ -237,15 +216,6 @@ mysql_close($conn);
 <div class="clear">&nbsp;</div>
 
 ---->	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
