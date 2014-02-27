@@ -78,4 +78,4 @@ class Controller_Front extends Controller_Template {
 
 }
 
-?> 
+?>
