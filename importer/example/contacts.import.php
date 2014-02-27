@@ -1,4 +1,5 @@
 <?php
+ //echo $progstatus;
 //echo $customerid=$_REQUEST['id'];
 ?>
 <script>
@@ -28,12 +29,17 @@ define("SITE","http://softoasistech.com/dev2013/referral");
 ?>
 
 
+
+<?php if($progstatus=="Active"){ ?>
+
 <span style="display:none; color: #FF0000;" id="warning"> Requset could not be handled.Try again Later. </span>
 			 
 <!---<form name="myForm" id="import_form" action="" class="center" method="post" onsubmit="myFunction()">-->
 <form name="myForm" action="" class="center" method="post" onsubmit="return validateForm();" >
 	<?php if (!$this->current_class->ExternalAuth) {?>
-		  <table height="229" class="table">
+		
+
+		<table height="229" class="table">
 		    
 			<tbody>
 			<tr>				  
@@ -120,9 +126,21 @@ define("SITE","http://softoasistech.com/dev2013/referral");
 		
 		   </tbody>
 		</table>
+		
+		
+		
 	</form>
 	
-	
+<?php } else{ ?>
+  <div style="  background-color: #FFFFFF;
+    border: 1px solid #000000;
+    float: left;
+    font: 14px Verdana,Geneva,sans-serif;
+    padding: 94px 10px;
+    width: 90%;">
+   Sorry, this Referral program is not Active.
+  </div>
+<?php } ?>
 
 <script>
 function validateForm()
