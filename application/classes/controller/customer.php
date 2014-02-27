@@ -4,7 +4,7 @@ class Controller_Customer extends Controller_Template {
 
     public function before()
     { 
-        parent::before(); 
+        parent::before();
 		
 		$user = Auth::instance()->get_user();
 		if (!$user)
@@ -18,21 +18,24 @@ class Controller_Customer extends Controller_Template {
         // Make $page_title available to all views
         View::bind_global('customername', $customername);
 		
-		/*$mycampaigns =DB::select('refProgID')
-		              ->from('referralprogs')
-                      ->where('customerID','=', $userid)
+
+		/*
+		$campaigns =DB::select()->from('referralprogdetails')
+                      //->where('customerID','=', $userid)
                       ->execute()
 					  ->as_array();
 		*/
-
-
-		$campaigns =DB::select()->from('referralprogdetails')
-                      //->where('customerID','=', $userid)
-                      ->execute();
 					  
+		$campaigns = DB::select('referralprogs.customerID','referralprogdetails.referralProgDetailsID',  'referralprogdetails.referralProgTitle')->from('referralprogs')->join('referralprogdetails')->on('referralprogs.refProgID','=', 'referralprogdetails.referralProgID')
+		            ->where('referralprogs.customerID', '=', $userid)
+		            ->execute()
+		            ->as_array();
+					
 		 View::bind_global('campaigns', $campaigns);
-					  
-        // Load $sidebar into the template as a view
+	
+         //print_r($campaigns);
+		
+		// Load $sidebar into the template as a view
         // $this->template->sidebar = View::factory('template/sidebar');
  
     }  
@@ -106,11 +109,15 @@ class Controller_Customer extends Controller_Template {
 		 ->values(array( $query[0], $data['sub1'], $data['editor1']))
 		 ->execute();
 		 
-		 Request::current()->redirect('customer/appearance');
+		  Request::current()->redirect('customer/appearance');
 		 
 		}
-
-         $this->template->content = View::factory('customer/emails');
+         
+		 $header = View::factory('customer/header');		
+	     $footer = View::factory('customer/footer');
+         $this->template->content = View::factory('customer/emails')
+		                           ->bind('header',$header)
+								   ->bind('footer',$footer);
 	   
 	}
 	
@@ -139,19 +146,21 @@ class Controller_Customer extends Controller_Template {
 				 ->execute()
 				 ->as_array();
 				 
-	     //print_r($query1);
-		 //die();
-		 
+
 		 //$paramid=$query1[0]['refProgTypeID'];
 		 $details =DB::select()->from('referralprogdetails')
                       ->where('referralProgDetailsID','=', $rpdid)
                       ->execute();		
 		 
+		$header = View::factory('customer/header');		
+	    $footer = View::factory('customer/footer');		
 		$this->template->content = View::factory('customer/cemails')
                                  ->set('rpdid',$rpdid)
                                  ->bind('query',$query)
                                  ->bind('query1',$query1)
-                                 ->bind('details',$details);
+                                 ->bind('details',$details)
+								  ->bind('header',$header)
+						         ->bind('footer',$footer);
 		 
 		   
 	}
@@ -180,8 +189,12 @@ class Controller_Customer extends Controller_Template {
 		 
 		 }
 		
-	   
-         $this->template->content = View::factory('customer/start');
+	   $header = View::factory('customer/header');		
+	   $footer = View::factory('customer/footer');		 
+                         
+       $this->template->content = View::factory('customer/start')
+	                               ->bind('header',$header)
+								   ->bind('footer',$footer);
 	   
 	}
 	
@@ -217,6 +230,19 @@ class Controller_Customer extends Controller_Template {
 
          if (HTTP_Request::POST == $this->request->method()){
  
+           /*******file uploading**************/
+            if (isset($_FILES['codefile1']))
+            {
+                $filename1 = $this->_save_sheet($_FILES['codefile1']);
+				
+            }
+            if (isset($_FILES['codefile2']))
+            {
+               $filename2 = $this->_save_sheet($_FILES['codefile2']);
+				
+            }
+			
+ 
           $query=DB::insert('referralprogdetails', array('referralProgID','referralProgTitle', 'referralProgDescription'))
 		 ->values(array( $id, $data['rpt'], $data['rpd']))
 		 ->execute();
@@ -229,8 +255,13 @@ class Controller_Customer extends Controller_Template {
 		  Request::current()->redirect('customer/emails');
 		 
 		 }
+		 
+		 $header = View::factory('customer/header');		
+	     $footer = View::factory('customer/footer');		 
 		 $this->template->content = View::factory('customer/reward')
-		                           ->bind('paramid', $programid);
+		                           ->bind('paramid', $programid)
+								    ->bind('header',$header)
+								    ->bind('footer',$footer);
 								   
 	}
 		 
@@ -242,8 +273,26 @@ class Controller_Customer extends Controller_Template {
 		 }
 		 $userid = Auth::instance()->get_user()->id;
 		 
-		 $rpdid=$this->request->param('id');
 		 
+		 
+		  if (HTTP_Request::POST == $this->request->method()){
+ 
+           /*******file uploading**************/
+            if (isset($_FILES['codefile1']))
+            {
+                $filename1 = $this->_save_sheet($_FILES['codefile1']);
+				
+            }
+            if (isset($_FILES['codefile2']))
+            {
+               $filename2 = $this->_save_sheet($_FILES['codefile2']);
+				
+            }
+		 
+		 }
+		 
+		 
+		 $rpdid=$this->request->param('id');
 		 $query = DB::select()->from('referralprogdetails')
 		         ->where('referralProgDetailsID', '=', $rpdid)
 				 ->execute()
@@ -265,12 +314,19 @@ class Controller_Customer extends Controller_Template {
         $details =DB::select()->from('referralprogdetails')
                       ->where('referralProgDetailsID','=', $rpdid)
                       ->execute();		 
+		
+		
+		$header = View::factory('customer/header');		
+	    $footer = View::factory('customer/footer');
+
 		$this->template->content = View::factory('customer/creward')
 								 ->set('paramid', $paramid)
                                  ->bind('rpdid',$rpdid)
                                  ->bind('query',$query)
                                  ->bind('query1',$query1)
-                                 ->bind('details',$details);
+                                 ->bind('details',$details)
+								  ->bind('header',$header)
+						          ->bind('footer',$footer);
 		 
 		   
 	}
@@ -324,6 +380,9 @@ class Controller_Customer extends Controller_Template {
             if (isset($_FILES['avatar']))
             {
                 $filename = $this->_save_image($_FILES['avatar']);
+				
+				//print_r( $filename);
+				
             }
         }
 		
@@ -353,16 +412,21 @@ class Controller_Customer extends Controller_Template {
 
         //print_r(images);					  
 		
+		 $header = View::factory('customer/header');		
+	     $footer = View::factory('customer/footer');
+
 		$this->template->content =View::factory('customer/appearance')
 		                    ->bind('description', $description)
 							->bind('details', $details)
-							->bind('images', $images);
+							->bind('images', $images)
+							->bind('header',$header)
+						    ->bind('footer',$footer);
 								
  }
 	
 
 	
-	public function action_cappearance() {
+ public function action_cappearance() {
       $user = Auth::instance()->get_user();
 	   if (!$user)
 		{
@@ -399,30 +463,28 @@ class Controller_Customer extends Controller_Template {
 					  ->limit(1)
                       ->execute();
 		
-        
-		
-		
         $view = View::factory('customer/cappearance');
         $error_message = NULL;
         $filename = NULL;
 		
-		
-		
 		$detail =DB::select()->from('referralprogdetails')
                       ->where('referralProgDetailsID','=', $rpdid)
                       ->execute();	
-			
+		
+
+		$header = View::factory('customer/header');		
+	    $footer = View::factory('customer/footer');
 	    $this->template->content = $view
 		                    ->set('rpdid', $rpdid)
 		                    ->bind('description', $description)
 							->bind('details', $details)
 							->bind('images', $images)
-							->bind('detail', $detail);
+							->bind('detail', $detail)
+							->bind('header',$header)
+						    ->bind('footer',$footer);;
 							
 
 		$data=$this->request->post();
-		//print_r($data);
-		//die();
  
         if ($this->request->method() == Request::POST)
         {
@@ -455,9 +517,9 @@ class Controller_Customer extends Controller_Template {
 		 
 		
 	
-	}
+ }
 	
-	public function action_upload()
+ public function action_upload()
     {
         $view = View::factory('customer/upload');
         $error_message = NULL;
@@ -484,7 +546,9 @@ class Controller_Customer extends Controller_Template {
         //$this->response->body($view);
     }
 	
-	protected function _save_image($image)
+	
+	
+   protected function _save_image($image)
     {
         if (
             ! Upload::valid($image) OR
@@ -512,6 +576,39 @@ class Controller_Customer extends Controller_Template {
  
         return FALSE;
     }
+	
+	
+  protected function _save_sheet($image)
+    {
+        if (
+            ! Upload::valid($image) OR
+            ! Upload::not_empty($image) OR
+            ! Upload::type($image, array('jpg', 'jpeg', 'png', 'gif','xlsx','xls')))
+        {
+            return FALSE;
+        }
+ 
+        $directory = DOCROOT.'uploads/couponsheets';
+ 
+        if ($file = Upload::save($image, NULL, $directory))
+        {
+            echo $filename = strtolower(Text::random('alnum', 20)).'.jpg';
+ 
+           
+			/*Image::factory($file)
+                ->resize(200, 200, Image::AUTO)
+                ->save($directory.$filename);
+            */
+            // Delete the temporary file
+            //unlink($file);
+            
+			//die('here');
+            return $filename;
+        }
+ 
+        return FALSE;
+    }
+	
 	
 	public function action_integration() {
 	   $user = Auth::instance()->get_user();
@@ -549,9 +646,15 @@ class Controller_Customer extends Controller_Template {
 		   //Request::current()->redirect('customer/emails');
 		 
 		 }
-	   
+	    
+		$header = View::factory('customer/header');		
+	    $footer = View::factory('customer/footer');
+
+							
        $this->template->content = View::factory('customer/integration')
-	                             ->bind('wid', $wid);
+	                             ->bind('wid', $wid)
+								 ->bind('header',$header)
+						         ->bind('footer',$footer);
 	   
 	}
 	
@@ -582,12 +685,17 @@ class Controller_Customer extends Controller_Template {
 		 $paramid=$query1[0]['refProgTypeID'];
 		 
 		 $wid= $temp;
-					  
-	    $this->template->content = View::factory('customer/cintegration')
+		
+       $header = View::factory('customer/header');		
+	   $footer = View::factory('customer/footer');
+
+	   $this->template->content = View::factory('customer/cintegration')
 	                              ->set('rpdid', $rpdid)
 	                              ->set('wid', $wid)
 	                             ->bind('details', $details)
-	                             ->bind('query1', $query1);
+	                             ->bind('query1', $query1)
+								 ->bind('header',$header)
+						         ->bind('footer',$footer);
 	}
 	
 	
@@ -767,15 +875,24 @@ class Controller_Customer extends Controller_Template {
 			Request::current()->redirect('user/login');
 		}
 		$username = Auth::instance()->get_user()->username;
-		//$userid = Auth::instance()->get_user()->id;
+		$userid = Auth::instance()->get_user()->id;
 
 		/********Draw charts**********/
-		$details =DB::select()->from('referralprogdetails')
+		/*$details =DB::select()->from('referralprogdetails')
 		                     ->order_by('referralProgDetailsID', `DESC`)
 				             ->limit(5) 
                              ->execute()
 							 ->as_array();
-			
+		*/
+		
+         $details = DB::select('referralprogs.customerID','referralprogdetails.referralProgDetailsID',  'referralprogdetails.referralProgTitle')
+		            ->from('referralprogs')
+					->join('referralprogdetails')
+					->on('referralprogs.refProgID','=', 'referralprogdetails.referralProgID')
+		            ->where('referralprogs.customerID', '=', $userid)
+		            ->execute()
+		            ->as_array();
+					
 		$dataresult1 ="['Campaign', 'Shares'],";	
 		foreach($details as $key=>$temp){
 		$campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
@@ -896,7 +1013,7 @@ class Controller_Customer extends Controller_Template {
                         //echo $temp->refProgID.'</br>'; 
                         //echo $temp->referralProgTitle.'</br>';
                      // endforeach; 
-					 print_r($progs);
+					// print_r($progs);
 		
 		
 	   /**Total No. of impressions, participants, shares and clicks**/
@@ -920,11 +1037,22 @@ class Controller_Customer extends Controller_Template {
        //print_r($n_of_participants);
 	   
 	   /********Draw charts**********/
-		$details =DB::select()->from('referralprogdetails')
+		/*$details =DB::select()->from('referralprogdetails')
 		                     ->order_by('referralProgDetailsID', 'DESC')
 				             ->limit(5) 
                              ->execute()
 							 ->as_array();
+		*/
+		
+        $details = DB::select('referralprogs.customerID','referralprogdetails.referralProgDetailsID',  'referralprogdetails.referralProgTitle')
+		            ->from('referralprogs')
+					->join('referralprogdetails')
+					->on('referralprogs.refProgID','=', 'referralprogdetails.referralProgID')
+		            ->where('referralprogs.customerID', '=', $userid)
+		            ->execute()
+		            ->as_array();
+		
+	
 			
 		$dataresult1 ="['Campaign', 'Impressions'],";	
 		foreach($details as $key=>$temp){
@@ -997,10 +1125,15 @@ class Controller_Customer extends Controller_Template {
 		 $temp=$options[0]['id'];
 		 
 		////////////////////////////////////////////
+		$header = View::factory('customer/header');		
+		$footer = View::factory('customer/footer');		
+		
 	    $this->template->content = View::factory('customer/account')
 		                           ->set('userid',$userid)
 								   ->bind('options',$options)
-								   ->bind('data',$data);
+								   ->bind('data',$data)
+								   ->bind('header',$header)
+								   ->bind('footer',$footer);
 		   
     }
 	
@@ -1016,6 +1149,7 @@ class Controller_Customer extends Controller_Template {
    
  }
 
+ 
  public function action_billing() {
 
 		$user = Auth::instance()->get_user();
@@ -1026,8 +1160,13 @@ class Controller_Customer extends Controller_Template {
 		
 		$userid = Auth::instance()->get_user()->id;
 
-	    $this->template->content = View::factory('customer/billing');
-         
+		
+		$header = View::factory('customer/header');		
+		$footer = View::factory('customer/footer');		
+		
+	    $this->template->content = View::factory('customer/billing')
+                                   ->bind('header',$header)
+								   ->bind('footer',$footer);
     }
 	
  public function action_support() {
@@ -1067,10 +1206,77 @@ class Controller_Customer extends Controller_Template {
 		  */
 	     }
 	   
-	  $this->template->content = View::factory('customer/support');
+	  $header = View::factory('customer/header');		
+	  $footer = View::factory('customer/footer');		 
+	  $this->template->content = View::factory('customer/support')
+	                              ->bind('header',$header)
+								  ->bind('footer',$footer);
  
  }
  	
+	
+ public function action_export() {
+     $user = Auth::instance()->get_user();
+
+	  if (!$user)
+  	   {
+	       Request::current()->redirect('user/login');
+       }
+	  $userid = Auth::instance()->get_user()->id;
+	  $rpdid=$this->request->param('id');
+	  
+	  ///////////////////////////////////////
+	  //Placing columns names in first row
+$csv_output ="";
+$delim =  ',' ;
+
+$csv_output .= "Name".$delim;
+$csv_output .= "Email".$delim;
+$csv_output .= "Subscribe date".$delim;
+$csv_output .= "Emails sent".$delim;
+$csv_output .= "Total Rewards".$delim;
+$csv_output .= "\n";
+
+$csv_output .= $delim;
+$csv_output .= $delim;
+$csv_output .= $delim;
+$csv_output .= $delim;
+$csv_output .= $delim;
+$csv_output .= "\n";
+//End Placing columns in first row
+
+
+for($i=1; $i<=10; $i++){
+  $CSV_SEPARATOR = ",";
+  $CSV_NEWLINE = "\r\n";
+
+$csv_output .= 'Test N	ame'.$i.$delim;
+$csv_output .= 'Test Email'.$i.$delim;
+$csv_output .= 'Test Subscribe date'.$i. $delim;
+$csv_output .= 'Test Emails sent'.$i. $delim ;
+$csv_output .= 'Test Rewards' .$i. $delim ;
+$csv_output .= "\n"; 
+  
+ }
+ 
+$csv_output .= " "; 
+
+$csv_output .= "\n"; 
+
+
+// while loop main first
+header("Content-Type: application/force-download\n");
+header("Cache-Control: cache, must-revalidate");   
+header("Pragma: public");
+header("Content-Disposition: attachment; filename=participantlistexports_" . date("Ymd") . ".csv");
+ print $csv_output;
+  exit;
+	  
+/////////////////////////////////////////////////////	  
+	  
+	  Request::current()->redirect('cuctomer/dashboard');
+ 
+ }
 	
 }
 
