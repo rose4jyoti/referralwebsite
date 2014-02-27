@@ -183,6 +183,8 @@ $seconds %= 60;
 <table class="songs_list">
   <tbody>
   
+  <?php //print_r($contacts); ?>
+  
  <?php $i=1;?> 
   <?php foreach ($contacts as $temp) : ?>	
 
@@ -196,6 +198,8 @@ $seconds %= 60;
 	 </td>
     <td style="float:left;" width="10%" valign="middle" align="center">
 	<span>
+	
+	<?php //echo $temp['sent_status'] ?>
 	<?php 
     $ss=$temp['sent_status']; 
 	if($ss=='1'){
