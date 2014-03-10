@@ -130,11 +130,13 @@ endforeach; ?>
 							<h2>
 							
 							<?= Form::open('home/index', array('style'=>'margin:0px',)); ?>
-						    <?= Form::input('key','',  array('class'=>'new_in_box')); ?>
+						   
+    						   <?= Form::input('key','',  array('class'=>'new_in_box')); ?>
                              <!----<input type="text" class="new_in_box" name="">-->		
                               <?php echo Form::hidden('formid', '1'); ?>
                                
 							   <?php echo Form::hidden('id', $id); ?>
+							   <?php echo Form::hidden('campaigndetail_id', $campaigndetail_id); ?>
 							 
                              <button style="border:none; background:none;height: 22px;width: 28px;" type="submit">
 							  <img style=" float: left;margin: 0; padding: 4px;" src="/dev2013/referral/public/image/search_but.png" alt="">
@@ -169,6 +171,7 @@ endforeach; ?>
 								  <?php $i++; ?>
 							   <?php endforeach; ?>
 							  <?php echo Form::hidden('id', $id); ?>
+							  <?php echo Form::hidden('campaigndetail_id', $campaigndetail_id); ?>
                               <?php echo Form::hidden('formid', '0'); ?>
 							  
                                <!---<tr class="no_back">
@@ -205,7 +208,7 @@ endforeach; ?>
 
 
 
-<a href="<?php echo URL::base(); ?>/home/congrats/<?php echo $id; ?>">
+<a href="<?php echo URL::base(); ?>/home/congrats/<?php echo $id; ?>/<?php echo $campaigndetail_id; ?>">
 
 
    <!---<img style="float: right; margin: 8px 7px 13px 0;" alt="" src="<?php echo URL::base(); ?>/public/image/next_but.jpg">-->
