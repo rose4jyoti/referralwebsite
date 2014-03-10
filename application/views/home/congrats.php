@@ -163,6 +163,7 @@ $seconds %= 60;
 							  <!---<input type="text" class="new_in_box" name="">---->
 							  <?php echo Form::hidden('formid', '1'); ?>
 							   <?php echo Form::hidden('id', $id); ?>
+							   <?php echo Form::hidden('campaigndetail_id', $campaigndetail_id); ?>
 							  <button style="border:none; background:none;height: 22px;width: 28px;" type="submit">
 							  <img style=" float: left;margin: 0; padding: 4px;" src="/dev2013/referral/public/image/search_but.png" alt="">
 							  </button>							  
