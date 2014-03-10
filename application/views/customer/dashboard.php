@@ -148,15 +148,7 @@ background-image:url("<?php echo URL::base(); ?>/public/image/hover.png");
 			<a href="#" class="kooltip"><span class="tooltip skyblue bottom center w200 slide-up">Rewards to the users .</span> <?php echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));    ?></a>
 			
 			</span> </div>
-			
-			
-			<!-----------Export bytton------->
-			<div class="a_top">
-             <h2><!--0--></h2>
-             <span><a href="<?php echo URL::base(); ?>customer/export/<?php echo $rpdid; ?>"><button>Export</button></a></span> 
-			</div>
-			<!------------- END ------------->
-			
+
 			
         </div>
         <div class="map">
@@ -169,8 +161,16 @@ background-image:url("<?php echo URL::base(); ?>/public/image/hover.png");
 		  <?php //echo Html::image('public/image/graph_d.jpg', array('alt'=>''));  ?>
 		  </div>
         </div>
-        <h1 class="Participants_List">Participants List</h1>
+        <h1 class="Participants_List">Participants List
 		
+		    <!-----------Export bytton------->
+             <span><a href="<?php echo URL::base(); ?>customer/export/<?php echo $rpdid; ?>"><button>Export</button></a></span> 
+			<!------------- END ------------->
+		
+		
+		</h1>
+		
+			
 		
 		<div class="b_textarea" style="">
          <!--<textarea name="" cols="" rows="" class="b_textarea">-->
@@ -179,12 +179,17 @@ background-image:url("<?php echo URL::base(); ?>/public/image/hover.png");
 		 <center>
 		  <p>
 		 
-		   <span class="listing" style=" font-size: 20px; padding: 0 25px;"><?php echo $temp['userName']; ?> </span>|
-            <span class="listing"  style=" font-size: 20px; padding: 0 25px;"><?php echo $temp['userName']; ?> </span>| 	   
+		   <span class="listing" style=" font-size: 20px; padding: 0 25px;"><?php echo $temp['userName']; ?> 
+		   
+		   <?php $t=explode('@',$temp['userEmail']);
+		     echo $t[0]; ?> 
+		   </span>|
+            <span class="listing"  style=" font-size: 20px; padding: 0 25px;"><?php echo $temp['userEmail']; ?> </span>| 	   
 		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;"><?php echo substr($temp['userRegistredDate'],0,10) ; ?> </span>| 
 		  
-		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;">sum </span>| 
-		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;">rewards </span>
+		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;">Esent</span>| 
+		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;">Csubscribed</span>| 
+		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;">0 </span>
 		   
 		   </p>
 		 </center>
