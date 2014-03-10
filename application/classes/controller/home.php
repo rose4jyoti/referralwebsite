@@ -40,15 +40,25 @@ class Controller_Home extends Controller_Template  {
    }
 
  
+ 
+ 
   public function action_index()
   {
         if($this->request->param('id')){
-		 $id=$this->request->param('id');
+
+		  $id=$this->request->param('id');
+		  $campaigndetail_id=$this->request->param('param');
+		  
 		  $session = Session::instance();
 		  $session->set('cam_id',$id);
+		  $session->set('campaigndetail_id',$campaigndetail_id);
+		  
 		}
+	
+	
         $session = Session::instance();		
-		$id=$id=$session->get('cam_id');
+		$id=$session->get('cam_id');
+		$campaigndetail_id=$session->get('campaigndetail_id');
         //$contacts = ORM::factory('listcontact')->find_all(); // loads all article   object from table
         
 		$options = DB::select()->from('rp_referralprog_images')
@@ -61,13 +71,24 @@ class Controller_Home extends Controller_Template  {
 		         ->where('referralProgID', '=', $id)
 				 ->execute()
 				 ->as_array();
-		
-			 
+	
 		$contacts= DB::select()->from('rp_users_referrals')
-		        // ->where('referralProgID', '=', $id)
+		         ->where('campaign_id', '=', $id)
+		         ->where('referredByUserID', '=', $campaigndetail_id)
 				 ->execute()
 				 ->as_array();
-		
+	
+					  
+		/*$contacts = DB::select('rp_users_referrals.referralID','rp_users_referrals.referredByUserID', 'rp_users_referrals.referredName', 'rp_users_referrals.referredEmail', 'rp_users_referrals.sent_status')
+		   ->from('rp_users_referrals')
+		   ->join('rpusers')
+		   ->on('rpusers.userID','=', 'rp_users_referrals.referredByUserID')
+		            ->where('rpusers.userReferralID', '=', $id)
+		            ->where('rpusers.userID', '=', 67)
+		            ->execute()
+		            ->as_array();
+			print_r($contacts);	
+		*/
 		
 		/////////////////////////////
 		 if (HTTP_Request::POST == $this->request->method()){
@@ -95,13 +116,12 @@ class Controller_Home extends Controller_Template  {
 							    ->set('contacts', $contacts) 
 								->set('options', $options)
 								->set('options2', $options2)
-							    ->bind('id', $id) ;	
+							    ->bind('id', $id) 	
+							    ->bind('campaigndetail_id',$campaigndetail_id );	
                       
   }
   
   
-  
-
   public function action_congrats()
    {     
    
@@ -117,6 +137,8 @@ class Controller_Home extends Controller_Template  {
 		    
 		    $session = Session::instance();
 			$session->set('cam_id',$data['id']);
+			
+			$session->set('campaigndetail_id',$data['campaigndetail_id']);
 			//print_r($session->get('cam_id'));
 			
 		    //for($i=1; $i<$count;$i++){
@@ -192,9 +214,15 @@ class Controller_Home extends Controller_Template  {
       
 		}
         
+		$session = Session::instance();	
+		$id=$session->get('cam_id');
+		$campaigndetail_id=$session->get('campaigndetail_id');
+		
 		/**********listing the sent contacts**********/
 		$contacts= DB::select()->from('rp_users_referrals')
-		        // ->where('referralProgID', '=', $id)
+		          //->where('referralProgID', '=', $id)
+				 ->where('campaign_id', '=', $id)
+		         ->where('referredByUserID', '=', $campaigndetail_id)
 				 ->execute()
 				 ->as_array();
 				 
@@ -254,7 +282,90 @@ class Controller_Home extends Controller_Template  {
 								->bind('countregistered', $countregistered)	
 								->bind('social', $social)	
 								->bind('created', $created)	
-								->bind('id',$id );	
+								->bind('id',$id )	
+								->bind('campaigndetail_id',$campaigndetail_id );	
    }
 
-}
+
+  
+
+public function action_congrats2()
+   {     
+   
+		$session = Session::instance();	
+		$id=$session->get('cam_id');
+		$campaigndetail_id=$session->get('campaigndetail_id');
+		
+		/**********listing the sent contacts**********/
+		$contacts= DB::select()->from('rp_users_referrals')
+		          //->where('referralProgID', '=', $id)
+				 ->where('campaign_id', '=', $id)
+		         ->where('referredByUserID', '=', $campaigndetail_id)
+				 ->execute()
+				 ->as_array();
+				 
+		/******counting invitation********/
+		$temptotal= DB::select()->from('rp_users_referrals')
+		         //->where('register_status', '=', 1)
+				 ->execute()
+				 ->as_array();
+		$counttotal=  count($temptotal);	
+		
+		$tempsent= DB::select()->from('rp_users_referrals')
+		         ->where('sent_status', '=', 1)
+				 ->execute()
+				 ->as_array();
+		$countsent=  count($tempsent);	
+        $tempregistered= DB::select()->from('rp_users_referrals')
+		         ->where('referralStatus', '=', 'Registered')
+				 ->execute()
+				 ->as_array();
+		$countregistered=  count($tempregistered);			
+        //print_r($countsent);
+        //print_r($countregistered);
+
+			
+		
+		/////////////////////////////
+		
+		 $social= DB::select()->from('sociallinks')
+		         //->where('referralProgID', '=', $id)
+				 ->limit(1)
+				 ->execute()
+				 ->as_array();
+
+		///////////////////////
+        $session = Session::instance();
+		$id=$session->get('cam_id');
+				  $options = DB::select()->from('rp_referralprog_images')
+		         ->where('referralProgID', '=', $id)
+				 ->order_by('referralProgImageID', 'ASC')
+				 ->execute()
+				 ->as_array();
+		
+		
+		$created= DB::select()->from('referralprogs')
+		         ->where('refProgID', '=', $id)
+				 ->execute()
+				 ->as_array();
+	    
+		
+		
+        $this->template->content =View::factory('home/congrats')
+							    //->set('results', $results)
+							    ->bind('options', $options)
+								->bind('contacts', $contacts)
+								->bind('counttotal', $counttotal)
+								->bind('countsent', $countsent)
+								->bind('countregistered', $countregistered)	
+								->bind('social', $social)	
+								->bind('created', $created)	
+								->bind('id',$id )	
+								->bind('campaigndetail_id',$campaigndetail_id );	
+  }  
+   
+   
+   
+   
+   
+ }
