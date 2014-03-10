@@ -15,7 +15,7 @@ if(! $conn )
   die('Could not connect: ' . mysql_error());
 }
  //$sql = 'SELECT * FROM rp_referralprog_images';
-$sql = "SELECT * FROM rp_referralprog_images WHERE referralProgID='". $customerid."'  ORDER BY referralProgImageID Desc";
+$sql = "SELECT * FROM rp_referralprog_images WHERE referralProgID='". $customerid."'  ORDER BY referralProgImageID Asc";
 
 mysql_select_db('softoasi_referral');
 $result = mysql_query( $sql, $conn );
