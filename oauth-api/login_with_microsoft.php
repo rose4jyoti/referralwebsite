@@ -66,15 +66,14 @@
 </head>
 <body>
 <?php
+    echo '<h1> you have logged in successfully with Microsoft!</h1>';
     for( $i = 0; $i < count($data->data); $i ++)
-    {
-      //echo $data->data[$i]->name.' ';
-      echo $data->data[$i]->emails->preferred;
-      echo '</br>';
+    {     
+      echo $data->data[$i]->name.' :'.$data->data[$i]->emails->preferred.'</br>';
+      
     }
-		//echo '<h1>', HtmlSpecialChars($data->name),
-			//' you have logged in successfully with Microsoft!</h1>';
-		echo '<pre>', HtmlSpecialChars(print_r($data, 1)), '</pre>';
+    //echo '<pre>', HtmlSpecialChars(print_r($data, 1)), '</pre>';	
+		
 ?>
 </body>
 </html>

@@ -38,13 +38,9 @@
 			{                   
                             
 				$success = $client->CallAPI(
-					'http://social.yahooapis.com/v1/user/me/contacts?count=max', 
+					'http://social.yahooapis.com/v1/user/me/contacts?count=max&format=json', 
 					//'http://query.yahooapis.com/v1/yql', 
-					'GET', array('$format=json'), /*urldecode('q=select * from social.profile where guid=me'),
-						//'q'=>'select * from social.profile where guid=me',
-						//'format'=>'json'
-						//'$format=json',
-                                                ),    */                                           
+					'GET', array(),                       
                                         array('FailOnAccessError'=>true), $contacts);
                                 
 			}
@@ -67,37 +63,19 @@
 <title>Yahoo OAuth client results</title>
 </head>
 <body>
-<?php
-/**
- * Take XML content and convert
- * if to a PHP array.
- * @param string $xml Raw XML data.
- * @param string $main_heading If there is a primary heading within the XML that you only want the array for.
- * @return array XML data in array format.
- */
-function xml_to_array($xml,$main_heading = '') {
-    $deXml = simplexml_load_string($xml);
-    $deJson = json_encode($deXml);
-    $xml_array = json_decode($deJson,TRUE);
-    if (! empty($main_heading)) {
-        $returned = $xml_array[$main_heading];
-        return $returned;
-    } else {
-        return $xml_array;
+<?php      
+
+    //echo '<pre>', HtmlSpecialChars(print_r($contacts, 1)), '</pre>';    
+    echo '<h1>', HtmlSpecialChars($xml->author->name),' you have logged in successfully with Yahoo!</h1>';   
+    
+    foreach ($contacts->contacts->contact as $contact) {          
+      if($contact->fields[1]->value->givenName == ''){
+          echo $contact->fields[0]->value.':'.$contact->fields[0]->value.'<br>';
+      }else{
+          echo $contact->fields[1]->value->givenName.' '.$contact->fields[1]->value->familyName.' :'.$contact->fields[0]->value.'<br>';
+      }
     }
-}
-                echo '<h1>you have logged in successfully with Yahoo!</h1>';
-                        
-                $arrContacts = xml_to_array($contacts);
-		
-                
-//for( $i = 0; $i < count($arrContacts[contact]); $i ++)
-foreach($arrContacts[contact] as $contact)
-    {      
-      print_r($contact[fields][1][value][givenName].' '.$contact[fields][1][value][familyName].' '.$contact[fields][0][value]);
-      echo '</br>';
-    }
-//echo '<pre>', HtmlSpecialChars(print_r($arrContacts),1), '</pre>';	
+      
 ?>
 </body>
 </html>

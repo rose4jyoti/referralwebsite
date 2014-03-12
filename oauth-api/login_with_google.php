@@ -54,6 +54,7 @@
                                 //echo "AccessTok".$client->access_token;
 				$success = $client->CallAPI(
 					//'https://www.googleapis.com/oauth2/v1/userinfo',
+					//'https://www.google.com/m8/feeds/contacts/default/full?alt=json',
 					'https://www.google.com/m8/feeds/contacts/default/full',
 					'GET', array(), array('FailOnAccessError'=>true), $data);
 					
@@ -73,29 +74,51 @@
 </head>
 <body>
 <?php
-
+/**
+ * Take XML content and convert
+ * if to a PHP array.
+ * @param string $xml Raw XML data.
+ * @param string $main_heading If there is a primary heading within the XML that you only want the array for.
+ * @return array XML data in array format.
+ */
     function xml_to_array($xml,$main_heading = '') {
-    $deXml = simplexml_load_string($xml);
-    $deJson = json_encode($deXml);
-    $xml_array = json_decode($deJson,TRUE);
-    if (! empty($main_heading)) {
-        $returned = $xml_array[$main_heading];
-        return $returned;
+        $deXml = simplexml_load_string($xml);
+        $deJson = json_encode($deXml);
+        $xml_array = json_decode($deJson,TRUE);
+        if (! empty($main_heading)) {
+            $returned = $xml_array[$main_heading];
+            return $returned;
     } else {
         return $xml_array;
-    }
-}
-                
-    $arrContacts = xml_to_array($data);		                
-
-    foreach($arrContacts[contact] as $contact)
-        {      
-          print_r($contact[fields][1][value][givenName].' '.$contact[fields][1][value][familyName].' '.$contact[fields][0][value]);
-          echo '</br>';
         }
-                echo '<h1>', HtmlSpecialChars($data->name),
-			' you have logged in successfully with Google!</h1>';
-		echo '<pre>', HtmlSpecialChars(print_r($arrContacts, 1)), '</pre>';
+    }       
+    
+
+    // The contacts api only returns XML responses.    
+    $xml = simplexml_load_string($data);
+    $xml->registerXPathNamespace('gd', 'http://schemas.google.com/g/2005');
+    //print "<pre>" . print_r(json_decode($xml, true), true) . "</pre>";
+    
+    echo '<h1>', HtmlSpecialChars($xml->author->name),' you have logged in successfully with Google!</h1>';
+    
+    //echo count($xml->entry).'<br>';
+    
+    foreach ($xml->entry as $entry) {
+        foreach ($entry->xpath('gd:email') as $email) {
+          //$output_array[] = array((string)$entry->title, (string)$email->attributes()->address);
+            if($entry->title == ''){
+                echo $email->attributes()->address.':'.$email->attributes()->address.'<br>';
+            }else{
+                echo $entry->title.':'.$email->attributes()->address.'<br>';
+            }
+          
+        }
+      }
+  
+    
+    //echo '<pre>', HtmlSpecialChars(print_r($xml, 1)), '</pre>';
+    //echo '<pre>', HtmlSpecialChars(print_r($data, 1)), '</pre>';
+		
 ?>
 </body>
 </html>
