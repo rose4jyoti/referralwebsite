@@ -17,17 +17,6 @@ foreach ($images as $temp) :
  }
 
 endforeach; ?>
-<?php
-
-//echo $img1;
-//echo '<br>';
-//echo $img2;
-//echo '<br>';
-//echo $img3;
-//echo '<br>';
-
-?>
-	
 								  
 <div class="wrapper_out">
   <div class="wrapper_in">
@@ -190,14 +179,14 @@ endforeach; ?>
                 </div>
                  <div class="img2">
                  	<div class="img_in">
-                                <div class="participation">
+                         <div class="participation">
                             <h3>
 							<!---
 							<b>invite your friends</b> to enter this giveaway
                             and get a free mp3 shuffling player
 							--->
 							
-							<b>
+							<b style="text-transform:capitalize;">
 								<?php foreach ($description as $temp) : ?>
                                <?php //echo $temp['referralProgDescription']; 
 							   
