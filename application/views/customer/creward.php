@@ -39,6 +39,7 @@ function afterchange(first, second, main){
 <?php foreach ($query1 as $temp) : 
    $start=$temp['startTime']; 
    $end=$temp['endTime']; 
+   $minReferralRequired=$temp['minReferralRequired']; 
  endforeach; ?>
 
 <div class="wrapper_out">
@@ -85,7 +86,7 @@ function afterchange(first, second, main){
        
        <h1>Define your campaign</h1>
 	   
-	    <?= Form::open('customer/reward'); ?>
+	    <?= Form::open('customer/creward/'.$rpdid); ?>
 		
        <div class="cam_input"><span>My campaign title is</span> 
 	   
@@ -129,7 +130,7 @@ function afterchange(first, second, main){
 
      <span class="bb"> when</span>
 	   <!----<a class="onchange" href="#">three</a> ---->
-   <?= Form::input('mrr','',  array('class'=>'aa_new', 'style'=>'width:50px;')); ?>
+   <?= Form::input('mrr',$minReferralRequired,  array('class'=>'aa_new', 'style'=>'width:50px;')); ?>
 
 <!---   
 <select name="mrr" class="asc_nn">
