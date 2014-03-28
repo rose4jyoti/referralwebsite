@@ -3,7 +3,7 @@
 class Controller_Customer extends Controller_Template {
 
     public function before()
-    {  
+    { 
         parent::before();
 		
 		$user = Auth::instance()->get_user();
@@ -14,25 +14,13 @@ class Controller_Customer extends Controller_Template {
          
 		$customername = Auth::instance()->get_user()->username;
 		$userid = Auth::instance()->get_user()->id;
-
-        // Make $page_title available to all views
         View::bind_global('customername', $customername);
-		
-
-		/*
-		$campaigns =DB::select()->from('referralprogdetails')
-                      //->where('customerID','=', $userid)
-                      ->execute()
-					  ->as_array();
-		*/
 					  
 		$campaigns = DB::select('referralprogs.customerID','referralprogdetails.referralProgDetailsID',  'referralprogdetails.referralProgTitle')->from('referralprogs')->join('referralprogdetails')->on('referralprogs.refProgID','=', 'referralprogdetails.referralProgID')
 		            ->where('referralprogs.customerID', '=', $userid)
 		            ->execute()
-		            ->as_array();
-					
+		            ->as_array();		
 		 View::bind_global('campaigns', $campaigns);
-	
          //print_r($campaigns);
 		
 		// Load $sidebar into the template as a view
@@ -51,7 +39,6 @@ class Controller_Customer extends Controller_Template {
 		$this->template->content = View::factory('customer/index')
 			->bind('user', $user);
          
-	   
 	}
 	
     // loads the new article form
@@ -95,7 +82,7 @@ class Controller_Customer extends Controller_Template {
 		 Request::current()->redirect('customer/start');
 		 }
 		 
-		 $programid=$finds[0]['refProgTypeID'];
+		$programid=$finds[0]['refProgTypeID'];
 		 
 	    $data=$this->request->post();
 
@@ -108,7 +95,6 @@ class Controller_Customer extends Controller_Template {
 		  $query1=DB::insert('rp_email_template_details', array('emailTempID','emailSubject', 'emailHtml','type'))
 		 ->values(array( $query[0], $data['sub1'], $data['editor1'],'Campaign_entry'))
 		 ->execute();
-		 
 		 
 		  $query2=DB::insert('rp_email_template_details', array('emailTempID','emailSubject', 'emailHtml','type'))
 		 ->values(array( $query[0], $data['sub2'], $data['editor2'],'Reward_notification'))
@@ -669,25 +655,18 @@ class Controller_Customer extends Controller_Template {
 	   $wid= $id;
 	   //print_r($id);
 		
-	   $data=$this->request->post();
-	 
-	   if (HTTP_Request::POST == $this->request->method()){
-		  
-		 $query = DB::update('referralprogs')
-		         ->set(array('refProgUniqueKeyID'=> $data['ukey']))
+
+	   $ukey=uniqid(); 
+	   $query = DB::update('referralprogs')
+		         ->set(array('refProgUniqueKeyID'=> $ukey))
 		          ->where('refProgID', '=', $id)
 				  ->execute();
 				  
-		   //Request::current()->redirect('customer/emails');
-		 
-		 }
-	    
-		$header = View::factory('customer/header');		
-	    $footer = View::factory('customer/footer');
-
-							
+	   $header = View::factory('customer/header');		
+	   $footer = View::factory('customer/footer');					
        $this->template->content = View::factory('customer/integration')
 	                             ->bind('wid', $wid)
+	                             ->bind('ukey', $ukey)
 								 ->bind('header',$header)
 						         ->bind('footer',$footer);
 	   
@@ -702,31 +681,27 @@ class Controller_Customer extends Controller_Template {
 	   $userid = Auth::instance()->get_user()->id;
 		 
 	   $rpdid=$this->request->param('id');
-       //print_r($rpdid);
+       
 	   $details =DB::select()->from('referralprogdetails')
                       ->where('referralProgDetailsID','=', $rpdid)
                       ->execute()
-					  ->as_array();	
-					  
-		 $temp=$details[0]['referralProgID'];
-		 
-		 //print_r($temp);
-		 
-		 $query1 = DB::select()->from('referralprogs')
+					  ->as_array();				  
+	   $temp=$details[0]['referralProgID'];
+ 
+	   $query1 = DB::select()->from('referralprogs')
 		         ->where('refProgID', '=', $temp)
 				 ->execute()
 				 ->as_array();
+		//print_r($query1);
+	   $paramid=$query1[0]['refProgTypeID'];
 		 
-		 $paramid=$query1[0]['refProgTypeID'];
-		 
-		 $wid= $temp;
+		$wid= $temp;
 		
        $header = View::factory('customer/header');		
 	   $footer = View::factory('customer/footer');
-
 	   $this->template->content = View::factory('customer/cintegration')
-	                              ->set('rpdid', $rpdid)
-	                              ->set('wid', $wid)
+	                             ->set('rpdid', $rpdid)
+	                             ->set('wid', $wid)
 	                             ->bind('details', $details)
 	                             ->bind('query1', $query1)
 								 ->bind('header',$header)
@@ -912,37 +887,43 @@ class Controller_Customer extends Controller_Template {
 		}
 		$username = Auth::instance()->get_user()->username;
 		$userid = Auth::instance()->get_user()->id;
-
-		/********Draw charts**********/
-		/*$details =DB::select()->from('referralprogdetails')
-		                     ->order_by('referralProgDetailsID', `DESC`)
-				             ->limit(5) 
-                             ->execute()
-							 ->as_array();
-		*/
+        
+		 $rpdid=$this->request->param('id');
 		
-         $details = DB::select('referralprogs.customerID','referralprogdetails.referralProgDetailsID',  'referralprogdetails.referralProgTitle')
+		
+		/*******required details********/
+	
+		/********Draw charts**********/
+		
+         $details = DB::select('referralprogs.customerID','referralprogdetails.referralProgDetailsID',  'referralprogdetails.referralProgTitle','referralprogs.refProgID','referralprogs.no_impressions','referralprogs.no_clicks')
 		            ->from('referralprogs')
 					->join('referralprogdetails')
 					->on('referralprogs.refProgID','=', 'referralprogdetails.referralProgID')
 		            ->where('referralprogs.customerID', '=', $userid)
+		            ->where('referralprogdetails.referralProgDetailsID', '=', $rpdid)
 		            ->execute()
 		            ->as_array();
-					
+
+		
 		$dataresult1 ="['Campaign', 'Shares'],";	
 		foreach($details as $key=>$temp){
-		$campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
-		$dataresult1.= "["."'".$campaignname."'".",".$key."]".",";
+		  $campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
+		
+		  $temp=$details[$key]['refProgID'];
+		  $option =DB::select(array('COUNT("campaign_id")', 'total_share'))->from('rp_users_referrals')
+                      ->where('campaign_id','=', $temp)
+                      ->execute()
+					  ->as_array();
+
+		  $dataresult1.= "["."'".$campaignname."'".",".$option['0']['total_share']."]".",";
 		}
 		$dataresult2 ="['Campaign', 'Clicks'],";	
 		foreach($details as $key=>$temp){
-		$campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
-		$dataresult2.= "["."'".$campaignname."'".",".$key."]".",";
+		  $campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
+		  $no_clicks=$details[$key]['no_clicks'];
+		 $dataresult2.= "["."'".$campaignname."'".",".$no_clicks."]".",";
 		}
 		
-		
-		
-	    $rpdid=$this->request->param('id');
 		
 		
 		$temp=DB::select()->from('referralprogdetails')
@@ -963,8 +944,9 @@ class Controller_Customer extends Controller_Template {
 		}
 		
 		if($temp3){
-		$status=$temp3[0]['refProgStatus'];
-           $no_impressions=$temp3[0]['no_impressions'];
+		   $status=$temp3[0]['refProgStatus'];
+           $no_impressions=$temp3[0]['no_impressions']; 
+		   $no_clicks=$temp3[0]['no_clicks'];
 		}
 		
 		
@@ -982,26 +964,43 @@ class Controller_Customer extends Controller_Template {
 		$lists =DB::select()->from('rpusers')
                    ->where('userReferralID','=', $list2)
                    ->execute()
-				   ->as_array();//print_r($lists);
+				   ->as_array();
+		 
+        /*
+		echo $count=count($lists);
+		
+		 for($i=0; $i<$count; $i++){
+		   $listsn[$i]['userName']=$lists[$i]['userName'] ;
+		   $listsn[$i]['userEmail']=$lists[$i]['userEmail'] ;
+		 }
+		 print_r($lists);
+		*/  
+		
 		//print_r($list2);	
 		//print_r($lists);	
+		$temp=DB::select()->from('referralprogdetails')
+                      ->where('referralProgDetailsID','=', $rpdid)
+                      ->execute()
+                      ->as_array();
+		$tempid=$temp['0']['referralProgID'];
 		
   	   $participants=DB::select()->from('rpusers')
-                      ->where('userReferralID','=', $rpdid)
+                      ->where('userReferralID','=', $tempid)
                       ->execute()
                       ->as_array();//print_r($participants);
        if($participants){
-		$participants=count($participants);
-                $referrals=DB::select()->from('rp_users_referrals')
+		    $participants=count($participants);
+             $referrals=DB::select()->from('rp_users_referrals')
+			           ->where('campaign_id','=', $tempid)
                        ->execute()
                       ->as_array();//print_r($participants);
-                     $referrals=count($referrals);
+             $referrals=count($referrals);
            
 		}
-              else
-          {
-               $participants=0;$referrals=0;
-          }
+       else
+        {
+            $participants=0;$referrals=0;
+        }
 					  
 		
 		$details =DB::select()->from('referralprogdetails')
@@ -1020,6 +1019,7 @@ class Controller_Customer extends Controller_Template {
                                  ->bind('rpdid',$rpdid)
                                  ->bind('status',$status)
                                  ->bind('no_impressions',$no_impressions)
+                                 ->bind('no_clicks',$no_clicks)
                                  ->bind('participants',$participants)
                                  ->bind('referrals',$referrals)
                                  ->bind('temp',$temp)
@@ -1039,35 +1039,11 @@ class Controller_Customer extends Controller_Template {
 		$userid = Auth::instance()->get_user()->id;
 		$username = Auth::instance()->get_user()->username;
 					  
-					  /*
-					  $data = ORM::factory('referralprog')
-                              ->find_all()
-							  ->as_array();
-					  print_r($data);	
-					  foreach ($data as $temp) :
-                        //echo $temp->refProgID.'</br>'; 
-                        //echo $temp->referralProgTitle.'</br>';
-                      endforeach; 	  
-						*/
-						
-					 //$progs =DB::select()->from('referralprogs')
-		                     //->order_by('referralProgDetailsID', 'DESC')
-				             //->limit(5) 
-                            // ->execute()
-							// ->as_array();	
+
                      //$progs = ORM::factory('referralprog')
-                              //->find_all();
-							  
+                              //->find_all();		  
                      //$progs=ORM::factory('referralprog', 100)->find;
 					 //$details= $progs->referralprogdetail->find_all();
-					 
-					 
-					 //foreach ($progs->$details as $temp) :
-                        //echo $temp->refProgID.'</br>'; 
-                        //echo $temp->referralProgTitle.'</br>';
-                     // endforeach; 
-					// print_r($progs);
-		
 		
 	   /**Total No. of impressions, participants, shares and clicks**/
 	    $numbers=DB::select(array('SUM("no_impressions")', 'total_impressions'), array('SUM("no_clicks")', 'total_clicks'))
@@ -1093,43 +1069,59 @@ class Controller_Customer extends Controller_Template {
        //print_r($n_of_participants);
 	   
 	   /********Draw charts**********/
-		/*$details =DB::select()->from('referralprogdetails')
-		                     ->order_by('referralProgDetailsID', 'DESC')
-				             ->limit(5) 
-                             ->execute()
-							 ->as_array();
-		*/
 		
-        $details = DB::select('referralprogs.customerID','referralprogdetails.referralProgDetailsID',  'referralprogdetails.referralProgTitle')
+        $details = DB::select('referralprogs.customerID','referralprogdetails.referralProgDetailsID',  'referralprogdetails.referralProgTitle','referralprogs.refProgID','referralprogs.no_impressions','referralprogs.no_clicks')
 		            ->from('referralprogs')
 					->join('referralprogdetails')
 					->on('referralprogs.refProgID','=', 'referralprogdetails.referralProgID')
 		            ->where('referralprogs.customerID', '=', $userid)
+					->limit(5)
+					->order_by('referralprogs.refProgID', 'DESC')
 		            ->execute()
 		            ->as_array();
 		
+		
 	    //print_r($details);
-			
+	
+		
 		$dataresult1 ="['Campaign', 'Impressions'],";	
 		foreach($details as $key=>$temp){
-		$campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
-		$dataresult1.= "["."'".$campaignname."'".",".$key."]".",";
+		 $campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
+		 $no_impressions=$details[$key]['no_impressions'];
+		 $dataresult1.= "["."'".$campaignname."'".",".$no_impressions."]".",";
 		}
 		
-		$dataresult2 ="['Campaign', 'Impressions'],";	
+		$dataresult2 ="['Campaign', 'Shares'],";	
 		foreach($details as $key=>$temp){
 		$campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
-		$dataresult2.= "["."'".$campaignname."'".",".$key."]".",";
+		
+		  $temp=$details[$key]['refProgID'];
+		  $option =DB::select(array('COUNT("campaign_id")', 'total_share'))->from('rp_users_referrals')
+		               ->where('campaign_id', '=', $temp)
+                      ->execute()
+					  ->as_array();
+
+		
+		$dataresult2.= "["."'".$campaignname."'".",".$option['0']['total_share']."]".",";
 		}
-		$dataresult3 ="['Campaign', 'Impressions'],";	
+		
+		$dataresult3 ="['Campaign', 'Participant'],";	
 		foreach($details as $key=>$temp){
 		$campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
-		$dataresult3.= "["."'".$campaignname."'".",".$key."]".",";
+		
+		  $temp=$details[$key]['refProgID'];
+		  $option =DB::select(array('COUNT("userReferralID")', 'total_participant'))->from('rpusers')
+		               ->where('userReferralID', '=', $temp)
+                      ->execute()
+					  ->as_array();
+					  
+		 $dataresult3.= "["."'".$campaignname."'".",".$option['0']['total_participant']."]".",";
 		}
-		$dataresult4 ="['Campaign', 'Impressions'],";	
+		$dataresult4 ="['Campaign', 'Clicks'],";	
 		foreach($details as $key=>$temp){
-		$campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
-		$dataresult4.= "["."'".$campaignname."'".",".$key."]".",";
+		  $campaignname=substr($details[$key]['referralProgTitle'],0,10)."..";
+		  $no_clicks=$details[$key]['no_clicks'];
+		 $dataresult4.= "["."'".$campaignname."'".",".$no_clicks."]".",";
 		}
 
 		
@@ -1150,49 +1142,76 @@ class Controller_Customer extends Controller_Template {
 	
     
  public function action_account() {
-
 		$user = Auth::instance()->get_user();
 		if (!$user)
 		{
 	      Request::current()->redirect('user/login');
 		}
-		
 		$userid = Auth::instance()->get_user()->id;
-
 		////////////////////////////////////////////
-		
-		 $userid = Auth::instance()->get_user()->id;
-		 
-	     $data=$this->request->post();
-
+	   $data=$this->request->post();
+	   //print_r($data);
        if (HTTP_Request::POST == $this->request->method()){
-		  $query = DB::update('users')
+	    
+		 if($data['formid']=='1'){
+		   $query = DB::update('users')
 		    ->set(array('customerName'=>$data['customerName'],'customerAddress1'=>$data['customerAddress1'],'customerAddress2'=>$data['customerAddress2'],'customerCity'=>$data['customerCity'],'customerStateProvID'=>$data['customerStateProvID'],'customerCountryID'=>$data['customerCountryID'],'customerPhone'=>$data['customerPhone'],'customerWebsite'=>$data['customerWebsite'],'customerCFirstName'=>$data['customerCFirstName'], 'customerCLastName'=>$data['customerCLastName']))
 		    ->where('id','=', $userid)
 			->execute();
+		 }
+		 if($data['formid']=='2'){
+		   if($data['password']==$data['password_confirm']){
+		     if((strlen($data['currentpass'])>7) && (strlen($data['password'])>7) && (strlen($data['password_confirm'])>7) ){
+			 
+               $user = ORM::factory('user')
+                ->where('id', '=', $userid)
+                ->find()
+                ->update_user($this->request->post(), array('username', 'password',
+                ));
 		
+			    $message='Password chaged successfully !';	
+	         }
+			 else{
+			   $message='password must be at least 8 characters long!';
+			 }
+			 
+			 
+		   }
+		   else{
+		    $message='New Password & confirm Password does not match!';
+		   }
+		  //print_r('here you are !');
+		  //print_r(Auth::instance()->get_user()->password);
+
+		
+		 
 		}
 		
 		
-		 $options = DB::select()->from('users')
+		
+		
+		
+	   }
+		
+		$options = DB::select()->from('users')
 		         ->where('id', '=', $userid)
 				 ->execute()
 				 ->as_array();
 				
-		 $temp=$options[0]['id'];
+		$temp=$options[0]['id'];
 		 
 		////////////////////////////////////////////
 		$header = View::factory('customer/header');		
 		$footer = View::factory('customer/footer');		
-		
 	    $this->template->content = View::factory('customer/account')
 		                           ->set('userid',$userid)
 								   ->bind('options',$options)
 								   ->bind('data',$data)
+								   ->bind('message',$message)
 								   ->bind('header',$header)
 								   ->bind('footer',$footer);
 		   
-    }
+   }
 	
  public function action_delete2() {
    $rpdid=$this->request->param('id');
@@ -1328,7 +1347,10 @@ $csv_output .= "\n";
 	 $CSV_SEPARATOR = ",";
      $CSV_NEWLINE = "\r\n";
 
-    $csv_output .= $temp['userName'].$delim;
+	$t=explode('@',$temp['userEmail']);
+    $t[0]; 
+			 
+    $csv_output .= $t[0].$delim;
     $csv_output .= $temp['userEmail'].$delim;
     $csv_output .= substr($temp['userRegistredDate'],0,10). $delim;
     $csv_output .= 'Test Emails sent'.$delim ;
@@ -1338,20 +1360,6 @@ $csv_output .= "\n";
     endforeach;
  ////////////////////////////
 
-/*
-for($i=1; $i<=10; $i++){
-  $CSV_SEPARATOR = ",";
-  $CSV_NEWLINE = "\r\n";
-
-$csv_output .= 'Test N	ame'.$i.$delim;
-$csv_output .= 'Test Email'.$i.$delim;
-$csv_output .= 'Test Subscribe date'.$i. $delim;
-$csv_output .= 'Test Emails sent'.$i. $delim ;
-$csv_output .= 'Test Rewards' .$i. $delim ;
-$csv_output .= "\n"; 
-  
- }
- */
 
  
 $csv_output .= " "; 
