@@ -1,33 +1,10 @@
 <?php
- //echo $progstatus;
-//echo $customerid=$_REQUEST['id'];
+//session_start();
+ //echo $_SESSION['compaingnid'];
 ?>
-<script>
-function check()
-{
- var email= document.getElementById("email").value;
- //alert("Hello World!");
- //alert(first);
- 
- if(~email.indexOf('gmail')){
-    document.getElementById("soption").value='Gmail';
-	document.getElementById('pf').innerHTML="Your Gmail Password";
-	}
- if(~email.indexOf('yahoo')){
-     document.getElementById("soption").value='Yahoo';
-	 document.getElementById('pf').innerHTML="Your Yahoo Password";
-	}
- if(~email.indexOf('hotmail')){
-    document.getElementById("soption").value='Hotmail';
-	document.getElementById('pf').innerHTML="Your Hotmail Password";
-  }
-		
-}
-</script>
 <?php 
 define("SITE","http://softoasistech.com/dev2013/referral");
 ?>
-
 
 
 <?php if($progstatus=="Active"){ ?>
@@ -53,38 +30,26 @@ define("SITE","http://softoasistech.com/dev2013/referral");
                 </tr>
 
 				
-			<tr>
-				<td>Email</td></tr>
+			<!----<tr>
+				<td>Email</td>
+			</tr>
 				
-				<tr>
+			<tr>
 				<td><input id='email' type="text" name="email" value="" class="in_box" /></td>
 			</tr>
 			<tr>
-				<td><span id='pf'>Your password</span></td></tr>
-				<tr>
+				<td><span id='pf'>Your password</span></td>
+			</tr>
+			<tr>
 				<td><input id="password" type="password" name="pswd" value="" class="in_box" onclick="check()"/>
 				
 				
-				<!---------------------->
+				
 				</td>
 				
 				<td>
-				
-				 <?php if ($this->display_menu) {?>
-				 
-				 <!---<select onchange="test(this.value)" name="contacts_option" style="width:200px;">
-				   <?php foreach ($this->contacts_classes as $k => $v) {?>
-				     <option value="<?php echo $v->ClassName . ($v->ExternalAuth ? "<br/>(External Authentication)" : ""); ?>">
-				   <?php echo $v->ClassName . ($v->ExternalAuth ? "<br/>(External Authentication)" : ""); ?>
-				     </option>
-				   <?php } ?>  
-				 </select>--->
-				
-				<?php } ?>
-                <!--------------------->
-				
-				
-        <!------------------------------------------>
+
+                
 	  <input  type="hidden" name="stage" value="1"/>			
 	   
 	   <input id="soption" type="hidden" name="contacts_option" value="<?php echo $selected_option; ?>"/>
@@ -94,15 +59,17 @@ define("SITE","http://softoasistech.com/dev2013/referral");
 		  <img src="<?php echo SITE; ?>/public/image/next_but.jpg"/>
 		<?php //echo $this->current_class->ExternalAuth? "Authorize Externally" : "Next"; ?>
 		</button>	
-
-        <!------------------------------------------->				
-				
-				
-				
-				
+			
+		
 		</td>
 	  </tr>
+	  ---->
 	  
+	   <tr>
+	    <td>
+		 <a href="<?php echo SITE;?>/oauth-api/login_with_google.php"> <img style="height:100px;width:150px;" src="<?php echo SITE; ?>/public/image/gmail.jpg"/></a>
+		</td>
+	   </tr>
 
 			
 
