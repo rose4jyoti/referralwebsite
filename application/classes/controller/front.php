@@ -5,38 +5,99 @@ class Controller_Front extends Controller_Template {
     public function before()
     { 
         parent::before();
+		
+		$user = Auth::instance()->get_user();
+		if ($user)
+		{
+		 $customername = Auth::instance()->get_user()->username;
+		 $userid = Auth::instance()->get_user()->id;
+
+         // Make $page_title available to all views
+         View::bind_global('customername', $customername);
+		
+		$campaigns = DB::select('referralprogs.customerID','referralprogdetails.referralProgDetailsID',  'referralprogdetails.referralProgTitle')->from('referralprogs')->join('referralprogdetails')->on('referralprogs.refProgID','=', 'referralprogdetails.referralProgID')
+		            ->where('referralprogs.customerID', '=', $userid)
+		            ->execute()
+		            ->as_array();
+					
+		 View::bind_global('campaigns', $campaigns);
+		}
+         
+		
 
     }  
 
 	
 	public function action_home() {
-		$this->template->content = View::factory('front/home');
+        $header = View::factory('customer/header');		
+	    $footer = View::factory('customer/footer');		
+
+		$this->template->content = View::factory('front/home')
+		                          ->bind('header',$header)
+						          ->bind('footer',$footer);
                                   //->set('username',$username);
+								
 	}
 	public function action_hiw() {
-		$this->template->content = View::factory('front/hiw');
+	    $header = View::factory('customer/header');		
+	    $footer = View::factory('customer/footer');		
+
+		$this->template->content = View::factory('front/hiw')
+		                           ->bind('header',$header)
+						          ->bind('footer',$footer);
               
 	}
 	public function action_price() {
-		$this->template->content = View::factory('front/price');
+	    $header = View::factory('customer/header');		
+	    $footer = View::factory('customer/footer');	
+		$this->template->content = View::factory('front/price')
+		                          ->bind('header',$header)
+						          ->bind('footer',$footer);
               
 	}
 	public function action_blog() {
-		$this->template->content = View::factory('front/blog');
+	    $header = View::factory('customer/header');		
+	    $footer = View::factory('customer/footer');		
+						  
+		$this->template->content = View::factory('front/blog')
+		                          ->bind('header',$header)
+						          ->bind('footer',$footer);;
               
 	}
 	
-	public function action_about() {
-		$this->template->content = View::factory('front/about');
+	public function action_about(){
+	
+	    $header = View::factory('customer/header');		
+	    $footer = View::factory('customer/footer');		
+	
+		$this->template->content = View::factory('front/about')
+		                         ->bind('header',$header)
+						         ->bind('footer',$footer);
 	}
 	public function action_tou() {
-		$this->template->content = View::factory('front/tou');
+	
+	    $header = View::factory('customer/header');		
+	    $footer = View::factory('customer/footer');		
+	
+		$this->template->content = View::factory('front/tou')
+		                         ->bind('header',$header)
+						         ->bind('footer',$footer);
 	}
 	public function action_quality() {
-		$this->template->content = View::factory('front/quality');
+	    $header = View::factory('customer/header');		
+	    $footer = View::factory('customer/footer');		
+
+		$this->template->content = View::factory('front/quality')
+		                           ->bind('header',$header)
+						           ->bind('footer',$footer);
 	}
 	public function action_privacypolicy() {
-		$this->template->content = View::factory('front/privacypolicy');
+	    $header = View::factory('customer/header');		
+	    $footer = View::factory('customer/footer');		
+
+		$this->template->content = View::factory('front/privacypolicy')
+		                           ->bind('header',$header)
+						           ->bind('footer',$footer);
 	}
 	public function action_contact() {
 
@@ -64,16 +125,21 @@ class Controller_Front extends Controller_Template {
 		  
 	    }
 
+	    $header = View::factory('customer/header');		
+	    $footer = View::factory('customer/footer');		
+
 		$this->template->content = View::factory('front/contact')
-		                           ->bind('postmessage',$postmessage);;
+		                           ->bind('postmessage',$postmessage)
+								   ->bind('header',$header)
+						           ->bind('footer',$footer);
 		
 	}
 	
 	
-		public function action_contact() {
+	/*public function action_contact() {
 		  $this->template->content = View::factory('front/iframe');
 		}
-	
+	*/
 
 
 }
