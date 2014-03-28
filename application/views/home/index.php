@@ -157,7 +157,7 @@ endforeach; ?>
 							
 							<div class="song_over">
 
-                             <?= Form::open('home/congrats',array('style'=>'margin:0px','id'=>'chkdiv', 'onsubmit'=>'return fnc();')); ?>
+                             <?= Form::open('home/congrats/'.$id.'/'.$campaigndetail_id,array('style'=>'margin:0px','id'=>'chkdiv', 'onsubmit'=>'return fnc();')); ?>
 						      <?php $i=1; ?>
                                <?php foreach ($contacts as $temp) : ?>
 							   
