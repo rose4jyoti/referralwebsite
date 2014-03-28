@@ -964,20 +964,33 @@ class Controller_Customer extends Controller_Template {
 		$lists =DB::select()->from('rpusers')
                    ->where('userReferralID','=', $list2)
                    ->execute()
-				   ->as_array();
+				   ->as_array();	   
+	     //print_r($lists);
+	    
+		$count=count($lists);
+		for($i=0; $i<$count; $i++){
 		 
-        /*
-		echo $count=count($lists);
-		
-		 for($i=0; $i<$count; $i++){
+		 $temp=$lists[$i]['userID'];
+		 $email_sent=DB::select(array('COUNT("referredByUserID")', 'total_participants'))
+			           ->from('rp_users_referrals')
+	                   ->where('referredByUserID','=', $temp)
+                       ->execute()
+			           ->as_array();
+		 $email_sent=$email_sent[0]['total_participants'];		   
+		 // print_r($email_sent);
+
+		   $listsn[$i]['userID']=$lists[$i]['userID'] ;
 		   $listsn[$i]['userName']=$lists[$i]['userName'] ;
 		   $listsn[$i]['userEmail']=$lists[$i]['userEmail'] ;
-		 }
-		 print_r($lists);
-		*/  
+		   $listsn[$i]['userRegistredDate']=$lists[$i]['userRegistredDate'] ;  
+		   $listsn[$i]['email_sent']=$email_sent;
+		   $listsn[$i]['subscribed']='csubscribed' ;
+		 }	
 		
-		//print_r($list2);	
-		//print_r($lists);	
+		 //print_r($listsn);
+		
+		
+		
 		$temp=DB::select()->from('referralprogdetails')
                       ->where('referralProgDetailsID','=', $rpdid)
                       ->execute()
@@ -1014,6 +1027,7 @@ class Controller_Customer extends Controller_Template {
 		                         ->set('header',$header)
 		                         ->set('footer',$footer)
 								 ->set('lists', $lists)
+								 ->bind('listsn', $listsn)
 								 ->set('dataresult1', $dataresult1)
 								 ->set('dataresult2', $dataresult2)
                                  ->bind('rpdid',$rpdid)
@@ -1313,6 +1327,7 @@ $csv_output .= "Name".$delim;
 $csv_output .= "Email".$delim;
 $csv_output .= "Subscribe date".$delim;
 $csv_output .= "Emails sent".$delim;
+$csv_output .= "Contacts subscribed".$delim;
 $csv_output .= "Total Rewards".$delim;
 $csv_output .= "\n";
 
@@ -1341,20 +1356,29 @@ $csv_output .= "\n";
 				 ->execute()
 				 ->as_array();
 	  
-		
+	
+	
     foreach($data2 as $temp) : 
 
 	 $CSV_SEPARATOR = ",";
      $CSV_NEWLINE = "\r\n";
-
-	$t=explode('@',$temp['userEmail']);
-    $t[0]; 
-			 
-    $csv_output .= $t[0].$delim;
+ 
+    $csv_output .= $temp['userName'].$delim;
     $csv_output .= $temp['userEmail'].$delim;
     $csv_output .= substr($temp['userRegistredDate'],0,10). $delim;
-    $csv_output .= 'Test Emails sent'.$delim ;
-    $csv_output .= 'Test Rewards'. $delim ;
+	 
+	     $temp=$temp['userID'];
+		 $email_sent=DB::select(array('COUNT("referredByUserID")', 'total_participants'))
+			           ->from('rp_users_referrals')
+	                   ->where('referredByUserID','=', $temp)
+                       ->execute()
+			           ->as_array();
+		 $email_sent=$email_sent[0]['total_participants'];	
+	
+	
+    $csv_output .= $email_sent.$delim ;
+    $csv_output .= '---'. $delim ;
+    $csv_output .= '0'. $delim ;
     $csv_output .= "\n";
 	
     endforeach;
