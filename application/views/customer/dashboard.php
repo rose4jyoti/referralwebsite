@@ -135,7 +135,7 @@ background-image:url("<?php echo URL::base(); ?>/public/image/hover.png");
 			 
 			</span> </div>
           <div class="a_top">
-            <h2>0</h2>
+            <h2><?php echo $no_clicks;?></h2>
             <span>Clicks
 			<?php //echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));  ?>
 			 <a href="#" class="kooltip"><span class="tooltip skyblue bottom center w200 slide-up">Clicks from unique users on the links which were distributed by your campaign participants.</span> <?php echo Html::image('public/image/question.jpg', array('alt'=>'','class'=>'qq'));    ?></a>
@@ -181,8 +181,8 @@ background-image:url("<?php echo URL::base(); ?>/public/image/hover.png");
 		 
 		   <span class="listing" style=" font-size: 20px; padding: 0 25px;"><?php echo $temp['userName']; ?> 
 		   
-		   <?php $t=explode('@',$temp['userEmail']);
-		     echo $t[0]; ?> 
+		   <?php //$t=explode('@',$temp['userEmail']);
+		     //echo $t[0]; ?> 
 		   </span>|
             <span class="listing"  style=" font-size: 20px; padding: 0 25px;"><?php echo $temp['userEmail']; ?> </span>| 	   
 		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;"><?php echo substr($temp['userRegistredDate'],0,10) ; ?> </span>| 
