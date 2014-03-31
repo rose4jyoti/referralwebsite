@@ -890,7 +890,6 @@ class Controller_Customer extends Controller_Template {
         
 		 $rpdid=$this->request->param('id');
 		
-		
 		/*******required details********/
 	
 		/********Draw charts**********/
@@ -936,6 +935,7 @@ class Controller_Customer extends Controller_Template {
 		$temp3=0;			  
 		if($temp){
 		$temp2=$temp[0]['referralProgID'];
+
 		
 		$temp3=DB::select()->from('referralprogs')
 		              ->where('refProgID','=',$temp2)
@@ -966,7 +966,8 @@ class Controller_Customer extends Controller_Template {
                    ->execute()
 				   ->as_array();	   
 	     //print_r($lists);
-	    
+		 $listsn=array();
+		 
 		$count=count($lists);
 		for($i=0; $i<$count; $i++){
 		 
@@ -976,7 +977,15 @@ class Controller_Customer extends Controller_Template {
 	                   ->where('referredByUserID','=', $temp)
                        ->execute()
 			           ->as_array();
-		 $email_sent=$email_sent[0]['total_participants'];		   
+		 $email_sent=$email_sent[0]['total_participants'];	
+
+         $subscribers=DB::select(array('COUNT("userID")', 'total_subscribers'))
+			           ->from('rpusers')
+	                   ->where('referbyid','=', $temp)
+	                   ->where('userReferralID','=', $temp2)
+                       ->execute()
+			           ->as_array();
+		 $subscribers=$subscribers[0]['total_subscribers'];				 
 		 // print_r($email_sent);
 
 		   $listsn[$i]['userID']=$lists[$i]['userID'] ;
@@ -984,7 +993,7 @@ class Controller_Customer extends Controller_Template {
 		   $listsn[$i]['userEmail']=$lists[$i]['userEmail'] ;
 		   $listsn[$i]['userRegistredDate']=$lists[$i]['userRegistredDate'] ;  
 		   $listsn[$i]['email_sent']=$email_sent;
-		   $listsn[$i]['subscribed']='csubscribed' ;
+		   $listsn[$i]['subscribed']=$subscribers;
 		 }	
 		
 		 //print_r($listsn);
@@ -1022,6 +1031,7 @@ class Controller_Customer extends Controller_Template {
 		
         $header = View::factory('customer/header');		
 		$footer = View::factory('customer/footer');		
+		
 		
 		$this->template->content = View::factory('customer/dashboard')
 		                         ->set('header',$header)
