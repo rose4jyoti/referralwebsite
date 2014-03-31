@@ -1,9 +1,16 @@
 <?php
 
+//print_r($_REQUEST);
+
 $compaign_id= $_REQUEST['id'];
 $fp = fopen('data.txt', 'w');
 fwrite($fp, $compaign_id);
+fclose($fp);
 
+echo $rid= $_REQUEST['rid'];
+$fp = fopen('data2.txt', 'w');
+fwrite($fp, $rid);
+fclose($fp);
 ?>
 <?php
 $compaingn_id =$_REQUEST['id'];
