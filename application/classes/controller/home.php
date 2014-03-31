@@ -1,213 +1,362 @@
 <?php defined('SYSPATH') or die('No direct script access.');
+class Controller_Home extends Controller_Template  {
+   
+   protected $session = NULL;
 
-class Controller_User extends Controller_Template {
-    
-	 public function before()
-    {
-       parent::before();
-		// Load the user information
-		$user = Auth::instance()->get_user();
-		
-		// if a user is not logged in, redirect to login page
-		if ($user)
-		{
-			$user = '1';
-		}
-    }
-	
-	public function action_index()
-	{
-		$this->template->content = View::factory('user/info')
-			->bind('user', $user);
-		
-		// Load the user information
-		$user = Auth::instance()->get_user();
-		
-		// if a user is not logged in, redirect to login page
-		if (!$user)
-		{
-			Request::current()->redirect('user/login');
-		}
+   public function before()
+    { 
+        parent::before();
+        $session = Session::instance();
 	}
 
-	public function action_create() 
-	{
-	    $sidebar=View::factory('sidebar');
-		
-		$this->template->content = View::factory('user/create')
-			->bind('errors', $errors)
-			->bind('message', $message)
-			->set('sidebar', $sidebar);;
-			
-		if (HTTP_Request::POST == $this->request->method()) 
-		{	
-		
-			try {
-		
-				// Create the user using form values
-				$user = ORM::factory('user')
-				      ->create_user($this->request->post(), array(
-					'username',
-					//'email',
-                    'customerCFirstName',
-                    'customerCLastName',
-	                'password',					
-                    'customerWebsite',
- 				
-				     ));
-				
-				// Grant user login role
-				$user->add('roles', ORM::factory('role', array('name' => 'login')));
-				
-				// Reset values so form is not sticky
-				$_POST = array();
-				
-				// Set success message
-				$message = "You have added user '{$user->username}' to the database";
-				
-				Request::current()->redirect('user/login');
-				
-			} catch (ORM_Validation_Exception $e) {
-				
-				// Set failure message
-				$message = 'There were errors, please see form below.';
-				
-				// Set errors using custom messages
-				$errors = $e->errors('models');
-			}
-		}
-	}
-	
-	public function action_login() 
-	{
-		$this->template->content = View::factory('user/login')
-			->bind('message', $message);
-			
-		if (HTTP_Request::POST == $this->request->method()) 
-		{
-			// Attempt to login user
-			$remember = array_key_exists('remember', $this->request->post()) ? (bool) $this->request->post('remember') : FALSE;
-			
-			$user = Auth::instance()->login($this->request->post('username'), $this->request->post('password'), $remember);
-			
-			
-			// If successful, redirect user
-			if ($user) 
-			{
-			    $role = Auth::instance()->get_user()->role;
-			    if($role=='admin'){
-				 Request::current()->redirect('admin/dashboard');
-				}
-				else{
-				 Request::current()->redirect('customer/campaign');
-				}
-			} 
-			else 
-			{
-				$message = 'Please Enter correct Username and Password';
-			}
-		}
-	}
-	
-	public function action_logout() 
-	{
-		// Log user out
-		Auth::instance()->logout();
-		
-		// Redirect to login page
-		Request::current()->redirect('user/login');
-	}
-	
-  public function action_changepasss(){
-    $user = Auth::instance()->get_user();
-	 if (!$user)
-	 {
-	  Request::current()->redirect('user/login');
-     }
-		
-	$userid = Auth::instance()->get_user()->id;
-
-   if (HTTP_Request::POST == $this->request->method()) 
-    {
-	
-	$userpass = Auth::instance()->get_user()->password;
-	
-	//print_r(hash($userpass, $salt = FALSE));
-	//print_r($this->request->post()); 
-	//die();
-	//print_r($query); 
-
-					  
-    $find=$this->User->find('first', array('conditions' => array('User.id' => $this->Auth->user('id'))));
-	
-    $formpassword=$this->request->data['User']['password'];
-	
-    $oldpassword=$this->Auth->password($formpassword);
-	
-    if($find['User']['password']==$oldpassword)
+   public function action_test()
    {
-     if($this->data['User']['npassword']==$this->data['User']['cpassword'])
-     {
-       $newpassword=$this->data['User']['npassword'];
-   	   $hashpassword=$this->Auth->password($newpassword);
-	   
-       $this->User->query('update users set password = "'.$hashpassword.'" where id = "'.$find['User']['id'].'"');
-       // $this->Session->write('message','Password is successfully changed');
-       
-	   $this->Session->setFlash('Password is successfully changed.');
+        $view = new View('home/test'); // load 'article/index.php' view file
+        $this->response->body($view);	
+   }	
 
-       $this->redirect('/projects/home');
-    
-	   
-     }  
-     else
-     {
-       $this->Session->setFlash('New Password And Confirm Password does not Matched. Please Try Again!');
-      // $this->redirect('/users/'); 
-     }
-    }
-    else
-      {
-     // $this->Session->write('message','<font color="red">Please enter OldPassword Correctly</font>');
-       $this->Session->setFlash('Please enter OldPassword Correctly');
-       $this->redirect('/users/changepassword');
-     }
-   
+  public function action_einsert()
+  {
+   	 $id=$this->request->param('id');
+	 
+	 
+	 $details = DB::select()->from('rp_referralprog_images')
+		         ->where('referralProgID', '=', $id)
+				 ->order_by('referralProgImageID', 'ASC')
+				 ->execute()
+				 ->as_array();
+	 
+	 $details2= DB::select()->from('referralprogdetails')
+		         ->where('referralProgID', '=', $id)
+				 ->execute()
+				 ->as_array();
+	 
+	 //print_r($details);
+		 
+    $this->template->content =View::factory('home/einsert')
+							->bind('details', $details)	 
+							->bind('details2', $details2)
+							->set('id', $id) ;	 
    }
-   
- 
- }
+
  
  
- public function action_changepass() {
  
- $user = Auth::instance()->get_user();
-	 if (!$user)
-	 {
-	  Request::current()->redirect('user/login');
-     }
+  public function action_index()
+  {
+        if($this->request->param('id')){
+
+		  $id=$this->request->param('id');
+		  $campaigndetail_id=$this->request->param('param');
+		  
+		  $session = Session::instance();
+		  $session->set('cam_id',$id);
+		  $session->set('campaigndetail_id',$campaigndetail_id);
+		  
+		}
+	
+	
+        $session = Session::instance();		
+		$id=$session->get('cam_id');
+		$campaigndetail_id=$session->get('campaigndetail_id');
+        //$contacts = ORM::factory('listcontact')->find_all(); // loads all article   object from table
+        
+		$options = DB::select()->from('rp_referralprog_images')
+		         ->where('referralProgID', '=', $id)
+				 ->order_by('referralProgImageID', 'ASC')
+				 ->execute()
+				 ->as_array();
+				 
+	    $options2= DB::select()->from('referralprogdetails')
+		         ->where('referralProgID', '=', $id)
+				 ->execute()
+				 ->as_array();
+	
+		$contacts= DB::select()->from('rp_users_referrals')
+		         ->where('campaign_id', '=', $id)
+		         ->where('referredByUserID', '=', $campaigndetail_id)
+				 ->execute()
+				 ->as_array();
+	
+
 		
-	$userid = Auth::instance()->get_user()->id;
+		/////////////////////////////
+		 if (HTTP_Request::POST == $this->request->method()){
 
- if (HTTP_Request::POST == $this->request->method()) 
- {
-	
+          $data= $this->request->post();
+          $count=count($data);
+		  
+		  if($data['formid']=='1'){
+		      $contacts= DB::select()->from('rp_users_referrals')
+		        // ->where('email', '=', $data['key'])
+		         ->where('referredEmail', 'LIKE', '%'.$data['key'].'%')
+				 ->execute()
+				 ->as_array();
+				 
+			  //print_r($contacts);
+			  //Request::current()->redirect('home/index/'.$data['id']);
+		   }
 
-        $user = ORM::factory('user')
-                ->where('id', '=', $userid)
-                ->find()
-                ->update_user($this->request->post(), array(
-            'username',
-            'password',
-                ));
-       //return $this->response('success', 'User Edited');
-	    Request::current()->redirect('customer/account');
-
-	
+		}
+		/////////////////////////////
+		$session = Session::instance();
+		$id=$session->get('cam_id');
+		
+		$this->template->content =View::factory('home/index')
+							    ->set('contacts', $contacts) 
+								->set('options', $options)
+								->set('options2', $options2)
+							    ->bind('id', $id) 	
+							    ->bind('campaigndetail_id',$campaigndetail_id );	
+                      
   }
+  
+  
+  public function action_congrats()
+   {     
+   
+      // $results = ORM::factory('contact')->find_all(); // loads all article   object from table
+	 
+	     if($this->request->param('id')){
 
+		  $id=$this->request->param('id');
+		  $campaigndetail_id=$this->request->param('param');
+		  
+		  $session = Session::instance();
+		  $session->set('cam_id',$id);
+		  $session->set('campaigndetail_id',$campaigndetail_id);
+		  
+		}
+	    
+        /////////////////////////////
+		 if (HTTP_Request::POST == $this->request->method()){
+
+          $data= $this->request->post();
+          $count=count($data);
+		  
+		   if($data['formid']=='0'){
+		    
+		    //$session = Session::instance();
+			//$session->set('cam_id',$data['id']);
+			//$session->set('campaigndetail_id',$data['campaigndetail_id']);
+			//print_r($session->get('cam_id'));
+			
+		    //for($i=1; $i<$count;$i++){
+		    for($i=1; $i<100;$i++){
+		     if(isset($data[$i])){
+		     $to =$data[$i];		   
+             $subject = "Referral program";
+             $message = "Hello!, Welcome to the referral program...";
+             $from = "someonelse@example.com";
+             $headers = "From:" . $from;
+             mail($to,$subject,$message,$headers);
+             //echo "Mail Sent.";
+		   
+		   	 $query = DB::update('rp_users_referrals')
+		         ->set(array('sent_status'=> 1))
+		          ->where('referredEmail', '=',$data[$i] )
+				  ->execute();
+		   
+		    }
+           }
+	  
+		   //Request::current()->redirect('home/congrats/'.$data['id']);
+		   //Request::current()->redirect('home/congrats/');
+	  }
+		  
+		  
+		  if($data['formid']=='1'){
+		      $contacts= DB::select()->from('rp_users_referrals')
+		        // ->where('email', '=', $data['key'])
+				 ->where('referredEmail', 'LIKE', '%'.$data['key'].'%')
+				 ->execute()
+				 ->as_array(); 
+
+		   }
+		   
+		  if($data['formid']=='2'){
+		     if(isset($data[1])){
+		     $to =$data[1];		   
+             $subject = "Remind Referral program";
+             $message = "Hello!, This mesage hs been sent to remin you about the referral program...";
+             $from = "someonelse@example.com";
+             $headers = "From:" . $from;
+             mail($to,$subject,$message,$headers);
+             //echo "Mail Sent.";
+		   
+		   	 $query = DB::update('rp_users_referrals')
+		         ->set(array('sent_status'=> 1))
+		          ->where('referredEmail', '=',$data[1] )
+				  ->execute();
+		   
+		    }
+     	
+		  Request::current()->redirect('home/congrats/');
+
+		  }
+
+	}
+        
+		$session = Session::instance();	
+		$id=$session->get('cam_id');
+		$campaigndetail_id=$session->get('campaigndetail_id');
+		
+		/**********listing the sent contacts**********/
+		
+		
+		//print_r($id);
+		//print_r($campaigndetail_id);
+		
+		
+		$contacts= DB::select()->from('rp_users_referrals')
+		          //->where('referralProgID', '=', $id)
+				 ->where('campaign_id', '=', $id)
+		         ->where('referredByUserID', '=', $campaigndetail_id)
+				 ->execute()
+				 ->as_array();
+				 
+		/******counting invitation********/
+		$temptotal= DB::select()->from('rp_users_referrals')
+		         //->where('register_status', '=', 1)
+		         ->where('referredByUserID', '=', $campaigndetail_id)
+				 ->execute()
+				 ->as_array();
+		$counttotal=  count($temptotal);	
+		
+		$tempsent= DB::select()->from('rp_users_referrals')
+		         ->where('sent_status', '=', 1)
+		         ->where('referredByUserID', '=', $campaigndetail_id)
+				 ->execute()
+				 ->as_array();
+				 
+		$countsent=  count($tempsent);	
+        $tempregistered= DB::select()->from('rp_users_referrals')
+		         ->where('referralStatus', '=', 'Registered')
+		         ->where('referredByUserID', '=', $campaigndetail_id)
+				 ->execute()
+				 ->as_array();
+		$countregistered=  count($tempregistered);			
+        //print_r($countsent);
+        //print_r($countregistered);	
+		
+		///////////////////////////// 
+		
+		 $social= DB::select()->from('sociallinks')
+		         //->where('referralProgID', '=', $id)
+				 ->limit(1)
+				 ->execute()
+				 ->as_array();
+
+		///////////////////////
+        $session = Session::instance();
+		$id=$session->get('cam_id');
+				  $options = DB::select()->from('rp_referralprog_images')
+		         ->where('referralProgID', '=', $id)
+				 ->order_by('referralProgImageID', 'ASC')
+				 ->execute()
+				 ->as_array();
+		
+		
+		$created= DB::select()->from('referralprogs')
+		         ->where('refProgID', '=', $id)
+				 ->execute()
+				 ->as_array();
+	    
+		
+		
+        $this->template->content =View::factory('home/congrats')
+							    //->set('results', $results)
+							    ->bind('options', $options)
+								->bind('contacts', $contacts)
+								->bind('counttotal', $counttotal)
+								->bind('countsent', $countsent)
+								->bind('countregistered', $countregistered)	
+								->bind('social', $social)	
+								->bind('created', $created)	
+								->bind('id',$id )	
+								->bind('campaigndetail_id',$campaigndetail_id );	
+   }
+
+
+  
+
+public function action_congrats2()
+   {     
+   
+		$session = Session::instance();	
+		$id=$session->get('cam_id');
+		$campaigndetail_id=$session->get('campaigndetail_id');
+		
+		/**********listing the sent contacts**********/
+		$contacts= DB::select()->from('rp_users_referrals')
+		          //->where('referralProgID', '=', $id)
+				 ->where('campaign_id', '=', $id)
+		         ->where('referredByUserID', '=', $campaigndetail_id)
+				 ->execute()
+				 ->as_array();
+				 
+		/******counting invitation********/
+		$temptotal= DB::select()->from('rp_users_referrals')
+		         //->where('register_status', '=', 1)
+				 ->execute()
+				 ->as_array();
+		$counttotal=  count($temptotal);	
+		
+		$tempsent= DB::select()->from('rp_users_referrals')
+		         ->where('sent_status', '=', 1)
+				 ->execute()
+				 ->as_array();
+		$countsent=  count($tempsent);	
+        $tempregistered= DB::select()->from('rp_users_referrals')
+		         ->where('referralStatus', '=', 'Registered')
+				 ->execute()
+				 ->as_array();
+		$countregistered=  count($tempregistered);			
+        //print_r($countsent);
+        //print_r($countregistered);
+
+			
+		
+		/////////////////////////////
+		
+		 $social= DB::select()->from('sociallinks')
+		         //->where('referralProgID', '=', $id)
+				 ->limit(1)
+				 ->execute()
+				 ->as_array();
+
+		///////////////////////
+        $session = Session::instance();
+		$id=$session->get('cam_id');
+				  $options = DB::select()->from('rp_referralprog_images')
+		         ->where('referralProgID', '=', $id)
+				 ->order_by('referralProgImageID', 'ASC')
+				 ->execute()
+				 ->as_array();
+		
+		
+		$created= DB::select()->from('referralprogs')
+		         ->where('refProgID', '=', $id)
+				 ->execute()
+				 ->as_array();
+	    
+		
+		
+        $this->template->content =View::factory('home/congrats')
+							    //->set('results', $results)
+							    ->bind('options', $options)
+								->bind('contacts', $contacts)
+								->bind('counttotal', $counttotal)
+								->bind('countsent', $countsent)
+								->bind('countregistered', $countregistered)	
+								->bind('social', $social)	
+								->bind('created', $created)	
+								->bind('id',$id )	
+								->bind('campaigndetail_id',$campaigndetail_id );	
+  }  
+   
+   
+   
+   
+   
  }
-	
-	
-}
-?>
