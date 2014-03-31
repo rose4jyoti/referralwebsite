@@ -7,6 +7,15 @@ while(!feof($file))
  $cid=fgets($file);
   }
 fclose($file);
+
+
+$file = fopen("../importer/data2.txt", "r") 
+or exit("Unable to open file!");
+while(!feof($file))
+  {
+ $rid=fgets($file);
+  }
+fclose($file);
 ?> 
 
 <?php 
@@ -150,8 +159,9 @@ if($success)
 </html>
 <?php 
 }
-	else
-	{ ?>
+
+else
+{ ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -236,13 +246,11 @@ mysql_close();
 
 <?php if($count==0){ ?>
  <script>
-  window.location.assign("<?php echo SITE;?>/home/index/<?php echo $cid; ?>/<?php echo $lastid; ?>")
+  window.location.assign("<?php echo SITE;?>/home/index/<?php echo $cid; ?>/<?php echo $lastid; ?>/<?php echo $rid; ?>")
 </script>
 <?php }else{ ?>
   <script>
-  window.location.assign("<?php echo SITE;?>/home/congrats/<?php echo $cid; ?>/<?php echo $lastid; ?>")
+  window.location.assign("<?php echo SITE;?>/home/congrats/<?php echo $cid; ?>/<?php echo $lastid; ?>/ <?php echo $rid; ?>")
 </script>
 <?php }?>
-
- 
 
