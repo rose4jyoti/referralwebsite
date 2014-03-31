@@ -175,7 +175,7 @@ background-image:url("<?php echo URL::base(); ?>/public/image/hover.png");
 		<div class="b_textarea" style="">
          <!--<textarea name="" cols="" rows="" class="b_textarea">-->
 
-		 <?php foreach ($lists as $temp) : ?>
+		 <?php foreach ($listsn as $temp) : ?>
 		 <center>
 		  <p>
 		 
@@ -187,8 +187,8 @@ background-image:url("<?php echo URL::base(); ?>/public/image/hover.png");
             <span class="listing"  style=" font-size: 20px; padding: 0 25px;"><?php echo $temp['userEmail']; ?> </span>| 	   
 		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;"><?php echo substr($temp['userRegistredDate'],0,10) ; ?> </span>| 
 		  
-		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;">Esent</span>| 
-		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;">Csubscribed</span>| 
+		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;"><?php echo $temp['email_sent']; ?></span>| 
+		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;"><?php echo $temp['subscribed']; ?></span>| 
 		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;">0 </span>
 		   
 		   </p>
