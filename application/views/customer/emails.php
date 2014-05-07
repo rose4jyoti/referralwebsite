@@ -2,7 +2,6 @@
 
 <?php echo Html::style('public/css/style.css'); ?>
 <?php echo Html::style('public/css/page3.css'); ?>
-
 <?php echo Html::script('public/js/ckeditor/ckeditor.js'); ?>
 
 
