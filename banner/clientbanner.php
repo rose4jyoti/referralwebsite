@@ -9,7 +9,7 @@
    <script type="text/javascript" src="http://softoasistech.com/dailylog/app/webroot/banner/click-tracker.js">
    </script>
    
-</head>
+</head>  
 <body>
 
 <!--<div id="banner-placeholder-1" class="banner-placeholder" style="width:250px;height:250px;border:1px solid grey;"></div> -->
