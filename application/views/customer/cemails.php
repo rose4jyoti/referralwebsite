@@ -5,10 +5,30 @@
 
 <?php echo Html::script('public/js/ckeditor/ckeditor.js'); ?>
 
-
 <?php foreach ($query1 as $temp) :         
-$rte= $temp['emailFromName'];
-$fnd= $temp['emailFromEmail'];
+ $rte= $temp['emailFromName'];
+ $fnd= $temp['emailFromEmail'];
+endforeach; 
+?>
+
+<?php 
+foreach ($query2 as $temp) : 
+ if($temp['type']=='Campaign_entry'){        
+ $sub1= $temp['emailSubject'];
+ $body1= $temp['emailHtml'];
+ }
+ if($temp['type']=='Reward_notification'){        
+ $sub2= $temp['emailSubject'];
+ $body2= $temp['emailHtml'];
+ }
+ if($temp['type']=='Campaign_referral'){        
+ $sub3= $temp['emailSubject'];
+ $body3= $temp['emailHtml'];
+ }
+ if($temp['type']=='Reminder_email'){        
+ $sub4= $temp['emailSubject'];
+ $body4= $temp['emailHtml'];
+ }
 endforeach; 
 ?>
 
@@ -41,32 +61,26 @@ endforeach;
       </div>
     </div>
 
-
-
-
-
-
-
 <div class="main" style="float:left;">
     <div class="a_main">
           <div class="a">
                 <div class="a1">
                    <div class="a1_heading">
 				   
-			<?= Form::open('customer/emails'); ?>
+			<?= Form::open('customer/cemails/'.$rpdid); ?>
 			
              Email settings
                 </div><br />
                 Reply to email: &nbsp;
   
-				<?= Form::input('rte','',  array('size'=>'24','class'=>'aa_new', 'style'=>'width: 265px;')); ?>
+				<?= Form::input('rte',$rte,  array('size'=>'24','class'=>'aa_new', 'style'=>'width: 265px;')); ?>
 				
 			
 				<!---<input type="email"  size="24"/>---->
 				<br />
                 <p>From name display:&nbsp;
 				
-				<?= Form::input('fnd','', array('class'=>'aa_new')); ?>
+				<?= Form::input('fnd',$fnd, array('class'=>'aa_new')); ?>
 				<!------<input type="text" />----->
 				</p>
                 </div>
@@ -96,7 +110,7 @@ endforeach;
             <div class="b2">
                  Subject<br />
 				  
-				 <?= Form::input('sub1','',  array('style'=>'width:595px;','class'=>'aa_new')); ?>
+				 <?= Form::input('sub1',$sub1,array('style'=>'width:595px;','class'=>'aa_new')); ?>
                  <!--<input type="text" size="60" />--->
 				 
             </div>
@@ -105,7 +119,7 @@ endforeach;
                   <div class="b3_img">
 				  
 				  
-				  <textarea class="ckeditor" name="editor1">Enter..</textarea>
+		<textarea class="ckeditor" name="editor1"><?php echo $body1;?></textarea>
 				  
 				   <?php //echo Html::image('public/image/mail_box.png', array('alt'=>'','width'=>'700px','height'=>'337px'));  ?>
 				 
@@ -145,7 +159,7 @@ endforeach;
               <div class="c2">
                Subject<br />
 			   
-			   	<?= Form::input('sub2','',  array('style'=>'width:595px;','class'=>'aa_new')); ?>
+			   	<?= Form::input('sub2',$sub2,  array('style'=>'width:595px;','class'=>'aa_new')); ?>
                 <!--<input type="text" size="60" />--->
               </div>
               <div class="c3">
@@ -153,7 +167,7 @@ endforeach;
 			  
                   <div class="c3_img">
 				  
-				<textarea class="ckeditor" name="editor2">Enter..</textarea> 
+		<textarea class="ckeditor" name="editor2"><?php echo $body2; ?></textarea> 
 				  
               <?php //echo Html::image('public/image/mail_box.png', array('alt'=>'','width'=>'700px','height'=>'337px'));  ?>
 				  
@@ -193,7 +207,7 @@ endforeach;
                 <div class="d2">
                Subject<br />
 			   
-			   <?= Form::input('sub3','',  array('style'=>'width:595px;','class'=>'aa_new')); ?>
+			   <?= Form::input('sub3',$sub3,  array('style'=>'width:595px;','class'=>'aa_new')); ?>
                 <!----<input type="text" size="60" />---->
               </div>
               <div class="d3">
@@ -201,7 +215,7 @@ endforeach;
                   <div class="d3_img">
                  <?php //echo Html::image('public/image/mail_box.png', array('alt'=>'','width'=>'700px','height'=>'337px'));  ?>
 				 
-				  <textarea class="ckeditor" name="editor3">Enter..</textarea>
+			  <textarea class="ckeditor" name="editor3"><?php echo $body3; ?></textarea>
 				  
 				  
 				 
@@ -233,14 +247,14 @@ endforeach;
                 <div class="e2">
                Subject<br />
 			   
-			   <?= Form::input('sub4','',  array('style'=>'width:595px;','class'=>'aa_new')); ?>
+			   <?= Form::input('sub4',$sub4, array('style'=>'width:595px;','class'=>'aa_new')); ?>
                 <!---<input type="text" size="60" />---->
               </div>
               <div class="e3">
               Notification body<br /><br />
                   <div class="e3_img">
 				  
-				  <textarea class="ckeditor" name="editor4">Enter..</textarea>
+				  <textarea class="ckeditor" name="editor4" placeholder="test.."><?php echo $body4; ?></textarea>
 
 
                   </div>
