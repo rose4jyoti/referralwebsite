@@ -1410,14 +1410,13 @@ header("Content-Disposition: attachment; filename=participantlistexports_" . dat
 	  
 /////////////////////////////////////////////////////	  
 	  
-	  Request::current()->redirect('cuctomer/dashboard');
+	  Request::current()->redirect('customer/dashboard');
  
  }
 	
 
 	
-	
-	
+
 	
 }
 
