@@ -6,7 +6,14 @@
 <?php echo Html::style('public/css/bootstrap-theme.min.css'); ?>
 <?php echo Html::style('public/css/bootstrap.min.css'); ?>
 
+<style>
+.foter_content_in > ul {
+    width: 85% !important;
+}
+</style>
 <div class="wrapper_out">
+
+<?php echo $header; ?>
     <div class="sign_in_wrapper">
         <div class="sign_box">
 
@@ -60,5 +67,7 @@
         </div>
 
     </div>
+	
+<?php echo $footer; ?>	
 </div>
 
