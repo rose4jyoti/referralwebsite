@@ -299,7 +299,7 @@ body {
         float:left;
         background:#06C;
         height:auto;
-        margin:20px 0 0 0px;
+        /*margin:20px 0 0 0px;*/
         
         background-image: linear-gradient(bottom, rgb(95,161,227) 15%, rgb(48,129,209) 58%, rgb(17,104,191) 79%);
 background-image: -o-linear-gradient(bottom, rgb(95,161,227) 15%, rgb(48,129,209) 58%, rgb(17,104,191) 79%);
@@ -643,11 +643,13 @@ img.qq {
 }
 span.cus_name {
          float: right;
-    font: 20px Verdana,Geneva,sans-serif;
+   /* font: 20px Verdana,Geneva,sans-serif; */
+    font:15px Verdana,Geneva,sans-serif;
     margin: 0;
     padding: 11px 0 0;
     text-align: right;
-    width: 28%;
+    /*width: 28%; */
+    width: 26%; 
 }
 /*-----------------ul li------*/
         
@@ -701,7 +703,8 @@ li:hover li a:hover {
 }
 .new_ul {
         float: right;
-        margin: 50px 0px 0 0;
+        /*margin: 50px 0px 0 0;*/
+        margin:40px -268px 0;
         padding: 0;
 }
         
