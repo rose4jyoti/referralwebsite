@@ -5,7 +5,7 @@
       <div class="foter_in">
         <div class="foter_content">
           <div class="foter_content_in">
-            <ul>
+            <ul style="box-sizing:none;">
               <li><a class="special" href="<?php echo URL::base(); ?>/front/about">About US </a></li>
               |
               <li><a class="special" href="<?php echo URL::base(); ?>/front/quality"> Q&A </a></li>
@@ -21,7 +21,7 @@
 			<?php echo Html::image('public/image/social_icon.png', array('alt'=>''));  ?>
 			</div>
             
-            <p class="copy">Copyright ©2010-2013 Referral. All rights reserved.</p>
+             <p class="copy">Copyright © 2010-2013 Referral. All rights reserved.</p>
           </div>
         </div>
       </div>
