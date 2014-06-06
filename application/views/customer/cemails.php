@@ -46,6 +46,18 @@ endforeach;
 		     echo $temp= substr($temp,0,42)."..";
 			endforeach; 
 		  ?>
+		  
+		    <span style="float: right; padding: 0 55px 0 0;">
+		 <?php if($status=="Active"){ ?>
+		   <a title="Play/Pause campaign" style="text-decoration:none;" href="<?php echo URL::base(); ?>/customer/activation/<?php echo $rpdid; ?>/0"><?php echo Html::image('public/image/pause.png', array('alt'=>''));  ?> </a>
+		 <?php } ?>
+		 <?php if($status=="Inactive"){ ?>
+		   <a class="" title="Play/Pause campaign" style="text-decoration:none;" href="<?php echo URL::base(); ?>/customer/activation/<?php echo $rpdid; ?>/1"><?php echo Html::image('public/image/play.png', array('alt'=>''));  ?> </a>
+		 <?php } ?>
+		   <a title="Delete campaign" href="<?php echo URL::base(); ?>/customer/delete/<?php echo $rpdid; ?>" onclick="javascript: if(!confirm('Are you sure you want to delete thiscampaign ?')){void(0); return false;}"><?php echo Html::image('public/image/del.png', array('alt'=>''));  ?> </a>
+		   </span>
+		  
+		  
 		  </h1>
       </div>
       <div class="top_line_b">
