@@ -1,30 +1,18 @@
 <?php defined('SYSPATH') or die('No direct script access.'); ?>
 <?php echo Html::style('public/css/style.css'); ?>
-
+<style>
+textarea { resize: none; }
+</style>
 <div class="wrapper_out">
   <div class="wrapper_in">
     
+	 <?php echo $header ?>
 	
-	   <?php echo $header ?>
-	
-	
-        <div class="top_line">
+      <div class="top_line">
       <div class="top_line_in">
         <h1></h1>
-      </div>
-     
-       <!---<div class="top_line_b">
-        <div class="top_line_b_in">
-          <ul class="dash">
-            <li>Dashboard</li>
-            <li>Reward</li>
-            <li>Emails</li>
-            <li>Appearance</li>
-            <li>Integration</li>
-          </ul>
-        </div>
-      </div>
-	  ---->
+      </div> 
+	  
     </div>
 	
 	<div class="form">
@@ -77,8 +65,21 @@
 			  <?= Form::input('customerCity',$options['0']['customerCity'],  array('class'=>'aa_new','style'=>'')); ?>
 			 
             </tr>
+			
 			<tr>
-              <td>Customer StateProvID</td>
+              <td>Customer Country</td>
+            </tr>
+            <tr>
+              <td> 
+			  
+			  <? //= Form::input('customerCountryID',$options['0']['customerCountryID'],  array('class'=>'aa_new','style'=>'')); ?>
+			
+             <?= Form::select('customerCountryID', $dropsvalue,'', array('class'=>'aa_new','style'=>'')); ?>
+
+            </tr>
+			
+			<tr>
+              <td>Customer State</td>
             </tr>
             <tr>
               <td> 
@@ -86,14 +87,7 @@
 			 
             </tr>
 			
-			<tr>
-              <td>Customer CountryID</td>
-            </tr>
-            <tr>
-              <td> 
-			  <?= Form::input('customerCountryID',$options['0']['customerCountryID'],  array('class'=>'aa_new','style'=>'')); ?>
-			 
-            </tr>
+		
 			
 			<tr>
               <td>Customer FirstName</td>
@@ -129,7 +123,7 @@
 			
             <tr>
               <td>
-               
+               <?= Form::hidden('formid','1',  array('style'=>'')); ?>
 			   <button type="submit" style=" background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; margin: 0 0 0 0px;">
 	             <?php echo Html::image('public/image/uaccount.png', array('alt'=>'', 'style'=>'margin: 0px 0px 0px -8px;'));  ?>
 		       </button>
@@ -167,10 +161,13 @@
 		 
 
 		 
-		  <?= Form::open('user/changepass'); ?>
+		  <?= Form::open('customer/account'); ?>
           <table class="change_table" border="0">
             <tr>
               <td><b>Change password</b></td>
+            </tr>
+			<tr>
+              <td style="color:#FF0000;"><?php echo $message; ?></td>
             </tr>
             <tr>
               <td>Current password:</td>
@@ -201,6 +198,7 @@
             </tr>
             <tr>
               <td>
+			   <?= Form::hidden('formid','2',  array('style'=>'')); ?>
                <button type="submit" style=" background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; margin: 0 0 0 0px;">
 	             <?php echo Html::image('public/image/chnag.png', array('alt'=>'', 'style'=>'margin: 0px 0px 0px -8px;'));  ?>
 		       </button>
@@ -231,49 +229,37 @@
       <div class="change_p">
         <div class="change_p_content">
           <h1 class="del_ac">Notifications settings</h1>
-          <table class="change_table">
+         
+         <?= Form::open('customer/account'); ?>
+		 <table class="change_table">
             <tr>
-              <td><input name="" type="checkbox" value="" /></td>
-              <td>&nbsp;Recieve weekly campaign performance reports</td>
+              <td>
+			   
+			  <?php if($options[0]['notification']=='1'){ ?>
+			    <?= Form::checkbox('notification',1,  true, array('class'=>'','style'=>'')); ?>
+			  <?php }else{ ?>
+			     <?= Form::checkbox('notification',1,  false, array('class'=>'','style'=>'')); ?>
+			  <?php } ?> 
+			 
+              &nbsp;Recieve weekly campaign performance reports
+			   <?= Form::hidden('formid','3',  array('style'=>'')); ?>
+			  </td>
             </tr>
-          </table>
+            <tr>
+			<td>
+		      <button type="submit" style="">
+	           Submit
+		      </button>
+			 </td>
+			 </tr>
+			 </table>
         </div>
       </div>
     </div>
 	
 	
-	
-	
-	
-	
-	
-<!----	
-  <div class="foter">
-      <div class="foter_in">
-        <div class="foter_content">
-          <div class="foter_content_in">
-            <ul>
-              <li><a class="special" href="<?php echo URL::base(); ?>/front/about">About US </a></li>
-              |
-              <li><a class="special" href="<?php echo URL::base(); ?>/front/quality"> Q&A </a></li>
-              |
-              <li><a class="special" href="<?php echo URL::base(); ?>/front/tou"> Terms of Use</a></li>
-              |
-              <li><a class="special" href="<?php echo URL::base(); ?>/front/privacypolicy"> Privacy Policy</a></li>
-              |
-              <li><a class="special" href="<?php echo URL::base(); ?>/front/contact"> Contact US</a></li>
-             
-            </ul>
-            <div class="socil_icon">
-			<?php echo Html::image('public/image/social_icon.png', array('alt'=>''));  ?>
-			</div>
-            
-            <p class="copy">Copyright ©2010-2013 Referral. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </div>
---->
+
+
 	
 	<?php echo $footer; ?>
 	
