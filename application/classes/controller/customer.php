@@ -26,7 +26,118 @@ class Controller_Customer extends Controller_Template {
 		// Load $sidebar into the template as a view
         // $this->template->sidebar = View::factory('template/sidebar');
  
-    }  
+    }
+
+
+
+	
+	
+	
+	
+	
+public function action_report() {
+
+     $users = DB::select()->from('users') //All users fetching from database
+				  ->order_by('id','ASC')
+				   ->where('users.notification', '=', '1')
+				  ->execute()
+				  ->as_array();	
+      
+	 foreach($users as $user):  //Displaying each user record once
+	  //echo $user['id'];
+      $email=$user['email'];	  
+	  $campaigns = DB::select('referralprogs.customerID','referralprogdetails.referralProgDetailsID',  'referralprogdetails.referralProgTitle','referralprogs.refProgID','referralprogs.no_impressions','referralprogs.no_clicks')
+		            ->from('referralprogs')
+					->join('referralprogdetails')
+					->on('referralprogs.refProgID','=', 'referralprogdetails.referralProgID')
+		            ->where('referralprogs.customerID', '=', $user['id'])
+		            ->execute()
+		            ->as_array();	  //All campaigns fetching from database	 
+				  
+	    foreach($campaigns as $cam): 
+	       $temp=$cam['refProgID'];
+		   $option =DB::select(array('COUNT("campaign_id")', 'total_share'))->from('rp_users_referrals')
+                      ->where('campaign_id','=', $temp)
+                      ->execute()
+					  ->as_array();
+
+
+		  $temp=DB::select()->from('referralprogdetails')
+                      ->where('referralProgID','=',$cam['refProgID'])
+                      ->execute()
+                      ->as_array();
+		  $tempid=$temp['0']['referralProgID'];
+		
+  	      $participants=DB::select()->from('rpusers')
+                      ->where('userReferralID','=', $tempid)
+                      ->execute()
+                      ->as_array();//print_r($participants);
+          if($participants){
+		    $participants=count($participants);
+             $referrals=DB::select()->from('rp_users_referrals')
+			           ->where('campaign_id','=', $tempid)
+                       ->execute()
+                      ->as_array();//print_r($participants);
+             $referrals=count($referrals);
+           
+		  }
+          else
+          {
+            $participants=0;$referrals=0;
+          }
+		   
+		$referralProgTitle=$cam['referralProgTitle'];
+		$total_share= $option['0']['total_share'];
+	    $total_clicks=$cam['no_clicks'];
+	    $total_impressions=$cam['no_impressions'];
+			
+echo $message="<table style='border:2px solid grey;'>
+<tr><th>Campaign title</th><td>$referralProgTitle</td>
+</tr><tr>
+<th>Total Impressions</th><td>$total_impressions</td>
+</tr><tr>
+<th>Total Clicks</th><td>$total_clicks</td>
+</tr><tr>
+<th>Total Shares</th><td>$total_share</td>
+</tr><tr>
+<th>Total Invites</th><td>$referrals</td>
+</tr><tr>
+<th>Total Participants</th><td>$participants</td>
+</tr><tr>
+<th>Total Rewards</th><td>0</td>
+</tr>
+</table>";
+
+
+
+////////////////////////Mailing///////////////////////
+/*
+$to = $email;
+//$to = "iamkeshri@gmail.com";
+$subject = "Weekly Campaign Report";
+$message = $message;
+
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+$headers .= 'From: <Support@referral.com>' . "\r\n";
+
+mail($to,$subject,$message,$headers);		
+*/
+
+     
+		
+		endforeach;
+
+	 endforeach;
+	 
+	 
+	     //print_r($query);
+	      die();
+       
+
+}	   
+	
+	
 	
 	public function action_index() {
 	   $user = Auth::instance()->get_user();
@@ -87,6 +198,20 @@ class Controller_Customer extends Controller_Template {
 	    $data=$this->request->post();
 
        if (HTTP_Request::POST == $this->request->method()){
+	   
+	   
+	    /*----------Session handling---------*/
+	    $_SESSION['rte']= $data['rte'];
+		$_SESSION['fnd']= $data['fnd'];
+	    $_SESSION['sub1']= $data['sub1'];
+	    $_SESSION['editor1']= $data['editor1'];
+		 $_SESSION['sub2']= $data['sub2'];
+		 $_SESSION['editor2']= $data['editor2'];
+		$_SESSION['sub3']= $data['sub3'];
+		$_SESSION['editor3']= $data['editor3'];
+		$_SESSION['sub4']= $data['sub4'];
+		$_SESSION['editor4']= $data['editor4'];
+		
          
 		 $query=DB::insert('rp_email_templates', array('refProgID','emailFromEmail', 'emailFromName'))
 		 ->values(array($id, $data['rte'], $data['fnd']))
@@ -136,12 +261,15 @@ class Controller_Customer extends Controller_Template {
 
 		 $temp=$query[0]['referralProgID'];
 
-		 
+
 		 $query1 = DB::select()->from('rp_email_templates')
 		         ->where('refProgID', '=', $temp)
 				 ->execute()
 				 ->as_array();
 		
+		
+		 //print_r($query1);
+		 
          $query2 = DB::select()->from('rp_email_template_details')
 		         ->where('emailTempID', '=', $query1[0]['emailTempID'])
 				 ->execute()
@@ -180,14 +308,27 @@ class Controller_Customer extends Controller_Template {
                                  ->bind('query1',$query1)
                                  ->bind('query2',$query2)
                                  ->bind('details',$details)
-								  ->bind('header',$header)
+                                 ->bind('status', $_SESSION['status'])
+								 ->bind('header',$header)
 						         ->bind('footer',$footer);
 		 
 		   
 	}
 	
 	public function action_start() {
-	
+	 /*----session work--------*/
+	 unset($_SESSION['rte']);
+	 unset($_SESSION['fnd']);
+	 unset($_SESSION['sub1']);
+	 unset($_SESSION['editor1']);
+	 unset($_SESSION['sub2']);
+	 unset($_SESSION['editor2']);
+	 unset($_SESSION['sub3']);
+	 unset($_SESSION['editor3']);
+	 unset($_SESSION['sub4']);
+	 unset($_SESSION['editor4']);
+
+
        $user = Auth::instance()->get_user();
 		// if a user is not logged in, redirect to login page
 		 if (!$user)
@@ -351,6 +492,7 @@ class Controller_Customer extends Controller_Template {
 
 		$this->template->content = View::factory('customer/creward')
 								 ->set('paramid', $paramid)
+								 ->bind('status', $_SESSION['status'])
                                  ->bind('rpdid',$rpdid)
                                  ->bind('query',$query)
                                  ->bind('query1',$query1)
@@ -533,6 +675,7 @@ class Controller_Customer extends Controller_Template {
 							->bind('details', $details)
 							->bind('images', $images)
 							->bind('detail', $detail)
+						     ->bind('status', $_SESSION['status'])
 							->bind('header',$header)
 						    ->bind('footer',$footer);; 
 		 
@@ -704,6 +847,7 @@ class Controller_Customer extends Controller_Template {
 	                             ->set('wid', $wid)
 	                             ->bind('details', $details)
 	                             ->bind('query1', $query1)
+								  ->bind('status', $_SESSION['status'])
 								 ->bind('header',$header)
 						         ->bind('footer',$footer);
 	}
@@ -947,6 +1091,11 @@ class Controller_Customer extends Controller_Template {
 		   $status=$temp3[0]['refProgStatus'];
            $no_impressions=$temp3[0]['no_impressions']; 
 		   $no_clicks=$temp3[0]['no_clicks'];
+		   
+
+		   $_SESSION['status']= $status;
+	       // print_r($_SESSION);
+			//die();
 		}
 		
 		
@@ -1041,7 +1190,7 @@ class Controller_Customer extends Controller_Template {
 								 ->set('dataresult1', $dataresult1)
 								 ->set('dataresult2', $dataresult2)
                                  ->bind('rpdid',$rpdid)
-                                 ->bind('status',$status)
+                                 ->bind('status',$_SESSION['status'])
                                  ->bind('no_impressions',$no_impressions)
                                  ->bind('no_clicks',$no_clicks)
                                  ->bind('participants',$participants)
@@ -1149,9 +1298,11 @@ class Controller_Customer extends Controller_Template {
 		}
 
 		
-		$header = View::factory('customer/header');
+		$header = View::factory('customer/header');		
+		$footer = View::factory('customer/footer');		
 		$this->template->content = View::factory('customer/campaign')
 		                           ->set('header',$header)
+		                           ->set('footer',$footer)
                                   ->set('username',$username)
                                   ->set('dataresult1',$dataresult1)
                                   ->set('dataresult2',$dataresult2)
@@ -1160,12 +1311,13 @@ class Controller_Customer extends Controller_Template {
                                   ->set('numbers',$numbers)
                                   ->set('n_of_participants',$n_of_participants)
                                   ->set('n_of_shares',$n_of_shares);
-	   
+	 
 	
  }
 	
     
  public function action_account() {
+ 
 		$user = Auth::instance()->get_user();
 		if (!$user)
 		{
@@ -1213,9 +1365,28 @@ class Controller_Customer extends Controller_Template {
 		
 		
 		
+	    if($data['formid']=='3'){
+	      $data=$this->request->post();
+		 
+		  if(isset($data['notification'])){
+		  $query = DB::update('users')
+		          ->set(array('notification'=> $data['notification']))
+		          ->where('id', '=', $userid)
+				  ->execute();
+		  }else{
+		   $query = DB::update('users')
+		          ->set(array('notification'=> '0'))
+		          ->where('id', '=', $userid)
+				  ->execute();
+		  }
+		 
+		  Request::current()->redirect('customer/account');
 		
 		
-	   }
+	    }
+		
+		
+	  }
 		
 		$options = DB::select()->from('users')
 		         ->where('id', '=', $userid)
@@ -1223,7 +1394,17 @@ class Controller_Customer extends Controller_Template {
 				 ->as_array();
 				
 		$temp=$options[0]['id'];
+		//$notification=$options[0]['notification'];
+		 //print_r($options);
 		 
+		 
+/************To display countries**********/		 
+$dropsvalue = DB::select('countryID', 'countryIsoA3')->from('rp_customer_countries')
+           ->execute()
+		   ->as_array('countryID','countryIsoA3');
+
+
+
 		////////////////////////////////////////////
 		$header = View::factory('customer/header');		
 		$footer = View::factory('customer/footer');		
@@ -1232,6 +1413,7 @@ class Controller_Customer extends Controller_Template {
 								   ->bind('options',$options)
 								   ->bind('data',$data)
 								   ->bind('message',$message)
+								   ->bind('dropsvalue',$dropsvalue)
 								   ->bind('header',$header)
 								   ->bind('footer',$footer);
 		   
@@ -1410,13 +1592,14 @@ header("Content-Disposition: attachment; filename=participantlistexports_" . dat
 	  
 /////////////////////////////////////////////////////	  
 	  
-	  Request::current()->redirect('customer/dashboard');
+	  Request::current()->redirect('cuctomer/dashboard');
  
  }
 	
 
 	
-
+	
+	
 	
 }
 
