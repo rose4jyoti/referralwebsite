@@ -80,8 +80,7 @@ class Controller_User extends Controller_Template {
 	
 	public function action_login() 
 	{
-		$this->template->content = View::factory('user/login')
-			->bind('message', $message);
+		
 			
 		if (HTTP_Request::POST == $this->request->method()) 
 		{
@@ -107,6 +106,17 @@ class Controller_User extends Controller_Template {
 				$message = 'Please Enter correct Username and Password';
 			}
 		}
+		
+		
+				
+		$header = View::factory('customer/header');		
+		$footer = View::factory('customer/footer');		
+		$this->template->content = View::factory('user/login')
+			                      ->bind('header', $header)
+			                      ->bind('footer', $footer)
+			                      ->bind('message', $message);
+		
+
 	}
 	
 	public function action_logout() 
