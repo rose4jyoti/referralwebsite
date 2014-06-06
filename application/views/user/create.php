@@ -34,7 +34,7 @@ document.getElementById("web").style.display="";
       <div class="form_in">
         <div class="leftnew">
 		
-		<span style="background-color: #C2C2C2;">
+		<span style="background-color: #C2C2C2;color:red;">
 		 <? if ($message) : ?>
 	    <h3 class="message">
 		<?= $message; ?>
