@@ -77,6 +77,7 @@
         <h1>Dashboard</h1>
       </div>
     </div>
+	
     <div class="form">
       <div class="form_in">
         <div class="top_menu">
@@ -137,8 +138,11 @@
       </div>
     </div>
 	
-	
+	   <!---addded by developer -->
+	    <?php echo $footer; ?>
 
   </div>
 </div>
+
+
 
