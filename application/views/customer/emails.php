@@ -1,4 +1,31 @@
 <?php defined('SYSPATH') or die('No direct script access.'); ?>
+<?php //unset($_SESSION['rte']);?>
+<?php if(isset($_SESSION['rte'])){
+ $rte= $_SESSION['rte'];
+ $fnd= $_SESSION['fnd'];
+ $sub1= $_SESSION['sub1'];
+ $editor1= $_SESSION['editor1'];
+ $sub2= $_SESSION['sub2'];
+ $editor2= $_SESSION['editor2'];
+ $sub3= $_SESSION['sub3'];
+ $editor3= $_SESSION['editor3'];
+  $sub4= $_SESSION['sub4'];
+ $editor4= $_SESSION['editor4'];
+}else{
+ $rte= '';
+ $fnd= '';
+ $sub1= '';
+ $editor1='';
+ 
+ $sub2= '';
+ $editor2= ''; 
+ $sub3='';
+ $editor3= '';
+ $sub4='';
+ $editor4= '';
+}
+//print_r($_SESSION);?>
+
 
 <?php echo Html::style('public/css/style.css'); ?>
 <?php echo Html::style('public/css/page3.css'); ?>
@@ -47,12 +74,12 @@
                 </div><br />
                 Reply to email: &nbsp;
 				
-				<?= Form::input('rte','',  array('size'=>'24','class'=>'aa_new', 'style'=>'width: 265px;')); ?>
+				<?= Form::input('rte',$rte,  array('size'=>'24','class'=>'aa_new', 'style'=>'width: 265px;')); ?>
 				<!---<input type="email"  size="24"/>---->
 				<br />
                 <p>From name display:&nbsp;
 				
-				<?= Form::input('fnd','', array('class'=>'aa_new')); ?>
+				<?= Form::input('fnd',$fnd, array('class'=>'aa_new')); ?>
 				<!------<input type="text" />----->
 				</p>
                 </div>
@@ -82,16 +109,15 @@
             <div class="b2">
                  Subject<br />
 				 
-				 <?= Form::input('sub1','',  array('style'=>'width:595px;','class'=>'aa_new')); ?>
+				 <?= Form::input('sub1',$sub1,  array('style'=>'width:595px;','class'=>'aa_new')); ?>
                  <!--<input type="text" size="60" />--->
 				 
             </div>
             <div class="b3">
                Notification body<br /><br />
                   <div class="b3_img">
-				  
-				  
-				  <textarea class="ckeditor" name="editor1">Enter..</textarea>
+				
+				  <textarea class="ckeditor" name="editor1"><?php echo $editor1; ?></textarea>
 				  
 				   <?php //echo Html::image('public/image/mail_box.png', array('alt'=>'','width'=>'700px','height'=>'337px'));  ?>
 				 
@@ -135,7 +161,7 @@
               <div class="c2">
                Subject<br />
 			   
-			   	<?= Form::input('sub2','',  array('style'=>'width:595px;','class'=>'aa_new')); ?>
+			   	<?= Form::input('sub2',$sub2,  array('style'=>'width:595px;','class'=>'aa_new')); ?>
                 <!--<input type="text" size="60" />--->
               </div>
               <div class="c3">
@@ -143,7 +169,7 @@
 			  
                   <div class="c3_img">
 				  
-				<textarea class="ckeditor" name="editor2">Enter..</textarea> 
+				<textarea class="ckeditor" name="editor2"><?php echo $editor2; ?></textarea> 
 				  
               <?php //echo Html::image('public/image/mail_box.png', array('alt'=>'','width'=>'700px','height'=>'337px'));  ?>
 				  
@@ -182,7 +208,7 @@
                 <div class="d2">
                Subject<br />
 			   
-			   <?= Form::input('sub3','',  array('style'=>'width:595px;','class'=>'aa_new')); ?>
+			   <?= Form::input('sub3',$sub3,  array('style'=>'width:595px;','class'=>'aa_new')); ?>
                 <!----<input type="text" size="60" />---->
               </div>
               <div class="d3">
@@ -190,7 +216,7 @@
                   <div class="d3_img">
                  <?php //echo Html::image('public/image/mail_box.png', array('alt'=>'','width'=>'700px','height'=>'337px'));  ?>
 				 
-				  <textarea class="ckeditor" name="editor3">Enter..</textarea>
+				  <textarea class="ckeditor" name="editor3"><?php echo $editor3; ?></textarea>
 				  
 				  
 				 
@@ -224,14 +250,14 @@
                 <div class="e2">
                Subject<br />
 			   
-			   <?= Form::input('sub4','',  array('style'=>'width:595px;','class'=>'aa_new')); ?>
+			   <?= Form::input('sub4',$sub4,  array('style'=>'width:595px;','class'=>'aa_new')); ?>
                 <!---<input type="text" size="60" />---->
               </div>
               <div class="e3">
               Notification body<br /><br />
                   <div class="e3_img">
 				  
-				  <textarea class="ckeditor" name="editor4">Enter..</textarea>
+				  <textarea class="ckeditor" name="editor4"><?php echo $editor4; ?></textarea>
 				  
                    <?php //echo Html::image('public/image/mail_box.png', array('alt'=>'','width'=>'700px','height'=>'337px'));  ?>
 				 
