@@ -1,14 +1,16 @@
 <?php defined('SYSPATH') or die('No direct script access.'); ?>
 <?php echo Html::style('public/css/style.css'); ?>
 
-<div class="header_out">
+<?php if(isset($customername)){ ?>
+ <div class="header_out">
       <div class="header_in">
-        <div class="logo">
-		<?php echo Html::image('public/image/dummy-logo.png', array('alt'=>''));  ?>
-		
+        <a href="<?php echo URL::base(); ?>">
+	     <div class="logo">
+		 <?php echo Html::image('public/image/dummy-logo.png', array('alt'=>''));  ?>
+		</a>
 		
 		</div>
-        <span class="cus_name"> Welcome &nbsp;<?php echo $customername; ?></span> 
+        <span class="cus_name"> Welcome &nbsp;<?php echo $customername; ?> !</span> 
         <!---ul class="main_nav">
           <li><a href="#">Campaigns</a> </li>
           <li> <a href="#">Account </a></li>
@@ -45,5 +47,24 @@
       </div>
   
   </div>
-	
-	
+
+<?php }else{ ?>  
+
+ 	<div class="header_out">
+      <div class="header_in">
+        <div class="logo">
+		
+		<?php echo Html::image('public/image/dummy-logo.png', array('alt'=>''));  ?>
+		</div>
+        <ul class="main_nav">
+           <li><a class="active" href="<?php echo URL::base(); ?>/front/home"> Home</a> </li>
+          <li> <a href="<?php echo URL::base(); ?>/front/hiw">How it works </a></li>
+          <li> <a href="<?php echo URL::base(); ?>/front/price">Pricing </a></li>
+          <li><a href="<?php echo URL::base(); ?>/front/blog"> Blog </a></li>
+          <li><?php echo Html::anchor('user/login', 'Sign In');?></li>
+      
+        </ul>
+      </div>
+    </div>
+
+<?php } ?> 	
