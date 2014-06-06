@@ -2,10 +2,12 @@
  <?php echo Html::style('public/css/style.css'); ?>
  <?php echo Html::style('public/css/page7.css'); ?>
 
-<?php 
+<?php
+//print_r($images);
+ 
 foreach ($images as $temp) :
  if($temp['referralProgImageOrder']=='1'){
-   $img1=$temp['referralProgImage'];
+  $img1=$temp['referralProgImage'];
  }
  if($temp['referralProgImageOrder']=='2'){
    $img2=$temp['referralProgImage'];
@@ -31,6 +33,17 @@ endforeach; ?>
 		     echo $temp= substr($temp,0,42)."..";
 			endforeach; 
 		  ?>
+		  
+		  <span style="float: right; padding: 0 55px 0 0;">
+		 <?php if($status=="Active"){ ?>
+		   <a title="Play/Pause campaign" style="text-decoration:none;" href="<?php echo URL::base(); ?>/customer/activation/<?php echo $rpdid; ?>/0"><?php echo Html::image('public/image/pause.png', array('alt'=>''));  ?> </a>
+		 <?php } ?>
+		 <?php if($status=="Inactive"){ ?>
+		   <a class="" title="Play/Pause campaign" style="text-decoration:none;" href="<?php echo URL::base(); ?>/customer/activation/<?php echo $rpdid; ?>/1"><?php echo Html::image('public/image/play.png', array('alt'=>''));  ?> </a>
+		 <?php } ?>
+		   <a title="Delete campaign" href="<?php echo URL::base(); ?>/customer/delete/<?php echo $rpdid; ?>" onclick="javascript: if(!confirm('Are you sure you want to delete thiscampaign ?')){void(0); return false;}"><?php echo Html::image('public/image/del.png', array('alt'=>''));  ?> </a>
+		   </span>
+		   
 		</h1>
       </div>
       <div class="top_line_b">
@@ -83,10 +96,11 @@ endforeach; ?>
                             </div>
                             <div class="right">
                             <p>
-								<b> 
-								<?php foreach ($description as $temp) : ?>
-                               <?php echo $temp['referralProgDescription']; ?>
-			                      <?php endforeach; ?>	
+								<b style="text-transform:capitalize;"> 
+								<?php foreach ($description as $temp) :
+                                 echo $temp['referralProgDescription']; 
+			                     endforeach; 
+								?>	
 							    </b>
                             </p>
                             
@@ -145,7 +159,7 @@ endforeach; ?>
 					<div class="browse">
                 Thumbnail image<br />
 				
-				<?php echo Form::open('customer/appearance', array('enctype' => 'multipart/form-data')); ?>
+				<?php echo Form::open('customer/cappearance/'.$rpdid, array('enctype' => 'multipart/form-data')); ?>
                 	 <div class="inputbar1">
                      <!---<input type="text"  size="30" />---->
 					   
@@ -193,10 +207,11 @@ endforeach; ?>
                             and get a free mp3 shuffling player
 							--->
 							
-							<b>
+							<b style="text-transform:capitalize;">
 								<?php foreach ($description as $temp) : ?>
                                <?php 
-							    echo substr($temp['referralProgDescription'],0,40);
+							    //echo substr($temp['referralProgDescription'],0,40);
+							    echo $temp['referralProgDescription'];
 							   ?>
 			                      <?php endforeach; ?>
 							</b>
@@ -339,7 +354,7 @@ endforeach; ?>
                 <div class="browse">
                 Thumbnail image  
 				
-				<?php echo Form::open('customer/appearance', array('enctype' => 'multipart/form-data')); ?>
+				<?php echo Form::open('customer/cappearance/'.$rpdid, array('enctype' => 'multipart/form-data')); ?>
                 	 <div class="inputbar1">
                     <?php echo Form::file('avatar'); ?>
 					<?= Form::hidden('so','2',  array('style'=>'')); ?>
@@ -689,7 +704,7 @@ of your friends will have
 				<div class="browse">
                 Thumbnail image
 				
-				<?php echo Form::open('customer/appearance', array('enctype' => 'multipart/form-data')); ?>
+				<?php echo Form::open('customer/cappearance/'.$rpdid, array('enctype' => 'multipart/form-data')); ?>
                 	 <div class="inputbar1">
                     <?php echo Form::file('avatar'); ?>
 					<?= Form::hidden('so','3',  array('style'=>'')); ?>
