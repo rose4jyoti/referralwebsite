@@ -6,7 +6,7 @@
 require SYSPATH.'classes/kohana/core'.EXT;
 
 if (is_file(APPPATH.'classes/kohana'.EXT))
-{
+{ 
 	// Application extends the core
 	require APPPATH.'classes/kohana'.EXT;
 }
