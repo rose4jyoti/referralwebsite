@@ -5,15 +5,15 @@
 return array(
 	'cookie' => array(
 		'encrypted' => TRUE,
-	    'lifetime' => 600
+	    'lifetime' => 0
 	),
    
-   /****added by vikash to increase session time****/	
-	'native' => array(
-        'name' => 'session_name',
-        'lifetime' => 600
-    ),
-	 
-	
+    /****added by vikash to increase session time****/	
+       'native' => array(
+       'name' => 'kohanasession',
+        'lifetime' => 0      
+      ),
+
+		
 );
 
