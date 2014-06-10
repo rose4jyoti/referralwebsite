@@ -30,12 +30,7 @@ class Controller_Customer extends Controller_Template {
 
 
 
-	
-	
-	
-	
-	
-public function action_report() {
+ public function action_report() {
 
      $users = DB::select()->from('users') //All users fetching from database
 				  ->order_by('id','ASC')
@@ -261,38 +256,53 @@ mail($to,$subject,$message,$headers);
 
 		 $temp=$query[0]['referralProgID'];
 
-
 		 $query1 = DB::select()->from('rp_email_templates')
 		         ->where('refProgID', '=', $temp)
 				 ->execute()
 				 ->as_array();
 		
-		
+		 $templateid=$query1[0]['emailTempID'];
 		 //print_r($query1);
 		 
          $query2 = DB::select()->from('rp_email_template_details')
 		         ->where('emailTempID', '=', $query1[0]['emailTempID'])
 				 ->execute()
-				 ->as_array();		
-         //print_r($query2);
+				 ->as_array();		 
+        // print_r($query2);
 		 
 		 
 		 //$paramid=$query1[0]['refProgTypeID'];
 		 $details =DB::select()->from('referralprogdetails')
                       ->where('referralProgDetailsID','=', $rpdid)
                       ->execute();		
-		 
-		 
+
+				 
 		  if (HTTP_Request::POST == $this->request->method()){
  
 			 $data=$this->request->post();
-
-			 /*$options1= DB::update('referralprogdetails')->set(array('referralProgTitle'=> $data['rpt'], 'referralProgDescription'=> $data['rpd']))
-		          ->where('referralProgDetailsID', '=', $rpdid)
+             print_r($data);
+			 $options1= DB::update('rp_email_templates')
+			         ->set(array('emailFromName'=> $data['rte'], 'emailFromEmail'=> $data['fnd']))
+		          ->where('emailTempID', '=',$data['templateid'])
 				  ->execute();
-			 */
-			 
-			 
+			
+             $details = DB::select()->from('rp_email_template_details')
+		         ->where('emailTempID', '=',$data['templateid'])
+				 ->execute()
+				 ->as_array();	
+				 
+			for($i=0; $i<4;$i++){
+			 //echo $details[$i]['emailTempDetID'];
+			 $t=$i+1;
+		      DB::update('rp_email_template_details')
+			         ->set(
+					  array('emailSubject'=> $data['sub'.$t],
+    			      'emailHtml'=> $data['editor'.$t])
+					  )
+		          ->where('emailTempDetID', '=',$details[$i]['emailTempDetID'])
+				  ->execute();
+		     }	
+
 		    Request::current()->redirect('customer/cappearance/'.$rpdid);
 		 
 		 } 
@@ -309,6 +319,7 @@ mail($to,$subject,$message,$headers);
                                  ->bind('query2',$query2)
                                  ->bind('details',$details)
                                  ->bind('status', $_SESSION['status'])
+                                 ->bind('templateid',$templateid)
 								 ->bind('header',$header)
 						         ->bind('footer',$footer);
 		 
@@ -1596,7 +1607,7 @@ header("Content-Disposition: attachment; filename=participantlistexports_" . dat
  
  }
 	
-
+ 
 	
 	
 	
