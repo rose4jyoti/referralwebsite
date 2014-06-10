@@ -299,8 +299,8 @@ endforeach;
   </button>	  
  </a>
  
- <?//= Form::submit('Next', 'Next'); ?>
 
+<?php echo Form::hidden('templateid', $templateid); ?>
 <?= Form::close(); ?>
 	  
 	  
