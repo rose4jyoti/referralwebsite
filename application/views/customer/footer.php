@@ -57,3 +57,11 @@
     <!-- end: Container  -->
 </div>
 <!-- end: Copyright -->
+
+<?php echo Html::script('../public/js/jquery-1.8.2.js'); ?>
+<?php echo Html::script('../public/js/bootstrap.js'); ?>
+<?php echo Html::script('../public/js/flexslider.js'); ?>
+<?php echo Html::script('../public/js/carousel.js'); ?>
+<?php echo Html::script('../public/js/jquery.cslider.js'); ?>
+<?php echo Html::script('../public/js/slider.js'); ?>
+<?php echo Html::script('../public/js/custom.js'); ?>

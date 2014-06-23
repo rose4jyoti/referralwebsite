@@ -32,9 +32,9 @@ var_dump($currentTimeoutInSecs);
                     </div>
                     <div class="col-md-3">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                 Upgrade <span class="caret"></span>
-                            </button>
+                            </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="#">Standard</a></li>
                                 <li><a href="#">Premium</a></li>
