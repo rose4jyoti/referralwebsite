@@ -29,8 +29,8 @@ class Controller_Front extends Controller_Template {
 
 	
 	public function action_home() {
-        $header = View::factory('customer/header');		
-	    $footer = View::factory('customer/footer');		
+        $header = View::factory('front/header');
+	    $footer = View::factory('front/footer');
 
 		$this->template->content = View::factory('front/home')
 		                          ->bind('header',$header)
@@ -39,8 +39,8 @@ class Controller_Front extends Controller_Template {
 								
 	}
 	public function action_hiw() {
-	    $header = View::factory('customer/header');		
-	    $footer = View::factory('customer/footer');		
+        $header = View::factory('front/header');
+	    $footer = View::factory('front/footer');
 
 		$this->template->content = View::factory('front/hiw')
 		                           ->bind('header',$header)
@@ -48,16 +48,16 @@ class Controller_Front extends Controller_Template {
               
 	}
 	public function action_price() {
-	    $header = View::factory('customer/header');		
-	    $footer = View::factory('customer/footer');	
+        $header = View::factory('front/header');
+	    $footer = View::factory('front/footer');
 		$this->template->content = View::factory('front/price')
 		                          ->bind('header',$header)
 						          ->bind('footer',$footer);
               
 	}
 	public function action_blog() {
-	    $header = View::factory('customer/header');		
-	    $footer = View::factory('customer/footer');		
+	    $header = View::factory('front/header');
+	    $footer = View::factory('front/footer');
 						  
 		$this->template->content = View::factory('front/blog')
 		                          ->bind('header',$header)
@@ -67,8 +67,8 @@ class Controller_Front extends Controller_Template {
 	
 	public function action_about(){
 	
-	    $header = View::factory('customer/header');		
-	    $footer = View::factory('customer/footer');		
+	    $header = View::factory('front/header');
+	    $footer = View::factory('front/footer');
 	
 		$this->template->content = View::factory('front/about')
 		                         ->bind('header',$header)
@@ -76,24 +76,24 @@ class Controller_Front extends Controller_Template {
 	}
 	public function action_tou() {
 	
-	    $header = View::factory('customer/header');		
-	    $footer = View::factory('customer/footer');		
+	    $header = View::factory('front/header');
+	    $footer = View::factory('front/footer');
 	
 		$this->template->content = View::factory('front/tou')
 		                         ->bind('header',$header)
 						         ->bind('footer',$footer);
 	}
 	public function action_quality() {
-	    $header = View::factory('customer/header');		
-	    $footer = View::factory('customer/footer');		
+	    $header = View::factory('front/header');
+	    $footer = View::factory('front/footer');
 
 		$this->template->content = View::factory('front/quality')
 		                           ->bind('header',$header)
 						           ->bind('footer',$footer);
 	}
 	public function action_privacypolicy() {
-	    $header = View::factory('customer/header');		
-	    $footer = View::factory('customer/footer');		
+	    $header = View::factory('front/header');
+	    $footer = View::factory('front/footer');
 
 		$this->template->content = View::factory('front/privacypolicy')
 		                           ->bind('header',$header)

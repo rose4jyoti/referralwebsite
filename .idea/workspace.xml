@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/application/views/front/home.php" line="53" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e150098f-73f5-457d-8395-722efe195559" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widget/contacts.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widget/login.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/referralwebsite.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widget/summary.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\invite\gmailcontacts\Config.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\invite\gmailcontacts\Contacts.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\invite\gmailcontacts\GmailConnect.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\invite\gmailcontacts\GmailOath.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\invite\gmailcontacts\Googleconnect.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\invite\gmailcontacts\error_log" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\invite\gmailcontacts\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\cookie_oauth_client.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\database_oauth_client.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\http.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\httpclient\LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\httpclient\http.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\httpclient\httpclient.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\httpclient\test_cookies.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\httpclient\test_http.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\httpclient\test_http_cookies.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\httpclient\test_http_image_request.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\httpclient\test_http_post.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\httpclient\test_http_soap.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\httpclient\yahoo_export_address_book.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\httpclient\yahoo_group_invite.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\httpclient\yahoo_user.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_bitbucket.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_box.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_disqus.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_dropbox.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_eventful.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_facebook.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_fitbit.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_flickr.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_foursquare.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_google.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_instagram.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_linkedin.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_microsoft.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_reddit.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_rightsignature.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_salesforce.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_scoopit.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_stocktwits.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_surveymonkey.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_tumblr.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_twitter.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_vk.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_withings.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_xing.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\login_with_yahoo.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\mysqli_login_with_google.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\mysqli_login_with_twitter.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\mysqli_oauth_client.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\mysqli_offline_access_to_google.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\mysqli_offline_access_to_twitter.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\oauth.sql" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\oauth_client.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\oauth_client_class.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\php-oauth-api.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\sasl\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\sasl\basic_sasl_client.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\sasl\cram_md5_sasl_client.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\sasl\digest_sasl_client.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\sasl\documentation\sasl_class.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\sasl\login_sasl_client.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\sasl\ntlm_sasl_client.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\sasl\plain_sasl_client.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\sasl\sasl.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\oauth-api\test_oauth_client.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\POLICY.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\autoupdate.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\config.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\default.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\example.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\images\ers.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\images\oks.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\index.htm" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\install.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\install_visual.pdf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\abv.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\aol.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\apropo.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\atlas.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\aussiemail.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\azet.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\badoo.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\bebo.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\bigstring.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\bookcrossing.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\bordermail.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\brazencareerist.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\canoe.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\care2.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\clevergo.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\cyworld.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\doramail.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\eons.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\evite.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\facebook.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\faces.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\famiva.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\fastmail.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\fdcareer.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\flickr.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\flingr.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\flixster.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\fm5.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\freemail.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\friendfeed.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\friendster.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\gawab.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\gmail.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\gmx_net.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\graffiti.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\hi5.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\hotmail.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\hushmail.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\hyves.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\inbox.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\india.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\indiatimes.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\inet.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\interia.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\katamail.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\kids.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\kincafe.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\konnects.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\koolro.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\lastfm.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\libero.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\linkedin.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\livejournal.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\lovento.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\lycos.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\mail2world.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\mail_com.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\mail_in.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\mail_ru.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\meinvz.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\meta.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\mevio.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\motortopia.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\multiply.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\mycatspace.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\mydogspace.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\mynet.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\myspace.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\netaddress.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\netlog.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\ning.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\nz11.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\o2.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\operamail.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\orkut.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\perfspot.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\plaxo.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\plazes.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\plurk.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\pochta.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\popstarmail.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\rambler.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\rediff.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\sapo.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\skyrock.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\tagged.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\techemail.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\terra.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\twitter.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\uk2.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\vimeo.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\virgilio.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\vkontakte.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\walla.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\web_de.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\wpl.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\xanga.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\xing.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\xuqa.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\yahoo.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\yandex.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\youtube.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\conf\zapak.conf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\css\jquery.fancybox-1.3.4.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\css\uniform.default.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\example_autodetect.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\example_list.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\get_contacts.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\all_services.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\all_services_up.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\bg-input-focus.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\bg-input.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\email_services.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\ers.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancy_close.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancy_loading.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancy_nav_left.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancy_nav_right.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancy_shadow_e.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancy_shadow_n.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancy_shadow_ne.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancy_shadow_nw.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancy_shadow_s.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancy_shadow_se.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancy_shadow_sw.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancy_shadow_w.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancy_title_left.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancy_title_main.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancy_title_over.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancy_title_right.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancybox-x.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancybox-y.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\fancybox.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\oks.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\social_services.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\imgs\sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\js\jquery.easing-1.3.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\js\jquery.fancybox-1.3.4.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\js\jquery.mousewheel-3.0.4.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\more_examples\js\jquery.uniform.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\notifier.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\openinviter.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\openinviter_stats.sqlite" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\plugins\_base.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\plugins\_hosted.plg.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\postinstall_results.res" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\openinviter\stats.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\public\css\bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\uploads\ql1pas4o0p6nwcmc4pe1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\referowl.com\uploads\x3fbh61pgocfgewv9913.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/customer/billing.php" afterPath="$PROJECT_DIR$/application/views/customer/billing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/public/css/bootstrap-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/bootstrap.css" afterPath="$PROJECT_DIR$/public/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/bootstrap.php" afterPath="$PROJECT_DIR$/application/bootstrap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/customer/campaign.php" afterPath="$PROJECT_DIR$/application/views/customer/campaign.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/customer/cemails.php" afterPath="$PROJECT_DIR$/application/views/customer/cemails.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home/congrats.php" afterPath="$PROJECT_DIR$/application/views/home/congrats.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home/congrats_new.txt" afterPath="$PROJECT_DIR$/application/views/home/congrats_new.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/importer/example/contacts.import.php" afterPath="$PROJECT_DIR$/importer/example/contacts.import.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/importer/example/contacts.page.php" afterPath="$PROJECT_DIR$/importer/example/contacts.page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user/create.php" afterPath="$PROJECT_DIR$/application/views/user/create.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/customer.php" afterPath="$PROJECT_DIR$/application/classes/controller/customer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home/einsert.php" afterPath="$PROJECT_DIR$/application/views/home/einsert.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home/einsert_new.txt" afterPath="$PROJECT_DIR$/application/views/home/einsert_new.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/customer/emails.php" afterPath="$PROJECT_DIR$/application/views/customer/emails.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/customer/footer.php" afterPath="$PROJECT_DIR$/application/views/customer/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/front.php" afterPath="$PROJECT_DIR$/application/classes/controller/front.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/customer/header.php" afterPath="$PROJECT_DIR$/application/views/customer/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/layout/header.php" afterPath="$PROJECT_DIR$/application/views/layout/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/front/hiw.php" afterPath="$PROJECT_DIR$/application/views/front/hiw.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/home.php" afterPath="$PROJECT_DIR$/application/classes/controller/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/front/home.php" afterPath="$PROJECT_DIR$/application/views/front/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home/index.php" afterPath="$PROJECT_DIR$/application/views/home/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home/index_new.txt" afterPath="$PROJECT_DIR$/application/views/home/index_new.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home/indexold.php" afterPath="$PROJECT_DIR$/application/views/home/indexold.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/front/price.php" afterPath="$PROJECT_DIR$/application/views/front/price.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/front/privacypolicy.php" afterPath="$PROJECT_DIR$/application/views/front/privacypolicy.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/front/quality.php" afterPath="$PROJECT_DIR$/application/views/front/quality.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/template/referral.php" afterPath="$PROJECT_DIR$/application/classes/controller/template/referral.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/admin/style.css" afterPath="$PROJECT_DIR$/public/css/admin/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/template.php" afterPath="$PROJECT_DIR$/application/views/template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home/test.php" afterPath="$PROJECT_DIR$/application/views/home/test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/front/tou.php" afterPath="$PROJECT_DIR$/application/views/front/tou.php" />
+    </list>
+    <ignored path="referralwebsite.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="referralwebsite" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/front/home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="223" column="80" selection-start="12105" selection-end="12105" vertical-scroll-proportion="0.0" vertical-offset="3272" max-vertical-offset="3927">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contacts.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widget/contacts.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="278" column="65" selection-start="13591" selection-end="13591" vertical-scroll-proportion="0.0" vertical-offset="4726" max-vertical-offset="5542">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="billing.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/customer/billing.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="175" column="75" selection-start="8828" selection-end="8828" vertical-scroll-proportion="0.0" vertical-offset="1136" max-vertical-offset="3434">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/front/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="27" selection-start="2786" selection-end="2786" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1054">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/classes/controller/customer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="357" column="48" selection-start="11212" selection-end="11218" vertical-scroll-proportion="0.0" vertical-offset="14739" max-vertical-offset="24276">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="119" column="0" selection-start="2411" selection-end="2411" vertical-scroll-proportion="0.3772242" vertical-offset="1811" max-vertical-offset="27183">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scrolling-nav.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/scrolling-nav.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="1020">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/hybridauth/examples/social_hub/logout_all.php" />
+        <option value="D:/SARIX MARKETING/OpenInviter/CssCheckboxKit_1399340016639543/demo.html" />
+        <option value="$PROJECT_DIR$/hybridauth/examples/social_hub/css/style.css" />
+        <option value="$PROJECT_DIR$/application/classes/controller/customer.php" />
+        <option value="$PROJECT_DIR$/hybridauth/examples/social_hub/public/css.css" />
+        <option value="$PROJECT_DIR$/hybridauth/examples/social_hub/mail.php" />
+        <option value="$PROJECT_DIR$/hybridauth/hybridauth/Hybrid/Providers/Plaxo.php" />
+        <option value="$PROJECT_DIR$/hybridauth/hybridauth/config.php" />
+        <option value="$PROJECT_DIR$/widget/index.php" />
+        <option value="$PROJECT_DIR$/hybridauth/examples/social_hub/contacts.php" />
+        <option value="$PROJECT_DIR$/hybridauth/examples/social_hub/summary.php" />
+        <option value="$PROJECT_DIR$/hybridauth/examples/social_hub/includes/mysql.class.php" />
+        <option value="$PROJECT_DIR$/hybridauth/examples/social_hub/login.php" />
+        <option value="$PROJECT_DIR$/widget/login.php" />
+        <option value="$PROJECT_DIR$/widget/summary.php" />
+        <option value="$PROJECT_DIR$/application/views/layout/top_header.php" />
+        <option value="$PROJECT_DIR$/application/views/customer/campaign.php" />
+        <option value="$PROJECT_DIR$/widget/hybridauth/Hybrid/Providers/Aol_oauth2.php" />
+        <option value="$PROJECT_DIR$/widget/hybridauth/Hybrid/Providers/AOL.php" />
+        <option value="$PROJECT_DIR$/widget/contacts.php" />
+        <option value="$PROJECT_DIR$/widget/hybridauth/config.php" />
+        <option value="$PROJECT_DIR$/widget/hybridauth/Hybrid/thirdparty/OpenID/LightOpenID.php" />
+        <option value="$PROJECT_DIR$/application/views/layout/header.php" />
+        <option value="$PROJECT_DIR$/application/views/user/create.php" />
+        <option value="D:/SARIX MARKETING/OpenInviter/Pricing page PHP Files/luc/sample.php" />
+        <option value="$PROJECT_DIR$/widget/aoltest.html" />
+        <option value="$PROJECT_DIR$/contactgrabber/index.php" />
+        <option value="$PROJECT_DIR$/contacts-importer/Svetlozar.NET/Contacts/AOL.php" />
+        <option value="$PROJECT_DIR$/public/front/css/style.css" />
+        <option value="D:/SARIX MARKETING/OpenInviter/gotya/css/style.css" />
+        <option value="$PROJECT_DIR$/public/css/bootstrap.css" />
+        <option value="D:/SARIX MARKETING/OpenInviter/gotya/index.html" />
+        <option value="$PROJECT_DIR$/public/js/custom.js" />
+        <option value="$PROJECT_DIR$/public/css/icons.css" />
+        <option value="$PROJECT_DIR$/application/classes/controller/template/referral.php" />
+        <option value="$PROJECT_DIR$/public/css/social-icons.css" />
+        <option value="$PROJECT_DIR$/application/classes/controller/front.php" />
+        <option value="$PROJECT_DIR$/public/css/parallax-slider.css" />
+        <option value="$PROJECT_DIR$/application/views/front/quality.php" />
+        <option value="$PROJECT_DIR$/application/views/front/hiw.php" />
+        <option value="$PROJECT_DIR$/application/views/front/privacypolicy.php" />
+        <option value="$PROJECT_DIR$/application/views/front/footer.php" />
+        <option value="$PROJECT_DIR$/application/views/front/price.php" />
+        <option value="$PROJECT_DIR$/application/views/front/tou.php" />
+        <option value="$PROJECT_DIR$/public/js/lrwidget.js" />
+        <option value="$PROJECT_DIR$/application/views/front/home.php" />
+        <option value="$PROJECT_DIR$/application/views/customer/header.php" />
+        <option value="$PROJECT_DIR$/application/views/customer/footer.php" />
+        <option value="$PROJECT_DIR$/application/views/customer/billing.php" />
+        <option value="$PROJECT_DIR$/application/views/front/header.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state />
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referralwebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referralwebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referowl.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referralwebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referowl.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="widget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referralwebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referowl.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referralwebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referowl.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referralwebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referowl.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referralwebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referowl.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referralwebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referowl.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referralwebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referowl.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="banner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referralwebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referowl.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referralwebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referowl.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="customer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referralwebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referowl.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referralwebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referowl.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referralwebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="referowl.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="options.lastSelected" value="editor.preferences.tabs" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\referowl.com\contactgrabber" />
+      <recent name="C:\wamp\www\referowl.com\hybridauth" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e150098f-73f5-457d-8395-722efe195559" name="Default" comment="" />
+      <created>1396482777405</created>
+      <updated>1396482777405</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14350453" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29522184" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/contacts-importer/Svetlozar.NET/Contacts/AOL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="13" selection-start="4600" selection-end="4600" vertical-scroll-proportion="0.67687595" vertical-offset="1173" max-vertical-offset="3213" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contactgrabber/aol/aol.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="176" column="104" selection-start="9810" selection-end="9810" vertical-scroll-proportion="0.21898928" vertical-offset="2526" max-vertical-offset="3383" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget/hybridauth/Hybrid/thirdparty/OpenID/LightOpenID.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-10.337838" vertical-offset="6885" max-vertical-offset="16830" />
+      </provider>
+    </entry>
+    <entry file="file://D:/SARIX MARKETING/OpenInviter/gotya/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="98260" />
+      </provider>
+    </entry>
+    <entry file="file://D:/SARIX MARKETING/OpenInviter/gotya/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="51" selection-start="1341" selection-end="1341" vertical-scroll-proportion="0.50073636" vertical-offset="0" max-vertical-offset="34255" />
+      </provider>
+    </entry>
+    <entry file="file://D:/SARIX MARKETING/OpenInviter/templatemo_396_smoothy/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="10" selection-start="3663" selection-end="3663" vertical-scroll-proportion="-35.96154" vertical-offset="510" max-vertical-offset="14450" />
+      </provider>
+    </entry>
+    <entry file="file://D:/SARIX MARKETING/OpenInviter/gotya/services.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="4" selection-start="4042" selection-end="4042" vertical-scroll-proportion="-45.76923" vertical-offset="918" max-vertical-offset="7140" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.bak">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="721" column="34" selection-start="16447" selection-end="16456" vertical-scroll-proportion="-4.18" vertical-offset="12048" max-vertical-offset="39134" />
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/page3.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="1" selection-start="183" selection-end="183" vertical-scroll-proportion="-5.3627167" vertical-offset="4034" max-vertical-offset="4726" />
+      </provider>
+    </entry>
+    <entry file="file://D:/SARIX MARKETING/OpenInviter/gotya/css/parallax-slider.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="11" selection-start="439" selection-end="439" vertical-scroll-proportion="0.28593272" vertical-offset="0" max-vertical-offset="14671" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/SuperSocialShare.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1768" />
+      </provider>
+    </entry>
+    <entry file="file://D:/SARIX MARKETING/OpenInviter/gotya/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="765" selection-end="1376" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="26384" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap-responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-23.202312" vertical-offset="16056" max-vertical-offset="18088" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/customer/creward.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="26" selection-start="1599" selection-end="1621" vertical-scroll-proportion="14.90196" vertical-offset="1559" max-vertical-offset="6086" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget/hybridauth/Hybrid/Providers/AOL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="51" selection-start="434" selection-end="456" vertical-scroll-proportion="0.25525525" vertical-offset="0" max-vertical-offset="666" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/layout/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="43" selection-start="2201" selection-end="2201" vertical-scroll-proportion="1.1454824" vertical-offset="0" max-vertical-offset="1241" />
+      </provider>
+    </entry>
+    <entry file="file://D:/SARIX MARKETING/OpenInviter/scrolling-nav/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="39" selection-start="2418" selection-end="2418" vertical-scroll-proportion="1.5620215" vertical-offset="0" max-vertical-offset="2023" />
+      </provider>
+    </entry>
+    <entry file="file://D:/SARIX MARKETING/OpenInviter/gotya/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="22" selection-start="538" selection-end="538" vertical-scroll-proportion="0.54046243" vertical-offset="0" max-vertical-offset="1479" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="8" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0" vertical-offset="413" max-vertical-offset="1105" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/layout/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.05105105" vertical-offset="0" max-vertical-offset="666" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/social-icons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="983" column="34" selection-start="27975" selection-end="27975" vertical-scroll-proportion="0.0" vertical-offset="6790" max-vertical-offset="16830" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/controller/template/referral.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="6" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.4084084" vertical-offset="663" max-vertical-offset="2907" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/layout/banner/blue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="679" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/classes/kohana/form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="400" column="27" selection-start="9923" selection-end="9923" vertical-scroll-proportion="0.3524229" vertical-offset="6640" max-vertical-offset="7480" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/layout/pagination.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.22972973" vertical-offset="153" max-vertical-offset="850" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/layout/aside.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="102" selection-start="753" selection-end="851" vertical-scroll-proportion="0.8168168" vertical-offset="0" max-vertical-offset="666" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/layout/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.46860644" vertical-offset="306" max-vertical-offset="1105" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3767" column="17" selection-start="73655" selection-end="73671" vertical-scroll-proportion="0.0" vertical-offset="63830" max-vertical-offset="103887" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/icons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="28" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="35139" />
+      </provider>
+    </entry>
+    <entry file="file://D:/SARIX MARKETING/OpenInviter/gotya/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="342" column="18" selection-start="11331" selection-end="11331" vertical-scroll-proportion="0.0" vertical-offset="5814" max-vertical-offset="8500" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/controller/front.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="38" selection-start="3162" selection-end="3162" vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="2584" />
+      </provider>
+    </entry>
+    <entry file="file://D:/SARIX MARKETING/OpenInviter/gotya/pricing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="232" column="46" selection-start="6785" selection-end="6785" vertical-scroll-proportion="-0.75497705" vertical-offset="4437" max-vertical-offset="9605" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget/summary.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="163" column="138" selection-start="7614" selection-end="7845" vertical-scroll-proportion="0.57099235" vertical-offset="2397" max-vertical-offset="4777" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/parallax-slider.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="200" column="30" selection-start="5306" selection-end="5320" vertical-scroll-proportion="1.1097561" vertical-offset="2672" max-vertical-offset="14688" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/front/quality.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="54" selection-start="924" selection-end="924" vertical-scroll-proportion="0.20763358" vertical-offset="306" max-vertical-offset="1122" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/lrwidget.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="694" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/controller/customer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="357" column="48" selection-start="11212" selection-end="11218" vertical-scroll-proportion="0.0" vertical-offset="14739" max-vertical-offset="24276">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/front/privacypolicy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="14" selection-start="0" selection-end="16933" vertical-scroll-proportion="0.29366603" vertical-offset="51" max-vertical-offset="1938" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/front/tou.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="26" selection-start="117" selection-end="117" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="3961" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/front/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="236" selection-start="0" selection-end="5243" vertical-scroll-proportion="-39.23077" vertical-offset="0" max-vertical-offset="2431" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/customer/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1459" selection-end="1459" vertical-scroll-proportion="-31.384615" vertical-offset="0" max-vertical-offset="1088" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/customer/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="0.13051823" vertical-offset="0" max-vertical-offset="918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/front/hiw.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="1719" selection-end="1859" vertical-scroll-proportion="-11.769231" vertical-offset="255" max-vertical-offset="2363" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/front/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="223" column="80" selection-start="12105" selection-end="12105" vertical-scroll-proportion="0.0" vertical-offset="3272" max-vertical-offset="3927">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/front/price.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="38" selection-start="459" selection-end="469" vertical-scroll-proportion="-4.2859883" vertical-offset="2522" max-vertical-offset="3043" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget/contacts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="278" column="65" selection-start="13591" selection-end="13591" vertical-scroll-proportion="0.0" vertical-offset="4726" max-vertical-offset="5542">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/customer/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="30" selection-start="437" selection-end="437" vertical-scroll-proportion="0.29366603" vertical-offset="153" max-vertical-offset="4947" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/customer/billing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="75" selection-start="8828" selection-end="8828" vertical-scroll-proportion="0.0" vertical-offset="1136" max-vertical-offset="3434">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/scrolling-nav.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/front/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="27" selection-start="2786" selection-end="2786" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="0" selection-start="2411" selection-end="2411" vertical-scroll-proportion="0.3772242" vertical-offset="1811" max-vertical-offset="27183">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

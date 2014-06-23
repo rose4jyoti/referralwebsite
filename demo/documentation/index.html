@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Login and sign up form with social authorization</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		
+		
+		<h1 class="center">Login and sign up form with social authorization - Documentation</h1
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#introduction">Introduction</a></li>
+			<li><a href="#TheFiles">Files In This Project</a></li>
+			<li><a href="#HowToInstall">How to Install</a></li>
+			<li><a href="#dbstructure">Db Structure</a></li>
+			<li><a href="#demo">Demo and screenshots</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="introduction"><strong>A) Introduction</strong></h3>
+		<p>Login and sign up form with social authorization script authorizes users through social network's like facebook, twitter, linkedin, google, yahoo and also through direct logins. Signup form enables creation of new user thereby enabling the direct login and can be logged in through the login form.</p> 
+
+		<hr>
+
+		<h3 id="TheFiles"><strong>B) Files In This Project</strong></h3>
+
+		<p>This Project has following folder structure</p> 
+
+		<p>
+			<ul>
+				<li><b>index.php</b> <em class="quiet small">(Main file for login form,sign up form,contact form,and social plugins)</em></li>
+				<li><b>callback.php</b> <em class="quiet small">(The file where session operations made after authorizing result)</em></li>
+				<li><b>signup.php</b> <em class="quiet small">(The file thorough which direct users can sign up)</em></li>
+				<li><b>login.php</b> <em class="quiet small">(The file thorough which direct user can login)</em></li>
+				<li><b>loginuser.php</b> <em class="quiet small">(The file where user login and database operations made)</em></li>
+				<li><b>src/*</b> <em class="quiet small">(Required classes for authorizing over social networks)</em></li>
+				<li><b>js/*</b> <em class="quiet small">(Javascript files for controlling user interfaces, making ajax requests)</em></li>			
+				<li><b>css/*</b> <em class="quiet small">(Css files for styles for form)</em></li>			
+			</ul>		
+		</p>
+
+		<hr>
+		
+		<h3 id="HowToInstall"><strong>C) Installation</strong></h3>
+		<p>Configure your settings in <strong>src/configs.php</strong> as shown below</p>
+		<ol>
+			<li><b>Configure Base Path : </b>Configure your base path and your domain !
+                       <pre>
+//Base path of your application. You must give full path! example : http://happytechies.com/login/
+$conf_main['base_path'] = '';
+//Default cookie expire time
+$conf_main['expire_time'] = time() + 60*60*24*30;//1 month
+//Domain name Example : http://happytechies.com/
+$conf_main['domain_name'] = '';
+
+                       </pre>
+                       </li>
+			<li><b>Configure Database : </b>
+<pre>
+//DB Configurations
+//Db server e.g. 'localhost'
+$conf_db['db_server'] = "";
+//Db name : e.g. 'CustomerDb'
+$conf_db['db_name'] = "";
+//Db username : e.g. 'root'
+$conf_db['db_username'] = "";
+//Db password
+$conf_db['db_password'] = "";
+//Db table name. e.g. 'tbl_users'
+$conf_db['db_user_table_name'] = "";
+//Id field of user table . e.g. 'id'
+$conf_db['db_user_field_id'] = "";
+//Name field of user table . e.g. 'name'
+$conf_db['db_user_field_name'] = "";
+//Id field of user table . e.g. 'username'
+$conf_db['db_user_field_username'] = "";
+//Id field of user table . e.g. 'password'
+$conf_db['db_user_field_password'] = "";
+//Id field of user table . e.g. 'email'
+$conf_db['db_user_field_email'] = "";
+//Id field of user table . e.g. 'network_type'
+$conf_db['db_user_field_social_network_type'] = "";
+//Password stored as md5?
+$conf_db['password_md5'] = true;
+</pre>
+<p>you can create your database as your wish,db structure is shown below.please give field  names and databse name in above configuration settings !</p>
+</li>
+<li><b>Configure Facebook : </b>
+Facebook appId and secret are generated when you create  facebook application from the link <a href="https://developers.facebook.com/apps" title="">https://developers.facebook.com/apps</a>
+<pre>
+/** Facebook configurations */
+
+//Facebook credentials
+$conf_facebook['appId'] = '';
+$conf_facebook['secret'] = '';
+//Callback url for facebook. e.g. http://happytechies.com/login/callback.php?type=facebook 
+$conf_facebook['redirect_uri'] = '';
+//Facebook callback fields(default values, it can be empty)
+$conf_facebook['fields'] = 'id,name,first_name,last_name,email';
+//Facebook permissions(default values)
+$conf_facebook['permissions'] = 'email,publish_stream,user_status';
+</pre>
+</li>
+<li><b>Configure Twitter : </b>Create new app for twitter at <a href="https://dev.twitter.com/apps/new" title="">https://dev.twitter.com/apps/new</a>
+<pre>
+/** Twitter configurations */
+
+//Twitter credentials
+$conf_twitter['consumer_key'] = '';
+$conf_twitter['consumer_secret'] = '';
+$conf_twitter['oauth_token'] = '';
+//Callback url for twitter. e.g. http://happytechies.com/login/callback.php?type=twitter
+$conf_twitter['oauth_callback'] = '';
+</pre>
+</li>
+<li><b>Configure LinkedIn : </b>you can create your linkedin app at <a href="https://www.linkedin.com/secure/developer?newapp=" title="">https://www.linkedin.com/secure/developer?newapp=</a>
+<pre>
+/** Linked configurations */
+
+//Linkedin credentials
+$conf_linkedin['linkedin_access'] = '';
+$conf_linkedin['linkedin_secret'] = '';
+//Callback url for linkedin. e.g. http://happytechies.com/login/callback.php?type=linkedin
+$conf_linkedin['callback_url'] = '';
+$conf_linkedin['base_url'] = $conf_main['base_path'];
+</pre>
+</li>
+<li><b>Configure Google : 
+<pre>
+/** Google configurations */
+
+//Callback url for google. e.g. http://happytechies.com/login/callback.php?type=google
+$conf_google['return_url'] = '';
+</pre>
+</li>
+<li><b>Configure Yahoo :
+<pre>
+/** Yahoo configurations */
+
+//Callback url for yahoo. e.g. http://happytechies.com/login/callback.php?type=yahoo
+$conf_yahoo['return_url'] = '';
+</pre>
+</li>
+		<hr>
+		
+		<h3 id="dbstructure"><strong>D) Db Structure</strong></h3>
+		
+		<p>There are must be following columns on your database table. Field names can be configured from <b>"configs.php"</b>;
+		
+		<ul>
+			<li>email : varchar(50)</li>
+			<li>name : varchar(50)</li>
+			<li>password : varchar(50)</li>
+			<li>network_type : varchar(15)</li>
+		</ul>
+		
+		<hr>
+		<hr>
+		
+		<h3 id="demo"><strong>E) Demo and screenshots</strong>&nbsp;&nbsp;&nbsp;<a href="http://codecanyon.net/item/social-and-direct-login/full_screen_preview/3058365" title="">Click here for live demo</a></h3>
+		<p>
+		<ul style="list-style:none;">
+			<li></li>
+			<li><h2>Screenshot 1</h2><h3>The login form with direct login and social links to authorize !!!!<h3></li>
+			<li><img src="assets/screenshot1.png" border="0" alt=""></li>
+			<li><h2>Screenshot 2</h2><h3>The signup form where users can create direct login account and login through the login form !!!</h3></li>
+			<li><img src="assets/screenshot2.png" border="0" alt=""></li>
+			<li><h2>Screenshot 3</h2><h3>The Contactus form - only design with validation</h3></li>
+			<li><img src="assets/screenshot3.png" border="0" alt=""></li>
+			<li><h2>Screenshot 4</h2><h3>The graph that shows the traffic distribution of the users based on the different types of authorizations !!!</h3></li>
+			<li><img src="assets/screenshot4.png" border="0" alt=""></li>
+		</ul>
+		</p>
+		
+		
+		
+		
+		<hr>
+	
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

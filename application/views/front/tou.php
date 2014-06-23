@@ -1,69 +1,227 @@
 <?php defined('SYSPATH') or die('No direct script access.'); ?>
-<?php echo Html::style('public/css/style.css'); ?>
 
-<div class="wrapper_out">
-  <div class="wrapper_in">
-    <div class="header_out">
-      <div class="header_in">
-        <div class="logo">
-		
-		<?php echo Html::image('public/image/dummy-logo.png', array('alt'=>''));  ?>
-		</div>
-        <ul class="main_nav">
-           <li><a class="active" href="<?php echo URL::base(); ?>/front/home"> Home</a> </li>
-          <li> <a href="<?php echo URL::base(); ?>/front/hiw">How it works </a></li>
-          <li> <a href="<?php echo URL::base(); ?>/front/price">Pricing </a></li>
-          <li><a href="<?php echo URL::base(); ?>/front/blog"> Blog </a></li>
-          <li><?php echo Html::anchor('user/login', 'Sign In');?></li>
-          <!---<li> <a href="#">Sign In</a></li>--->
-        </ul>
-      </div>
-    </div>
-    <div class="top_line">
-      <div class="top_line_in">
-        <h1>Terms of use</h1>
-      </div>
-    </div>
-    <div class="form">
-      <div class="form_in">
-       
 
-		
-      </div>
-	  
-	  <h1 class="b_heading">Terms of use page contents goes here </h1>
-	  
-	  </div>
-	  
-	  
-    </div>
-<div class="foter">
-      <div class="foter_in">
-        <div class="foter_content">
-          <div class="foter_content_in">
-            <ul>
-              <li><a class="special" href="<?php echo URL::base(); ?>/front/about">About US </a></li>
-              |
-              <li><a class="special" href="<?php echo URL::base(); ?>/front/quality"> Q&A </a></li>
-              |
-              <li><a class="special" href="<?php echo URL::base(); ?>/front/tou"> Terms of Use</a></li>
-              |
-              <li><a class="special" href="<?php echo URL::base(); ?>/front/privacypolicy"> Privacy Policy</a></li>
-              |
-              <li><a class="special" href="<?php echo URL::base(); ?>/front/contact"> Contact US</a></li>
-             
-            </ul>
-            <div class="socil_icon">
-			<?php echo Html::image('public/image/social_icon.png', array('alt'=>''));  ?>
-			</div>
-            
-            <p class="copy">Copyright ©2010-2013 Referral. All rights reserved.</p>
-          </div>
+
+<?php echo $header; ?>
+
+<!-- start: Page Title -->
+<div id="page-title">
+    <div id="page-title-inner">
+        <!-- start: Container -->
+        <div class="container">
+            <h2>Terms of use</h2>
         </div>
-      </div>
+        <!-- end: Container  -->
     </div>
-	
-  </div>
 </div>
-</body>
-</html>
+<!-- end: Page Title -->
+<div class="container-fluid">
+    <div class="row" style="background-color: #fff; padding: 40px 0 30px 0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <p>This Terms and Condition for Use of http://www.luckyreferral.com website is a legal agreement (Agreement) between you and luckyreferral.com , an incorporated company in Canada, (hereinafter referred to as 'Luckyreferral', 'Our', 'Us', 'We') providing, among other things, the terms and conditions for your use of subscription services, primarily a web based Referral Campaign management service hosted and managed remotely ( the 'Services' or 'Website services') through the website located at www.luckyreferral.com (the 'Website', 'Site', 'Luckyreferral'). The site www.luckyreferral.com is owned and operated by Luckyreferral. </p><br>
+                    <p>Read the Terms and Conditions carefully. Your use of Services on the Website means you are consenting to these Terms and Conditions. You could archive the copy of this Agreement for your records. </p><br>
+                    <p>These Terms and Conditions may be modified from time to time in Luckyreferral 's sole discretion and you may not be notified. It is your responsibility to review these Terms and Conditions from time to time. You will be deemed to have accepted the Agreement as amended if you continue to use any of the Website services after any amendments are posted on the Website. We reserve the right to include additional terms and conditions if we were to provide additional services or programs. You shall be bound by the same on your participation in such services or programs. </p><br>
+                    <h4>AUTHORISED USERS</h4>
+                    <p>You represent that you have read and understood, and that you agree to be bound by this Agreement. The Website services are available to legal entities or individuals aged 18 years or older. By using the Website you represent that you are at least 18 years old. </p><br>
+                    <h4>REGISTRATION</h4>
+                    <p>To use the Website services, you may have to be registered and provide your name, valid email address, contact number and other details. Please see our Privacy Policy and practices at http://www.luckyreferral.com/campaign/site/policy on how the personal information would be used. </p><br>
+                    <h4>ACCOUNT SECURITY</h4>
+                    <p>You are solely responsible for the confidentiality of any password and other account information that you create in order to access or use the Services. You agree to notify us immediately on any unauthorized use of your account, user name, or password. You also agree that we are not liable in any manner for any loss that you may incur as a result of any third party using your password, either with or without your knowledge. You are solely liable for any losses incurred by Us, Our affiliates, officers, directors, employees, consultants, agents, and representatives due to misuse of your account or password. Log-in to your account shall be used by one person. Multiple people are not permitted to share the same/single log-in. </p><br>
+                    <h4>SERVICE AND USE OF WEBSITE</h4>
+                    <p>Luckyreferral provides Services through the Website - www.luckyreferral.com, a Referral Campaign management solutions as a Software as a Solution (SaaS) model. The details of the Services are provided here www.luckyreferral.com/price. Use of the Website may require you to use software provided by or operated from the Website, and on occasion we may make certain software available to you from the Website. To the extent you use such software or download such software from the Website, the software, including all files and images contained in or generated by the software, and accompanying data (collectively, "Software") will be deemed to be licensed to you by us, for providing Services to you and enabling you to use those Services only. We do not transfer either the title or the intellectual property rights to the Software, and we (or our licensors) retain full and complete title to the Software as well as all intellectual property rights therein. You may not sell, redistribute, or reproduce the Software, nor decompile, reverse-engineer, disassemble, or otherwise convert the Software to a human-perceivable form. </p><br>
+                    <h4>Trial Offer for 15 Day Period</h4>
+                    <p>Luckyreferral also offers a free 14 day trial offer of its Services. During the trial period you will get to experience all the features of the Services. The Users of the Services during the trial period are bound by the terms of this Agreement. </p><br>
+                    <p>You may not access the Services if you are our direct competitor, except with our prior written consent. In addition, you may not access the Services for purposes of monitoring their availability, performance or functionality, or for any other benchmarking or competitive purposes. </p><br>
+                    <p>We do not provide any warranty as mentioned in this Agreement during the trial period, including our uptime. </p><br>
+                    <p>Our Responsibilities</p>
+                    <ul>We Shall:
+                        <li>provide to You basic support for the Services at no additional charge, and/or upgraded support if purchased separately,</li>
+                        <li>use commercially reasonable efforts to make the Services available 24 hours a day, 7 days a week, except for: ,</li>
+                        <li>planned downtime (of which We shall give at least 8 hours notice via the Services and which We shall schedule to the extent practicable during the weekend hours from 6:00 p.m. Eastern Standard Time (EST) Friday to 6:00 a.m. Eastern Standard Time (EST) Monday), or,</li>
+                        <li>any unavailability caused by circumstances beyond Our reasonable control, including without limitation, acts of God, acts of government, flood, fire, earthquakes, civil unrest, acts of terror, strikes or other labor problems (other than those involving Our employees), or Internet service provider failures or delays,</li>
+                        <li>and provide the Services only in accordance with applicable laws and government regulations. ,</li>
+                    </ul>
+                    <p>Usage Limitations</p>
+                    <p>Our Services may be subject to limitations, such as, for example, limits on disk storage space, on the number of calls you are permitted to make against our application programming interface, and, other limitations dependent on the User Plan, for example, number of SMS, number of users or accounts. Any such limitations are specified in the User Plans. The Services provide real-time information to enable you to monitor your compliance with such limitations.</p><br>
+                    <p>We may suspend your ability to use or access the Website at any time while we investigate complaints or alleged violations of this Agreement or for any other reason within our sole discretion. We cannot assure you of accessibility or availability of the website at all times but would strive for an uptime of 99.99%.</p><br>
+                    <h4>PAYMENT, FEES AND TAXES</h4>
+                    <p>You agree to pay all subscription fees, consulting fees and other fees applicable to your use of Services and you shall not circumvent the fee structure. The fee is dependent on the User Plan that you purchase and not on actual usage of the services. </p><br>
+                    <p>The subscription fee is non-refundable</p><br>
+                    <p>Each User / Member is solely responsible for payment of all taxes, legal compliances, and statutory registrations and reporting. Luckyreferral is in no way responsible for any of the taxes except for its own income tax. </p><br>
+                    <p>Method of payment: </p>
+                    <p> Online : The Fees should be paid online through the facility made on the Website. Third parties support and services are required to process online fee payment. We are not responsible for any loss or damage caused to you during this process as these third parties are beyond the control of Luckyreferral. </p>
+                    <p>All Fees are inclusive of taxes. Service Tax of 15% is included on every price shown. </p>
+                    <p>Fees not received within the specified due dates attract late charges of 18% per annum from the due-date of payment, which may levied at Luckyreferral's discretion. </p>
+                    <p>Luckyreferral reserves the right to modify the fee structure by providing a 15 day prior notice, either by notice on the Website or through email to the authorized user, which shall be considered as valid and agreed communication. </p>
+                    <p>In order to process the payments, we might require details of your bank account, credit card number etc. Please check our Privacy Policy www.luckyreferral.com/privacypolicy  on how we use the confidential information provided by you. </p><br>
+                    <p>For non-payment of fee for a continuous period of 1 month, Luckyreferral reserves the right to discontinue the services to you and delete all information in your account, apart from reserving any legal recourse available. </p><br>
+                    <h4> INTELLECTUAL PROPERTY</h4>
+                    <p> Luckyreferral grants you a limited license to access and, if you are a member, to use this Website internally for the Website's services of ordering, receiving, delivering and communicating only as per this agreement. You must not sell, copy, reproduce, modify, distribute, display, publicly perform, prepare derivative works based on, repost or otherwise use any content of this Website in anyway other than those listed in this agreement, including for any public or commercial purposes. You must not use any content of this Website on any other website or in a networked computer environment for any purpose other than your own viewing. You shall not reverse engineer or attempt to interfere with the operation of any part of this Website. </p><br>
+                    <p>Luckyreferral retains all its rights, title and interest in all copyrights, know-how, trade secrets, trademark, logo, the name Luckyreferral, content, design and features on the Website. All other product names, marks, logos, symbols used on the Website may be the trademarks of their respective owners. The ownership of the data vests with the authorized users. </p><br>
+                    <h4>AFFILIATED / EXTERNAL SITES</h4>
+                    <p>Our Site may be linked to the website of third parties, affiliates and business partners. We have no control over, and not liable or responsible for content, accuracy, validity, reliability, quality for such websites or made available by / through our Website. Inclusion of any link on our Website does not imply that we endorse the linked site. You use the links and these services at your own risk. </p><br>
+                    <h4>USER CONDUCT</h4>
+                    <p>All Users agree to adhere to the below code of conduct. </p><br>
+                    <p>While using the Website, software and/or Service, you agree not to restrict or inhibit any other visitor or member from using the Website, including, without limitation, by means of "hacking" or defacing any portion of the Website; </p><br>
+                    <p>Use the Website, software and/or Service for any unlawful purpose; or post any information which infringes third party's intellectual property rights or privacy policy. </p>
+                    <p>Express or imply that any statements you make are endorsed by us;
+                    <ul>Transmit
+                        <li>any content or information that is unlawful, fraudulent, threatening, abusive, libelous, defamatory, obscene or otherwise objectionable, or infringes on our or any third party's intellectual property or other rights; </li>
+                        <li>any material, non-public information about companies without the authorization to do so; </li>
+                        <li>any trade secret of any third party; or any advertisements, solicitations, chain letters, pyramid schemes, investment opportunities, or other unsolicited commercial communication (except as otherwise expressly permitted by us), or engage in spamming or flooding; </li>
+                        <li>any job posting involving any franchise, club membership, distributorship or sales representative agency arrangement or other business opportunity. </li>
+                        <li>any software or other materials that contain any virus, worm, time bomb, Trojan horse, or other harmful or disruptive component; </li>
+                        <li>Modify, adapt, sub-license, translate, sell, reverse engineer, decompile or disassemble any portion of the Website or software; </li>
+                        <li>Remove any copyright, trademark, or other proprietary rights notices contained in the Website; </li>
+                        <li>"Frame" or "mirror" any part of the Website without our prior written authorization; Link to any page of or material on the</li>
+                        <li>Website other than the URL located at www.luckyreferral.com; </li>
+                        <li>Use any robot, spider, site search/retrieval application, or other manual or automatic device or process to retrieve, index, "data mine," or in any way reproduce or circumvent the navigational structure or presentation of the Site or its contents; or</li>
+                        <li>Harvest or collect information about Website visitors or members without their express consent. </li>
+                    </ul>
+                    </p><br>
+                    <h4>WARRANTY DISCLAIMER</h4>
+                    <p>The Services provided by Luckyreferral or any of our licensors or providers are provided "as is," as available, and without any warranties or conditions (express or implied, including the implied warranties of merchantability, accuracy, fitness for a particular purpose, title and non-infringement, arising by statute or otherwise in law or from a course of dealing or usage or trade). We make no representations or warranties, of any kind, either express or implied, as to the quality, identity or reliability of any third party, or as to the accuracy of the postings made on the Website by any third party. </p><br>
+                    <h4>COMPLIANCE TO LAWS</h4>
+                    <p>The Users are solely responsible for compliance to all applicable laws, including customer history, confidential information and privacy laws. Luckyreferral is a facilitator for Referral Campaign management and provides the required platform. Luckyreferral is in no way responsible, liable, accountable for customer information available on the software provided by Luckyreferral. </p><br>
+                    <h4>INDEMNITY</h4>
+                    <p>You agree to indemnify and hold harmless the Luckyreferral, its affiliates, officers, directors, employees, consultants, licensors, agents, and representatives from any and all third party claims, losses, liability, damages, and/or costs (including reasonable attorney fees and costs) arising from your access to or use of Website, your violation of this Agreement, or your infringement, or infringement by any other user of your account, of any intellectual property or other right of any person or entity. We will notify you promptly of any such claim, loss, liability, or demand, and in addition to your foregoing obligations, you agree to provide us with reasonable assistance, at your expense, in defending any such claim, loss, liability, damage, or cost. </p><br>
+                    <h4>TERMINATION</h4>
+                    <p>You can terminate your plan with us at any time by providing 30 days of prior written notice to info@luckyreferral.com. We need this period to disable the auto billing of your account. Only after verifying if there are any ongoing or pending services or payments. We may want you to continue until the completion of an on-going service should the situation warrant. </p><br>
+                    <p>You shall be obligated to pay Luckyreferral for any services for which you have procured. </p><br>
+                    <p> Luckyreferral reserves the right to terminate any account in cases
+                    <ul>
+                        <li>you breach any terms and conditions of this Agreement. </li>
+                        <li>we are unable to verify or authenticate any information you provide to us; or</li>
+                        <li>we believe in our sole discretion that your actions may cause legal liability for you, our Users or for Luckyreferral or are contrary to the interests of the Website. Once temporarily suspended, indefinitely suspended or terminated, you may not continue to use the Website under the same Account, a different Account or re- register under a new Account. On termination of your Account due to the reasons mentioned herein, you shall no longer have access to data, messages, files and other material you keep on the Website. Please ensure that you have continuous backup of the Services you have rendered in order to comply with your record keeping process and practices. </li> </ul></p>
+                    <p>Return of Your Data. We shall have no obligation to maintain or provide any of your Data and shall thereafter, unless legally prohibited, delete all of your data in Our systems or otherwise in Our possession or under Our control. </p>
+                    <p> In the event we suspend or terminate your registration or Account, we reserve the right but not an obligation to
+                    <ul>
+                        <li>notify other Members</li>
+                        <li>provide them the reason for the action that we have taken. </li>
+                        <li> Even after termination, certain obligations mentioned under Warranty Disclaimer, Limited Liability, Indemnity, Intellectual Property, Dispute Resolution will continue and survive termination. </li> </ul></p><br>
+                    <h4>CUSTOMER SERVICE</h4>
+                    <p> If you have any questions, issues, complaints regarding any of our Services, please contact our customer service at info@luckyreferral.com</p><br>
+                    <h4>DISPUTE RESOLUTION</h4>
+                    <p>Our goal is to provide Services efficiently and communicate effectively with Users / Members to prevent any dispute. Should a dispute arise between you and Luckyreferral, you shall agree with us to resolve such dispute quickly and cost effectively. Before resorting to any legal recourse we urge you to contact our Customer Service team so that we can resolve issues amicably. </p><br>
+                    <h4>NOTICES AND COMMUNICATION</h4>
+                    <p>Luckyreferral communicates with you through the email address you have provided us. It is your responsibility to keep your email address and snail mail address update at all times. You consent to receive communications from us electronically and you agree that these electronic communications satisfy any legal requirement that such communications be in writing. If you fail to respond to an email message regarding violation, dispute or complaint within two business days, we reserve the right to terminate or suspend your Account. </p><br>
+                    <h4>GOVERNING LAW</h4>
+                    <p>These Terms of Use and any contractual obligation between Us and You will be governed by the laws of Quebec, Canada, subject to the Courts in Quebec province. </p><br>
+                    <h4>SEVERABILITY; WAIVER</h4>
+                    <p> If any provision of this Terms and Conditions is held to be invalid or unenforceable, such provision shall be struck and the remaining provisions shall be enforced. </p><br>
+                    <h4>CONTACT INFORMATION</h4>
+                    <p>If you have any questions concerning us, the Website, these Terms of Use, or anything related to any of the foregoing, we can be reached at the following email address - info@luckyreferral.com or via the contact information available from the following hyperlink: www.luckyreferral.com/contact</p>
+
+                    <h4>AUTHORISED USERS</h4>
+                    <p>You represent that you have read and understood, and that you agree to be bound by this Agreement. The Website services are available to legal entities or individuals aged 18 years or older. By using the Website you represent that you are at least 18 years old. </p><br>
+                    <h4>REGISTRATION</h4>
+                    <p>To use the Website services, you may have to be registered and provide your name, valid email address, contact number and other details. Please see our Privacy Policy and practices at http://www.luckyreferral.com/campaign/site/policy on how the personal information would be used. </p><br>
+                    <h4>ACCOUNT SECURITY</h4>
+                    <p>You are solely responsible for the confidentiality of any password and other account information that you create in order to access or use the Services. You agree to notify us immediately on any unauthorized use of your account, user name, or password. You also agree that we are not liable in any manner for any loss that you may incur as a result of any third party using your password, either with or without your knowledge. You are solely liable for any losses incurred by Us, Our affiliates, officers, directors, employees, consultants, agents, and representatives due to misuse of your account or password. Log-in to your account shall be used by one person. Multiple people are not permitted to share the same/single log-in. </p><br>
+                    <h4>SERVICE AND USE OF WEBSITE</h4>
+                    <p>Luckyreferral provides Services through the Website - www.luckyreferral.com, a Referral Campaign management solutions as a Software as a Solution (SaaS) model. The details of the Services are provided here www.luckyreferral.com/price. Use of the Website may require you to use software provided by or operated from the Website, and on occasion we may make certain software available to you from the Website. To the extent you use such software or download such software from the Website, the software, including all files and images contained in or generated by the software, and accompanying data (collectively, "Software") will be deemed to be licensed to you by us, for providing Services to you and enabling you to use those Services only. We do not transfer either the title or the intellectual property rights to the Software, and we (or our licensors) retain full and complete title to the Software as well as all intellectual property rights therein. You may not sell, redistribute, or reproduce the Software, nor decompile, reverse-engineer, disassemble, or otherwise convert the Software to a human-perceivable form. </p><br>
+                    <h4>Trial Offer for 15 Day Period</h4>
+                    <p>Luckyreferral also offers a free 14 day trial offer of its Services. During the trial period you will get to experience all the features of the Services. The Users of the Services during the trial period are bound by the terms of this Agreement. </p><br>
+                    <p>You may not access the Services if you are our direct competitor, except with our prior written consent. In addition, you may not access the Services for purposes of monitoring their availability, performance or functionality, or for any other benchmarking or competitive purposes. </p><br>
+                    <p>We do not provide any warranty as mentioned in this Agreement during the trial period, including our uptime. </p><br>
+                    <p>Our Responsibilities</p>
+                    <ul>We Shall:
+                        <li>provide to You basic support for the Services at no additional charge, and/or upgraded support if purchased separately,</li>
+                        <li>use commercially reasonable efforts to make the Services available 24 hours a day, 7 days a week, except for: ,</li>
+                        <li>planned downtime (of which We shall give at least 8 hours notice via the Services and which We shall schedule to the extent practicable during the weekend hours from 6:00 p.m. Eastern Standard Time (EST) Friday to 6:00 a.m. Eastern Standard Time (EST) Monday), or,</li>
+                        <li>any unavailability caused by circumstances beyond Our reasonable control, including without limitation, acts of God, acts of government, flood, fire, earthquakes, civil unrest, acts of terror, strikes or other labor problems (other than those involving Our employees), or Internet service provider failures or delays,</li>
+                        <li>and provide the Services only in accordance with applicable laws and government regulations. ,</li>
+                    </ul>
+                    <p>Usage Limitations</p>
+                    <p>Our Services may be subject to limitations, such as, for example, limits on disk storage space, on the number of calls you are permitted to make against our application programming interface, and, other limitations dependent on the User Plan, for example, number of SMS, number of users or accounts. Any such limitations are specified in the User Plans. The Services provide real-time information to enable you to monitor your compliance with such limitations.</p><br>
+                    <p>We may suspend your ability to use or access the Website at any time while we investigate complaints or alleged violations of this Agreement or for any other reason within our sole discretion. We cannot assure you of accessibility or availability of the website at all times but would strive for an uptime of 99.99%.</p><br>
+                    <h4>PAYMENT, FEES AND TAXES</h4>
+                    <p>You agree to pay all subscription fees, consulting fees and other fees applicable to your use of Services and you shall not circumvent the fee structure. The fee is dependent on the User Plan that you purchase and not on actual usage of the services. </p><br>
+                    <p>The subscription fee is non-refundable</p><br>
+                    <p>Each User / Member is solely responsible for payment of all taxes, legal compliances, and statutory registrations and reporting. Luckyreferral is in no way responsible for any of the taxes except for its own income tax. </p><br>
+                    <p>Method of payment: </p>
+                    <p> Online : The Fees should be paid online through the facility made on the Website. Third parties support and services are required to process online fee payment. We are not responsible for any loss or damage caused to you during this process as these third parties are beyond the control of Luckyreferral. </p>
+                    <p>All Fees are inclusive of taxes. Service Tax of 15% is included on every price shown. </p>
+                    <p>Fees not received within the specified due dates attract late charges of 18% per annum from the due-date of payment, which may levied at Luckyreferral's discretion. </p>
+                    <p>Luckyreferral reserves the right to modify the fee structure by providing a 15 day prior notice, either by notice on the Website or through email to the authorized user, which shall be considered as valid and agreed communication. </p>
+                    <p>In order to process the payments, we might require details of your bank account, credit card number etc. Please check our Privacy Policy www.luckyreferral.com/privacypolicy  on how we use the confidential information provided by you. </p><br>
+                    <p>For non-payment of fee for a continuous period of 1 month, Luckyreferral reserves the right to discontinue the services to you and delete all information in your account, apart from reserving any legal recourse available. </p><br>
+                    <h4> INTELLECTUAL PROPERTY</h4>
+                    <p> Luckyreferral grants you a limited license to access and, if you are a member, to use this Website internally for the Website's services of ordering, receiving, delivering and communicating only as per this agreement. You must not sell, copy, reproduce, modify, distribute, display, publicly perform, prepare derivative works based on, repost or otherwise use any content of this Website in anyway other than those listed in this agreement, including for any public or commercial purposes. You must not use any content of this Website on any other website or in a networked computer environment for any purpose other than your own viewing. You shall not reverse engineer or attempt to interfere with the operation of any part of this Website. </p><br>
+                    <p>Luckyreferral retains all its rights, title and interest in all copyrights, know-how, trade secrets, trademark, logo, the name Luckyreferral, content, design and features on the Website. All other product names, marks, logos, symbols used on the Website may be the trademarks of their respective owners. The ownership of the data vests with the authorized users. </p><br>
+                    <h4>AFFILIATED / EXTERNAL SITES</h4>
+                    <p>Our Site may be linked to the website of third parties, affiliates and business partners. We have no control over, and not liable or responsible for content, accuracy, validity, reliability, quality for such websites or made available by / through our Website. Inclusion of any link on our Website does not imply that we endorse the linked site. You use the links and these services at your own risk. </p><br>
+                    <h4>USER CONDUCT</h4>
+                    <p>All Users agree to adhere to the below code of conduct. </p><br>
+                    <p>While using the Website, software and/or Service, you agree not to restrict or inhibit any other visitor or member from using the Website, including, without limitation, by means of "hacking" or defacing any portion of the Website; </p><br>
+                    <p>Use the Website, software and/or Service for any unlawful purpose; or post any information which infringes third party's intellectual property rights or privacy policy. </p>
+                    <p>Express or imply that any statements you make are endorsed by us;
+                    <ul>Transmit
+                        <li>any content or information that is unlawful, fraudulent, threatening, abusive, libelous, defamatory, obscene or otherwise objectionable, or infringes on our or any third party's intellectual property or other rights; </li>
+                        <li>any material, non-public information about companies without the authorization to do so; </li>
+                        <li>any trade secret of any third party; or any advertisements, solicitations, chain letters, pyramid schemes, investment opportunities, or other unsolicited commercial communication (except as otherwise expressly permitted by us), or engage in spamming or flooding; </li>
+                        <li>any job posting involving any franchise, club membership, distributorship or sales representative agency arrangement or other business opportunity. </li>
+                        <li>any software or other materials that contain any virus, worm, time bomb, Trojan horse, or other harmful or disruptive component; </li>
+                        <li>Modify, adapt, sub-license, translate, sell, reverse engineer, decompile or disassemble any portion of the Website or software; </li>
+                        <li>Remove any copyright, trademark, or other proprietary rights notices contained in the Website; </li>
+                        <li>"Frame" or "mirror" any part of the Website without our prior written authorization; Link to any page of or material on the</li>
+                        <li>Website other than the URL located at www.luckyreferral.com; </li>
+                        <li>Use any robot, spider, site search/retrieval application, or other manual or automatic device or process to retrieve, index, "data mine," or in any way reproduce or circumvent the navigational structure or presentation of the Site or its contents; or</li>
+                        <li>Harvest or collect information about Website visitors or members without their express consent. </li>
+                    </ul>
+                    </p>
+                    <h4>WARRANTY DISCLAIMER</h4>
+                    <p>The Services provided by Luckyreferral or any of our licensors or providers are provided "as is," as available, and without any warranties or conditions (express or implied, including the implied warranties of merchantability, accuracy, fitness for a particular purpose, title and non-infringement, arising by statute or otherwise in law or from a course of dealing or usage or trade). We make no representations or warranties, of any kind, either express or implied, as to the quality, identity or reliability of any third party, or as to the accuracy of the postings made on the Website by any third party. </p><br>
+                    <h4>COMPLIANCE TO LAWS</h4>
+                    <p>The Users are solely responsible for compliance to all applicable laws, including customer history, confidential information and privacy laws. Luckyreferral is a facilitator for Referral Campaign management and provides the required platform. Luckyreferral is in no way responsible, liable, accountable for customer information available on the software provided by Luckyreferral. </p><br>
+                    <h4>INDEMNITY</h4>
+                    <p>You agree to indemnify and hold harmless the Luckyreferral, its affiliates, officers, directors, employees, consultants, licensors, agents, and representatives from any and all third party claims, losses, liability, damages, and/or costs (including reasonable attorney fees and costs) arising from your access to or use of Website, your violation of this Agreement, or your infringement, or infringement by any other user of your account, of any intellectual property or other right of any person or entity. We will notify you promptly of any such claim, loss, liability, or demand, and in addition to your foregoing obligations, you agree to provide us with reasonable assistance, at your expense, in defending any such claim, loss, liability, damage, or cost. </p><br>
+                    <h4>TERMINATION</h4>
+                    <p>You can terminate your plan with us at any time by providing 30 days of prior written notice to info@luckyreferral.com. We need this period to disable the auto billing of your account. Only after verifying if there are any ongoing or pending services or payments. We may want you to continue until the completion of an on-going service should the situation warrant. </p><br>
+                    <p>You shall be obligated to pay Luckyreferral for any services for which you have procured. </p><br>
+                    <p> Luckyreferral reserves the right to terminate any account in cases
+                    <ul>
+                        <li>you breach any terms and conditions of this Agreement. </li>
+                        <li>we are unable to verify or authenticate any information you provide to us; or</li>
+                        <li>we believe in our sole discretion that your actions may cause legal liability for you, our Users or for Luckyreferral or are contrary to the interests of the Website. Once temporarily suspended, indefinitely suspended or terminated, you may not continue to use the Website under the same Account, a different Account or re- register under a new Account. On termination of your Account due to the reasons mentioned herein, you shall no longer have access to data, messages, files and other material you keep on the Website. Please ensure that you have continuous backup of the Services you have rendered in order to comply with your record keeping process and practices. </li> </ul></p>
+                    <p>Return of Your Data. We shall have no obligation to maintain or provide any of your Data and shall thereafter, unless legally prohibited, delete all of your data in Our systems or otherwise in Our possession or under Our control. </p>
+                    <p> In the event we suspend or terminate your registration or Account, we reserve the right but not an obligation to
+                    <ul>
+                        <li>notify other Members</li>
+                        <li>provide them the reason for the action that we have taken. </li>
+                        <li> Even after termination, certain obligations mentioned under Warranty Disclaimer, Limited Liability, Indemnity, Intellectual Property, Dispute Resolution will continue and survive termination. </li> </ul></p><br>
+                    <h4>CUSTOMER SERVICE</h4>
+                    <p> If you have any questions, issues, complaints regarding any of our Services, please contact our customer service at info@luckyreferral.com</p><br>
+                    <h4>DISPUTE RESOLUTION</h4>
+                    <p>Our goal is to provide Services efficiently and communicate effectively with Users / Members to prevent any dispute. Should a dispute arise between you and Luckyreferral, you shall agree with us to resolve such dispute quickly and cost effectively. Before resorting to any legal recourse we urge you to contact our Customer Service team so that we can resolve issues amicably. </p><br>
+                    <h4>NOTICES AND COMMUNICATION</h4>
+                    <p>Luckyreferral communicates with you through the email address you have provided us. It is your responsibility to keep your email address and snail mail address update at all times. You consent to receive communications from us electronically and you agree that these electronic communications satisfy any legal requirement that such communications be in writing. If you fail to respond to an email message regarding violation, dispute or complaint within two business days, we reserve the right to terminate or suspend your Account. </p><br>
+                    <h4>GOVERNING LAW</h4>
+                    <p>These Terms of Use and any contractual obligation between Us and You will be governed by the laws of Quebec, Canada, subject to the Courts in Quebec province. </p><br>
+                    <h4>SEVERABILITY; WAIVER</h4>
+                    <p> If any provision of this Terms and Conditions is held to be invalid or unenforceable, such provision shall be struck and the remaining provisions shall be enforced. </p><br>
+                    <h4>CONTACT INFORMATION</h4>
+                    <p>If you have any questions concerning us, the Website, these Terms of Use, or anything related to any of the foregoing, we can be reached at the following email address - info@luckyreferral.com or via the contact information available from the following hyperlink: www.luckyreferral.com/contact</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php echo $footer; ?>
+
+<!-- start: Java Script -->
+<!-- Placed at the end of the document so the pages load faster -->
+<?php echo Html::script('../public/js/jquery-1.8.2.js'); ?>
+<?php echo Html::script('../public/js/bootstrap.js'); ?>
+<?php echo Html::script('../public/js/flexslider.js'); ?>
+<?php echo Html::script('../public/js/carousel.js'); ?>
+<?php echo Html::script('../public/js/jquery.cslider.js'); ?>
+<?php echo Html::script('../public/js/slider.js'); ?>
+<?php echo Html::script('../public/js/custom.js'); ?>
+<!-- end: Java Script -->
+
+

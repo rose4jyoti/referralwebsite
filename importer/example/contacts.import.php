@@ -3,7 +3,8 @@
  //echo $_SESSION['compaingnid'];
 ?>
 <?php 
-define("SITE","http://softoasistech.com/dev2013/referral");
+//define("SITE","http://softoasistech.com/dev2013/referral");
+define("SITE","http://local.referowl.com");
 ?>
 
 
@@ -67,7 +68,7 @@ define("SITE","http://softoasistech.com/dev2013/referral");
 	  
 	   <tr>
 	    <td>
-		 <a href="<?php echo SITE;?>/oauth-api/login_with_google.php"> <img style="height:100px;width:150px;" src="<?php echo SITE; ?>/public/image/gmail.jpg"/></a>
+		 <a href="<?php echo SITE;?>/widget/oauth-api/login_with_microsoft.php"> <img style="height:100px;width:150px;" src="<?php echo SITE; ?>/public/image/gmail.jpg"/></a>
 		</td>
 	   </tr>
 

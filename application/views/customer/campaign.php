@@ -7,7 +7,6 @@
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
-	  
 
 	  ////////Pie chart1//////////
         var data = google.visualization.arrayToDataTable([

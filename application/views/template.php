@@ -22,7 +22,7 @@
 	<!---<h1>Auth module using the ORM driver for Kohana 3.1</h1>---->
 	<!----<div id="content">---->
 
-		<?= $content; ?>
+		<?= $content;?>
 	<!---</div>---->
 </body>
 </html>

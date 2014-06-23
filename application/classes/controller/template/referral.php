@@ -50,7 +50,7 @@ class Controller_Template_Referral extends Controller_Template {
      * @var array 
      */
     protected $keywords = array();
-    public $template = 'template/referral';
+    //public $template = 'template/referral';
 
     /**
      *

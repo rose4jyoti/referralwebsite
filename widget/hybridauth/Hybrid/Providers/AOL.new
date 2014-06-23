@@ -1,0 +1,144 @@
+<?php
+/*!
+* HybridAuth
+* http://hybridauth.sourceforge.net | http://github.com/hybridauth/hybridauth
+* (c) 2009-2012, HybridAuth authors | http://hybridauth.sourceforge.net/licenses.html 
+*/
+
+/**
+ * Hybrid_Providers_AOL provider adapter based on oauth2 protocol
+ *
+ * http://hybridauth.sourceforge.net/userguide/IDProvider_info_AOL.html
+ */
+class Hybrid_Providers_Aol extends Hybrid_Provider_Model_OAuth2
+{
+    // default permissions
+    public $scope = "profile email addressbook";
+
+    /**
+     * IDp wrappers initializer
+     */
+    function initialize()
+    {
+        parent::initialize();
+
+        // Provider api end-points
+        $this->api->api_base_url  = 'https://api.screenname.aol.com/auth/';
+        $this->api->authorize_url = 'https://api.screenname.aol.com/auth/authorize';
+        $this->api->token_url     = 'https://api.screenname.aol.com/auth/access_token';
+
+        $this->api->curl_authenticate_method  = "GET";
+    }
+
+    /**
+     * begin login step
+     */
+    function loginBegin()
+    {
+        $parameters = array("scope" => $this->scope, "redirect_uri" => $this->endpoint, );
+        $optionals  = array("scope", "access_type", "redirect_uri");
+
+        foreach ($optionals as $parameter){
+            if( isset( $this->config[$parameter] ) && ! empty( $this->config[$parameter] ) ){
+                $parameters[$parameter] = $this->config[$parameter];
+            }
+            if( isset( $this->config["scope"] ) && ! empty( $this->config["scope"] ) ){
+                $this->scope = $this->config["scope"];
+            }
+        }
+
+        Hybrid_Auth::redirect( $this->api->authorizeUrl( $parameters ) );
+    }
+
+    /**
+     * grab the user profile from the api client
+     */
+    function getUserProfile()
+    {
+        $userId = $this->getCurrentUserId();
+
+        $parameters = array();
+        $parameters['f']	= 'json';
+
+        $response = $this->api->get( 'getUserData', $parameters );
+
+        if ( ! isset( $response->data ) ){
+            throw new Exception( "User profile request failed! {$this->providerId} returned an invalid response.", 6 );
+        }
+
+        $data = $response->data;
+
+        $this->user->profile->identifier    = (property_exists($data,'loginId'))?$data->guid:"";
+        $this->user->profile->displayName   = (property_exists($data,'displayName'))?trim( $data->displayName ):"";
+        $this->user->profile->firstName     = (property_exists($data,'first_name'))?$data->first_name:"";
+        $this->user->profile->lastName      = (property_exists($data,'last_name'))?$data->last_name:"";
+        $this->user->profile->displayName   = (property_exists($data,'nickname'))?trim( $data->nickname ):"";
+        $this->user->profile->profileURL    = (property_exists($data,'profileUrl'))?$data->profileUrl:"";
+        $this->user->profile->gender        = (property_exists($data,'gender'))?$data->gender:"";
+
+        if( $this->user->profile->gender == "F" ){
+            $this->user->profile->gender = "female";
+        }
+
+        if( $this->user->profile->gender == "M" ){
+            $this->user->profile->gender = "male";
+        }
+
+        if( isset($data->emails) ){
+            $email = "";
+            foreach( $data->emails as $v ){
+                if( isset($v->primary) && $v->primary ) {
+                    $email = (property_exists($v,'handle'))?$v->handle:"";
+
+                    break;
+                }
+            }
+
+            $this->user->profile->email         = $email;
+            $this->user->profile->emailVerified = $email;
+        }
+
+        $this->user->profile->age           = (property_exists($data,'displayAge'))?$data->displayAge:"";
+        $this->user->profile->photoURL      = (property_exists($data,'image'))?$data->image->imageUrl:"";
+
+        $this->user->profile->address       = (property_exists($data,'location'))?$data->location:"";
+        $this->user->profile->language      = (property_exists($data,'lang'))?$data->lang:"";
+
+        return $this->user->profile;
+    }
+
+
+    /**
+     * load the current logged in user contacts list from the IDp api client
+     */
+
+    /* Windows Live api does not support retrieval of email addresses (only hashes :/) */
+    function getUserContacts()
+    {
+        $response = $this->api->get( 'me/contacts' );
+
+        if ( $this->api->http_code != 200 )
+        {
+            throw new Exception( 'User contacts request failed! ' . $this->providerId . ' returned an error: ' . $this->errorMessageByStatus( $this->api->http_code ) );
+        }
+
+        if ( ! $response->data && ( $response->error != 0 ) )
+        {
+            return array();
+        }
+
+        $contacts = array();
+
+        foreach( $response->data as $item ) {
+            $uc = new Hybrid_User_Contact();
+
+            $uc->identifier   = (property_exists($item,'id'))?$item->id:"";
+            $uc->email   = (property_exists($item,'emails'))?$item->emails->preferred:"";
+            $uc->displayName  = (property_exists($item,'name'))?$item->name:"";
+
+            $contacts[] = $uc;
+        }
+
+        return $contacts;
+    }
+}

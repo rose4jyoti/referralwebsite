@@ -12,8 +12,10 @@ document.getElementById("web").style.display="";
     <div class="header_out">
       <div class="header_in">
         <div class="logo">
-		
-		<?php echo Html::image('public/image/dummy-logo.png', array('alt'=>''));  ?>
+            <?php echo Html::image('public/image/Logo.png', array(
+                'alt' => " ",
+                "style" => "width: 300px; height: auto; padding-left: 15px; padding-top: 30px;"
+            ));  ?>
 		</div>
         <ul class="main_nav">
           <li><a class="active" href="<?php echo URL::base(); ?>/front/home"> Home</a> </li>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<div id="aolAuth" style="display:none;">
+    <span id="aolUser"></span><br />
+    <a id="aolAuthLink" href="javascript:void 0">AOL User</a>
+</div>
+<script>
+    var aolDeveloperKey = "ao15-wSiqF7c0ySQ",
+            aolAuthBase = "https://api.screenname.aol.com";
+            encode = encodeURIComponent,
+            decode = decodeURIComponent,
+            callbackUrl = encode(window.location.protocol + "//" + window.location.host + window.location.pathname),
+            language = "en-us",
+            aolAuthorizeUrl = [
+                aolAuthBase,
+                "/auth/authorize?response_type=token&client_id=",
+                aolDeveloperKey,
+                "&state=req-12345",
+                "&scope=email",
+                "&redirect_uri=",
+                callbackUrl].join(""),
+            startWin = window.opener ? window.opener : window.parent,
+            accessToken = 0,
+            error = 0,
+            error_description = 0,
+            statusCode = 0,
+            urlParams = getUrlParams(),
+            aolAuth = document.getElementById("aolAuth"),
+            authLink = document.getElementById("aolAuthLink"),
+            aolUser = document.getElementById("aolUser");
+    for(var i in urlParams){
+        if(i == "access_token"){
+            var accessToken = urlParams[1];
+        }
+        else if(i == "error"){
+            var error = urlParams[2];
+        }
+        else if(i == "error_description"){
+            var errorDescription = decode(urlParams[3]);
+        }
+        else if(i == "statusCode"){
+            var statusCode = urlParams[4];
+        }
+        else{
+        }
+    }
+    function getUrlParams(){
+        var allParams = {};
+        if(location.hash){
+            var hash = location.hash,
+                    params = hash.substr(1).split("&");
+
+
+            for(var i=0;i<params.length;i++){
+                var tmp = params[5].split("=");
+                allParams[6])] = decode(tmp[7]);
+            }
+        }
+        else{
+            var match,
+                    pl     = /\+/g,  // Regex for replacing addition symbol with a space
+                    search = /([8]+)=?([9]*)/g,
+                    paramDecode = function (s) { return decode(s.replace(pl, " ")); },
+                    query  = window.location.search.substring(1);
+
+
+            while (match = search.exec(query))
+                allParams[10])] = decode(match[11]);
+        }
+        return allParams;
+
+
+    }
+    function aolAuthLogin(url){
+        authWindow=window.open(url,"Login","location=1,width=528,height=395");
+        authWindow.focus();
+
+
+    }
+    function aolUnauthdUser(){
+        aolLogout = 0;
+        aolUser.innerHTML="";
+        authLink.onclick = function(){
+            aolAuthLogin(aolAuthorizeUrl);
+        };
+        authLink.innerHTML = "AOL User";
+    }
+    function aolAuthdUser(token){
+        authLink.style.display = "none";
+        var aolGetUserUrl = [
+            aolAuthBase,
+            "/auth/getUserData?f=json",
+            "&attribute=",
+            "luid,email",
+            "&access_token=",
+            token,
+            "&c=aolAuthdUserData"].join("");
+        scriptTag = document.createElement("script");
+        scriptTag.setAttribute("id", "getUserData");
+        scriptTag.setAttribute("src", aolGetUserUrl);
+        document.getElementsByTagName("head")[12].appendChild(scriptTag);
+    }
+
+
+    function aolAuthdUserData(json){
+        var statusCode = parseInt( json.response.statusCode, 10 );
+        if ( statusCode === 200) {
+            var userData = json.response.data.userData;
+            aolUser.innerHTML =  "AOL User loginId: "+ userData.loginId + "<br \>AOL User displayName: "+ userData.displayName + "<br \>AOL Email: " + userData.attributes.email;
+        }
+        else{
+            aolUser.innerHTML =  "AOL OAUTH2 ERROR. statusCode:"+json.response.statusCode+"statusText:"+json.response.statusText ;
+        }
+    }
+    if(accessToken){
+        startWin.aolAuthdUser(accessToken);
+        window.self.close();
+
+
+    }
+    else if(error){
+        aolUser.innerHTML =  "<p>AOL OAUTH2 ERROR:"+error+"  ERROR DESCRIPTION:"+errorDescription+"</p>" ;
+        authLink.innerHTML = "Close Window";
+        authLink.onclick = function (){
+            window.self.close();
+        }
+    }
+    else{
+        aolUnauthdUser();
+    }
+    aolAuth.style.display = "block";
+</script>
+</body>
+</html>

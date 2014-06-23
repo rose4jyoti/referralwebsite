@@ -22,7 +22,7 @@ else
  * @see  http://kohanaframework.org/guide/using.configuration
  * @see  http://php.net/timezones
  */
-date_default_timezone_set('Asia/Calcutta');
+date_default_timezone_set('America/Montreal');
 
 /**
  * Set the default locale.
@@ -81,7 +81,8 @@ if (getenv('KOHANA_ENV') !== FALSE)
  */
 Kohana::init(array(
    //'base_url'   => 'http://softoasistech.com//dev2013/referral',
-    'base_url'   => 'http://referralwebsite.com.local',
+    'name'   => 'Referral Campaigns',
+    'base_url'   => 'http://local.referowl.com',
     'index_file' => FALSE
 ));
 
@@ -120,19 +121,26 @@ Kohana::modules(array(
  */
 
 
-Route::set('default', '(<controller>(/<action>(/<id>)))')
+/*
+Route::set('user', '(user,index)')
 	->defaults(array(
-		'controller' => 'front',
-		'action'     => 'home',
+		'controller' => 'user',
+		'action'     => 'index',
 	));
+*/
+
+Route::set('default', '(<controller>(/<action>(/<id>)))')
+    ->defaults(array(
+        'controller' => 'front',
+        'action' => 'home',
+    ));
 
 Route::set('customer', '(<controller>(/<action>(/<id>(/<param>))))')
-	->defaults(array(
-		'controller' => 'register',
-		'action'     => 'index',
-	)); 
+    ->defaults(array(
+        'controller' => 'register',
+        'action' => 'index',
+    ));
 
-	
 
 
 	
