@@ -100,20 +100,25 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	 'auth'       => MODPATH.'auth',       // Basic authentication
-	 'cache'      => MODPATH.'cache',      // Caching with multiple backends
-	 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-	 'database'   => MODPATH.'database',   // Database access
-	 'image'      => MODPATH.'image',      // Image manipulation
-	 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
-	 'unittest'   => MODPATH.'unittest',   // Unit testing
-	 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-	 
-	   'kohana-email'  => MODPATH.'kohana-email', // Kohana email module
-       'email'       => MODPATH.'email',          // Email module
-       'mailer'      => MODPATH.'mailer',         // Mailer module
-	   
+    'auth'       => MODPATH.'auth',       // Basic authentication
+    'cache'      => MODPATH.'cache',      // Caching with multiple backends
+    'codebench'  => MODPATH.'codebench',  // Benchmarking tool
+    'database'   => MODPATH.'database',   // Database access
+    'image'      => MODPATH.'image',      // Image manipulation
+    'orm'        => MODPATH.'orm',        // Object Relationship Mapping
+    'unittest'   => MODPATH.'unittest',   // Unit testing
+    'userguide'  => MODPATH.'userguide',  // User guide and API documentation
+
+    'bootstrap'  => MODPATH.'bootstrap',  // Helper for Twitter Bootstrap
+    'paypal'    => MODPATH.'paypal',
+    'tax'       => MODPATH.'tax'
 	));
+
+Cookie::$salt = 'asdasd4234234';
+
+PayPal::$environment = Kohana::$environment === Kohana::PRODUCTION ? 'live' : 'sandbox';
+
+Tax::$default = 'ca.qc';
 
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of

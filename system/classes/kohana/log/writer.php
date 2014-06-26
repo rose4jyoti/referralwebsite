@@ -5,7 +5,7 @@
  * @package    Kohana
  * @category   Logging
  * @author     Kohana Team
- * @copyright  (c) 2008-2011 Kohana Team
+ * @copyright  (c) 2008-2012 Kohana Team
  * @license    http://kohanaframework.org/license
  */
 abstract class Kohana_Log_Writer {
@@ -16,12 +16,14 @@ abstract class Kohana_Log_Writer {
 	 */
 	protected $_log_levels = array(
 		LOG_EMERG   => 'EMERGENCY',
+		LOG_ALERT   => 'ALERT',
 		LOG_CRIT    => 'CRITICAL',
 		LOG_ERR     => 'ERROR',
 		LOG_WARNING => 'WARNING',
 		LOG_NOTICE  => 'NOTICE',
 		LOG_INFO    => 'INFO',
 		LOG_DEBUG   => 'DEBUG',
+		8           => 'STRACE',
 	);
 
 	/**
@@ -29,7 +31,7 @@ abstract class Kohana_Log_Writer {
 	 *
 	 *     $writer->write($messages);
 	 *
-	 * @param   array  messages
+	 * @param   array   $messages
 	 * @return  void
 	 */
 	abstract public function write(array $messages);

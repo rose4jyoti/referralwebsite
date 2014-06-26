@@ -39,7 +39,7 @@ Controllers can extend other controllers.
 	// classes/controller/api.php
 	class Controller_Api extends Controller_REST
 	
-[!!] [Controller_Template] and [Controller_REST] are some example controllers provided in Kohana.
+[!!] [Controller_Template] is an example controller provided in Kohana.
 
 You can also have a controller extend another controller to share common things, such as requiring you to be logged in to use all of those controllers.
 
@@ -55,7 +55,7 @@ You can also have a controller extend another controller to share common things,
 
 Every controller has the `$this->request` property which is the [Request] object that called the controller.  You can use this to get information about the current request, as well as set the response body via `$this->response->body($ouput)`.
 
-Here is a partial list of the properties and methods available to `$this->request`.  These can also be accessed via `Request::instance()`, but `$this->request` is provided as a shortcut.  See the [Request] class for more information on any of these. 
+Here is a partial list of the properties and methods available to `$this->request`.  See the [Request] class for more information on any of these.
 
 Property/method | What it does
 --- | ---
@@ -103,7 +103,40 @@ If that parameter is not set it will be returned as NULL.  You can provide a sec
 
 ### Examples
 
-TODO: some examples of actions
+A view action for a product page.
+
+	public function action_view()
+	{
+		$product = new Model_Product($this->request->param('id'));
+
+		if ( ! $product->loaded())
+		{
+			throw new HTTP_Exception_404('Product not found!');
+		}
+
+		$this->response->body(View::factory('product/view')
+			->set('product', $product));
+	}
+
+A user login action.
+
+	public function action_login()
+	{
+		$view = View::factory('user/login');
+
+		if ($this->request->post())
+		{
+			// Try to login
+			if (Auth::instance()->login($this->request->post('username'), $this->request->post('password')))
+			{
+				Request::current()->redirect('home');
+			}
+
+			$view->errors = 'Invalid email or password';
+		}
+
+		$this->response->body($view);
+	}
 
 ## Before and after
 

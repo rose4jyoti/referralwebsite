@@ -5,7 +5,7 @@
  * @package    Kohana
  * @category   Helpers
  * @author     Kohana Team
- * @copyright  (c) 2007-2011 Kohana Team
+ * @copyright  (c) 2007-2012 Kohana Team
  * @license    http://kohanaframework.org/license
  */
 class Kohana_URL {
@@ -25,7 +25,7 @@ class Kohana_URL {
 	 *     // Absolute URL path with host and protocol from $request
 	 *     echo URL::base($request);
 	 *
-	 * @param   mixed    $protocol Protocol string, or [Request]
+	 * @param   mixed    $protocol Protocol string, [Request], or boolean
 	 * @param   boolean  $index    Add index file to URL?
 	 * @return  string
 	 * @uses    Kohana::$index_file
@@ -36,15 +36,29 @@ class Kohana_URL {
 		// Start with the configured base URL
 		$base_url = Kohana::$base_url;
 
+		if ($protocol === TRUE)
+		{
+			// Use the initial request to get the protocol
+			$protocol = Request::$initial;
+		}
+
 		if ($protocol instanceof Request)
 		{
-			// Use the current protocol
-			$protocol = $protocol->protocol();
+			if ( ! $protocol->secure())
+			{
+				// Use the current protocol
+				list($protocol) = explode('/', strtolower($protocol->protocol()));
+			}
+			else
+			{
+				$protocol = 'https';
+			}
 		}
-		elseif ($protocol === NULL AND $scheme = parse_url($base_url, PHP_URL_SCHEME))
+
+		if ( ! $protocol)
 		{
 			// Use the configured default protocol
-			$protocol = $scheme;
+			$protocol = parse_url($base_url, PHP_URL_SCHEME);
 		}
 
 		if ($index === TRUE AND ! empty(Kohana::$index_file))
@@ -98,11 +112,23 @@ class Kohana_URL {
 		if ( ! UTF8::is_ascii($path))
 		{
 			// Encode all non-ASCII characters, as per RFC 1738
-			$path = preg_replace('~([^/]+)~e', 'rawurlencode("$1")', $path);
+			$path = preg_replace_callback('~([^/]+)~', 'URL::_rawurlencode_callback', $path);
 		}
 
 		// Concat the URL
 		return URL::base($protocol, $index).$path;
+	}
+
+	/**
+	 * Callback used for encoding all non-ASCII characters, as per RFC 1738
+	 * Used by URL::site()
+	 * 
+	 * @param  array $matches  Array of matches from preg_replace_callback()
+	 * @return string          Encoded string
+	 */
+	protected static function _rawurlencode_callback($matches)
+	{
+		return rawurlencode($matches[0]);
 	}
 
 	/**
@@ -133,7 +159,7 @@ class Kohana_URL {
 			else
 			{
 				// Merge the current and new parameters
-				$params = array_merge($_GET, $params);
+				$params = Arr::merge($_GET, $params);
 			}
 		}
 

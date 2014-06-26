@@ -4,13 +4,14 @@
  * Tests the Arr lib that's shipped with kohana
  *
  * @group kohana
- * @group kohana.arr
+ * @group kohana.core
+ * @group kohana.core.arr
  *
  * @package    Kohana
  * @category   Tests
  * @author     Kohana Team
  * @author     BRMatt <matthew@sigswitch.com>
- * @copyright  (c) 2008-2011 Kohana Team
+ * @copyright  (c) 2008-2012 Kohana Team
  * @license    http://kohanaframework.org/license
  */
 class Kohana_ArrTest extends Unittest_TestCase
@@ -279,6 +280,42 @@ class Kohana_ArrTest extends Unittest_TestCase
 				array('foo'	=> array('bar')),
 				array('foo'	=> 'bar'),
 			),
+			/**
+			 * @ticket 4482
+			 */
+			array(
+				array(
+					'foo' => array(
+						'bar' => array(
+							'foo'  => TRUE,
+							array(
+								'bar' => TRUE,
+								'bar1' => FALSE,
+							),
+						),
+					)
+				),
+				array(
+					'foo' => array(
+						'bar' => array(
+							'foo'  => 'php',
+							array(
+								'bar' => TRUE,
+							),
+						),
+					),
+				),
+				array(
+					'foo' => array(
+						'bar' => array(
+							'foo' => TRUE,
+							array(
+								'bar1' => FALSE,
+							),
+						),
+					),
+				)
+			),
 		);
 	}
 
@@ -509,8 +546,47 @@ class Kohana_ArrTest extends Unittest_TestCase
 	public function provider_map()
 	{
 		return array(
-			array('strip_tags', array('<p>foobar</p>'), array('foobar')),
-			array('strip_tags', array(array('<p>foobar</p>'), array('<p>foobar</p>')), array(array('foobar'), array('foobar'))),
+			array('strip_tags', array('<p>foobar</p>'), NULL, array('foobar')),
+			array('strip_tags', array(array('<p>foobar</p>'), array('<p>foobar</p>')), NULL, array(array('foobar'), array('foobar'))),
+			array(
+				'strip_tags',
+				array(
+					'foo' => '<p>foobar</p>',
+					'bar' => '<p>foobar</p>',
+				),
+				NULL,
+				array(
+					'foo' => 'foobar',
+					'bar' => 'foobar',
+				),
+			),
+			array(
+				'strip_tags',
+				array(
+					'foo' => '<p>foobar</p>',
+					'bar' => '<p>foobar</p>',
+				),
+				array('foo'),
+				array(
+					'foo' => 'foobar',
+					'bar' => '<p>foobar</p>',
+				),
+			),
+			array(
+				array(
+					'strip_tags',
+					'trim',
+				),
+				array(
+					'foo' => '<p>foobar </p>',
+					'bar' => '<p>foobar</p>',
+				),
+				NULL,
+				array(
+					'foo' => 'foobar',
+					'bar' => 'foobar',
+				),
+			),
 		);
 	}
 
@@ -519,11 +595,11 @@ class Kohana_ArrTest extends Unittest_TestCase
 	 * @test
 	 * @dataProvider provider_map
 	 */
-	public function test_map($method, $source, $expected)
+	public function test_map($method, $source, $keys, $expected)
 	{
 		$this->assertSame(
 			$expected,
-			Arr::map($method, $source)
+			Arr::map($method, $source, $keys)
 		);
 	}
 

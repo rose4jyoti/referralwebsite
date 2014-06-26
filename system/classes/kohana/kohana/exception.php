@@ -5,7 +5,7 @@
  * @package    Kohana
  * @category   Exceptions
  * @author     Kohana Team
- * @copyright  (c) 2008-2011 Kohana Team
+ * @copyright  (c) 2008-2012 Kohana Team
  * @license    http://kohanaframework.org/license
  */
 class Kohana_Kohana_Exception extends Exception {
@@ -30,14 +30,19 @@ class Kohana_Kohana_Exception extends Exception {
 	public static $error_view = 'kohana/error';
 
 	/**
+	 * @var  string  error view content type
+	 */
+	public static $error_view_content_type = 'text/html';
+
+	/**
 	 * Creates a new translated exception.
 	 *
 	 *     throw new Kohana_Exception('Something went terrible wrong, :user',
 	 *         array(':user' => $user));
 	 *
-	 * @param   string   error message
-	 * @param   array    translation variables
-	 * @param   integer  the exception code
+	 * @param   string          $message    error message
+	 * @param   array           $variables  translation variables
+	 * @param   integer|string  $code       the exception code
 	 * @return  void
 	 */
 	public function __construct($message, array $variables = NULL, $code = 0)
@@ -51,8 +56,12 @@ class Kohana_Kohana_Exception extends Exception {
 		// Set the message
 		$message = __($message, $variables);
 
-		// Pass the message to the parent
-		parent::__construct($message, $code);
+		// Pass the message and integer code to the parent
+		parent::__construct($message, (int) $code);
+
+		// Save the unmodified code
+		// @link http://bugs.php.net/39615
+		$this->code = $code;
 	}
 
 	/**
@@ -71,15 +80,21 @@ class Kohana_Kohana_Exception extends Exception {
 	/**
 	 * Inline exception handler, displays the error message, source of the
 	 * exception, and the stack trace of the error.
-	 *
+	 * 
+	 * Re-registers Kohana::shutdown_handler to make the PHP engine
+	 * run the shutdown twice. We'll be exit(1)-ing from there.
+	 * @see issue #3931
+	 * 
 	 * @uses    Kohana_Exception::text
-	 * @param   object   exception object
+	 * @param   Exception   $e
 	 * @return  boolean
 	 */
 	public static function handler(Exception $e)
 	{
 		try
 		{
+			register_shutdown_function(array('Kohana', 'shutdown_handler'));
+			
 			// Get the exception information
 			$type    = get_class($e);
 			$code    = $e->getCode();
@@ -100,8 +115,9 @@ class Kohana_Kohana_Exception extends Exception {
 
 				if (version_compare(PHP_VERSION, '5.3', '<'))
 				{
-					// Workaround for a bug in ErrorException::getTrace() that exists in
-					// all PHP 5.2 versions. @see http://bugs.php.net/bug.php?id=45895
+					// Workaround for a bug in ErrorException::getTrace() that
+					// exists in all PHP 5.2 versions.
+					// @link http://bugs.php.net/45895
 					for ($i = count($trace) - 1; $i > 0; --$i)
 					{
 						if (isset($trace[$i - 1]['args']))
@@ -116,12 +132,43 @@ class Kohana_Kohana_Exception extends Exception {
 				}
 			}
 
+			// Create a text version of the exception
+			$error = Kohana_Exception::text($e);
+
+			if (is_object(Kohana::$log))
+			{
+				// Add this exception to the log
+				Kohana::$log->add(Log::ERROR, $error);
+
+				$strace = Kohana_Exception::text($e)."\n--\n" . $e->getTraceAsString();
+				Kohana::$log->add(Log::STRACE, $strace);
+
+				// Make sure the logs are written
+				Kohana::$log->write();
+			}
+
+			if (Kohana::$is_cli)
+			{
+				// Just display the text of the exception
+				echo "\n{$error}\n";
+
+				return TRUE;
+			}
+
 			if ( ! headers_sent())
 			{
 				// Make sure the proper http header is sent
-				$http_header_status = ($e instanceof Http_Exception) ? $code : 500;
+				$http_header_status = ($e instanceof HTTP_Exception) ? $code : 500;
 
-				header('Content-Type: text/html; charset='.Kohana::$charset, TRUE, $http_header_status);
+				header('Content-Type: '.Kohana_Exception::$error_view_content_type.'; charset='.Kohana::$charset, TRUE, $http_header_status);
+			}
+
+			if (Request::$current !== NULL AND Request::current()->is_ajax() === TRUE)
+			{
+				// Just display the text of the exception
+				echo "\n{$error}\n";
+
+				return TRUE;
 			}
 
 			// Start an output buffer
@@ -142,26 +189,6 @@ class Kohana_Kohana_Exception extends Exception {
 			// Display the contents of the output buffer
 			echo ob_get_clean();
 
-			// Create a text version of the exception
-			$error = Kohana_Exception::text($e);
-
-			if (is_object(Kohana::$log))
-			{
-				// Add this exception to the log
-				Kohana::$log->add(Log::ERROR, $error);
-
-				// Make sure the logs are written
-				Kohana::$log->write();
-			}
-
-			if (Kohana::$is_cli)
-			{
-				// Just display the text of the exception
-				echo "\n{$error}\n";
-
-				return TRUE;
-			}
-
 			return TRUE;
 		}
 		catch (Exception $e)
@@ -172,8 +199,8 @@ class Kohana_Kohana_Exception extends Exception {
 			// Display the exception text
 			echo Kohana_Exception::text($e), "\n";
 
-			// Exit with an error status
-			exit(1);
+			// return
+			return TRUE;
 		}
 	}
 
@@ -182,7 +209,7 @@ class Kohana_Kohana_Exception extends Exception {
 	 *
 	 * Error [ Code ]: Message ~ File [ Line ]
 	 *
-	 * @param   object  Exception
+	 * @param   Exception   $e
 	 * @return  string
 	 */
 	public static function text(Exception $e)

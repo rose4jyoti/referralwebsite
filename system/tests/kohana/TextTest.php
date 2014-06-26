@@ -4,7 +4,8 @@
  * Tests the kohana text class (Kohana_Text)
  *
  * @group kohana
- * @group kohana.text
+ * @group kohana.core
+ * @group kohana.core.text
  *
  * @package    Kohana
  * @category   Tests
@@ -383,9 +384,90 @@ class Kohana_TextTest extends Unittest_TestCase
 	{
 		return array
 			(
-				array('No gain, no&nbsp;pain', 'No gain, no pain'),
-				array("spaces?what'rethey?", "spaces?what'rethey?"),
-				array('', ''),
+				// A very simple widont test
+				array(
+					'A very simple&nbsp;test',
+					'A very simple test',
+				),
+				// Single word items shouldn't be changed
+				array(
+					'Test',
+					'Test',
+				),
+				// Single word after single space shouldn't be changed either
+				array(
+					' Test',
+					' Test',
+				),
+				// Single word with HTML all around
+				array(
+					'<ul><li><p>Test</p></li><ul>',
+					'<ul><li><p>Test</p></li><ul>',
+				),
+				// Single word after single space with HTML all around
+				array(
+					'<ul><li><p> Test</p></li><ul>',
+					'<ul><li><p> Test</p></li><ul>',
+				),
+				// Widont with more than one paragraph
+				array(
+					'<p>In a couple of&nbsp;paragraphs</p><p>paragraph&nbsp;two</p>',
+					'<p>In a couple of paragraphs</p><p>paragraph two</p>',
+				),
+				// a link inside a heading
+				array(
+					'<h1><a href="#">In a link inside a&nbsp;heading </a></h1>',
+					'<h1><a href="#">In a link inside a heading </a></h1>',
+				),
+				// a link followed by text
+				array(
+					'<h1><a href="#">In a link</a> followed by other&nbsp;text</h1>',
+					'<h1><a href="#">In a link</a> followed by other text</h1>',
+				),
+				// empty html, with no text inside
+				array(
+					'<h1><a href="#"></a></h1>',
+					'<h1><a href="#"></a></h1>',
+				),
+				// apparently, we don't love DIVs
+				array(
+					'<div>Divs get no love!</div>',
+					'<div>Divs get no love!</div>',
+				),
+				// we don't love PREs, either
+				array(
+					'<pre>Neither do PREs</pre>',
+					'<pre>Neither do PREs</pre>',
+				),
+				// but we love DIVs with paragraphs
+				array(
+					'<div><p>But divs with paragraphs&nbsp;do!</p></div>',
+					'<div><p>But divs with paragraphs do!</p></div>',
+				),
+				array(
+					'No gain, no&nbsp;pain',
+					'No gain, no pain',
+				),
+				array(
+					"spaces?what'rethey?",
+					"spaces?what'rethey?",
+				),
+			/*
+			 * // @issue 3499, with HTML at the end
+			 * array(
+			 * 		'with HTML at the end &nbsp;<strong>Kohana</strong>',
+			 * 		'with HTML at the end <strong>Kohana</strong>',
+			 * 	),
+			 * 	// @issue 3499, with HTML with attributes at the end
+			 * 	array(
+			 * 		'with HTML at the end:&nbsp;<a href="#" title="Kohana">Kohana</a>',
+			 * 		'with HTML at the end: <a href="#" title="Kohana">Kohana</a>',
+			 * 	),
+			 */
+				array(
+					'',
+					'',
+				),
 			);
 	}
 
@@ -486,6 +568,19 @@ class Kohana_TextTest extends Unittest_TestCase
 				'Look at me <a href="http://www.google.com">http://www.google.com</a>',
 				'Look at me <a href="http://www.google.com">http://www.google.com</a>',
 			),
+			// Punctuation at the end of the URL
+			array(
+				'Wow <a href="http://www.google.com">http://www.google.com</a>!',
+				'Wow http://www.google.com!',
+			),
+			array(
+				'Zomg <a href="http://www.google.com">www.google.com</a>!',
+				'Zomg www.google.com!',
+			),
+			array(
+				'Well this, <a href="http://www.google.com">www.google.com</a>, is cool',
+				'Well this, www.google.com, is cool',
+			),
 			// @issue 3190
 			array(
 				'<a href="http://www.google.com/">www.google.com</a>',
@@ -494,6 +589,32 @@ class Kohana_TextTest extends Unittest_TestCase
 			array(
 				'<a href="http://www.google.com/">www.google.com</a> <a href="http://www.google.com/">http://www.google.com/</a>',
 				'<a href="http://www.google.com/">www.google.com</a> http://www.google.com/',
+			),
+			// @issue 3436
+			array(
+				'<strong><a href="http://www.google.com/">http://www.google.com/</a></strong>',
+				'<strong>http://www.google.com/</strong>',
+			),
+			// @issue 4208, URLs with a path
+			array(
+				'Foobar <a href="http://www.google.com/analytics">www.google.com/analytics</a> cake',
+				'Foobar www.google.com/analytics cake',
+			),
+			array(
+				'Look at this <a href="http://www.google.com/analytics">www.google.com/analytics</a>!',
+				'Look at this www.google.com/analytics!',
+			),
+			array(
+				'Path <a href="http://www.google.com/analytics">http://www.google.com/analytics</a> works?',
+				'Path http://www.google.com/analytics works?',
+			),
+			array(
+				'Path <a href="http://www.google.com/analytics">http://www.google.com/analytics</a>',
+				'Path http://www.google.com/analytics',
+			),
+			array(
+				'Path <a href="http://www.google.com/analytics">www.google.com/analytics</a>',
+				'Path www.google.com/analytics',
 			),
 		);
 	}
@@ -592,7 +713,7 @@ class Kohana_TextTest extends Unittest_TestCase
 
 		foreach ($emails as $email)
 		{
-			$this->assertNotContains($email, $linked_text);
+			$this->assertContains('&#109;&#097;&#105;&#108;&#116;&#111;&#058;'.$email, $linked_text);
 		}
 
 	}

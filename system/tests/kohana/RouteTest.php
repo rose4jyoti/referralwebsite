@@ -4,13 +4,14 @@
  * Description of RouteTest
  *
  * @group kohana
- * @group kohana.route
+ * @group kohana.core
+ * @group kohana.core.route
  *
  * @package    Kohana
  * @category   Tests
  * @author     Kohana Team
  * @author     BRMatt <matthew@sigswitch.com>
- * @copyright  (c) 2008-2011 Kohana Team
+ * @copyright  (c) 2008-2012 Kohana Team
  * @license    http://kohanaframework.org/license
  */
 
@@ -353,6 +354,8 @@ class Kohana_RouteTest extends Unittest_TestCase
 		$route = new Route($uri, $regex);
 		$route->defaults($defaults);
 
+		$this->assertSame($defaults, $route->defaults());
+
 		$matches = $route->matches($default_uri);
 
 		$this->assertInternalType('array', $matches);
@@ -631,5 +634,124 @@ class Kohana_RouteTest extends Unittest_TestCase
 		);
 
 		$this->assertSame('#^(?P<controller>[a-z]+)(?:/(?P<action>[^/.,;?\n]++)(?:/(?P<id>\d+))?)?$#uD', $compiled);
+	}
+
+	/**
+	 * Tests Route::is_external(), ensuring the host can return
+	 * whether internal or external host
+	 */
+	public function test_is_external_route_from_host()
+	{
+		// Setup local route
+		Route::set('internal', 'local/test/route')
+			->defaults(array(
+				'controller' => 'foo',
+				'action'     => 'bar'
+				)
+			);
+
+		// Setup external route
+		Route::set('external', 'local/test/route')
+			->defaults(array(
+				'controller' => 'foo',
+				'action'     => 'bar',
+				'host'       => 'http://kohanaframework.org'
+				)
+			);
+
+		// Test internal route
+		$this->assertFalse(Route::get('internal')->is_external());
+
+		// Test external route
+		$this->assertTrue(Route::get('external')->is_external());
+	}
+
+	/**
+	 * Provider for test_external_route_includes_params_in_uri
+	 *
+	 * @return array
+	 */
+	public function provider_external_route_includes_params_in_uri()
+	{
+		return array(
+			array(
+				'<controller>/<action>',
+				array(
+					'controller'  => 'foo',
+					'action'      => 'bar',
+					'host'        => 'kohanaframework.org'
+				),
+				'http://kohanaframework.org/foo/bar'
+			),
+			array(
+				'<controller>/<action>',
+				array(
+					'controller'  => 'foo',
+					'action'      => 'bar',
+					'host'        => 'http://kohanaframework.org'
+				),
+				'http://kohanaframework.org/foo/bar'
+			),
+			array(
+				'foo/bar',
+				array(
+					'controller'  => 'foo',
+					'host'        => 'http://kohanaframework.org'
+				),
+				'http://kohanaframework.org/foo/bar'
+			),
+		);
+	}
+
+	/**
+	 * Tests the external route include route parameters
+	 *
+	 * @dataProvider provider_external_route_includes_params_in_uri
+	 */
+	public function test_external_route_includes_params_in_uri($route, $defaults, $expected_uri)
+	{
+		Route::set('test', $route)
+			->defaults($defaults);
+
+		$this->assertSame($expected_uri, Route::get('test')->uri());
+	}
+
+	/**
+	 * Provides test data for test_route_uri_encode_parameters
+	 *
+	 * @return array
+	 */
+	public function provider_route_uri_encode_parameters()
+	{
+		return array(
+			array(
+				'article',
+				'blog/article/<article_name>',
+				array(
+					'controller' => 'home',
+					'action' => 'index'
+				),
+				'article_name',
+				'Article name with special chars \\ ##',
+				'blog/article/Article%20name%20with%20special%20chars%20\\%20%23%23'
+			)
+		);
+	}
+
+	/**
+	 * http://dev.kohanaframework.org/issues/4079
+	 *
+	 * @test
+	 * @covers Route::get
+	 * @ticket 4079
+	 * @dataProvider provider_route_uri_encode_parameters
+	 */
+	public function test_route_uri_encode_parameters($name, $uri_callback, $defaults, $uri_key, $uri_value, $expected)
+	{
+		Route::set($name, $uri_callback)->defaults($defaults);
+
+		$get_route_uri = Route::get($name)->uri(array($uri_key => $uri_value));
+
+		$this->assertSame($expected, $get_route_uri);
 	}
 }

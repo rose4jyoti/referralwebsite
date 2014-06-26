@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Kohana_Http_Exception extends Kohana_Exception {
+class Kohana_HTTP_Exception extends Kohana_Exception {
 
 	/**
 	 * @var     int      http status code
@@ -13,9 +13,9 @@ class Kohana_Http_Exception extends Kohana_Exception {
 	 *     throw new Kohana_Exception('Something went terrible wrong, :user',
 	 *         array(':user' => $user));
 	 *
-	 * @param   string   status message, custom content to display with error
-	 * @param   array    translation variables
-	 * @param   integer  the http status code
+	 * @param   string  $message    status message, custom content to display with error
+	 * @param   array   $variables  translation variables
+	 * @param   integer $code       the http status code
 	 * @return  void
 	 */
 	public function __construct($message = NULL, array $variables = NULL, $code = 0)
@@ -31,4 +31,4 @@ class Kohana_Http_Exception extends Kohana_Exception {
 		parent::__construct($message, $variables, $code);
 	}
 
-} // End Kohana_Http_Exception
+} // End Kohana_HTTP_Exception

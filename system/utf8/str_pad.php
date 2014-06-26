@@ -4,7 +4,7 @@
  *
  * @package    Kohana
  * @author     Kohana Team
- * @copyright  (c) 2007-2011 Kohana Team
+ * @copyright  (c) 2007-2012 Kohana Team
  * @copyright  (c) 2005 Harry Fuecks
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt
  */
@@ -46,5 +46,7 @@ function _str_pad($str, $final_str_length, $pad_str = ' ', $pad_type = STR_PAD_R
 		return $pad_left.$str.$pad_right;
 	}
 
-	trigger_error('UTF8::str_pad: Unknown padding type ('.$pad_type.')', E_USER_ERROR);
+	throw new UTF8_Exception("UTF8::str_pad: Unknown padding type (:pad_type)", array(
+			':pad_type' => $pad_type,
+		));
 }

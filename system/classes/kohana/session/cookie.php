@@ -5,7 +5,7 @@
  * @package    Kohana
  * @category   Session
  * @author     Kohana Team
- * @copyright  (c) 2008-2011 Kohana Team
+ * @copyright  (c) 2008-2012 Kohana Team
  * @license    http://kohanaframework.org/license
  */
 class Kohana_Session_Cookie extends Session {
@@ -34,6 +34,14 @@ class Kohana_Session_Cookie extends Session {
 	protected function _write()
 	{
 		return Cookie::set($this->_name, $this->__toString(), $this->_lifetime);
+	}
+
+	/**
+	 * @return  bool
+	 */
+	protected function _restart()
+	{
+		return TRUE;
 	}
 
 	/**

@@ -1,0 +1,18 @@
+[submodule "modules/paypal"]
+	path = modules/paypal
+	url = https://github.com/Hete/kohana-paypal.git
+[submodule "modules/tax"]
+	path = modules/tax
+	url = https://github.com/arteymix/kohana-tax.git
+[submodule "modules/userguide"]
+	path = modules/userguide
+	url = https://github.com/kohana/userguide.git
+[submodule "modules/auth"]
+	path = modules/auth
+	url = https://github.com/kohana/auth.git
+[submodule "modules/database"]
+	path = modules/database
+	url = https://github.com/kohana/database/git
+[submodule "modules/orm"]
+	path = modules/orm
+	url = https://github.com/kohana/orm.git

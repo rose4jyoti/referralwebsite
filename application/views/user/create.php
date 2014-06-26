@@ -53,7 +53,7 @@ document.getElementById("web").style.display="";
               <td width="33%"><?= Form::label('username', 'Email'); ?></td>
               <td width="67%">
 			  
-			   <?= Form::input('username', HTML::chars(Arr::get($_POST, 'username')), array('class'=>'aa')); ?>
+			   <?= Form::input('email', HTML::chars(Arr::get($_POST, 'email')), array('class'=>'aa')); ?>
                <div class="error">
 	          <?= Arr::get($errors, 'username'); ?>
                </div>

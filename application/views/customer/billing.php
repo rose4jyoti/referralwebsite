@@ -31,18 +31,38 @@ var_dump($currentTimeoutInSecs);
                         100 participants over the 14 days.
                     </div>
                     <div class="col-md-3">
-                        <div class="btn-group">
-                            <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                Upgrade <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Standard</a></li>
-                                <li><a href="#">Premium</a></li>
-                                <li><a href="#">Professional</a></li>
-                                <li><a href="#">Ultimate</a></li>
-                            </ul>
-                        </div>
+                        Enable
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- start: Page Title -->
+                <div class="col-md-12">
+                    <h2>Available plans</h2>
+                </div>
+                <div class="col-md-12" style="border: 1px #d2d2d2; padding: 5px 0 5px 0">
+                    <?php echo Form::open('customer/payment') ?>
+                        <table class="table">
+                            <tbody>
+                                <?php foreach($packages as $package): ?>
+                                    <tr>
+                                        <td style="vertical-align: middle">
+                                            <?php echo $package->name ?>
+                                        </td>
+                                        <td style="vertical-align: middle">
+                                            <?php echo $package->description ?>
+                                        </td>
+                                        <td style="vertical-align: middle">
+                                            <?php echo Num::format($package->amount,0, TRUE) ?> $
+                                        </td>
+                                        <td style="vertical-align: middle">
+                                            <button class="btn btn-success" name="package" value="<?php echo $package->id ?>">Upgrade</button>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    <?php echo Form::close() ?>
                 </div>
             </div>
             <div class="row">
@@ -190,7 +210,3 @@ var_dump($currentTimeoutInSecs);
 </div>
 
 <?php echo $footer; ?>
-
-
-
-

@@ -57,12 +57,12 @@ Somewhere in `application/bootstrap.php`, copy the following code:
 
 You can now autoload any Zend Framework classes from inside your Kohana application.
 
-	if ($validate($_POST))
+	if ($validate($this->request->post()))
 	{
 		$mailer = new Zend_Mail;
 		
 		$mailer->setBodyHtml($view)
-			->setFrom(Kohana::config('site')->email_from)
+			->setFrom(Kohana::$config->load('site')->email_from)
 			->addTo($email)
 			->setSubject($message)
 			->send();

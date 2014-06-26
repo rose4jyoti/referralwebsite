@@ -5,8 +5,8 @@
  * @package    Kohana
  * @category   Base
  * @author     Kohana Team
- * @copyright  (c) 2008-2011 Kohana Team
- * @license    http://kohanaphp.com/license
+ * @copyright  (c) 2008-2012 Kohana Team
+ * @license    http://kohanaframework.org/license
  */
 class Kohana_Debug {
 
@@ -15,10 +15,9 @@ class Kohana_Debug {
 	 * variables, each wrapped in a "pre" tag:
 	 *
 	 *     // Displays the type and value of each variable
-	 *     echo Debug::debug($foo, $bar, $baz);
+	 *     echo Debug::vars($foo, $bar, $baz);
 	 *
-	 * @param   mixed   variable to debug
-	 * @param   ...
+	 * @param   mixed   $var,...    variable to debug
 	 * @return  string
 	 */
 	public static function vars()
@@ -43,24 +42,26 @@ class Kohana_Debug {
 	 *
 	 * Borrows heavily on concepts from the Debug class of [Nette](http://nettephp.com/).
 	 *
-	 * @param   mixed    variable to dump
-	 * @param   integer  maximum length of strings
+	 * @param   mixed   $value              variable to dump
+	 * @param   integer $length             maximum length of strings
+	 * @param   integer $level_recursion    recursion limit
 	 * @return  string
 	 */
-	public static function dump($value, $length = 128)
+	public static function dump($value, $length = 128, $level_recursion = 10)
 	{
-		return Debug::_dump($value, $length);
+		return Debug::_dump($value, $length, $level_recursion);
 	}
 
 	/**
 	 * Helper for Debug::dump(), handles recursion in arrays and objects.
 	 *
-	 * @param   mixed    variable to dump
-	 * @param   integer  maximum length of strings
-	 * @param   integer  recursion level (internal)
+	 * @param   mixed   $var    variable to dump
+	 * @param   integer $length maximum length of strings
+	 * @param   integer $limit  recursion limit
+	 * @param   integer $level  current recursion level (internal usage only!)
 	 * @return  string
 	 */
-	protected static function _dump( & $var, $length = 128, $level = 0)
+	protected static function _dump( & $var, $length = 128, $limit = 10, $level = 0)
 	{
 		if ($var === NULL)
 		{
@@ -144,7 +145,7 @@ class Kohana_Debug {
 			{
 				$output[] = "(\n$space$s*RECURSION*\n$space)";
 			}
-			elseif ($level < 5)
+			elseif ($level < $limit)
 			{
 				$output[] = "<span>(";
 
@@ -157,7 +158,7 @@ class Kohana_Debug {
 						$key = '"'.htmlspecialchars($key, ENT_NOQUOTES, Kohana::$charset).'"';
 					}
 
-					$output[] = "$space$s$key => ".Debug::_dump($val, $length, $level + 1);
+					$output[] = "$space$s$key => ".Debug::_dump($val, $length, $limit, $level + 1);
 				}
 				unset($var[$marker]);
 
@@ -194,7 +195,7 @@ class Kohana_Debug {
 			{
 				$output[] = "{\n$space$s*RECURSION*\n$space}";
 			}
-			elseif ($level < 10)
+			elseif ($level < $limit)
 			{
 				$output[] = "<code>{";
 
@@ -214,7 +215,7 @@ class Kohana_Debug {
 						$access = '<small>public</small>';
 					}
 
-					$output[] = "$space$s$access $key => ".Debug::_dump($val, $length, $level + 1);
+					$output[] = "$space$s$access $key => ".Debug::_dump($val, $length, $limit, $level + 1);
 				}
 				unset($objects[$hash]);
 
@@ -242,7 +243,7 @@ class Kohana_Debug {
 	 *     // Displays SYSPATH/classes/kohana.php
 	 *     echo Debug::path(Kohana::find_file('classes', 'kohana'));
 	 *
-	 * @param   string  path to debug
+	 * @param   string  $file   path to debug
 	 * @return  string
 	 */
 	public static function path($file)
@@ -274,9 +275,9 @@ class Kohana_Debug {
 	 *     // Highlights the current line of the current file
 	 *     echo Debug::source(__FILE__, __LINE__);
 	 *
-	 * @param   string   file to open
-	 * @param   integer  line number to highlight
-	 * @param   integer  number of padding lines
+	 * @param   string  $file           file to open
+	 * @param   integer $line_number    line number to highlight
+	 * @param   integer $padding        number of padding lines
 	 * @return  string   source of file
 	 * @return  FALSE    file is unreadable
 	 */
@@ -340,7 +341,7 @@ class Kohana_Debug {
 	 *     // Displays the entire current backtrace
 	 *     echo implode('<br/>', Debug::trace());
 	 *
-	 * @param   string  path to debug
+	 * @param   array   $trace
 	 * @return  string
 	 */
 	public static function trace(array $trace = NULL)

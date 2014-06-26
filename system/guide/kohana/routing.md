@@ -82,6 +82,8 @@ TODO: example of either using directory or controller where it isn't in the rout
 
 In 3.1, you can specify advanced routing schemes by using lambda routes. Instead of a URI, you can use an anonymous function or callback syntax to specify a function that will process your routes. Here's a simple example:
 
+If you want to use reverse routing with lambda routes, you must pass the third parameter:
+
 	Route::set('testing', function($uri)
 		{
 			if ($uri == 'foo/bar')
@@ -89,8 +91,11 @@ In 3.1, you can specify advanced routing schemes by using lambda routes. Instead
 					'controller' => 'welcome',
 					'action'     => 'foobar',
 				);
-		}
+		},
+		'foo/bar'
 	);
+
+As you can see in the below route, the reverse uri parameter might not make sense.
 
 	Route::set('testing', function($uri)
 		{
@@ -102,18 +107,15 @@ In 3.1, you can specify advanced routing schemes by using lambda routes. Instead
 					'action'     => 'foobar'
 				);
 			}
-		}
+		},
+		'<language>/<rest_of_uri>
 	);
-	
+
+If you are using php 5.2, you can still use callbacks for this behavior (this example omits the reverse route):
+
 	Route::set('testing', array('Class', 'method_to_process_my_uri'));
 
 ## Examples
-
-TODO: a million billion examples, you can use the following as a guide for some routes to include:
-
-<http://kerkness.ca/wiki/doku.php?id=routing:routing_basics>   
-<http://kerkness.ca/wiki/doku.php?id=routing:ignoring_overflow_in_a_route>   
-<http://kerkness.ca/wiki/doku.php?id=routing:building_routes_with_subdirectories>
 
 There are countless other possibilities for routes. Here are some more examples:
 
@@ -210,17 +212,7 @@ For example, with the following route:
 		'action'     => 'index',
 	));
 	
-If a url matches the route, then `Controller_Ads::index()` will be called.  You could access the parameters in two ways:
-
-First, any non-special parameters (parameters other than controller, action, and directory) in a route are passed as parameters to the action method in the order they appear in the route.  Be sure to define a default value for optional parameters if you don't define them in the route's `->defaults()`.
-
-	class Controller_Ads extends Controller {
-		public function action_index($ad, $affiliate = NULL)
-		{
-			
-		}
-
-Secondly, you can access the parameters using the `param()` method of the [Request] class. Again, remember to define a default value (via the second, optional parameter of [Request::param]) if you didn't in `->defaults()`.
+If a url matches the route, then `Controller_Ads::index()` will be called.  You can access the parameters by using the `param()` method of the controller's [Request]. Remember to define a default value (via the second, optional parameter of [Request::param]) if you didn't in `->defaults()`.
 
 	class Controller_Ads extends Controller {
 		public function action_index()
@@ -256,11 +248,11 @@ Let's say you decided later to make that route definition more verbose by changi
 
 One method you might use frequently is the shortcut [Request::uri] which is the same as the above except it assumes the current route, directory, controller and action. If our current route is the default and the uri was `users/list`, we can do the following to generate uris in the format `users/view/$id`:
 
-    $this->request->uri(array('action' => 'view', 'id' => $user_id));
-    
+    $this->request->route()->uri(array('action' => 'view', 'id' => $user_id));
+
 Or if within a view, the preferable method is:
 
-    Request::instance()->uri(array('action' => 'view', 'id' => $user_id));
+    Route::url('default', array('action' => 'view', 'id' => $user_id));
 
 TODO: examples of using html::anchor in addition to the above examples
 

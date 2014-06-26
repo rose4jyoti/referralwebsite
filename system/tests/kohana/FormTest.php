@@ -4,13 +4,14 @@
  * Tests Kohana Form helper
  *
  * @group kohana
- * @group kohana.form
+ * @group kohana.core
+ * @group kohana.core.form
  *
  * @package    Kohana
  * @category   Tests
  * @author     Kohana Team
  * @author     Jeremy Bush <contractfrombelow@gmail.com>
- * @copyright  (c) 2008-2011 Kohana Team
+ * @copyright  (c) 2008-2012 Kohana Team
  * @license    http://kohanaframework.org/license
  */
 class Kohana_FormTest extends Unittest_TestCase
@@ -22,6 +23,7 @@ class Kohana_FormTest extends Unittest_TestCase
 	protected $environmentDefault = array(
 		'Kohana::$base_url' => '/',
 		'HTTP_HOST' => 'kohanaframework.org',
+		'Kohana::$index_file' => '',
 	);
 
 	/**
@@ -32,11 +34,22 @@ class Kohana_FormTest extends Unittest_TestCase
 	public function provider_open()
 	{
 		return array(
-			// $value, $result
-			array(NULL, NULL, '<form action="/" method="post" accept-charset="utf-8">'),
-			array('foo', NULL),
-			array('', NULL),
-			array('foo', array('method' => 'get')),
+			array(
+				  array('', NULL),
+				  array('action' => '')
+			),
+			array(
+				  array(NULL, NULL),
+				  array('action' => '')
+			),
+			array(
+				  array('foo', NULL),
+				  array('action' => '/foo')
+			),
+			array(
+				  array('foo', array('method' => 'get')),
+				  array('action' => '/foo', 'method' => 'get')
+			),
 		);
 	}
 
@@ -48,22 +61,22 @@ class Kohana_FormTest extends Unittest_TestCase
 	 * @param boolean $input  Input for Form::open
 	 * @param boolean $expected Output for Form::open
 	 */
-	public function test_open($action, $attributes)
+	public function test_open($input, $expected)
 	{
+		list($action, $attributes) = $input;
+
 		$tag = Form::open($action, $attributes);
 
 		$matcher = array(
 			'tag' => 'form',
+			// Default attributes
 			'attributes' => array(
-				'method' => 'post',
+				'method'         => 'post',
 				'accept-charset' => 'utf-8',
 			),
 		);
 
-		if ($attributes !== NULL)
-		{
-			$matcher['attributes'] = $attributes + $matcher['attributes'];
-		}
+		$matcher['attributes'] = $expected + $matcher['attributes'];
 
 		$this->assertTag($matcher, $tag);
 	}

@@ -6,9 +6,13 @@ Kohana is an open source, [object oriented](http://wikipedia.org/wiki/Object-Ori
 
 ## What makes Kohana great?
 
-Anything can be extended using the unique [filesystem](about.filesystem) design, little or no [configuration](about.configuration) is necessary, [error handling](debugging.errors) helps locate the source of errors quickly, and [debugging](debugging) and [profiling](debugging.profiling) provide insight into the application.
+Anything can be extended using the unique [filesystem](files) design, little or no [configuration](config) is
+necessary, [error handling](errors) helps locate the source of errors quickly, and [debugging](debugging) and [profiling](profiling) provide insight into the application.
 
-To help secure your applications, tools for [XSS removal](security.xss), [input validation](security.validation), [signed cookies](security.cookies), [form](security.forms) and [HTML](security.html) generators are all included. The [database](security.database) layer provides protection against [SQL injection](http://wikipedia.org/wiki/SQL_Injection). Of course, all official code is carefully written and reviewed for security.
+To help secure your applications, tools for [input validation](security/validation),
+[signed cookies](security/cookies), [Form] and [HTML] generators are all included. The
+ [database](security/database) layer provides protection against [SQL injection](http://wikipedia
+ .org/wiki/SQL_Injection). Of course, all official code is carefully written and reviewed for security.
 
 ## Contribute to the Documentation
 
@@ -16,4 +20,4 @@ We are working very hard to provide complete documentation. To help improve the 
 
 ## Unofficial Documentation
 
-If you are having trouble finding an answer here, have a look through the [unofficial wiki](http://kerkness.ca/wiki/doku.php). Your answer may also be found by searching the [forum](http://forum.kohanaphp.com/) or [stackoverflow](http://stackoverflow.com/questions/tagged/kohana) followed by asking your question on either.  Additionally, you can chat with the community of developers on the freenode [#kohana](irc://irc.freenode.net/kohana) IRC channel.  
+If you are having trouble finding an answer here, have a look through the [unofficial wiki](http://kerkness.ca/wiki/doku.php). Your answer may also be found by searching the [forum](http://forum.kohanaframework.org/) or [stackoverflow](http://stackoverflow.com/questions/tagged/kohana) followed by asking your question on either.  Additionally, you can chat with the community of developers on the freenode [#kohana](irc://irc.freenode.net/kohana) IRC channel.  

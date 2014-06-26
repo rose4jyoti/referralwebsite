@@ -8,7 +8,7 @@
  * @package    Kohana
  * @category   Helpers
  * @author     Kohana Team
- * @copyright  (c) 2007-2011 Kohana Team
+ * @copyright  (c) 2007-2012 Kohana Team
  * @license    http://kohanaframework.org/license
  */
 class Kohana_Inflector {
@@ -39,7 +39,7 @@ class Kohana_Inflector {
 	 * been defined as uncountable in `config/inflector.php`. If this is the
 	 * case, please report [an issue](http://dev.kohanaphp.com/projects/kohana3/issues).
 	 *
-	 * @param   string   word to check
+	 * @param   string  $str    word to check
 	 * @return  boolean
 	 */
 	public static function uncountable($str)
@@ -47,7 +47,7 @@ class Kohana_Inflector {
 		if (Inflector::$uncountable === NULL)
 		{
 			// Cache uncountables
-			Inflector::$uncountable = Kohana::config('inflector')->uncountable;
+			Inflector::$uncountable = Kohana::$config->load('inflector')->uncountable;
 
 			// Make uncountables mirrored
 			Inflector::$uncountable = array_combine(Inflector::$uncountable, Inflector::$uncountable);
@@ -70,8 +70,8 @@ class Kohana_Inflector {
 	 *
 	 * [!!] Special inflections are defined in `config/inflector.php`.
 	 *
-	 * @param   string   word to singularize
-	 * @param   integer  count of thing
+	 * @param   string  $str    word to make singular
+	 * @param   integer $count  count of thing
 	 * @return  string
 	 * @uses    Inflector::uncountable
 	 */
@@ -99,7 +99,7 @@ class Kohana_Inflector {
 		if (empty(Inflector::$irregular))
 		{
 			// Cache irregular words
-			Inflector::$irregular = Kohana::config('inflector')->irregular;
+			Inflector::$irregular = Kohana::$config->load('inflector')->irregular;
 		}
 
 		if ($irregular = array_search($str, Inflector::$irregular))
@@ -144,8 +144,8 @@ class Kohana_Inflector {
 	 *
 	 * [!!] Special inflections are defined in `config/inflector.php`.
 	 *
-	 * @param   string   word to pluralize
-	 * @param   integer  count of thing
+	 * @param   string  $str    word to pluralize
+	 * @param   integer $count  count of thing
 	 * @return  string
 	 * @uses    Inflector::uncountable
 	 */
@@ -176,7 +176,7 @@ class Kohana_Inflector {
 		if (empty(Inflector::$irregular))
 		{
 			// Cache irregular words
-			Inflector::$irregular = Kohana::config('inflector')->irregular;
+			Inflector::$irregular = Kohana::$config->load('inflector')->irregular;
 		}
 
 		if (isset(Inflector::$irregular[$str]))
@@ -197,7 +197,7 @@ class Kohana_Inflector {
 			$str .= 's';
 		}
 
-		// Convert to uppsecase if nessasary
+		// Convert to uppercase if necessary
 		if ($is_uppercase)
 		{
 			$str = strtoupper($str);
@@ -213,7 +213,7 @@ class Kohana_Inflector {
 	 *     $str = Inflector::camelize('mother cat');     // "motherCat"
 	 *     $str = Inflector::camelize('kittens in bed'); // "kittensInBed"
 	 *
-	 * @param   string  phrase to camelize
+	 * @param   string  $str    phrase to camelize
 	 * @return  string
 	 */
 	public static function camelize($str)
@@ -230,8 +230,8 @@ class Kohana_Inflector {
 	 *     $str = Inflector::decamelize('houseCat');    // "house cat"
 	 *     $str = Inflector::decamelize('kingAllyCat'); // "king ally cat"
 	 *
-	 * @param   string   phrase to camelize
-	 * @param   string   word separator
+	 * @param   string  $str    phrase to camelize
+	 * @param   string  $sep    word separator
 	 * @return  string
 	 */
 	public static function decamelize($str, $sep = ' ')
@@ -244,7 +244,7 @@ class Kohana_Inflector {
 	 *
 	 *     $str = Inflector::underscore('five cats'); // "five_cats";
 	 *
-	 * @param   string  phrase to underscore
+	 * @param   string  $str    phrase to underscore
 	 * @return  string
 	 */
 	public static function underscore($str)
@@ -258,7 +258,7 @@ class Kohana_Inflector {
 	 *     $str = Inflector::humanize('kittens-are-cats'); // "kittens are cats"
 	 *     $str = Inflector::humanize('dogs_as_well');     // "dogs as well"
 	 *
-	 * @param   string  phrase to make human-readable
+	 * @param   string  $str    phrase to make human-readable
 	 * @return  string
 	 */
 	public static function humanize($str)

@@ -10,23 +10,23 @@
  * @package    Kohana
  * @category   Base
  * @author     Kohana Team
- * @copyright  (c) 2008-2011 Kohana Team
+ * @copyright  (c) 2008-2012 Kohana Team
  * @license    http://kohanaframework.org/license
  */
 class Kohana_Core {
 
 	// Release version and codename
-	const VERSION  = '3.1.0';
-	const CODENAME = 'merle';
+	const VERSION  = '3.2.3.1';
+	const CODENAME = 'turdus';
 
 	// Common environment type constants for consistency and convenience
-	const PRODUCTION  = 1;
-	const STAGING     = 2;
-	const TESTING     = 3;
-	const DEVELOPMENT = 4;
+	const PRODUCTION  = 10;
+	const STAGING     = 20;
+	const TESTING     = 30;
+	const DEVELOPMENT = 40;
 
 	// Security check that is added to all generated PHP files
-	const FILE_SECURITY = '<?php defined(\'SYSPATH\') or die(\'No direct script access.\');';
+	const FILE_SECURITY = '<?php defined(\'SYSPATH\') OR die(\'No direct script access.\');';
 
 	// Format of cache files: header, cache name, and data
 	const FILE_CACHE = ":header \n\n// :name\n\n:data\n";
@@ -180,10 +180,12 @@ class Kohana_Core {
 	 * `string`  | cache_dir  | Kohana's cache directory.  Used by [Kohana::cache] for simple internal caching, like [Fragments](kohana/fragments) and **\[caching database queries](this should link somewhere)**.  This has nothing to do with the [Cache module](cache). | `APPPATH."cache"`
 	 * `integer` | cache_life | Lifetime, in seconds, of items cached by [Kohana::cache]         | `60`
 	 * `boolean` | errors     | Should Kohana catch PHP errors and uncaught Exceptions and show the `error_view`. See [Error Handling](kohana/errors) for more info. <br /> <br /> Recommended setting: `TRUE` while developing, `FALSE` on production servers. | `TRUE`
-	 * `boolean` | profile    | Whether to enable the [Profiler](kohana/profiling). <br /> <br />Recommended setting: `TRUE` while developing, `FALSE` on production servers. | `TRUE`	 * `boolean` | caching    | Cache file locations to speed up [Kohana::find_file].  This has nothing to do with [Kohana::cache], [Fragments](kohana/fragments) or the [Cache module](cache).  <br /> <br />  Recommended setting: `FALSE` while developing, `TRUE` on production servers. | `FALSE`
+	 * `boolean` | profile    | Whether to enable the [Profiler](kohana/profiling). <br /> <br />Recommended setting: `TRUE` while developing, `FALSE` on production servers. | `TRUE`
+	 * `boolean` | caching    | Cache file locations to speed up [Kohana::find_file].  This has nothing to do with [Kohana::cache], [Fragments](kohana/fragments) or the [Cache module](cache).  <br /> <br />  Recommended setting: `FALSE` while developing, `TRUE` on production servers. | `FALSE`
+	 * `boolean` | expose     | Set the X-Powered-By header
 	 *
 	 * @throws  Kohana_Exception
-	 * @param   array   Array of settings.  See above.
+	 * @param   array   $settings   Array of settings.  See above.
 	 * @return  void
 	 * @uses    Kohana::globals
 	 * @uses    Kohana::sanitize
@@ -325,18 +327,24 @@ class Kohana_Core {
 		}
 
 		// Determine if the extremely evil magic quotes are enabled
-		Kohana::$magic_quotes = (bool) get_magic_quotes_gpc();
+		Kohana::$magic_quotes = (version_compare(PHP_VERSION, '5.4') < 0 AND get_magic_quotes_gpc());
 
 		// Sanitize all request variables
 		$_GET    = Kohana::sanitize($_GET);
 		$_POST   = Kohana::sanitize($_POST);
 		$_COOKIE = Kohana::sanitize($_COOKIE);
 
-		// Load the logger
-		Kohana::$log = Log::instance();
+		// Load the logger if one doesn't already exist
+		if ( ! Kohana::$log instanceof Log)
+		{
+			Kohana::$log = Log::instance();
+		}
 
-		// Load the config
-		Kohana::$config = Config::instance();
+		// Load the config if one doesn't already exist
+		if ( ! Kohana::$config instanceof Config)
+		{
+			Kohana::$config = new Config;
+		}
 	}
 
 	/**
@@ -380,7 +388,7 @@ class Kohana_Core {
 
 	/**
 	 * Reverts the effects of the `register_globals` PHP setting by unsetting
-	 * all global varibles except for the default super globals (GPCS, etc),
+	 * all global variables except for the default super globals (GPCS, etc),
 	 * which is a [potential security hole.][ref-wikibooks]
 	 *
 	 * This is called automatically by [Kohana::init] if `register_globals` is
@@ -431,8 +439,8 @@ class Kohana_Core {
 	 * - Strips slashes if magic quotes are enabled
 	 * - Normalizes all newlines to LF
 	 *
-	 * @param   mixed  any variable
-	 * @return  mixed  sanitized variable
+	 * @param   mixed   $value  any variable
+	 * @return  mixed   sanitized variable
 	 */
 	public static function sanitize($value)
 	{
@@ -480,7 +488,7 @@ class Kohana_Core {
 	 *
 	 *     spl_autoload_register(array('Kohana', 'auto_load'));
 	 *
-	 * @param   string   class name
+	 * @param   string  $class  class name
 	 * @return  boolean
 	 */
 	public static function auto_load($class)
@@ -515,8 +523,8 @@ class Kohana_Core {
 	 *
 	 *     Kohana::modules(array('modules/foo', MODPATH.'bar'));
 	 *
-	 * @param   array  list of module paths
-	 * @return  array  enabled modules
+	 * @param   array   $modules    list of module paths
+	 * @return  array   enabled modules
 	 */
 	public static function modules(array $modules = NULL)
 	{
@@ -539,7 +547,10 @@ class Kohana_Core {
 			else
 			{
 				// This module is invalid, remove it
-				unset($modules[$name]);
+				throw new Kohana_Exception('Attempted to load an invalid or missing module \':module\' at \':path\'', array(
+					':module' => $name,
+					':path'   => Debug::path($path),
+				));
 			}
 		}
 
@@ -599,12 +610,12 @@ class Kohana_Core {
 	 *     // Returns an array of all the "mimes" configuration files
 	 *     Kohana::find_file('config', 'mimes');
 	 *
-	 * @param   string   directory name (views, i18n, classes, extensions, etc.)
-	 * @param   string   filename with subdirectory
-	 * @param   string   extension to search for
-	 * @param   boolean  return an array of files?
-	 * @return  array    a list of files when $array is TRUE
-	 * @return  string   single file path
+	 * @param   string  $dir    directory name (views, i18n, classes, extensions, etc.)
+	 * @param   string  $file   filename with subdirectory
+	 * @param   string  $ext    extension to search for
+	 * @param   boolean $array  return an array of files?
+	 * @return  array   a list of files when $array is TRUE
+	 * @return  string  single file path
 	 */
 	public static function find_file($dir, $file, $ext = NULL, $array = FALSE)
 	{
@@ -627,10 +638,10 @@ class Kohana_Core {
 		// Create a partial path of the filename
 		$path = $dir.DIRECTORY_SEPARATOR.$file.$ext;
 
-		if (Kohana::$caching === TRUE AND isset(Kohana::$_files[$path]))
+		if (Kohana::$caching === TRUE AND isset(Kohana::$_files[$path.($array ? '_array' : '_path')]))
 		{
 			// This path has been cached
-			return Kohana::$_files[$path];
+			return Kohana::$_files[$path.($array ? '_array' : '_path')];
 		}
 
 		if (Kohana::$profiling === TRUE AND class_exists('Profiler', FALSE))
@@ -677,7 +688,7 @@ class Kohana_Core {
 		if (Kohana::$caching === TRUE)
 		{
 			// Add the path to the cache
-			Kohana::$_files[$path] = $found;
+			Kohana::$_files[$path.($array ? '_array' : '_path')] = $found;
 
 			// Files have been changed
 			Kohana::$_files_changed = TRUE;
@@ -700,8 +711,8 @@ class Kohana_Core {
 	 *     // Find all view files.
 	 *     $views = Kohana::list_files('views');
 	 *
-	 * @param   string  directory name
-	 * @param   array   list of paths to search
+	 * @param   string  $directory  directory name
+	 * @param   array   $paths      list of paths to search
 	 * @return  array
 	 */
 	public static function list_files($directory = NULL, array $paths = NULL)
@@ -781,54 +792,12 @@ class Kohana_Core {
 	 *
 	 *     $foo = Kohana::load('foo.php');
 	 *
-	 * @param   string
+	 * @param   string  $file
 	 * @return  mixed
 	 */
 	public static function load($file)
 	{
 		return include $file;
-	}
-
-	/**
-	 * Returns the configuration array for the requested group.  See
-	 * [configuration files](kohana/files/config) for more information.
-	 *
-	 *     // Get all the configuration in config/database.php
-	 *     $config = Kohana::config('database');
-	 *
-	 *     // Get only the default connection configuration
-	 *     $default = Kohana::config('database.default')
-	 *
-	 *     // Get only the hostname of the default connection
-	 *     $host = Kohana::config('database.default.connection.hostname')
-	 *
-	 * @param   string   group name
-	 * @return  Config
-	 */
-	public static function config($group)
-	{
-		static $config;
-
-		if (strpos($group, '.') !== FALSE)
-		{
-			// Split the config group and path
-			list ($group, $path) = explode('.', $group, 2);
-		}
-
-		if ( ! isset($config[$group]))
-		{
-			// Load the config group into the cache
-			$config[$group] = Kohana::$config->load($group);
-		}
-
-		if (isset($path))
-		{
-			return Arr::path($config[$group], $path, NULL, '.');
-		}
-		else
-		{
-			return $config[$group];
-		}
 	}
 
 	/**
@@ -849,9 +818,9 @@ class Kohana_Core {
 	 * [ref-var]: http://php.net/var_export
 	 *
 	 * @throws  Kohana_Exception
-	 * @param   string   name of the cache
-	 * @param   mixed    data to cache
-	 * @param   integer  number of seconds the cache is valid for
+	 * @param   string  $name       name of the cache
+	 * @param   mixed   $data       data to cache
+	 * @param   integer $lifetime   number of seconds the cache is valid for
 	 * @return  mixed    for getting
 	 * @return  boolean  for setting
 	 */
@@ -929,7 +898,7 @@ class Kohana_Core {
 	}
 
 	/**
-	 * Get a message from a file. Messages are arbitary strings that are stored
+	 * Get a message from a file. Messages are arbitrary strings that are stored
 	 * in the `messages/` directory and reference by a key. Translation is not
 	 * performed on the returned values.  See [message files](kohana/files/messages)
 	 * for more information.
@@ -937,9 +906,9 @@ class Kohana_Core {
 	 *     // Get "username" from messages/text.php
 	 *     $username = Kohana::message('text', 'username');
 	 *
-	 * @param   string  file name
-	 * @param   string  key path to get
-	 * @param   mixed   default value if the path does not exist
+	 * @param   string  $file       file name
+	 * @param   string  $path       key path to get
+	 * @param   mixed   $default    default value if the path does not exist
 	 * @return  string  message string for the given path
 	 * @return  array   complete message list, when no path is specified
 	 * @uses    Arr::merge
@@ -998,17 +967,36 @@ class Kohana_Core {
 
 	/**
 	 * Catches errors that are not caught by the error handler, such as E_PARSE.
+	 * 
+	 * In case of an exception, the Kohana exception handler registers
+	 * this shutdown_handler again. We'll count the number of visits to
+	 * this function using a local static function variable, and exit(1)
+	 * on the second visit.
+	 * @see issue #3931
 	 *
-	 * @uses    Kohana_Exception::handler
 	 * @return  void
 	 */
 	public static function shutdown_handler()
 	{
+		// test if we have already shutdown, if TRUE, exit(1)
+		static $shutdown_handler_visited = FALSE;
+		if ($shutdown_handler_visited)
+		{
+			exit(1);
+		}
+		$shutdown_handler_visited = TRUE;
+		
 		if ( ! Kohana::$_init)
 		{
 			// Do not execute when not active
 			return;
 		}
+
+		// Retrieve the current exception handler
+		$handler = set_exception_handler(array('Kohana_Exception', 'handler'));
+
+		// Restore it back to it's previous state
+		restore_exception_handler();
 
 		try
 		{
@@ -1021,7 +1009,7 @@ class Kohana_Core {
 		catch (Exception $e)
 		{
 			// Pass the exception to the handler
-			Kohana_Exception::handler($e);
+			call_user_func($handler, $e);
 		}
 
 		if (Kohana::$errors AND $error = error_get_last() AND in_array($error['type'], Kohana::$shutdown_errors))
@@ -1030,7 +1018,7 @@ class Kohana_Core {
 			ob_get_level() and ob_clean();
 
 			// Fake an exception for nice debugging
-			Kohana_Exception::handler(new ErrorException($error['message'], $error['type'], 0, $error['file'], $error['line']));
+			call_user_func($handler, new ErrorException($error['message'], $error['type'], 0, $error['file'], $error['line']));
 
 			// Shutdown now to avoid a "death loop"
 			exit(1);

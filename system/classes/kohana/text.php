@@ -5,7 +5,7 @@
  * @package    Kohana
  * @category   Helpers
  * @author     Kohana Team
- * @copyright  (c) 2007-2011 Kohana Team
+ * @copyright  (c) 2007-2012 Kohana Team
  * @license    http://kohanaframework.org/license
  */
 class Kohana_Text {
@@ -52,9 +52,9 @@ class Kohana_Text {
 	 *
 	 *     $text = Text::limit_words($text);
 	 *
-	 * @param   string   phrase to limit words of
-	 * @param   integer  number of words to limit to
-	 * @param   string   end character or entity
+	 * @param   string  $str        phrase to limit words of
+	 * @param   integer $limit      number of words to limit to
+	 * @param   string  $end_char   end character or entity
 	 * @return  string
 	 */
 	public static function limit_words($str, $limit = 100, $end_char = NULL)
@@ -80,10 +80,10 @@ class Kohana_Text {
 	 *
 	 *     $text = Text::limit_chars($text);
 	 *
-	 * @param   string   phrase to limit characters of
-	 * @param   integer  number of characters to limit to
-	 * @param   string   end character or entity
-	 * @param   boolean  enable or disable the preservation of words while limiting
+	 * @param   string  $str            phrase to limit characters of
+	 * @param   integer $limit          number of characters to limit to
+	 * @param   string  $end_char       end character or entity
+	 * @param   boolean $preserve_words enable or disable the preservation of words while limiting
 	 * @return  string
 	 * @uses    UTF8::strlen
 	 */
@@ -120,7 +120,7 @@ class Kohana_Text {
 	 * Note that using multiple iterations of different strings may produce
 	 * unexpected results.
 	 *
-	 * @param   string  strings to alternate between
+	 * @param   string  $str,...    strings to alternate between
 	 * @return  string
 	 */
 	public static function alternate()
@@ -160,8 +160,8 @@ class Kohana_Text {
 	 * You can also create a custom type by providing the "pool" of characters
 	 * as the type.
 	 *
-	 * @param   string   a type of pool, or a string of characters to use as the pool
-	 * @param   integer  length of string to return
+	 * @param   string  $type   a type of pool, or a string of characters to use as the pool
+	 * @param   integer $length length of string to return
 	 * @return  string
 	 * @uses    UTF8::split
 	 */
@@ -233,11 +233,27 @@ class Kohana_Text {
 	}
 
 	/**
+	 * Uppercase words that are not separated by spaces, using a custom
+	 * delimiter or the default.
+	 * 
+	 *      $str = Text::ucfirst('content-type'); // returns "Content-Type" 
+	 *
+	 * @param   string  $string     string to transform
+	 * @param   string  $delimiter  delimiter to use
+	 * @return  string
+	 */
+	public static function ucfirst($string, $delimiter = '-')
+	{
+		// Put the keys back the Case-Convention expected
+		return implode($delimiter, array_map('ucfirst', explode($delimiter, $string)));
+	}
+
+	/**
 	 * Reduces multiple slashes in a string to single slashes.
 	 *
 	 *     $str = Text::reduce_slashes('foo//bar/baz'); // "foo/bar/baz"
 	 *
-	 * @param   string  string to reduce slashes of
+	 * @param   string  $str    string to reduce slashes of
 	 * @return  string
 	 */
 	public static function reduce_slashes($str)
@@ -253,10 +269,13 @@ class Kohana_Text {
 	 *         'frick' => '#####',
 	 *     ));
 	 *
-	 * @param   string   phrase to replace words in
-	 * @param   array    words to replace
-	 * @param   string   replacement string
-	 * @param   boolean  replace words across word boundries (space, period, etc)
+	 * If argument $replacement is a single character, it will be used to replace
+	 * the characters in the badword, otherwise it will replace the badword completely
+	 *
+	 * @param   string  $str                    phrase to replace words in
+	 * @param   array   $badwords               words to replace
+	 * @param   string  $replacement            replacement string
+	 * @param   boolean $replace_partial_words  replace words across word boundaries (space, period, etc)
 	 * @return  string
 	 * @uses    UTF8::strlen
 	 */
@@ -277,12 +296,16 @@ class Kohana_Text {
 
 		$regex = '!'.$regex.'!ui';
 
+		// if $replacement is a single character: replace each of the characters of the badword with $replacement
 		if (UTF8::strlen($replacement) == 1)
 		{
-			$regex .= 'e';
-			return preg_replace($regex, 'str_repeat($replacement, UTF8::strlen(\'$1\'))', $str);
+			// issue #4819: use preg_replace_callback, preg_replace with /e modifier is depricated for PHP 5.5.0
+			$callback = create_function('$matches', 'return str_repeat("' . $replacement . '", UTF8::strlen($matches[1]));');
+
+			return preg_replace_callback($regex, $callback, $str);
 		}
 
+		// if $replacement is not a single character, fully replace the badword with $replacement
 		return preg_replace($regex, $replacement, $str);
 	}
 
@@ -291,7 +314,7 @@ class Kohana_Text {
 	 *
 	 *     $match = Text::similar(array('fred', 'fran', 'free'); // "fr"
 	 *
-	 * @param   array   words to find similar text of
+	 * @param   array   $words  words to find similar text of
 	 * @return  string
 	 */
 	public static function similar(array $words)
@@ -321,7 +344,7 @@ class Kohana_Text {
 	 *
 	 * [!!] This method is not foolproof since it uses regex to parse HTML.
 	 *
-	 * @param   string   text to auto link
+	 * @param   string  $text   text to auto link
 	 * @return  string
 	 * @uses    Text::auto_link_urls
 	 * @uses    Text::auto_link_emails
@@ -339,17 +362,17 @@ class Kohana_Text {
 	 *
 	 * [!!] This method is not foolproof since it uses regex to parse HTML.
 	 *
-	 * @param   string   text to auto link
+	 * @param   string  $text   text to auto link
 	 * @return  string
 	 * @uses    HTML::anchor
 	 */
 	public static function auto_link_urls($text)
 	{
 		// Find and replace all http/https/ftp/ftps links that are not part of an existing html anchor
-		$text = preg_replace_callback('~\b(?<!href="|">)(?:ht|f)tps?://\S+(?:/|\b)~i', 'Text::_auto_link_urls_callback1', $text);
+		$text = preg_replace_callback('~\b(?<!href="|">)(?:ht|f)tps?://[^<\s]+(?:/|\b)~i', 'Text::_auto_link_urls_callback1', $text);
 
 		// Find and replace all naked www.links.com (without http://)
-		return preg_replace_callback('~\b(?<!://|">)www(?:\.[a-z0-9][-a-z0-9]*+)+\.[a-z]{2,6}\b~i', 'Text::_auto_link_urls_callback2', $text);
+		return preg_replace_callback('~\b(?<!://|">)www(?:\.[a-z0-9][-a-z0-9]*+)+\.[a-z]{2,6}[^<\s]*\b~i', 'Text::_auto_link_urls_callback2', $text);
 	}
 
 	protected static function _auto_link_urls_callback1($matches)
@@ -370,7 +393,7 @@ class Kohana_Text {
 	 *
 	 * [!!] This method is not foolproof since it uses regex to parse HTML.
 	 *
-	 * @param   string   text to auto link
+	 * @param   string  $text   text to auto link
 	 * @return  string
 	 * @uses    HTML::mailto
 	 */
@@ -395,8 +418,8 @@ class Kohana_Text {
 	 *
 	 * [!!] This method is not foolproof since it uses regex to parse HTML.
 	 *
-	 * @param   string   subject
-	 * @param   boolean  convert single linebreaks to <br />
+	 * @param   string  $str    subject
+	 * @param   boolean $br     convert single linebreaks to <br />
 	 * @return  string
 	 */
 	public static function auto_p($str, $br = TRUE)
@@ -451,10 +474,10 @@ class Kohana_Text {
 	 *
 	 *     echo Text::bytes(filesize($file));
 	 *
-	 * @param   integer  size in bytes
-	 * @param   string   a definitive unit
-	 * @param   string   the return string format
-	 * @param   boolean  whether to use SI prefixes or IEC
+	 * @param   integer $bytes      size in bytes
+	 * @param   string  $force_unit a definitive unit
+	 * @param   string  $format     the return string format
+	 * @param   boolean $si         whether to use SI prefixes or IEC
 	 * @return  string
 	 */
 	public static function bytes($bytes, $force_unit = NULL, $format = NULL, $si = TRUE)
@@ -493,7 +516,7 @@ class Kohana_Text {
 	 *     // Display: five million, six hundred and thirty-two
 	 *     echo Text::number(5000632);
 	 *
-	 * @param   integer   number to format
+	 * @param   integer $number number to format
 	 * @return  string
 	 * @since   3.0.8
 	 */
@@ -515,7 +538,7 @@ class Kohana_Text {
 		{
 			if ($number / $unit >= 1)
 			{
-				// $value = the number of times the number is divisble by unit
+				// $value = the number of times the number is divisible by unit
 				$number -= $unit * ($value = (int) floor($number / $unit));
 				// Temporary var for textifying the current unit
 				$item = '';
@@ -571,20 +594,24 @@ class Kohana_Text {
 	 *
 	 *     echo Text::widont($text);
 	 *
-	 * @param   string  text to remove widows from
+	 * regex courtesy of the Typogrify project
+	 * @link http://code.google.com/p/typogrify/
+	 *
+	 * @param   string  $str    text to remove widows from
 	 * @return  string
 	 */
 	public static function widont($str)
 	{
-		$str = rtrim($str);
-		$space = strrpos($str, ' ');
-
-		if ($space !== FALSE)
-		{
-			$str = substr($str, 0, $space).'&nbsp;'.substr($str, $space + 1);
-		}
-
-		return $str;
+		// use '%' as delimiter and 'x' as modifier 
+ 		$widont_regex = "%
+			((?:</?(?:a|em|span|strong|i|b)[^>]*>)|[^<>\s]) # must be proceeded by an approved inline opening or closing tag or a nontag/nonspace
+			\s+                                             # the space to replace
+			([^<>\s]+                                       # must be flollowed by non-tag non-space characters
+			\s*                                             # optional white space!
+			(</(a|em|span|strong|i|b)>\s*)*                 # optional closing inline tags with optional white space after each
+			((</(p|h[1-6]|li|dt|dd)>)|$))                   # end with a closing p, h1-6, li or the end of the string
+		%x";
+		return preg_replace($widont_regex, '$1&nbsp;$2', $str);
 	}
 
 } // End text
