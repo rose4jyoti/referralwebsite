@@ -1,4 +1,9 @@
 <?php defined('SYSPATH') or die('No direct script access.'); ?>
+<!-----Bootstrap library----->
+ <?php echo Html::style('public/bootstrap-3.1.1-dist/css/bootstrap.min.css'); ?>
+  <?php echo Html::style('public/bootstrap-3.1.1-dist/css/bootstrap.css'); ?>
+
+ 
 <!----date picker jquery---->
 <?php echo Html::style('http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css', array('media'=>'screen, projection'), TRUE); ?>
 <?php echo Html::script('http://code.jquery.com/jquery-1.9.1.js'); ?>
@@ -181,6 +186,9 @@ from this
  <span class="bb">
 I would like to draw  
 
+
+<input name="mrr4" class="asc_nn" style="width:35px;">
+<!--
 <select name="mrr4" class="asc_nn">
 <option value="1">1</option>
 <option value="2">2</option>
@@ -193,6 +201,7 @@ I would like to draw
 <option value="9">9</option>
 <option value="10">10</option>
 </select>
+--->
 
 winner(s)
 <!--
@@ -304,9 +313,10 @@ status.</span>
 	  
 	    <?php //echo Form::hidden('refprogid', $refprogid); ?>
 	   
-        <button type="submit" style="background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; float:right; margin: 40px 0 10px 0px;">
-	     <?php echo Html::image('public/image/next.jpg', array('alt'=>'', 'class'=>''));  ?>
-        </button>
+	   <div style="margin:0px;float:right;">
+	   <button type="submit" class="btn btn-primary btn-lg">Next</button>
+	   </div> 
+        
 	
        <?//= Form::submit('create', 'Create'); ?>
 
