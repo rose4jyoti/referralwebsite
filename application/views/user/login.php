@@ -1,14 +1,18 @@
 <?php defined('SYSPATH') or die('No direct script access.'); ?>
 
 <?php echo Html::style('public/css/style.css'); ?>
-<?php echo Html::style('public/css/bootstrap.css'); ?>
-<?php echo Html::style('public/css/bootstrap-theme.css'); ?>
-<?php echo Html::style('public/css/bootstrap-theme.min.css'); ?>
-<?php echo Html::style('public/css/bootstrap.min.css'); ?>
+<?php //echo Html::style('public/css/bootstrap.css'); ?>
+<?php //echo Html::style('public/css/bootstrap-theme.css'); ?>
+<?php //echo Html::style('public/css/bootstrap-theme.min.css'); ?>
+<?php //echo Html::style('public/css/bootstrap.min.css'); ?>
 
-<style>
-.foter_content_in > ul {
-    width: 85% !important;
+<style type="text/css">
+body {
+    font-size: 14px !important;
+}
+.btn-primary {
+background-image: none !important;
+background-color: #428bca !important;
 }
 </style>
 <div class="wrapper_out">
@@ -20,13 +24,13 @@
             <div class="sign_box_in">
                 <div class="logo_b">
 
-                    <?php echo Html::image('public/image/dummy-logo.png', array('alt' => '')); ?>
+                    <?php echo Html::image('public/image/Logo.png', array('alt'=>'', 'class'=>'image', 'style'=>'padding: 10px 0 21px 40px')); ?>
 
                 </div>
 
 
                 <? if ($message) : ?>
-                    <div class="row-fluid">
+                    <div class="row-fluid" style="float:left;">
                         <div class="alert alert" style="background:none !important; color:red !important; padding-left:45px;">
                             <?= $message; ?>
                         </div>                    
@@ -34,7 +38,7 @@
                 <? endif; ?>
 
                 
-                    <?= Form::open('user/login'); ?>
+                    <?= Form::open('user/login', array('style'=>'float:left;width:100%;')); ?>
                     <!-- 
                     <?= Form::input('username', HTML::chars(Arr::get($_POST, 'username')), array('class' => 'main_in')); ?>
                                
@@ -63,7 +67,7 @@
 
             </div>
 
-
+ 
         </div>
 
     </div>
