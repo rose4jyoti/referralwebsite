@@ -48,7 +48,7 @@
         <h2 class="s_head">insert the script into your website. you can insert the API as a Widget or as an iframe to your website</h2>
       <div id="tabContaier">
 	<ul>
-    	<li><a class="active" href="#tab1">Widget</a></li>
+    	<!--<li><a class="active" href="#tab1">Widget</a></li>-->
     	<li><a href="#tab2">Iframe</a></li> 
   
     </ul>
@@ -57,7 +57,7 @@
 	
 	<?= Form::open('customer/integration'); ?>
     <div class="tabDetails">
-    	<div id="tab1" class="tabContents">
+    	<!--<div id="tab1" class="tabContents">
            <textarea name="widget" style="background-color:#FAFAFA; border: medium none; height: 150px;margin: 0; padding: 0;width: 100%;"><script id="invitebox-script" type="text/javascript">(function() {    var ib = document.createElement('script');    ib.type = 'text/javascript';    ib.async = true;    ib.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'invitebox.com/invitation-camp/5587/invitebox.js?key=713a962709b2585eccc840d3cb26142d&jquery='+(typeof(jQuery)=='undefined');    var s = document.getElementsByTagName('script')[0];    s.parentNode.insertBefore(ib, s);})();</script><a id="invitebox-href" href="<?php echo 'http://softoasistech.com/dev2013/referral/'; ?>importer/index.php?id=<?php echo $wid ?>">Refer a friend</a></textarea>
      
       </div><!-- //tab1 -->
