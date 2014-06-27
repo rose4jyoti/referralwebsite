@@ -4,6 +4,42 @@ defined('SYSPATH') or die('No direct script access.'); ?>
 <?php echo Html::style('http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css', array('media'=>'screen, projection'), TRUE); ?>
 <?php echo Html::script('http://code.jquery.com/jquery-1.9.1.js'); ?>
 <?php echo Html::script('http://code.jquery.com/ui/1.10.3/jquery-ui.js'); ?>
+
+
+<script>
+  
+  function checking(t){
+   //alert(t.id);
+   //alert(t.value);
+
+   var temp= document.getElementById("select").value;
+   var temp1= document.getElementById("select1").value;
+    //alert(temp);
+	if(t.id=="select"){
+	
+    if(temp=="yes"){
+          document.getElementById("test").style.display= "";
+    }else{
+      
+          document.getElementById("test").style.display= "none";
+    }
+	}
+	
+	if(t.id=="select1"){
+	
+    if(temp1=="Manually"){
+          document.getElementById("test1").style.display= "none";
+    }else{
+      
+          document.getElementById("test1").style.display= "";
+    }
+	}
+	
+  }
+  </script>
+
+
+
 <script>
 $(function() { 
 var $j = jQuery.noConflict();
@@ -191,12 +227,12 @@ function afterchange(first, second, main){
 <!---<b>want</b> --->
 
 
-<select name="rwd" class="asc">
+<select name="rwd" class="" id="select1" style="border: 2px solid #d2d2d2;color: #000;cursor: pointer;font: bold 18px Verdana,Geneva,sans-serif; text-align: center;"  onChange="checking(this);">
 <option option="Coupon codes">Coupon codes</option>
 <option option="Manually">Manually</option>
 </select>
 
-
+<span id="test1" > 
 from this
 <br>
  XLS 
@@ -204,7 +240,8 @@ from this
 
 <b><?php echo Form::file('codefile1', array('style'=>'
     margin: 0 0 0 -425px;opacity: 0; width: 75px;cursor: pointer;')); ?> </b>
-	
+
+</span>	
 </span></div>
 
        
@@ -214,9 +251,14 @@ from this
 <?php if($paramid==2){ ?>
  <div class="cam_input">
  <span class="bb">
+ 
+ 
+ 
 I would like to draw  
 
-<select name="mrr4" class="asc_nn">
+<?= Form::input('mrr4',$minReferralRequired,  array('class'=>'asc_nn', 'style'=>'width:45px;')); ?>
+
+<!--<select name="mrr4" class="asc_nn">
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -227,7 +269,7 @@ I would like to draw
 <option value="8">8</option>
 <option value="9">9</option>
 <option value="10">10</option>
-</select>
+</select>-->
 
 winner(s)
 <!--
@@ -258,7 +300,10 @@ randomly. Chances of winning are proportional to the number of entries a partici
 The participant gets 
 
 1 entry when entering this campaign and 
-<select name="mrr" class="asc_nn">
+
+<?= Form::input('mrr',$minReferralRequired,  array('class'=>'asc_nn', 'style'=>'width:45px;')); ?>
+
+<!--<select name="mrr" class="asc_nn">
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -269,7 +314,7 @@ The participant gets
 <option value="8">8</option>
 <option value="9">9</option>
 <option value="10">10</option>
-</select>
+</select>-->
 
 additional entries each time a friend
 <select name="ar" class="asc">
@@ -289,13 +334,13 @@ on my website.
 
 
 <div class="cam_input"><span class="bb">I  
-<select name="ira" class="asc">
+<select id="select" name="ira" class="" style="border: 2px solid #d2d2d2;color: #000;cursor: pointer;font: bold 18px Verdana,Geneva,sans-serif; text-align: center;"  onChange="checking(this);">
 <option option="yes">want</option>
 <option option="no">Don`t want</option>
 </select>
 
 
-to give an instant reward to the participants with a 
+to give an instant reward to the participants<span id="test" > with a 
 
 <select name="cc" class="asc">
 <option option="one-time use coupon code">one-time use coupon code</option>
@@ -305,7 +350,7 @@ from this XLS
 <b>file</b>(<a style="text-decoration:none;" href="<?php echo URL::base(); ?>/uploads/demo.xlsx">click here</a> to see the organised structure).
 
 <b><?php echo Form::file('codefile1', array('style'=>'margin: 0 0 0 -425px;opacity: 0; width: 75px;cursor: pointer;')); ?> </b>
-	
+</span>	
 </span>
 
 </div>
@@ -342,10 +387,10 @@ status.</span>
 	   
 	   <div class="cam_input">
 	  
-         <button type="submit" style=" background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; margin: 0 0 0 835px;">
-	     <?php echo Html::image('public/image/next.jpg', array('alt'=>'', 'class'=>'next_but'));  ?>
-         </button>
-	
+         
+	    <div style="margin:30px 100px 30px 0px;float:right;">
+          <button class="btn btn-primary btn-lg" type="submit">Next</button>
+        </div>
 		
 	   </div>
 	
