@@ -292,9 +292,11 @@
 
 	  </div>
 	  
- <button type="submit" style="    background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; margin:0 0 25px 1065px;">
-	     <?php echo Html::image('public/image/next.jpg', array('alt'=>'', 'class'=>'next_but'));  ?>
-  </button>	  
+	  
+<div style="margin:30px 100px 30px 0px;float:right;">
+<button class="btn btn-primary btn-lg" type="submit">Next</button>
+</div>
+ 
 	  	  
  <?//= Form::submit('Next', 'Next'); ?>
 
