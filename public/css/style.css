@@ -49,6 +49,7 @@ border:1px solid #c5c5c5;}
 .table td{margin:0px;
 padding:0px;}
 
+/*
 .table{ background-color: #FFFFFF;
     border: 1px solid #000000;
     float: left;
@@ -59,7 +60,7 @@ padding:0px;}
     padding: 5px 0 21px 16px;
     width: 96%;
 }
-        
+*/        
         .in_box{ border: 1px solid #CDCDCD;
     border-radius: 0 0 0 0;
     box-shadow: 0 5px 23px -3px #D5D5D5;
@@ -704,7 +705,7 @@ li:hover li a:hover {
 .new_ul {
         float: right;
         /*margin: 50px 0px 0 0;*/
-        margin:40px -268px 0;
+        margin:40px 0px 0;
         padding: 0;
 }
         
@@ -1217,3 +1218,16 @@ background:none!important;
     padding: 0 11px;
 }
 
+
+
+/**********Custom css after 19 june*********/
+.tablen{ background-color: #FFFFFF;
+    border: 1px solid #000000;
+    float: left;
+    font: 14px Verdana,Geneva,sans-serif;
+    height: auto;
+    margin: 0;
+         box-shadow: 0 1px 16px #909090 inset;
+    padding: 5px 0 21px 16px;
+    width: 96%;
+}
