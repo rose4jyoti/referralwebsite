@@ -290,7 +290,7 @@ mail($to,$subject,$message,$headers);
 		         ->where('emailTempID', '=',$data['templateid'])
 				 ->execute()
 				 ->as_array();	
-				 
+				   
 			for($i=0; $i<4;$i++){
 			 //echo $details[$i]['emailTempDetID'];
 			 $t=$i+1;
@@ -1607,7 +1607,7 @@ header("Content-Disposition: attachment; filename=participantlistexports_" . dat
  
  }
 	
- 
+
 	
 	
 	
