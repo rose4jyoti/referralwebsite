@@ -1,4 +1,16 @@
 <?php defined('SYSPATH') or die('No direct script access.'); ?>
+
+
+<!-----Bootstrap library----->
+ <?php echo Html::style('public/bootstrap-3.1.1-dist/css/bootstrap.min.css'); ?>
+  <?php echo Html::style('public/bootstrap-3.1.1-dist/css/bootstrap.css'); ?>
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ <!----Include all compiled plugins (below), or include individual files as needed----> 
+  <?php echo Html::style('public/bootstrap-3.1.1-dist/js/bootstrap.min.js'); ?>
+
+
+
 <?php echo Html::style('public/css/style.css'); ?>
 <?php echo Html::style('public/css/kooltip/kooltip.css'); ?>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -49,6 +61,10 @@ background-image:url("<?php echo URL::base(); ?>/public/image/hover.png");
  float: left;
  margin: 0;
 
+}
+* {
+    box-sizing: none !important;
+    box-sizing: inherit !important;
 }
 
 </style>
@@ -164,48 +180,78 @@ background-image:url("<?php echo URL::base(); ?>/public/image/hover.png");
         <h1 class="Participants_List">Participants List
 		
 		    <!-----------Export bytton------->
-             <span><a href="<?php echo URL::base(); ?>customer/export/<?php echo $rpdid; ?>"><button>Export</button></a></span> 
+             <span><a href="<?php echo URL::base(); ?>customer/export/<?php echo $rpdid; ?>"><button class="btn">Export</button></a></span> 
 			<!------------- END ------------->
 		
 		
 		</h1>
 		
 			
-		
-		<div class="b_textarea" style="">
-         <!--<textarea name="" cols="" rows="" class="b_textarea">-->
+			
+			
+			
+			
 
-		 <?php foreach ($listsn as $temp) : ?>
-		 <center>
-		  <p>
-		 
-		   <span class="listing" style=" font-size: 20px; padding: 0 25px;"><?php echo $temp['userName']; ?> 
-		   
-		   <?php //$t=explode('@',$temp['userEmail']);
-		     //echo $t[0]; ?> 
-		   </span>|
-            <span class="listing"  style=" font-size: 20px; padding: 0 25px;"><?php echo $temp['userEmail']; ?> </span>| 	   
-		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;"><?php echo substr($temp['userRegistredDate'],0,10) ; ?> </span>| 
+
+
+
+
+
+
+		<div class="b_textarea" style="">
+         
+
 		  
-		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;"><?php echo $temp['email_sent']; ?></span>| 
-		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;"><?php echo $temp['subscribed']; ?></span>| 
-		   <span class="listing"  style=" font-size: 20px; padding: 0 25px;">0 </span>
-		   
-		   </p>
-		 </center>
-		<?php endforeach; ?>
-		  	
-		<!---</textarea>----->
+
+			
+<!--------Start participant list--------->			
+<table class="table">
+<thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Email</th>
+<th>Date</th>
+<th>Email sent</th>
+<th>Subscribed</th>
+<th>Reward</th>
+</tr>
+
+</thead>
+<tbody>
+
+
+<?php $i=1; 
+foreach ($listsn as $temp) : ?>
+<tr>
+<td><?php echo $i;?></td>
+<td><?php echo $temp['userName']; ?> </td>
+<td><?php echo $temp['userEmail']; ?></td>
+<td><?php echo substr($temp['userRegistredDate'],0,10) ; ?></td>
+<td><?php echo $temp['email_sent']; ?></td>
+<td><?php echo $temp['subscribed']; ?></td>
+<td>0 </td>
+</tr>
+
+
+<?php 
+$i++;
+endforeach; ?>
+
+
+</thead>
+<tbody>
+</table>
+<!--------end participant list--------->		 
+
 	   </div>
 	   
 
 		   
       </div>
 	  
-	  <a href="<?php echo URL::base(); ?>/customer/creward/<?php echo $rpdid; ?>">
-	     <button type="submit" style="background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; margin: 0 0 14px 863px;">
-	     <?php echo Html::image('public/image/next.jpg', array('alt'=>'', 'class'=>'next_but', 'style'=>'margin:5px 40px 0 0;'));  ?>
-        </button>
+	 <a style="margin: 20px 0 0 915px;" href="<?php echo URL::base(); ?>/customer/creward/<?php echo $rpdid; ?>">
+		 <button class="btn btn-primary btn-lg" type="button">Next</button>
 	  </a>
 	  
 		
