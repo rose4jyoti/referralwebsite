@@ -107,13 +107,13 @@ var_dump($currentTimeoutInSecs);
                                 <div class="control-group col-lg-6">
                                     <label>First Name</label>
                                     <div class="controls">
-                                        <input class="form-control" placeholder="Enter Name" type="text">
+                                        <?php echo Form::input('dodirectpayment[FIRSTNAME]', $dodirectpayment['FIRSTNAME'], array('id' => 'FIRSTNAME', 'class' => 'form-control')) ?>
                                     </div>
                                 </div>
                                 <div class="control-group col-lg-6">
                                     <label>Last Name</label>
                                     <div class="controls">
-                                        <input class="form-control" placeholder="Enter Name" type="text">
+                                        <?php echo Form::input('dodirectpayment[LASTNAME]', $dodirectpayment['LASTNAME'], array('id' => 'LASTNAME', 'class' => 'form-control')) ?>
                                     </div>
                                 </div>
 
@@ -122,13 +122,13 @@ var_dump($currentTimeoutInSecs);
                                 <div class="control-group col-lg-6">
                                     <label>Email address (business)</label>
                                     <div class="controls">
-                                        <input class="form-control" placeholder="Enter Name" type="text">
+                                        <?php echo Form::input('dodirectpayment[EMAIL]', $dodirectpayment['EMAIL'], array('id' => 'EMAIL', 'class' => 'form-control')) ?>
                                     </div>
                                 </div>
                                 <div class="control-group col-lg-6">
                                     <label>Company / organization</label>
                                     <div class="controls">
-                                        <input class="form-control" placeholder="Enter Name" type="text">
+                                        <?php echo Form::input('dodirectpayment[COMPANY]', $dodirectpayment['COMPANY'], array('id' => 'COMPANY', 'class' => 'form-control')) ?>
                                     </div>
                                 </div>
                             </div>
@@ -136,13 +136,13 @@ var_dump($currentTimeoutInSecs);
                                 <div class="control-group col-lg-6">
                                     <label>Office telephone</label>
                                     <div class="controls">
-                                        <input class="form-control" placeholder="Enter Name" type="text">
+                                        <?php echo Form::input('dodirectpayment[SHIPTOPHONENUM]', $dodirectpayment['SHIPTOPHONENUM'], array('id' => 'SHIPTOPHONENUM', 'class' => 'form-control')) ?>
                                     </div>
                                 </div>
                                 <div class="control-group col-lg-6">
                                     <label>Office fax</label>
                                     <div class="controls">
-                                        <input class="form-control" placeholder="Enter Name" type="text">
+                                        <?php echo Form::input('dodirectpayment[SHIPTOFAXNUM]', $dodirectpayment['SHIPTOFAXNUM'], array('id' => 'SHIPTOFAXNUM', 'class' => 'form-control')) ?>
                                     </div>
                                 </div>
                             </div>
@@ -150,13 +150,13 @@ var_dump($currentTimeoutInSecs);
                                 <div class="control-group col-lg-6">
                                     <label>Address</label>
                                     <div class="controls">
-                                        <input class="form-control" placeholder="Enter Name" type="text">
+                                        <?php echo Form::input('dodirectpayment[STREET]', $dodirectpayment['STREET'], array('id' => 'STREET', 'class' => 'form-control')) ?>
                                     </div>
                                 </div>
                                 <div class="control-group col-lg-6">
                                     <label>Address 2</label>
                                     <div class="controls">
-                                        <input class="form-control" placeholder="Enter Name" type="text">
+                                        <?php echo Form::input('dodirectpayment[STREET2]', $dodirectpayment['STREET2'], array('id' => 'STREET2', 'class' => 'form-control')) ?>
                                     </div>
                                 </div>
                             </div>
@@ -164,13 +164,13 @@ var_dump($currentTimeoutInSecs);
                                 <div class="control-group col-lg-6">
                                     <label>City</label>
                                     <div class="controls">
-                                        <input class="form-control" placeholder="Enter Name" type="text">
+                                        <?php echo Form::input('dodirectpayment[CITY]', $dodirectpayment['CITY'], array('id' => 'CITY', 'class' => 'form-control')) ?>
                                     </div>
                                 </div>
                                 <div class="control-group col-lg-6">
                                     <label>State / province</label>
                                     <div class="controls">
-                                        <select class="form-control"><option>options</option></select>
+                                        <?php echo Form::input('dodirectpayment[STATE]', $dodirectpayment['STATE'], array('id' => 'STATE', 'class' => 'form-control')) ?>
                                     </div>
                                 </div>
 
@@ -179,13 +179,13 @@ var_dump($currentTimeoutInSecs);
                                 <div class="control-group col-lg-6">
                                     <label>Zip / postal code</label>
                                     <div class="controls">
-                                        <input class="form-control" placeholder="Enter Name" type="text">
+                                        <?php echo Form::input('dodirectpayment[ZIP]', $dodirectpayment['ZIP'], array('id' => 'ZIP', 'class' => 'form-control')) ?>
                                     </div>
                                 </div>
                                 <div class="control-group col-lg-6">
                                     <label>Country</label>
                                     <div class="controls">
-                                        <select class="form-control"><option>options</option></select>
+                                        <?php echo Form::input('dodirectpayment[COUNTRY]', $dodirectpayment['COUNTRY'], array('id' => 'COUNTRY', 'class' => 'form-control')) ?>
                                     </div>
                                 </div>
                             </div>

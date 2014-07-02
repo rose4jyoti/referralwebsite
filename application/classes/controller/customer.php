@@ -1218,14 +1218,14 @@ class Controller_Customer extends Controller_Template
             Request::current()->redirect('user/login');
         }
 
-        $userid = Auth::instance()->get_user()->id;
-
         $header = View::factory('customer/header');
         $footer = View::factory('customer/footer');
 
         $this->template->content = View::factory('customer/billing')
             ->bind('header', $header)
             ->bind('footer', $footer);
+
+        $this->template->content->dodirectpayment = Auth::instance()->get_user()->directpayment_details();
 
         $this->template->content->packages = ORM::factory('package')
             ->order_by('amount')
@@ -1235,38 +1235,11 @@ class Controller_Customer extends Controller_Template
     public function action_payment()
     {
 
-        $user = Auth::instance()->get_user();
-        if (!$user) {
-            Request::current()->redirect('user/login');
-        }
-
-        $userid = Auth::instance()->get_user()->id;
-        // On préremplit le dodirectpayment
-        $dodirectpayment = "";
-
-
-
-
-        $header = View::factory('customer/header');
-        $footer = View::factory('customer/footer');
-
-        $this->template->content = View::factory('customer/payment', array("dodirectpayment" => $dodirectpayment))
-            ->bind('header', $header)
-            ->bind('footer', $footer);
-
-    }
-
-    /**
-     * /customer/billingagreement/
-     */
-    public function action_billingagreement()
-    {
-
         $package = ORM::factory('package', $this->request->post('package'));
         $billing_agreement_desc = $package->name. ' package ('.$package->description. ').';
         echo $billing_agreement_desc;
 
-        $billing_agreement = PayPal::factory('SetExpressCheckout')
+        $billing_agreement = PayPal::factory('DoExpressCheckoutPayment')
             ->query('CANCELURL', URL::site('customer/billingagreement', 'https'))
             ->query('RETURNURL', URL::site('customer/billing.php', 'https'));
 
@@ -1280,18 +1253,109 @@ class Controller_Customer extends Controller_Template
             ->query('PAYMENTREQUEST_0_AMT', PayPal::number_format(Tax::factory()->calculate($package->amount)));
 
         $billing_agreement
+            ->query('PAYMENTACTION', 'sale')
+            ->query('IPADDRESS', $_SERVER['REMOTE_ADDR'])
+            ->query('FIRSTNAME', 'Luc')
+            ->query('LASTNAME', 'Chateauvert')
+        ->query('CREDITCARDTYPE', 'Visa')
+        ->query('ACCT', '4222222222222')
+        ->query('CVV2', '272')
+        ->query('EXPDATE', '052020')
+        ->query('EMAIL', 'info@example.com')
+        ->query('ZIP', 'H0H 0H0')
+        ->query('STREET', '55, Sesam street')
+        ->query('AMT', PayPal::number_format(Tax::factory()->calculate($package->amount)))
+            ->query('CURRENCYCODE', 'CAD')
             ->query('L_BILLINGTYPE0', 'RecurringPayments')
             ->query('L_BILLINGAGREEMENTDESCRIPTION0', $billing_agreement_desc );
 
         $response = $billing_agreement->execute();
 
-        $validation = PayPal_SetExpressCheckout::get_response_validation($response);
+        $validation = PayPal_DoExpressCheckoutPayment::get_response_validation($response);
 
         if (!$validation->check()) {
+            var_dump($response);
+            var_dump($validation);
             //echo PayPal::parse_response($response);
             var_dump($validation->errors('models'));
         }else{
-            Request::current()->redirect('customer/billing');
+            var_dump($response);
+            var_dump($validation);
+            //Request::current()->redirect('customer/billing');
+        }
+
+    }
+
+    /**
+     * /customer/billingagreement/
+     */
+    public function action_billingagreement()
+    {
+
+        $userid = Auth::instance()->get_user()->id;
+
+        $package = ORM::factory('package', $this->request->post('package'));
+        $billing_agreement_desc = $package->name. ' package ('.$package->description. ').';
+        $billing_agreement_amt = PayPal::number_format(Tax::factory()->diff($package->amount));
+        $billing_agreement_taxamt = PayPal::number_format(Tax::factory()->diff($package->amount));
+        $billing_agreement_totamt = PayPal::number_format(Tax::factory()->calculate($package->amount));
+        echo $billing_agreement_desc;
+
+        $billing_agreement = PayPal::factory('SetExpressCheckoutPayment')
+            ->query('CANCELURL', URL::site('customer/billingagreement', 'https'))
+            ->query('RETURNURL', URL::site('customer/billing.php', 'https'));
+
+        $billing_agreement
+            ->query('NOSHIPPING', '1')
+            ->query('ALLOWNOTE', '0')
+            ->query('LOCALECODE', 'CA')
+            ->query('HDRIMG', Html::image('public/image/Logo.png'));
+
+        $billing_agreement
+            ->query('OrderTotal', $billing_agreement_totamt);
+
+        $billing_agreement
+            ->query('L_BILLINGTYPE0', 'RecurringPayments')
+            ->query('L_BILLINGAGREEMENTDESCRIPTION0', $billing_agreement_desc );
+
+        $response = $billing_agreement->execute();
+
+        $validation = PayPal_DoExpressCheckoutPayment::get_response_validation($response);
+
+        if (!$validation->check()) {
+            var_dump($response);
+            var_dump($validation);
+            //echo PayPal::parse_response($response);
+            var_dump($validation->errors('models'));
+        }else{
+            var_dump($response);
+            var_dump($validation);
+
+            $billing_agreement = PayPal::factory('DoExpressCheckoutPayment')
+                ->query('CANCELURL', URL::site('customer/billingagreement', 'https'))
+                ->query('RETURNURL', URL::site('customer/billing.php', 'https'));
+
+            $billing_agreement
+                ->query('NOSHIPPING', '1')
+                ->query('ALLOWNOTE', '0')
+                ->query('LOCALECODE', 'CA')
+                ->query('HDRIMG', Html::image('public/image/Logo.png'));
+
+            $billing_agreement
+                ->query('AMT', $billing_agreement_totamt)
+                ->query('TAXAMT', $billing_agreement_taxamt);
+
+            $billing_agreement
+                ->query('L_BILLINGTYPE0', 'RecurringPayments')
+                ->query('L_BILLINGAGREEMENTDESCRIPTION0', $billing_agreement_desc );
+
+            $response = $billing_agreement->execute();
+
+            $validation = PayPal_DoExpressCheckoutPayment::get_response_validation($response);
+            /*$query = DB::insert('customerpayments', array('transactionID', 'customerID', 'completedDate', 'packageID', 'paymentType', 'paymentGateway', 'paymentResponse', 'orderSubTotal', 'orderTotal', 'taxAmount'))
+                ->values(array($validation->data('TRANSACTIONID'), $userid, $validation->data('TIMESTAMP'), $package->id, 'paymentType', 'paymentGateway', $validation->data('ACK'), $billing_agreement_amt, $billing_agreement_totamt, $billing_agreement_taxamt))
+                ->execute();*/
+            //Request::current()->redirect('customer/billing');
         }
     }
 
