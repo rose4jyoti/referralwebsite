@@ -5,4 +5,5 @@ return array(
 	CURLOPT_CONNECTTIMEOUT => 5,
 	CURLOPT_TIMEOUT        => 5,
 	CURLOPT_HEADER         => FALSE,
+    CURLOPT_SSL_VERIFYPEER => Kohana::$environment === Kohana::PRODUCTION
 );

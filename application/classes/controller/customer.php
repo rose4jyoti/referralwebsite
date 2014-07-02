@@ -1209,7 +1209,9 @@ class Controller_Customer extends Controller_Template
 
     }
 
-
+    /**
+     * Display available packages.
+     */
     public function action_billing()
     {
 
@@ -1232,57 +1234,130 @@ class Controller_Customer extends Controller_Template
             ->find_all();
     }
 
+    /**
+     * Initiate package purchase.
+     */
     public function action_payment()
     {
 
-        $package = ORM::factory('package', $this->request->post('package'));
-        $billing_agreement_desc = $package->name. ' package ('.$package->description. ').';
-        echo $billing_agreement_desc;
+        $package = ORM::factory('package', $this->request->param('id'));
 
-        $billing_agreement = PayPal::factory('DoExpressCheckoutPayment')
-            ->query('CANCELURL', URL::site('customer/billingagreement', 'https'))
-            ->query('RETURNURL', URL::site('customer/billing.php', 'https'));
+        /**
+         * @todo terminer la configuration pour le dodirectpayment
+         */
+        $dodirectpayment = PayPal::factory('DoDirectPayment')
+            ->query('PAYMENTACTION', 'Sale')
+            ->query('IPADDRESS', Arr::get($_SERVER, 'REMOTE_ADDR', '127.0.0.1'))
+            ->query('NOTIFYURL', Route::url('ipn', NULL, 'https'));
 
-        $billing_agreement
+        /**
+         * Item details
+         */
+        $dodirectpayment
+            ->query('L_ITEM0', $package->name);
+        /**
+         * Payment details
+         */
+        $dodirectpayment
+            ->query('RECURRING', 'Y')
+            ->query('ITEMAMT', PayPal::number_format($package->amount))
+            ->query('TAXAMT', PayPal::number_format(Tax::factory()->diff($package->amount)))
+            ->query('AMT', PayPal::number_format(Tax::factory()->calculate($package->amount)));
+
+        $billing_agreement_desc = $package->name . ' package (' . $package->description . ').';
+
+        /**
+         * @todo terminer la configuration pour l'expresscheckout
+         */
+        $setexpresscheckout = PayPal::factory('SetExpressCheckout')
+            ->query('CANCELURL', Route::url('default', array('controller' => 'customer', 'action' => 'cancel'), 'https'))
+            ->query('RETURNURL', Route::url('default', array('controller' => 'customer', 'action' => 'complete'), 'https'));
+
+        $setexpresscheckout
             ->query('NOSHIPPING', '1')
             ->query('ALLOWNOTE', '0')
             ->query('LOCALECODE', 'CA')
             ->query('HDRIMG', Html::image('public/image/Logo.png'));
 
-        $billing_agreement
+        $setexpresscheckout
             ->query('PAYMENTREQUEST_0_AMT', PayPal::number_format(Tax::factory()->calculate($package->amount)));
 
-        $billing_agreement
-            ->query('PAYMENTACTION', 'sale')
-            ->query('IPADDRESS', $_SERVER['REMOTE_ADDR'])
-            ->query('FIRSTNAME', 'Luc')
-            ->query('LASTNAME', 'Chateauvert')
-        ->query('CREDITCARDTYPE', 'Visa')
-        ->query('ACCT', '4222222222222')
-        ->query('CVV2', '272')
-        ->query('EXPDATE', '052020')
-        ->query('EMAIL', 'info@example.com')
-        ->query('ZIP', 'H0H 0H0')
-        ->query('STREET', '55, Sesam street')
-        ->query('AMT', PayPal::number_format(Tax::factory()->calculate($package->amount)))
+        $setexpresscheckout
+            ->query('AMT', PayPal::number_format(Tax::factory()->calculate($package->amount)))
             ->query('CURRENCYCODE', 'CAD')
             ->query('L_BILLINGTYPE0', 'RecurringPayments')
-            ->query('L_BILLINGAGREEMENTDESCRIPTION0', $billing_agreement_desc );
+            ->query('L_BILLINGAGREEMENTDESCRIPTION0', $billing_agreement_desc);
 
-        $response = $billing_agreement->execute();
+        if ($this->request->method() === Request::POST) {
 
-        $validation = PayPal_DoExpressCheckoutPayment::get_response_validation($response);
+            if ($this->request->post('payment') === 'dodirectpayment') {
 
-        if (!$validation->check()) {
-            var_dump($response);
-            var_dump($validation);
-            //echo PayPal::parse_response($response);
-            var_dump($validation->errors('models'));
-        }else{
-            var_dump($response);
-            var_dump($validation);
-            //Request::current()->redirect('customer/billing');
+                /**
+                 * @todo ajouter les cles manquantes
+                 */
+                $expected = array(
+                    'FIRSTNAME', 'LASTNAME', 'EMAIL',
+                    'STREET', 'CITY', 'ZIP',
+                    'ACCT', 'CV2', 'EXPDATE'
+                );
+
+                foreach (Arr::extract($this->request->post('dodirectpayment'), $expected) as $key => $value) {
+
+                    $dodirectpayment->query($key, $value);
+                }
+
+                var_dump($dodirectpayment->query());
+
+                $response = $dodirectpayment->execute();
+
+                var_dump(PayPal::parse_response($response));
+
+            }
+
+            if ($this->request->post('payment') === 'setexpresscheckout') {
+
+                $response = $setexpresscheckout->execute();
+
+                $validation = PayPal_SetExpressCheckout::get_response_validation($response);
+
+                if ($validation->check()) {
+
+                    /**
+                     * Redirect user to PayPal website.
+                     */
+                    $this->request->redirect(PayPal_SetExpressCheckout::redirect_url() . URL::query(PayPal_SetExpressCheckout::redirect_query($response)));
+
+                }
+
+                // @todo afficher une erreur
+            }
         }
+
+        $this->template->content = View::factory('customer/payment', array(
+            'dodirectpayment' => $dodirectpayment
+        ));
+
+    }
+
+    /**
+     * Complete an express checkout
+     */
+    public function action_complete()
+    {
+
+        if($token = $this->request->query('token') AND $payer_id = $this->request->query('PayerID')) {
+
+
+        }
+
+    }
+
+    /**
+     * Cancel an express checkout.
+     */
+    public function action_cancel()
+    {
+
 
     }
 
@@ -1295,7 +1370,7 @@ class Controller_Customer extends Controller_Template
         $userid = Auth::instance()->get_user()->id;
 
         $package = ORM::factory('package', $this->request->post('package'));
-        $billing_agreement_desc = $package->name. ' package ('.$package->description. ').';
+        $billing_agreement_desc = $package->name . ' package (' . $package->description . ').';
         $billing_agreement_amt = PayPal::number_format(Tax::factory()->diff($package->amount));
         $billing_agreement_taxamt = PayPal::number_format(Tax::factory()->diff($package->amount));
         $billing_agreement_totamt = PayPal::number_format(Tax::factory()->calculate($package->amount));
@@ -1316,7 +1391,7 @@ class Controller_Customer extends Controller_Template
 
         $billing_agreement
             ->query('L_BILLINGTYPE0', 'RecurringPayments')
-            ->query('L_BILLINGAGREEMENTDESCRIPTION0', $billing_agreement_desc );
+            ->query('L_BILLINGAGREEMENTDESCRIPTION0', $billing_agreement_desc);
 
         $response = $billing_agreement->execute();
 
@@ -1327,7 +1402,7 @@ class Controller_Customer extends Controller_Template
             var_dump($validation);
             //echo PayPal::parse_response($response);
             var_dump($validation->errors('models'));
-        }else{
+        } else {
             var_dump($response);
             var_dump($validation);
 
@@ -1347,7 +1422,7 @@ class Controller_Customer extends Controller_Template
 
             $billing_agreement
                 ->query('L_BILLINGTYPE0', 'RecurringPayments')
-                ->query('L_BILLINGAGREEMENTDESCRIPTION0', $billing_agreement_desc );
+                ->query('L_BILLINGAGREEMENTDESCRIPTION0', $billing_agreement_desc);
 
             $response = $billing_agreement->execute();
 
@@ -1497,6 +1572,15 @@ class Controller_Customer extends Controller_Template
 
         Request::current()->redirect('customer/dashboard');
 
+    }
+
+    public function after()
+    {
+
+        $this->template->content->header = View::factory('customer/header');
+        $this->template->content->footer = View::factory('customer/footer');
+
+        parent::after();
     }
 
 

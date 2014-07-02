@@ -56,7 +56,7 @@ var_dump($currentTimeoutInSecs);
                                             <?php echo Num::format($package->amount,0, TRUE) ?> $
                                         </td>
                                         <td style="vertical-align: middle">
-                                            <button class="btn btn-success" name="package" value="<?php echo $package->id ?>">Upgrade</button>
+                                            <?php echo HTML::anchor(Route::get('default')->uri(array('controller' => 'customer', 'action' => 'payment', 'id' => $package->id)), 'Upgrade for ' . $package->name) ?>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

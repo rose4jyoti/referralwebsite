@@ -30,7 +30,7 @@ date_default_timezone_set('America/Montreal');
  * @see  http://kohanaframework.org/guide/using.configuration
  * @see  http://php.net/setlocale
  */
-setlocale(LC_ALL, 'en_US.utf-8');
+setlocale(LC_ALL, 'en_CA.utf-8');
 
 /**
  * Enable the Kohana auto-loader.
@@ -53,7 +53,7 @@ ini_set('unserialize_callback_func', 'spl_autoload_call');
 /**
  * Set the default language
  */
-I18n::lang('en-us');
+I18n::lang('en');
 
 /**
  * Set Kohana::$environment if a 'KOHANA_ENV' environment variable has been supplied.
@@ -108,7 +108,6 @@ Kohana::modules(array(
     'orm'        => MODPATH.'orm',        // Object Relationship Mapping
     'unittest'   => MODPATH.'unittest',   // Unit testing
     'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-
     'bootstrap'  => MODPATH.'bootstrap',  // Helper for Twitter Bootstrap
     'paypal'    => MODPATH.'paypal',
     'tax'       => MODPATH.'tax'
