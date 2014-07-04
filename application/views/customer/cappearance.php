@@ -15,7 +15,13 @@ foreach ($images as $temp) :
  if($temp['referralProgImageOrder']=='3'){
    $img3=$temp['referralProgImage'];
  }
+ 
+endforeach; ?>
 
+<?php foreach ($query as $temp) :
+
+ $referralProgTCs=$temp['referralProgTCs']; 
+ 
 endforeach; ?>
 
 								  
@@ -256,9 +262,26 @@ endforeach; ?>
 	
                 </div>
 				
+				
+				
+			<div class="form">
+				<div class="form_in">
+				<div class="reward">
+				 <div class="cam_input">
+			<?php echo Form::open('customer/cappearance/'.$rpdid, array('enctype' => 'multipart/form-data')); ?>
+			  <span>Enter campaign's Terms and Conditions URL
+			  <?= Form::input('referralProgTCs',$referralProgTCs,  array('class'=>'aa_new')); ?>
+			</span>
+			</div>
+			</div>
+			</div>
+			</div>
+				
+				
+				
 				<a style="margin:30px 100px 30px 0px;float:right;" href="<?php echo URL::base(); ?>/customer/cintegration/<?php echo $rpdid ?>" style="margin:0px; float:right;">
 				
-				    <button class="btn btn-primary btn-lg" type="button">Next</button>
+				    <button class="btn btn-primary btn-lg" type="submit">Next</button>
 			
 			    </a>
 				

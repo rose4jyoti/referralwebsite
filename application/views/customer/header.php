@@ -1,6 +1,17 @@
 <?php defined('SYSPATH') or die('No direct script access.'); ?>
 
 <style>
+.navbar-inverse {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+.navbar-fixed-bottom {
+  position: absolute;	
+ }
+.navbar {
+  border: none;
+}
+ 
 ul li a {
 border-radius: 0px;
 text-decoration: none !important;
@@ -15,9 +26,8 @@ font-family: Verdana,Geneva,sans-serif !important;
 </style>
 
 
-<?php echo Html::style('public/css/headercss/scrolling-nav.css'); ?>
+<?php //echo Html::style('public/css/headercss/scrolling-nav.css'); ?>
 <?php echo Html::style('public/css/headercss/lucstyle.css'); ?>
-
 <?php echo Html::style('public/css/headercss/bootstrap.css'); ?>
 
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
@@ -27,7 +37,7 @@ font-family: Verdana,Geneva,sans-serif !important;
  
 <!--start: Header -->
 <header>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="width:100%">
         <!--start: Container -->
         <div class="container">
             <!--start: Row -->

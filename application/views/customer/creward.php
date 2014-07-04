@@ -12,35 +12,34 @@ defined('SYSPATH') or die('No direct script access.'); ?>
    //alert(t.id);
    //alert(t.value);
 
-   var temp= document.getElementById("select").value;
-   var temp1= document.getElementById("select1").value;
-    //alert(temp);
-	if(t.id=="select"){
-	
+  
+
+   
+	if(t.id=='select'){
+	   var temp= document.getElementById("select").value;
+    
     if(temp=="yes"){
-          document.getElementById("test").style.display= "";
+          document.getElementById("test").style.display= "inline";
     }else{
-      
           document.getElementById("test").style.display= "none";
+      
     }
 	}
 	
 	if(t.id=="select1"){
-	
-    if(temp1=="Manually"){
+	   var temp= document.getElementById("select1").value;
+    if(temp=="Manually"){
           document.getElementById("test1").style.display= "none";
     }else{
       
-          document.getElementById("test1").style.display= "";
+          document.getElementById("test1").style.display= "inline";
     }
 	}
 	
   }
   </script>
-
-
-
-<script>
+<script>  
+ 
 $(function() { 
 var $j = jQuery.noConflict();
 $j( "#datepicker1" ).datepicker({ dateFormat: "yy-m-d" });
@@ -72,11 +71,14 @@ function afterchange(first, second, main){
 <?php foreach ($query as $temp) : 
    $title=$temp['referralProgTitle']; 
    $description=$temp['referralProgDescription']; 
+   $referralProgSocShareReward=$temp['referralProgSocShareReward']; 
  endforeach; ?>
 <?php foreach ($query1 as $temp) : 
    $start=$temp['startTime']; 
    $end=$temp['endTime']; 
    $minReferralRequired=$temp['minReferralRequired']; 
+   $maxReferralLimit=$temp['maxReferralLimit']; 
+    
  endforeach; ?>
 
 <div class="wrapper_out">
@@ -301,7 +303,7 @@ The participant gets
 
 1 entry when entering this campaign and 
 
-<?= Form::input('mrr',$minReferralRequired,  array('class'=>'asc_nn', 'style'=>'width:45px;')); ?>
+<?= Form::input('mrr',$maxReferralLimit,  array('class'=>'asc_nn', 'style'=>'width:45px;')); ?>
 
 <!--<select name="mrr" class="asc_nn">
 <option value="1">1</option>
@@ -333,10 +335,14 @@ on my website.
 
 
 
-<div class="cam_input"><span class="bb">I  
+<div class="cam_input">
+
+<span class="bb">I  
+
+
 <select id="select" name="ira" class="" style="border: 2px solid #d2d2d2;color: #000;cursor: pointer;font: bold 18px Verdana,Geneva,sans-serif; text-align: center;"  onChange="checking(this);">
-<option option="yes">want</option>
-<option option="no">Don`t want</option>
+<option value="yes">want</option>
+<option value="no">Don`t want</option>
 </select>
 
 
@@ -347,10 +353,10 @@ to give an instant reward to the participants<span id="test" > with a
 <option option="multi-time use coupon code">multi-time use coupon code</option>
 </select>
 from this XLS
-<b>file</b>(<a style="text-decoration:none;" href="<?php echo URL::base(); ?>/uploads/demo.xlsx">click here</a> to see the organised structure).
+<b>file</b>(<a style="text-decoration:none;" href="<?php echo URL::base(); ?>/uploads/demo.xlsx">click here</a> to see the organised structure).</span>
 
 <b><?php echo Form::file('codefile1', array('style'=>'margin: 0 0 0 -425px;opacity: 0; width: 75px;cursor: pointer;')); ?> </b>
-</span>	
+	
 </span>
 
 </div>
@@ -368,6 +374,19 @@ from this XLS
 to send the status update once per week to every participant to inform them on their referral
 status.</span>
 </div>
+
+
+
+<div class="cam_input">
+ <span class="bb">
+ 
+
+<?= Form::input('referralProgSocShareReward',$referralProgSocShareReward,  array('class'=>'asc_nn', 'style'=>'width:45px;')); ?>
+  Number of extra entries a participant get for sharing on the social network via the participant interface
+
+</span>
+</div>
+
 
 
                         <!----

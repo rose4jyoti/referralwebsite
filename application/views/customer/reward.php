@@ -8,6 +8,41 @@
 <?php echo Html::style('http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css', array('media'=>'screen, projection'), TRUE); ?>
 <?php echo Html::script('http://code.jquery.com/jquery-1.9.1.js'); ?>
 <?php echo Html::script('http://code.jquery.com/ui/1.10.3/jquery-ui.js'); ?>
+
+<script>
+  
+  function checking(t){
+   //alert(t.id);
+   //alert(t.value);
+
+  
+
+   
+	if(t.id=='select'){
+	   var temp= document.getElementById("select").value;
+    
+    if(temp=="yes"){
+          document.getElementById("test").style.display= "inline";
+    }else{
+          document.getElementById("test").style.display= "none";
+      
+    }
+	}
+	
+	if(t.id=="select1"){
+	   var temp= document.getElementById("select1").value;
+    if(temp=="Manually"){
+          document.getElementById("test1").style.display= "none";
+    }else{
+      
+          document.getElementById("test1").style.display= "inline";
+    }
+	}
+	
+  }
+  </script>
+
+
 <script>
 $(function() { 
 var $j = jQuery.noConflict();
@@ -161,12 +196,12 @@ function afterchange(first, second, main){
 <!---<b>want</b> --->
 
 
-<select name="rwd" class="asc">
+<select name="rwd" class="" id="select1" style="border: 2px solid #d2d2d2;color: #000;cursor: pointer;font: bold 18px Verdana,Geneva,sans-serif; text-align: center;"  onChange="checking(this);">
 <option option="Coupon codes">Coupon codes</option>
 <option option="Manually">Manually</option>
 </select>
 
-
+<span id="test1" > 
 from this
 <br>
  XLS 
@@ -174,7 +209,7 @@ from this
 
 <b><?php echo Form::file('codefile1', array('style'=>'margin: 0 0 0 -425px;opacity: 0; width: 75px;cursor: pointer;')); ?> </b>
 	
-	
+</span>	
 </span></div>
 
        
@@ -186,9 +221,9 @@ from this
  <span class="bb">
 I would like to draw  
 
+<?= Form::input('mrr4','',  array('class'=>'asc_nn', 'style'=>'width:45px;')); ?>
+<!--<input name="mrr4" class="asc_nn" style="width:35px;">
 
-<input name="mrr4" class="asc_nn" style="width:35px;">
-<!--
 <select name="mrr4" class="asc_nn">
 <option value="1">1</option>
 <option value="2">2</option>
@@ -232,7 +267,11 @@ randomly. Chances of winning are proportional to the number of entries a partici
 The participant gets 
 
 1 entry when entering this campaign and 
-<select name="mrr" class="asc_nn">
+
+<?= Form::input('mrr','',  array('class'=>'asc_nn', 'style'=>'width:45px;')); ?>
+
+
+<!--<select name="mrr" class="asc_nn">
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -243,7 +282,7 @@ The participant gets
 <option value="8">8</option>
 <option value="9">9</option>
 <option value="10">10</option>
-</select>
+</select>-->
 
 additional entries each time a friend
 <select name="ar" class="asc">
@@ -263,27 +302,34 @@ on my website.
 
 
 
-<div class="cam_input"><span class="bb">I  
-<select name="ira" class="asc">
-<option option="yes">want</option>
-<option option="no">Don`t want</option>
+<div class="cam_input">
+
+<span class="bb">I  
+
+<select id="select" name="ira" class="" style="border: 2px solid #d2d2d2;color: #000;cursor: pointer;font: bold 18px Verdana,Geneva,sans-serif; text-align: center;"  onChange="checking(this);">
+<option value="yes">want</option>
+<option value="no">Don`t want</option>
 </select>
 
 
-to give an instant reward to the participants with a 
+
+to give an instant reward to the participants <span id="test" > with a 
 
 <select name="cc" class="asc">
 <option option="one-time use coupon code">one-time use coupon code</option>
 <option option="multi-time use coupon code">multi-time use coupon code</option>
 </select>
 from this XLS
-<b>file</b>(<a style="text-decoration:none;" href="<?php echo URL::base(); ?>/uploads/demo.xlsx">click here</a> to see the organised structure).
+<b>file</b>(<a style="text-decoration:none;" href="<?php echo URL::base(); ?>/uploads/demo.xlsx">click here</a> to see the organised structure).</span>
 
 <b><?php echo Form::file('codefile2', array('style'=>'margin: 0 0 0 -425px;opacity: 0; width: 75px;cursor: pointer;')); ?> </b>
 
 </span>
 
 </div>
+
+
+
 
 
 <div class="cam_input"><span class="bb">I  
@@ -297,6 +343,21 @@ from this XLS
 to send the status update once per week to every participant to inform them on their referral
 status.</span>
 </div>
+
+<div class="cam_input">
+ <span class="bb">
+ 
+
+<?= Form::input('referralProgSocShareReward','',  array('class'=>'asc_nn', 'style'=>'width:45px;')); ?>
+  Number of extra entries a participant get for sharing on the social network via the participant interface
+
+</span>
+</div>
+
+
+
+
+
 
        
                       <div class="mssgbox">
