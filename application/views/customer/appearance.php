@@ -17,7 +17,14 @@ foreach ($images as $temp) :
  }
 
 endforeach; ?>
-								  
+	
+
+
+
+
+
+
+	
 <div class="wrapper_out">
   <div class="wrapper_in">
     
@@ -238,14 +245,29 @@ endforeach; ?>
 				
                 </div>
 				
-			  <a href="<?php echo URL::base(); ?>customer/integration" style="margin:30px 100px 30px 0px;float:right;">
-				
 			
-                <button class="btn btn-primary btn-lg" type="button">Next</button>
+			
+			
+			<div class="form">
+				<div class="form_in">
+				<div class="reward">
+				 <div class="cam_input">
+			<?php echo Form::open('customer/appearance', array('enctype' => 'multipart/form-data')); ?>
+			  <span>Enter campaign's Terms and Conditions URL
+			  <?= Form::input('referralProgTCs','',  array('class'=>'aa_new')); ?>
+			</span>
+			</div>
+			</div>
+			</div>
+			</div>
+
+			  <a href="<?php echo URL::base(); ?>customer/integration" style="margin:30px 100px 30px 0px;float:right;">
+
+                <button class="btn btn-primary btn-lg" type="submit">Next</button>
 
 			  </a>
 			
-				
+			  <?= Form::close(); ?>	
 			   
 		  </div>
 		  
