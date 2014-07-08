@@ -85,14 +85,14 @@ endforeach;
                 </div><br />
                 Reply to email: &nbsp;
   
-				<?= Form::input('rte',$rte,  array('size'=>'24','class'=>'aa_new', 'style'=>'width: 265px;')); ?>
+				<?= Form::input('fnd',$fnd,  array('size'=>'24','class'=>'aa_new', 'style'=>'width: 265px;')); ?>
 				
 			
 				<!---<input type="email"  size="24"/>---->
 				<br />
                 <p>From name display:&nbsp;
 				
-				<?= Form::input('fnd',$fnd, array('class'=>'aa_new')); ?>
+				<?= Form::input('rte',$rte, array('class'=>'aa_new')); ?>
 				<!------<input type="text" />----->
 				</p>
                 </div>
