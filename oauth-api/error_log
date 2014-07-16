@@ -1,0 +1,892 @@
+[18-Mar-2014 07:37:55 America/Denver] PHP Fatal error:  require(): Failed opening required 'oauth_client.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 13
+[18-Mar-2014 07:37:59 America/Denver] PHP Fatal error:  require(): Failed opening required 'oauth_client.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 13
+[18-Mar-2014 07:38:00 America/Denver] PHP Fatal error:  require(): Failed opening required 'oauth_client.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 13
+[18-Mar-2014 07:38:02 America/Denver] PHP Warning:  Unterminated comment starting line 592 in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 592
+[18-Mar-2014 07:38:02 America/Denver] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 599
+[18-Mar-2014 23:16:29 America/Denver] OAuth client: Checking if OAuth access token was already retrieved from 
+[18-Mar-2014 23:16:29 America/Denver] OAuth client: Checking the authentication state in URI /dev2013/referral//oauth-api/test_oauth_client.php
+[18-Mar-2014 23:16:29 America/Denver] OAuth client: Error: the dialog URL is not defined for this server
+[18-Mar-2014 23:35:05 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 27
+[18-Mar-2014 23:35:05 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[18-Mar-2014 23:35:05 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[18-Mar-2014 23:35:05 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 38
+[18-Mar-2014 23:35:07 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 27
+[18-Mar-2014 23:35:07 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[18-Mar-2014 23:35:07 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[18-Mar-2014 23:35:07 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 38
+[18-Mar-2014 23:35:10 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 27
+[18-Mar-2014 23:35:10 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[18-Mar-2014 23:35:10 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[18-Mar-2014 23:35:10 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 38
+[18-Mar-2014 23:35:22 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 4
+[18-Mar-2014 23:35:22 America/Denver] PHP Notice:  Undefined variable: current_click in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 20
+[18-Mar-2014 23:35:22 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 27
+[18-Mar-2014 23:35:22 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[18-Mar-2014 23:35:22 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[18-Mar-2014 23:35:22 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 38
+[18-Mar-2014 23:36:28 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 4
+[18-Mar-2014 23:36:28 America/Denver] PHP Notice:  Undefined variable: current_click in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 20
+[18-Mar-2014 23:36:28 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 27
+[18-Mar-2014 23:36:28 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 38
+[18-Mar-2014 23:36:28 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 38
+[18-Mar-2014 23:36:28 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 39
+[18-Mar-2014 23:36:32 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 27
+[18-Mar-2014 23:36:32 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 38
+[18-Mar-2014 23:36:32 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 38
+[18-Mar-2014 23:36:32 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 39
+[18-Mar-2014 23:36:33 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 27
+[18-Mar-2014 23:36:33 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 38
+[18-Mar-2014 23:36:33 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 38
+[18-Mar-2014 23:36:33 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 39
+[19-Mar-2014 04:15:30 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 27
+[19-Mar-2014 04:15:30 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 38
+[19-Mar-2014 04:15:30 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 38
+[19-Mar-2014 04:15:30 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 39
+[19-Mar-2014 07:27:17 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 27
+[19-Mar-2014 07:27:17 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 38
+[19-Mar-2014 07:27:17 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 38
+[19-Mar-2014 07:27:17 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 39
+[19-Mar-2014 07:28:10 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 27
+[19-Mar-2014 07:28:10 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 38
+[19-Mar-2014 07:28:10 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 38
+[19-Mar-2014 07:28:10 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 39
+[19-Mar-2014 07:30:47 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:30:47 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:30:47 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:30:47 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[19-Mar-2014 07:30:49 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:30:49 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:30:49 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:30:49 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[19-Mar-2014 07:31:02 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:31:02 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:31:02 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:31:02 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[19-Mar-2014 07:31:04 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:31:04 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:31:04 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:31:04 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[19-Mar-2014 07:31:05 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:31:05 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:31:05 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:31:05 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[19-Mar-2014 07:31:22 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:31:22 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:31:22 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:31:22 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[19-Mar-2014 07:32:32 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:32:32 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:32:32 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:32:32 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[19-Mar-2014 07:32:35 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:32:35 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:32:35 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:32:35 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[19-Mar-2014 07:32:37 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:32:37 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:32:37 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:32:37 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[19-Mar-2014 07:33:04 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:33:04 America/Denver] PHP Warning:  include_once(example/contacts.main.php): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:33:04 America/Denver] PHP Warning:  include_once(): Failed opening 'example/contacts.main.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 36
+[19-Mar-2014 07:33:04 America/Denver] PHP Fatal error:  Class 'ContactsHandler' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 37
+[19-Mar-2014 07:34:41 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:34:41 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:34:41 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 149
+[19-Mar-2014 07:34:43 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:34:43 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:34:43 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 149
+[19-Mar-2014 07:36:05 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:36:05 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:36:05 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 149
+[19-Mar-2014 07:37:51 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:37:51 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:37:51 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 149
+[19-Mar-2014 07:37:53 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:37:53 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:37:53 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 149
+[19-Mar-2014 07:37:55 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:37:55 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:37:55 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 149
+[19-Mar-2014 07:38:22 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:38:22 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:38:22 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 149
+[19-Mar-2014 07:40:11 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:40:11 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:40:11 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 150
+[19-Mar-2014 07:40:17 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:40:17 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:40:17 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 150
+[19-Mar-2014 07:40:19 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:40:19 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:40:19 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 150
+[19-Mar-2014 07:49:31 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:49:31 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:49:31 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 150
+[19-Mar-2014 07:50:29 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:50:29 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:50:29 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 150
+[19-Mar-2014 07:50:32 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:50:32 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:50:32 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 150
+[19-Mar-2014 07:50:35 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:50:35 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:50:35 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 150
+[19-Mar-2014 07:51:45 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:51:45 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:51:45 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 93
+[19-Mar-2014 07:51:47 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:51:47 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:51:47 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 93
+[19-Mar-2014 07:53:48 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:53:48 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:53:48 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 93
+[19-Mar-2014 07:55:18 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:55:18 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:55:18 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 93
+[19-Mar-2014 07:55:59 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:55:59 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:55:59 America/Denver] PHP Notice:  Undefined variable: refprogdesc in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 122
+[19-Mar-2014 07:55:59 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[19-Mar-2014 07:56:02 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:56:02 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:56:02 America/Denver] PHP Notice:  Undefined variable: refprogdesc in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 122
+[19-Mar-2014 07:56:02 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[19-Mar-2014 07:56:31 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:56:31 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:56:31 America/Denver] PHP Notice:  Undefined variable: refprogdesc in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 122
+[19-Mar-2014 07:56:31 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[19-Mar-2014 07:57:36 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:57:36 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:57:36 America/Denver] PHP Notice:  Undefined variable: refprogdesc in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 122
+[19-Mar-2014 07:57:36 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[19-Mar-2014 07:57:38 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:57:38 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:57:38 America/Denver] PHP Notice:  Undefined variable: refprogdesc in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 125
+[19-Mar-2014 07:57:38 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 135
+[19-Mar-2014 07:57:38 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 175
+[19-Mar-2014 07:57:40 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:57:40 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:57:40 America/Denver] PHP Notice:  Undefined variable: refprogdesc in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 125
+[19-Mar-2014 07:57:40 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 135
+[19-Mar-2014 07:57:40 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 175
+[19-Mar-2014 07:58:19 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:58:19 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:58:19 America/Denver] PHP Notice:  Undefined variable: refprogdesc in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 125
+[19-Mar-2014 07:58:19 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 135
+[19-Mar-2014 07:58:19 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 175
+[19-Mar-2014 07:58:26 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:58:26 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 50
+[19-Mar-2014 07:58:26 America/Denver] PHP Notice:  Undefined variable: refprogdesc in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 125
+[19-Mar-2014 07:58:26 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 135
+[19-Mar-2014 07:58:26 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 175
+[19-Mar-2014 07:58:58 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:58:58 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 46
+[19-Mar-2014 07:58:58 America/Denver] PHP Notice:  Undefined variable: refprogdesc in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 121
+[19-Mar-2014 07:58:58 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 131
+[19-Mar-2014 07:58:58 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 171
+[19-Mar-2014 07:59:00 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 07:59:00 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 46
+[19-Mar-2014 07:59:00 America/Denver] PHP Notice:  Undefined variable: refprogdesc in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 121
+[19-Mar-2014 07:59:00 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 131
+[19-Mar-2014 07:59:00 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 171
+[19-Mar-2014 08:00:19 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 08:00:19 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 46
+[19-Mar-2014 08:00:19 America/Denver] PHP Notice:  Undefined variable: refprogdesc in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 121
+[19-Mar-2014 08:00:19 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 131
+[19-Mar-2014 08:00:19 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 171
+[19-Mar-2014 08:00:21 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 08:00:21 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 57
+[19-Mar-2014 08:00:21 America/Denver] PHP Notice:  Undefined variable: refprogdesc in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 121
+[19-Mar-2014 08:00:21 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 131
+[19-Mar-2014 08:00:21 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 171
+[19-Mar-2014 08:00:58 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 08:00:58 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 131
+[19-Mar-2014 08:00:58 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 171
+[19-Mar-2014 08:01:00 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 08:01:00 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 131
+[19-Mar-2014 08:01:00 America/Denver] PHP Fatal error:  Using $this when not in object context in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 171
+[19-Mar-2014 08:01:42 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 08:01:42 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 131
+[19-Mar-2014 08:01:42 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 175
+[19-Mar-2014 08:01:46 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 08:01:46 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 131
+[19-Mar-2014 08:01:46 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 175
+[19-Mar-2014 08:01:48 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 08:01:48 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 131
+[19-Mar-2014 08:01:48 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 175
+[19-Mar-2014 08:04:20 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 08:04:20 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 133
+[19-Mar-2014 08:04:20 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 177
+[19-Mar-2014 08:05:31 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 08:05:31 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 133
+[19-Mar-2014 08:05:31 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 177
+[19-Mar-2014 08:05:59 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 08:05:59 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 133
+[19-Mar-2014 08:05:59 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 177
+[19-Mar-2014 08:06:01 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 08:06:01 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 133
+[19-Mar-2014 08:06:01 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 177
+[19-Mar-2014 08:06:20 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 08:06:20 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[19-Mar-2014 08:06:20 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 176
+[19-Mar-2014 08:06:28 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 08:06:28 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[19-Mar-2014 08:06:28 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 176
+[19-Mar-2014 08:06:34 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 08:06:34 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[19-Mar-2014 08:06:34 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 176
+[19-Mar-2014 08:25:41 America/Denver] PHP Notice:  Use of undefined constant SITE - assumed 'SITE' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 155
+[19-Mar-2014 08:25:41 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 155
+[19-Mar-2014 08:25:41 America/Denver] PHP Notice:  Undefined variable: lastid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 155
+[19-Mar-2014 08:26:34 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 08:26:34 America/Denver] PHP Notice:  Undefined variable: lastid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 08:28:10 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 08:29:47 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 08:31:44 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 08:43:25 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 160
+[19-Mar-2014 08:43:50 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 160
+[19-Mar-2014 08:47:45 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 160
+[19-Mar-2014 09:03:19 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 160
+[19-Mar-2014 09:03:46 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:03:46 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:03:46 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:03:47 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:03:47 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:03:47 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:03:50 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:03:50 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:03:50 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:04:10 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:04:10 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:04:10 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:04:12 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:04:12 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:04:12 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:04:14 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:04:14 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:04:14 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:04:15 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:04:15 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:04:15 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:04:24 America/Denver] PHP Warning:  Unterminated comment starting line 83 in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 83
+[19-Mar-2014 09:04:24 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 87
+[19-Mar-2014 09:04:26 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:04:26 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:04:26 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:05:34 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:05:34 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:05:34 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:05:37 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:05:37 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:05:37 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:06:06 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:06:06 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:06:06 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:06:08 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:06:08 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:06:08 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:06:21 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:06:21 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:06:21 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:06:32 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:06:32 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:06:32 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:06:45 America/Denver] PHP Parse error:  syntax error, unexpected '0' (T_LNUMBER), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 144
+[19-Mar-2014 09:06:46 America/Denver] PHP Parse error:  syntax error, unexpected '0' (T_LNUMBER), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 144
+[19-Mar-2014 09:06:54 America/Denver] PHP Warning:  Unterminated comment starting line 83 in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 83
+[19-Mar-2014 09:06:54 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 87
+[19-Mar-2014 09:06:55 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:06:55 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:06:55 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:07:07 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:07:07 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:07:07 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:07:09 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:07:09 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:07:09 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:07:26 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:07:26 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:07:26 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 09:07:52 America/Denver] PHP Warning:  Unterminated comment starting line 83 in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 83
+[19-Mar-2014 09:07:52 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 87
+[19-Mar-2014 09:07:54 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 158
+[19-Mar-2014 09:07:54 America/Denver] PHP Notice:  Undefined variable: customerid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 159
+[19-Mar-2014 09:07:54 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 23:01:31 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 176
+[19-Mar-2014 23:01:42 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 176
+[19-Mar-2014 23:01:55 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 176
+[19-Mar-2014 23:03:32 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:03:34 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:04:12 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:04:14 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:04:29 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:04:31 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:04:43 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:04:45 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:04:54 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:04:56 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:05:26 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:05:27 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:05:29 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:05:55 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:05:56 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:05:58 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:05:59 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:06:21 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:06:22 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:06:37 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:06:58 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:07:01 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:08:11 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:08:24 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:08:31 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:08:33 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:08:48 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:09:30 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:09:32 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:09:34 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 177
+[19-Mar-2014 23:11:13 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:11:45 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:11:47 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:11:59 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:12:17 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 176
+[19-Mar-2014 23:12:51 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:13:09 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:13:11 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:14:06 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 180
+[19-Mar-2014 23:23:00 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 180
+[19-Mar-2014 23:31:09 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[19-Mar-2014 23:31:09 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 174
+[19-Mar-2014 23:31:09 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 176
+[19-Mar-2014 23:31:09 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 193
+[19-Mar-2014 23:32:30 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 23:32:30 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[19-Mar-2014 23:32:30 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 176
+[19-Mar-2014 23:32:51 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 23:32:51 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[19-Mar-2014 23:32:51 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 176
+[19-Mar-2014 23:33:28 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 23:33:28 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[19-Mar-2014 23:33:28 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 176
+[19-Mar-2014 23:33:31 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[19-Mar-2014 23:33:31 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[19-Mar-2014 23:33:31 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 176
+[19-Mar-2014 23:34:17 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 6
+[19-Mar-2014 23:34:22 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 4
+[19-Mar-2014 23:34:22 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 6
+[19-Mar-2014 23:34:22 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 179
+[19-Mar-2014 23:34:22 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 181
+[19-Mar-2014 23:34:22 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 23:41:25 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[19-Mar-2014 23:41:25 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[19-Mar-2014 23:41:32 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[19-Mar-2014 23:41:32 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[19-Mar-2014 23:41:32 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:41:32 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 180
+[19-Mar-2014 23:41:32 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 197
+[19-Mar-2014 23:42:05 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 6
+[19-Mar-2014 23:42:09 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[19-Mar-2014 23:42:09 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 6
+[19-Mar-2014 23:42:10 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 179
+[19-Mar-2014 23:42:10 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 181
+[19-Mar-2014 23:42:10 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[19-Mar-2014 23:50:14 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 5
+[19-Mar-2014 23:50:18 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[19-Mar-2014 23:50:18 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 5
+[19-Mar-2014 23:50:18 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:50:18 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 180
+[19-Mar-2014 23:50:18 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 224
+[19-Mar-2014 23:52:03 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[19-Mar-2014 23:52:03 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 5
+[19-Mar-2014 23:52:04 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[19-Mar-2014 23:52:04 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 180
+[19-Mar-2014 23:52:04 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 222
+[20-Mar-2014 00:13:00 America/Denver] PHP Parse error:  syntax error, unexpected '}' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 7
+[20-Mar-2014 00:13:08 America/Denver] PHP Parse error:  syntax error, unexpected '}' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 7
+[20-Mar-2014 00:13:18 America/Denver] PHP Parse error:  syntax error, unexpected '}' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 7
+[20-Mar-2014 00:13:19 America/Denver] PHP Parse error:  syntax error, unexpected '}' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 7
+[20-Mar-2014 00:13:21 America/Denver] PHP Parse error:  syntax error, unexpected '}' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 7
+[20-Mar-2014 00:13:32 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 18
+[20-Mar-2014 00:13:42 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 16
+[20-Mar-2014 00:13:42 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 18
+[20-Mar-2014 00:13:42 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 191
+[20-Mar-2014 00:13:42 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 193
+[20-Mar-2014 00:13:42 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 232
+[20-Mar-2014 00:13:50 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 16
+[20-Mar-2014 00:13:50 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 18
+[20-Mar-2014 00:13:50 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 191
+[20-Mar-2014 00:13:50 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 193
+[20-Mar-2014 00:13:50 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 232
+[20-Mar-2014 00:14:00 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 16
+[20-Mar-2014 00:14:00 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 18
+[20-Mar-2014 00:14:00 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 191
+[20-Mar-2014 00:14:00 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 193
+[20-Mar-2014 00:14:00 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 232
+[20-Mar-2014 00:15:53 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 5
+[20-Mar-2014 00:15:59 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:15:59 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 5
+[20-Mar-2014 00:16:00 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[20-Mar-2014 00:16:00 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 180
+[20-Mar-2014 00:16:00 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 219
+[20-Mar-2014 00:16:42 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 00:16:46 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:16:46 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 00:16:46 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[20-Mar-2014 00:16:46 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 180
+[20-Mar-2014 00:16:46 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 219
+[20-Mar-2014 00:17:50 America/Denver] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ';' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 118
+[20-Mar-2014 00:17:51 America/Denver] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ';' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 118
+[20-Mar-2014 00:18:08 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:18:08 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 00:18:08 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 178
+[20-Mar-2014 00:18:08 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 180
+[20-Mar-2014 00:18:08 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 219
+[20-Mar-2014 00:18:44 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:18:44 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 00:18:44 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 118
+[20-Mar-2014 00:18:44 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 180
+[20-Mar-2014 00:18:44 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 219
+[20-Mar-2014 00:18:48 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:18:48 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 00:18:48 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 118
+[20-Mar-2014 00:18:48 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 180
+[20-Mar-2014 00:18:48 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 219
+[20-Mar-2014 00:19:51 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:19:51 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 00:19:51 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 118
+[20-Mar-2014 00:19:51 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 181
+[20-Mar-2014 00:19:51 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 220
+[20-Mar-2014 00:20:28 America/Denver] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 118
+[20-Mar-2014 00:20:30 America/Denver] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 118
+[20-Mar-2014 00:23:56 America/Denver] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 118
+[20-Mar-2014 00:25:11 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:25:11 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 00:25:11 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 118
+[20-Mar-2014 00:25:11 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 00:25:11 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 222
+[20-Mar-2014 00:25:56 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:26:01 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:26:01 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 118
+[20-Mar-2014 00:26:01 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 00:26:01 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 222
+[20-Mar-2014 00:26:47 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:26:52 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:26:52 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 118
+[20-Mar-2014 00:26:52 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 00:26:52 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 222
+[20-Mar-2014 00:27:38 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:28:13 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 00:28:17 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:28:17 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 00:28:18 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 118
+[20-Mar-2014 00:28:18 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 00:28:18 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 222
+[20-Mar-2014 00:31:19 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 00:40:24 America/Denver] PHP Notice:  Use of undefined constant compaingnid - assumed 'compaingnid' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:40:24 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 00:40:28 America/Denver] PHP Notice:  Use of undefined constant compaingnid - assumed 'compaingnid' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:40:28 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 00:40:29 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 118
+[20-Mar-2014 00:40:29 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 00:40:29 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 222
+[20-Mar-2014 00:41:20 America/Denver] PHP Notice:  Use of undefined constant compaingnid - assumed 'compaingnid' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:46:12 America/Denver] PHP Notice:  Use of undefined constant compaingnid - assumed 'compaingnid' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:51:40 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 00:51:45 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 00:51:45 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 00:51:45 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 123
+[20-Mar-2014 00:51:45 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 189
+[20-Mar-2014 00:51:45 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 228
+[20-Mar-2014 01:00:02 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:00:06 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 01:00:06 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:00:06 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 134
+[20-Mar-2014 01:00:06 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 200
+[20-Mar-2014 01:00:06 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 239
+[20-Mar-2014 01:00:31 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:00:34 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 01:00:34 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:00:34 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 134
+[20-Mar-2014 01:00:34 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 200
+[20-Mar-2014 01:00:34 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 239
+[20-Mar-2014 01:01:08 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:01:12 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 01:01:12 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:01:12 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 134
+[20-Mar-2014 01:01:12 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 200
+[20-Mar-2014 01:01:12 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 239
+[20-Mar-2014 01:01:50 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:01:54 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 01:01:54 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:01:55 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 134
+[20-Mar-2014 01:01:55 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 200
+[20-Mar-2014 01:01:55 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 239
+[20-Mar-2014 01:03:12 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:03:15 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 01:03:15 America/Denver] PHP Notice:  Use of undefined constant temp - assumed 'temp' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 14
+[20-Mar-2014 01:03:15 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:03:15 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 134
+[20-Mar-2014 01:03:15 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 200
+[20-Mar-2014 01:03:15 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 239
+[20-Mar-2014 01:04:20 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:04:24 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 01:04:24 America/Denver] PHP Notice:  Use of undefined constant temp - assumed 'temp' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 14
+[20-Mar-2014 01:04:24 America/Denver] PHP Warning:  constant(): Couldn't find constant temp in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 16
+[20-Mar-2014 01:04:24 America/Denver] PHP Notice:  Use of undefined constant temp - assumed 'temp' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 17
+[20-Mar-2014 01:04:24 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:04:24 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 134
+[20-Mar-2014 01:04:24 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 200
+[20-Mar-2014 01:04:24 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 239
+[20-Mar-2014 01:06:23 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:06:26 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 01:06:26 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:06:27 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 182
+[20-Mar-2014 01:06:27 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 184
+[20-Mar-2014 01:06:27 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 223
+[20-Mar-2014 01:22:09 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:31:40 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:31:46 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:33:27 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:35:13 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:35:18 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 01:35:18 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:35:18 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 196
+[20-Mar-2014 01:35:18 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 198
+[20-Mar-2014 01:35:18 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 237
+[20-Mar-2014 01:36:02 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 01:36:02 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 01:36:02 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 01:36:02 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 185
+[20-Mar-2014 01:36:02 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 224
+[20-Mar-2014 01:40:00 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 02:11:59 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 02:12:03 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 02:12:03 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 02:12:03 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 02:12:03 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 185
+[20-Mar-2014 02:12:03 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 224
+[20-Mar-2014 02:47:40 America/Denver] PHP Warning:  Unterminated comment starting line 9 in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 9
+[20-Mar-2014 02:47:40 America/Denver] PHP Fatal error:  Class 'oauth_client_class' not found in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 25
+[20-Mar-2014 02:47:46 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 02:47:50 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 02:47:50 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 02:47:51 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 02:47:51 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 185
+[20-Mar-2014 02:47:51 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 224
+[20-Mar-2014 02:49:48 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 02:50:02 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 02:50:02 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 02:50:02 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 02:50:02 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 185
+[20-Mar-2014 02:50:02 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 224
+[20-Mar-2014 02:57:28 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 02:57:32 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 02:57:32 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 02:57:32 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 02:57:32 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 185
+[20-Mar-2014 02:57:32 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 224
+[20-Mar-2014 05:28:23 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 05:28:34 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:28:34 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 05:28:58 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:28:58 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 05:29:33 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 05:29:39 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:29:39 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 05:29:54 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 05:29:59 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:29:59 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 05:30:02 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:30:02 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 05:30:04 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 05:30:04 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 185
+[20-Mar-2014 05:30:04 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 224
+[20-Mar-2014 05:30:48 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 05:30:53 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:30:53 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 05:31:00 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:31:00 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 05:31:02 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 05:31:02 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 185
+[20-Mar-2014 05:31:02 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 224
+[20-Mar-2014 05:32:57 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:32:58 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 05:32:58 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 05:32:58 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 185
+[20-Mar-2014 05:32:58 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 224
+[20-Mar-2014 05:35:04 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:35:04 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[20-Mar-2014 05:35:05 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 05:35:05 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 185
+[20-Mar-2014 05:35:05 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 224
+[20-Mar-2014 05:35:22 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:47:59 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:48:04 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:48:04 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 05:48:04 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 185
+[20-Mar-2014 05:48:04 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 224
+[20-Mar-2014 05:52:14 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:52:19 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:52:20 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 05:52:20 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 185
+[20-Mar-2014 05:52:20 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 224
+[20-Mar-2014 05:58:16 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:58:21 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:58:22 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 184
+[20-Mar-2014 05:58:22 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 186
+[20-Mar-2014 05:58:22 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 225
+[20-Mar-2014 05:59:21 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 05:59:21 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 184
+[20-Mar-2014 05:59:21 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 186
+[20-Mar-2014 05:59:21 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 225
+[20-Mar-2014 06:01:40 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 06:01:45 America/Denver] PHP Notice:  Undefined variable: _SESSION in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 06:01:45 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 184
+[20-Mar-2014 06:01:45 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 186
+[20-Mar-2014 06:01:45 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 225
+[20-Mar-2014 06:08:15 America/Denver] PHP Notice:  Undefined index: user in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 7
+[20-Mar-2014 06:08:19 America/Denver] PHP Notice:  Undefined index: user in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 7
+[20-Mar-2014 06:08:20 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 187
+[20-Mar-2014 06:08:20 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 189
+[20-Mar-2014 06:08:20 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 228
+[20-Mar-2014 06:09:54 America/Denver] PHP Notice:  Undefined index: user in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 7
+[20-Mar-2014 06:09:58 America/Denver] PHP Notice:  Undefined index: user in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 7
+[20-Mar-2014 06:09:58 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 188
+[20-Mar-2014 06:09:58 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 190
+[20-Mar-2014 06:09:58 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 229
+[20-Mar-2014 06:11:50 America/Denver] PHP Notice:  Undefined index: user in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 7
+[20-Mar-2014 06:11:55 America/Denver] PHP Notice:  Undefined index: user in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 7
+[20-Mar-2014 06:11:56 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 188
+[20-Mar-2014 06:11:56 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 190
+[20-Mar-2014 06:11:56 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 229
+[20-Mar-2014 06:13:16 America/Denver] PHP Notice:  Undefined index: user in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 7
+[20-Mar-2014 06:13:16 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 188
+[20-Mar-2014 06:13:16 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 190
+[20-Mar-2014 06:13:16 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 229
+[20-Mar-2014 06:13:41 America/Denver] PHP Notice:  Undefined index: user in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 7
+[20-Mar-2014 06:13:41 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 188
+[20-Mar-2014 06:13:41 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 190
+[20-Mar-2014 06:13:41 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 229
+[20-Mar-2014 06:13:45 America/Denver] PHP Notice:  Undefined index: user in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 7
+[20-Mar-2014 06:13:45 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 188
+[20-Mar-2014 06:13:45 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 190
+[20-Mar-2014 06:13:45 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 229
+[20-Mar-2014 06:19:06 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 185
+[20-Mar-2014 06:19:06 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 187
+[20-Mar-2014 06:19:06 America/Denver] PHP Notice:  Use of undefined constant SITE - assumed 'SITE' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 226
+[20-Mar-2014 06:19:06 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 226
+[20-Mar-2014 06:20:35 America/Denver] PHP Warning:  Unterminated comment starting line 218 in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 218
+[20-Mar-2014 06:20:40 America/Denver] PHP Warning:  Unterminated comment starting line 218 in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 218
+[20-Mar-2014 06:20:40 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 179
+[20-Mar-2014 06:20:40 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 181
+[20-Mar-2014 06:21:18 America/Denver] PHP Warning:  Unterminated comment starting line 218 in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 218
+[20-Mar-2014 06:21:18 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 179
+[20-Mar-2014 06:21:18 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 181
+[20-Mar-2014 06:21:32 America/Denver] PHP Warning:  Unterminated comment starting line 218 in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 218
+[20-Mar-2014 06:21:36 America/Denver] PHP Warning:  Unterminated comment starting line 218 in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 218
+[20-Mar-2014 06:21:37 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 179
+[20-Mar-2014 06:21:37 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 181
+[20-Mar-2014 06:22:14 America/Denver] PHP Warning:  Unterminated comment starting line 218 in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 218
+[20-Mar-2014 06:22:18 America/Denver] PHP Warning:  Unterminated comment starting line 218 in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 218
+[20-Mar-2014 06:22:18 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 179
+[20-Mar-2014 06:22:18 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 181
+[20-Mar-2014 06:23:37 America/Denver] PHP Warning:  Unterminated comment starting line 219 in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 219
+[20-Mar-2014 06:23:41 America/Denver] PHP Warning:  Unterminated comment starting line 219 in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 219
+[20-Mar-2014 06:23:42 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 180
+[20-Mar-2014 06:23:42 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 182
+[20-Mar-2014 06:24:44 America/Denver] PHP Warning:  Unterminated comment starting line 220 in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 220
+[20-Mar-2014 06:24:51 America/Denver] PHP Warning:  Unterminated comment starting line 220 in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 220
+[20-Mar-2014 06:24:52 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 164
+[20-Mar-2014 06:24:52 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 181
+[20-Mar-2014 06:24:52 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 183
+[20-Mar-2014 06:49:02 America/Denver] PHP Warning:  readfile(data.txt): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 06:49:33 America/Denver] PHP Warning:  readfile(data.txt): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 06:49:52 America/Denver] PHP Warning:  readfile(data.txt): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 06:49:53 America/Denver] PHP Warning:  readfile(data.txt): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 06:50:01 America/Denver] PHP Warning:  readfile(data.txt): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 06:50:02 America/Denver] PHP Warning:  readfile(data.txt): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 06:50:02 America/Denver] PHP Warning:  readfile(importer/data.txt): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 4
+[20-Mar-2014 06:50:05 America/Denver] PHP Warning:  readfile(data.txt): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 06:50:05 America/Denver] PHP Warning:  readfile(importer/data.txt): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 4
+[20-Mar-2014 06:50:06 America/Denver] PHP Warning:  readfile(data.txt): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 06:50:06 America/Denver] PHP Warning:  readfile(importer/data.txt): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 4
+[20-Mar-2014 06:50:12 America/Denver] PHP Warning:  readfile(data.txt): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 06:50:12 America/Denver] PHP Warning:  readfile(importer/data.txt): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 4
+[20-Mar-2014 06:50:13 America/Denver] PHP Warning:  readfile(data.txt): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 06:50:15 America/Denver] PHP Warning:  readfile(data.txt): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 06:50:16 America/Denver] PHP Warning:  readfile(data.txt): failed to open stream: No such file or directory in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 3
+[20-Mar-2014 06:52:18 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 194
+[20-Mar-2014 06:52:18 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 196
+[20-Mar-2014 06:52:18 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 235
+[20-Mar-2014 06:52:53 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 97
+[20-Mar-2014 06:52:55 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 195
+[20-Mar-2014 06:52:55 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 197
+[20-Mar-2014 06:52:55 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 236
+[20-Mar-2014 06:53:32 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 188
+[20-Mar-2014 06:53:32 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 190
+[20-Mar-2014 06:53:32 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 229
+[20-Mar-2014 06:53:33 America/Denver] PHP Notice:  Undefined index: compaingnid in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 188
+[20-Mar-2014 06:53:33 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 190
+[20-Mar-2014 06:53:33 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 229
+[20-Mar-2014 06:58:10 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 190
+[20-Mar-2014 06:58:10 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 229
+[20-Mar-2014 07:00:10 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 190
+[20-Mar-2014 07:00:10 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 229
+[20-Mar-2014 07:01:26 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 190
+[20-Mar-2014 07:01:26 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 229
+[20-Mar-2014 07:02:07 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 190
+[20-Mar-2014 07:02:07 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 229
+[20-Mar-2014 07:02:10 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 190
+[20-Mar-2014 07:02:10 America/Denver] PHP Notice:  Undefined index: id in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 229
+[20-Mar-2014 07:05:34 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 190
+[20-Mar-2014 07:06:57 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 190
+[20-Mar-2014 07:09:22 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 190
+[20-Mar-2014 07:10:09 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 189
+[20-Mar-2014 07:12:08 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 189
+[20-Mar-2014 07:12:56 America/Denver] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 133
+[20-Mar-2014 07:12:57 America/Denver] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 133
+[20-Mar-2014 07:12:58 America/Denver] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 133
+[20-Mar-2014 07:13:11 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 92
+[20-Mar-2014 07:13:13 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 189
+[20-Mar-2014 07:14:12 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 189
+[20-Mar-2014 07:14:14 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 189
+[20-Mar-2014 07:14:33 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 92
+[20-Mar-2014 07:14:35 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 189
+[20-Mar-2014 07:15:50 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 189
+[20-Mar-2014 07:16:10 America/Denver] PHP Notice:  Undefined index: email in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 189
+[20-Mar-2014 07:29:14 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 191
+[20-Mar-2014 07:29:40 America/Denver] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 191
+[20-Mar-2014 08:28:19 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[20-Mar-2014 08:28:19 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[20-Mar-2014 08:28:19 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 176
+[20-Mar-2014 08:28:24 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[20-Mar-2014 08:28:24 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[20-Mar-2014 08:28:24 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 176
+[20-Mar-2014 08:36:22 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[20-Mar-2014 08:36:22 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[20-Mar-2014 08:36:22 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 176
+[20-Mar-2014 08:36:26 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[20-Mar-2014 08:36:26 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[20-Mar-2014 08:36:26 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 176
+[20-Mar-2014 08:37:47 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[20-Mar-2014 08:37:47 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[20-Mar-2014 08:37:47 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 176
+[25-Mar-2014 06:06:41 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[25-Mar-2014 06:06:41 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[25-Mar-2014 06:06:41 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 176
+[25-Mar-2014 06:06:44 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[25-Mar-2014 06:06:44 America/Denver] PHP Notice:  Use of undefined constant php - assumed 'php' in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 132
+[25-Mar-2014 06:06:44 America/Denver] PHP Notice:  Undefined variable: selected_option in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 176
+[28-Mar-2014 06:52:45 America/Denver] PHP Notice:  Use of undefined constant rid - assumed 'rid' in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 252
+[23-Apr-2014 20:02:35] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[23-Apr-2014 20:02:35] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[11-May-2014 12:39:31] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[11-May-2014 12:39:31] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[11-May-2014 12:39:31] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:13:22] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:13:22] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:13:50] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:13:50] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:13:53] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:13:53] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:14:19] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:14:19] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:45:45] PHP Parse error:  syntax error, unexpected $end in /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php on line 103
+[22-May-2014 23:45:53] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:45:53] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:46:22] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:3) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:46:22] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:3) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:46:25] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:3) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:46:25] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:3) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:46:26] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:3) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:46:26] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:3) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:46:31] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:3) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:46:31] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:3) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:47:14] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:20) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:47:14] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:20) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:47:18] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:20) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:47:18] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:20) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:47:28] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:47:28] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:47:32] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:47:32] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:47:36] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:47:36] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:47:36] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:47:36] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:47:36] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:47:36] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:48:25] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:19) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:48:25] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:19) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:48:40] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:19) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:48:40] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:19) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:49:37] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:49:37] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:49:38] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:49:38] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:49:38] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:49:38] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:49:38] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:49:38] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:49:38] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:49:38] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:49:38] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:49:38] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:49:38] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:49:38] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:49:39] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:49:39] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:49:39] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:49:39] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:49:39] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:49:39] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:50:16] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:50:16] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:7) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:03] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:03] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:04] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:04] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:04] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:04] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:04] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:04] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:04] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:04] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:04] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:04] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:04] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:05] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:09] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:09] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:13] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:13] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:13] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:13] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:14] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:14] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:14] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:14] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:14] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:14] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:19] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:19] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:29] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:29] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:30] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:30] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:51:34] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:51:34] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:2) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:58:59] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:58:59] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[22-May-2014 23:59:03] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 1075
+[22-May-2014 23:59:03] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/softoasi/public_html/dev2013/referral/oauth-api/login_with_google.php:21) in /home4/softoasi/public_html/dev2013/referral/oauth-api/oauth_client.php on line 961
+[03-Jun-2014 06:13:44] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[03-Jun-2014 06:13:58] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[03-Jun-2014 06:14:12] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[03-Jun-2014 06:14:27] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[24-Jun-2014 05:45:36] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[24-Jun-2014 05:45:43] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[24-Jun-2014 05:47:32] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[24-Jun-2014 05:55:54] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
+[24-Jun-2014 05:56:11] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home4/softoasi/public_html/dev2013/referral/oauth-api/index.php on line 25
