@@ -868,7 +868,7 @@ class oauth_client_class
 			'{CLIENT_ID}', UrlEncode($this->client_id), str_replace(
 			'{API_KEY}', UrlEncode($this->api_key), str_replace(
 			'{SCOPE}', UrlEncode($this->scope),
-			$url)))));
+			$url))))); 
 		return(true);
 	}
 

@@ -552,6 +552,7 @@ mail($to,$subject,$message,$headers);
 					  ->order_by('referralProgDetailsID', 'DESC')
 					  ->limit(1)
                       ->execute();
+		
 		$details =DB::select()->from('referralprogs')
 					  ->order_by('refProgID', 'DESC')
 					  ->limit(1)
@@ -581,36 +582,25 @@ mail($to,$subject,$message,$headers);
 		 
 		 ->values(array( $id, $filename, $data['so']))
 		 ->execute();
+		  		  
+		
+		  } 
 		  
-		 //Request::current()->redirect('customer/appearance');
-		 }
-		}
-		
-		
-		/**************URL INPUT SAVE***********/
-		 $data=$this->request->post();
 
-         if (HTTP_Request::POST == $this->request->method()){
-		
+		  if(isset($data['referralProgTCs'])){
 		   $query= DB::update('referralprogdetails')->set(array('referralProgTCs'=> $data['referralProgTCs']))
 		          ->where('referralProgID', '=', $id)
 				  ->execute();
 				  
-				 
-		  
-		 //Request::current()->redirect('customer/appearance');
+			Request::current()->redirect('customer/integration');
+		  }	 
+		   
+
+	
 		}
 		
 		
-		
-		 
-		  
-		 
-		 
-		
-		
-		
-		
+
 		
 		if ( ! $filename)
         {
@@ -692,30 +682,65 @@ mail($to,$subject,$message,$headers);
         }
 		
 		/***************filename insert***********/
-		if ($this->request->method() == Request::POST)
+		/*if ($this->request->method() == Request::POST)
         {
 		 $query=DB::insert('rp_referralprog_images', array('referralProgID','referralProgImage','referralProgImageOrder'))
 		 ->values(array( $id, $filename, $data['so']))
 		 ->execute();
 		  
 		 //Request::current()->redirect('customer/appearance');
+		
+		}*/
+		
+		
+		if ($this->request->method() == Request::POST)
+        {
+		if(isset($data['so'])){
+		 $query=DB::insert('rp_referralprog_images', array('referralProgID','referralProgImage','referralProgImageOrder'))
+		 
+		 ->values(array( $id, $filename, $data['so']))
+		 ->execute();
+		  		  
+		
+		  } 
+		  
+
+		  if(isset($data['referralProgTCs'])){
+		   $query= DB::update('referralprogdetails')->set(array('referralProgTCs'=> $data['referralProgTCs']))
+		          ->where('referralProgID', '=', $id)
+				  ->execute();
+				  
+			Request::current()->redirect('customer/cintegration/'.$rpdid);
+		  }	 
+		   
+
+	
 		}
 		
 		
 		
 		
-		 if (HTTP_Request::POST == $this->request->method()){
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/* if (HTTP_Request::POST == $this->request->method()){
 		
 		$data=$this->request->post();
 			//print_r($data);
 			
-			 $query= DB::update('referralprogdetails')->set(array('referralProgTCs'=> $data['referralProgTCs']))
-		          ->where('referralProgID', '=', $id)
-				  ->execute();
+			 //$query= DB::update('referralprogdetails')->set(array('referralProgTCs'=> $data['referralProgTCs']))
+		          //->where('referralProgID', '=', $id)
+				  //->execute();
 		
 		    //Request::current()->redirect('customer/cemails/'.$rpdid);
 		 
-		 }
+		 } */
 		 
 		 
 		 
@@ -907,7 +932,9 @@ mail($to,$subject,$message,$headers);
 	   $details =DB::select()->from('referralprogdetails')
                       ->where('referralProgDetailsID','=', $rpdid)
                       ->execute()
-					  ->as_array();				  
+					  ->as_array();		
+
+					  
 	   $temp=$details[0]['referralProgID'];
  
 	   $query1 = DB::select()->from('referralprogs')
@@ -1342,6 +1369,12 @@ mail($to,$subject,$message,$headers);
 		 $no_impressions=$details[$key]['no_impressions'];
 		 $dataresult1.= "["."'".$campaignname."'".",".$no_impressions."]".",";
 		}
+		
+		
+		//print_r($dataresult1);
+		//die();
+		
+		
 		
 		$dataresult2 ="['Campaign', 'Shares'],";	
 		foreach($details as $key=>$temp){

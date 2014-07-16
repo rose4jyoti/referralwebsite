@@ -1,5 +1,4 @@
 <?php
-/*echo readfile("../importer/data.txt");*/
 $file = fopen("../importer/data.txt", "r") 
 or exit("Unable to open file!");
 while(!feof($file))
@@ -16,9 +15,7 @@ while(!feof($file))
  $rid=fgets($file);
   }
 fclose($file);
-?> 
 
-<?php 
 define("SITE","http://softoasistech.com/dev2013/referral");
 ?>
 <?php

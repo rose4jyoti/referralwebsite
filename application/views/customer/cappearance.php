@@ -298,23 +298,5 @@ endforeach; ?>
 <?php echo $footer; ?>
 	
    </div>
+  </div>
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
- </div> 

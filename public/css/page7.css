@@ -29,18 +29,18 @@ body{
 	font-family:Verdana, Geneva, sans-serif;
 	float:left;
 }
+/*
 .nav{
-	margin:0px;
-		height:35px;
-width:1000px;
-float:left;
+  margin:0px;
+  height:35px;
+  width:1000px;
+  float:left;
 	
 }
 .nav_in.{
 	margin:0px;
 }
 .nav ul{
-	
 	height:35px;
 	width:260px;
 	background-color:#ebebeb;
@@ -56,9 +56,10 @@ text-align:center;
 .nav ul li a{
 	font-size:18px;
 		color:#43648f;
-height:35px;
+     height:35px;
 	width:130px;
 	text-decoration:none;
+	
 }
 .nav ul li a:hover{
 	height:35px;
@@ -66,6 +67,7 @@ height:35px;
 	background-color:#fdf8f5;
 	padding:8px;
 }
+*/
 .hr{
 	width:1000px;
 	margin:auto;

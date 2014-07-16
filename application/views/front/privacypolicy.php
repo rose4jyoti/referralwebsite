@@ -3,7 +3,9 @@
 
 <div class="wrapper_out">
   <div class="wrapper_in">
-    <div class="header_out">
+    
+	<!---
+	<div class="header_out">
       <div class="header_in">
         <div class="logo">
 		
@@ -15,10 +17,14 @@
           <li> <a href="<?php echo URL::base(); ?>/front/price">Pricing </a></li>
           <li><a href="<?php echo URL::base(); ?>/front/blog"> Blog </a></li>
           <li><?php echo Html::anchor('user/login', 'Sign In');?></li>
-          <!---<li> <a href="#">Sign In</a></li>--->
+      
         </ul>
       </div>
     </div>
+	---->
+	<?php echo $header; ?>
+	
+	
     <div class="top_line">
       <div class="top_line_in">
         <h1>Privacy Policy</h1>
@@ -38,7 +44,8 @@
 	  
     </div>
 	
-<div class="foter">
+ <!-----	
+ <div class="foter">
       <div class="foter_in">
         <div class="foter_content">
           <div class="foter_content_in">
@@ -63,6 +70,9 @@
         </div>
       </div>
     </div>
+	---->
+	
+	<?php echo $footer; ?>
 	
   </div>
 </div>
